@@ -22,7 +22,7 @@
     </div>
 
     <div class="grid-item item1">
-        <div class="pad-body">
+        <div style="opacity: 0" id="pad_body" class="pad-body">
 
             {% block landing %}
             {% endblock %}<br>
@@ -31,9 +31,7 @@
 </div>
 
 
-{#<button type="button" class="continue-arrow" id="continue_arrow"></button>#}
-
-<img src="/static/homepage/img/continue_new.svg"
+<img src="{% static '/homepage/img/continue_new.svg' %}"
      alt="hi"
      height="80px"
      width="80px"

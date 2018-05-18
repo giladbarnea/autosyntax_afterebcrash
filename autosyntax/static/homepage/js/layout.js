@@ -1,4 +1,5 @@
-set_px("whatisit_block", "paddingTop", window.screen.availHeight);
+set_style("whatisit_block", "paddingTop", window.screen.availHeight);
+increase_opacity(by_id("pad_body"), 1);
 
 on_call("continue_arrow", "click", scroll_to_whatisit);
 

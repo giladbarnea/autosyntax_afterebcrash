@@ -18,11 +18,29 @@ function on_call(element, event, fn) {
     }
 }
 
-function set_px(element, att, val) {
-    if (typeof element === "string")
-        by_id(element).style[att] = val.toString() + "px";
-
-    else element.style[att] = val.toString() + "px";
+function set_style(element, att, val) {
+    let new_val;
+    if (typeof val === "number") {
+        new_val = val.toString();
+    }
+    else {
+        new_val = val;
+    }
+    let new_element;
+    if (typeof element === "string") {
+        new_element = by_id(element);
+    }
+    else {
+        new_element = element;
+    }
+    let before = new_element.style[att];
+    new_element.style[att] = new_val;
+    if (before === new_element.style[att]) {
+        new_element.style[att] = new_val + "px";
+    }
+    else {
+        new_element.style[att] = new_val + "px";
+    }
 
 }
 

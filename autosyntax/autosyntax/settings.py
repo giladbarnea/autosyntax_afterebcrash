@@ -26,7 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['autosyntax-dev-aftercrash.us-west-2.elasticbeanstalk.com',
                  '127.0.0.1',
-                 'autosyntax.io']
+                 'autosyntax.io',
+                 'www.autosyntax.io']
 
 # Application definition
 
