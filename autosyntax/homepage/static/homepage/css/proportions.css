@@ -131,9 +131,9 @@ and (min-width: 850px) {
     /*.pad-body {*/
     /*padding-left: 85px;*/
     /*}*/
-    .space {
-        font-size: 50px;
-    }
+    /*.space {*/
+        /*font-size: 50px;*/
+    /*}*/
 
     .work {
         font-size: 25px;
@@ -149,9 +149,9 @@ and (min-width: 689px) {
     /*.pad-body {*/
     /*padding-left: 70px;*/
     /*}*/
-    .space {
-        font-size: 40px;
-    }
+    /*.space {*/
+        /*font-size: 40px;*/
+    /*}*/
 
     .work {
         font-size: 20px;
@@ -167,9 +167,9 @@ and (min-width: 672px) {
     /*.pad-body {*/
     /*padding-left: 70px;*/
     /*}*/
-    .space {
-        font-size: 37.5px;
-    }
+    /*.space {*/
+        /*font-size: 37.5px;*/
+    /*}*/
 
     .work {
         font-size: 18px;
@@ -185,9 +185,9 @@ and (min-width: 626px) {
     /*.pad-body {*/
     /*padding-left: 65px;*/
     /*}*/
-    .space {
-        font-size: 35px;
-    }
+    /*.space {*/
+        /*font-size: 35px;*/
+    /*}*/
 
     .work {
         font-size: 17.5px;
@@ -203,9 +203,9 @@ and (min-width: 553px) {
     /*.pad-body {*/
     /*padding-left: 50px;*/
     /*}*/
-    .space {
-        font-size: 30px;
-    }
+    /*.space {*/
+        /*font-size: 30px;*/
+    /*}*/
 
     .work {
         font-size: 15px;
@@ -221,9 +221,9 @@ and (min-width: 537px) {
     /*.pad-body {*/
     /*padding-left: 45px;*/
     /*}*/
-    .space {
-        font-size: 27px;
-    }
+    /*.space {*/
+        /*font-size: 27px;*/
+    /*}*/
 
     .work {
         font-size: 15px;
@@ -239,9 +239,9 @@ and (min-width: 424px) {
     /*.pad-body {*/
     /*padding-left: 35px;*/
     /*}*/
-    .space {
-        font-size: 25px;
-    }
+    /*.space {*/
+        /*font-size: 25px;*/
+    /*}*/
 
     .work {
         font-size: 15px;
@@ -265,9 +265,9 @@ and (min-width: 390px) {
     /*.pad-body {*/
     /*padding-left: 30px;*/
     /*}*/
-    .space {
-        font-size: 22.5px;
-    }
+    /*.space {*/
+        /*font-size: 22.5px;*/
+    /*}*/
 
     .work {
         font-size: 15px;
@@ -288,13 +288,12 @@ and (min-width: 390px) {
 
 @media all and (max-width: 390px)
 and (min-width: 343px) {
-    .pad-body {
-        padding-left: 22px;
-    }
-
-    .space {
-        font-size: 20px;
-    }
+    /*.pad-body {*/
+    /*padding-left: 22px;*/
+    /*}*/
+    /*.space {*/
+        /*font-size: 20px;*/
+    /*}*/
 
     .work {
         font-size: 12.5px;
@@ -315,13 +314,12 @@ and (min-width: 343px) {
 
 @media all and (max-width: 343px)
 and (min-width: 301px) {
-    .pad-body {
-        padding-left: 15px;
-    }
-
-    .space {
-        font-size: 17px;
-    }
+    /*.pad-body {*/
+    /*padding-left: 15px;*/
+    /*}*/
+    /*.space {*/
+        /*font-size: 17px;*/
+    /*}*/
 
     .work {
         font-size: 12.5px;
@@ -342,13 +340,12 @@ and (min-width: 301px) {
 
 @media all and (max-width: 301px)
 and (min-width: 250px) {
-    .pad-body {
-        padding-left: 10px;
-    }
-
-    .space {
-        font-size: 15px;
-    }
+    /*.pad-body {*/
+    /*padding-left: 10px;*/
+    /*}*/
+    /*.space {*/
+        /*font-size: 15px;*/
+    /*}*/
 
     .work {
         font-size: 10px;
