@@ -9,14 +9,13 @@
 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 <div class="grid-container">
     <div class="grid-item item0">
-        <img src="{% static '/homepage/img/console_menu.svg' %}"
+        <img src="{% static '/homepage/img/console_menu_trans.svg' %}"
              alt="hi"
              height="30px"
              width="30px"
              id="console_menu"
              class="console-menu"
         />
-        {#        <a class="space console-menu" id="console_menu">></a>#}
         <div class="space-reg sidebar" id="sidebar">
             {% for item in sidebar_items %}
                 <button type="button" class="sidebar-item" id="sidebar_item_{{ forloop.counter }}">
@@ -36,21 +35,14 @@
 </div>
 
 
-<img src="{% static '/homepage/img/continue_new.svg' %}"
+<img src="{% static '/homepage/img/continue_new_trans.svg' %}"
      alt="hi"
      height="80px"
      width="80px"
      id="continue_arrow"
      class="continue-arrow"
 />
-{#<svg xmlns="https://drive.google.com/file/d/1d2tmCshz5mp6omQT3WEUbxRqP8VvInLx/view?usp=sharing"#}
-{#     viewbox="0 0 80 80"#}
-{#     alt="hi"#}
-{#     height="80px"#}
-{#     width="80px"#}
-{#     id="continue_arrow"#}
-{#     class="continue-arrow"#}
-{#></svg>#}
+
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
