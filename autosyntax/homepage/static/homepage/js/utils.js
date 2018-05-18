@@ -19,8 +19,15 @@ function on_call(element, event, fn) {
 }
 
 function set_style_to_collection(collection, att, val) {
-    for (let i = 0; i < collection.length; i++) {
-        set_style(collection[i], att, val);
+    let new_collection;
+    if (typeof collection === "string") {
+        new_collection = by_class(collection);
+    }
+    else {
+        new_collection = collection;
+    }
+    for (let i = 0; i < new_collection.length; i++) {
+        set_style(new_collection[i], att, val);
     }
 }
 

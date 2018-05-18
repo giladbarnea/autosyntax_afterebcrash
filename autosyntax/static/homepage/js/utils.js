@@ -18,6 +18,19 @@ function on_call(element, event, fn) {
     }
 }
 
+function set_style_to_collection(collection, att, val) {
+    let new_collection;
+    if (typeof collection === "string") {
+        new_collection = by_class(collection);
+    }
+    else {
+        new_collection = collection;
+    }
+    for (let i = 0; i < new_collection.length; i++) {
+        set_style(new_collection[i], att, val);
+    }
+}
+
 function set_style(element, att, val) {
     let new_val;
     if (typeof val === "number") {
@@ -26,21 +39,25 @@ function set_style(element, att, val) {
     else {
         new_val = val;
     }
+
     let new_element;
+
     if (typeof element === "string") {
         new_element = by_id(element);
     }
     else {
         new_element = element;
     }
-    let before = new_element.style[att];
-    new_element.style[att] = new_val;
-    if (before === new_element.style[att]) {
-        new_element.style[att] = new_val + "px";
-    }
-    else {
-        new_element.style[att] = new_val + "px";
-    }
+    // let before = new_element.style[att];
+    // new_element.style[att] = new_val;
+    // if (before === new_element.style[att]) {
+    //     new_element.style[att] = new_val + "px";
+    // }
+    // else {
+    //     new_element.style[att] = new_val + "px";
+    // }
+
+    new_element.style[att] = new_val + "px";
 
 }
 
