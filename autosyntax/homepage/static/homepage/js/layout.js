@@ -4,6 +4,8 @@ on_resize();
 function on_resize() {
     let w = window.screen.availWidth;
     console.log(w);
+    by_id("width_flag").innerHTML = w;
+    set_style("width_flag", "fontSize", w / 21.7);
     resize_body_left();
     resize_body_right();
     resize_pad_body();
@@ -27,11 +29,11 @@ function on_resize() {
     function resize_body_left() {
         if (w < 700 && w > 550) {
             set_style(document.body, "marginLeft", Math.pow(w, 0.6));
-            console.log('body margin left: ', Math.pow(w, 0.6))
+            // console.log('body margin left: ', Math.pow(w, 0.6))
         }
         else if (w <= 550) {
             set_style(document.body, "marginLeft", Math.pow(w, 0.5));
-            console.log('body margin left: ', Math.pow(w, 0.5))
+            // console.log('body margin left: ', Math.pow(w, 0.5))
         }
         else {
             set_style(document.body, "marginLeft", 60);
@@ -39,11 +41,12 @@ function on_resize() {
     }
 
     function resize_body_right() {
-        if (w < 1300 && w > 450) {
+        if (w < 1300 && w > 500) {
             set_style(document.body, "marginRight", 60);
         }
-        else if (w <= 450) {
-            set_style(document.body, "marginRight", w / 8);
+        else if (w <= 500) {
+            set_style(document.body, "marginRight", w / 10);
+            console.log('body margin right: ', w / 10);
         }
 
     }
@@ -61,19 +64,19 @@ function on_resize() {
     function resize_pad_body() {
         if (w < 1300 && w > 1000) {
             set_style("pad_body", "paddingLeft", w / 4.5);
-            console.log('pad body: ', w / 4.5)
+            // console.log('pad body: ', w / 4.5)
         }
         else if (w <= 1000 && w > 880) {
             set_style("pad_body", "paddingLeft", w / 4.2);
-            console.log('pad body: ', w / 4.2)
+            // console.log('pad body: ', w / 4.2)
         }
         else if (w <= 880 && w > 550) {
             set_style("pad_body", "paddingLeft", w / 3.7);
-            console.log('pad body: ', w / 3.7)
+            // console.log('pad body: ', w / 3.7)
         }
         else if (w <= 550) {
             set_style("pad_body", "paddingLeft", w / 3.7);
-            console.log('pad body: ', w / 3.7)
+            // console.log('pad body: ', w / 3.7)
         }
         else {
             set_style("pad_body", "paddingLeft", 250);
