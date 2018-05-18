@@ -98,10 +98,9 @@ and (min-height: 0px) {
 
 @media screen and (max-width: 1300px)
 and (min-width: 1170px) {
-    .pad-body {
-        padding-left: 220px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 220px;*/
+    /*}*/
     .width:after {
         content: 'w1170'
     }
@@ -109,10 +108,9 @@ and (min-width: 1170px) {
 
 @media screen and (max-width: 1170px)
 and (min-width: 990px) {
-    .pad-body {
-        padding-left: 130px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 130px;*/
+    /*}*/
     .width:after {
         content: 'w990'
     }
@@ -120,10 +118,9 @@ and (min-width: 990px) {
 
 @media screen and (max-width: 990px)
 and (min-width: 950px) {
-    .pad-body {
-        padding-left: 100px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 100px;*/
+    /*}*/
     .width:after {
         content: 'w950'
     }
@@ -131,10 +128,9 @@ and (min-width: 950px) {
 
 @media screen and (max-width: 950px)
 and (min-width: 850px) {
-    .pad-body {
-        padding-left: 85px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 85px;*/
+    /*}*/
     .space {
         font-size: 50px;
     }
@@ -150,10 +146,9 @@ and (min-width: 850px) {
 
 @media screen and (max-width: 850px)
 and (min-width: 689px) {
-    .pad-body {
-        padding-left: 70px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 70px;*/
+    /*}*/
     .space {
         font-size: 40px;
     }
@@ -169,10 +164,9 @@ and (min-width: 689px) {
 
 @media screen and (max-width: 689px)
 and (min-width: 672px) {
-    .pad-body {
-        padding-left: 70px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 70px;*/
+    /*}*/
     .space {
         font-size: 37.5px;
     }
@@ -188,10 +182,9 @@ and (min-width: 672px) {
 
 @media screen and (max-width: 672px)
 and (min-width: 626px) {
-    .pad-body {
-        padding-left: 65px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 65px;*/
+    /*}*/
     .space {
         font-size: 35px;
     }
@@ -207,10 +200,9 @@ and (min-width: 626px) {
 
 @media screen and (max-width: 626px)
 and (min-width: 553px) {
-    .pad-body {
-        padding-left: 50px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 50px;*/
+    /*}*/
     .space {
         font-size: 30px;
     }
@@ -226,10 +218,9 @@ and (min-width: 553px) {
 
 @media screen and (max-width: 553px)
 and (min-width: 537px) {
-    .pad-body {
-        padding-left: 45px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 45px;*/
+    /*}*/
     .space {
         font-size: 27px;
     }
@@ -245,10 +236,9 @@ and (min-width: 537px) {
 
 @media screen and (max-width: 537px)
 and (min-width: 424px) {
-    .pad-body {
-        padding-left: 35px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 35px;*/
+    /*}*/
     .space {
         font-size: 25px;
     }
@@ -272,10 +262,9 @@ and (min-width: 424px) {
 
 @media screen and (max-width: 424px)
 and (min-width: 390px) {
-    .pad-body {
-        padding-left: 30px;
-    }
-
+    /*.pad-body {*/
+    /*padding-left: 30px;*/
+    /*}*/
     .space {
         font-size: 22.5px;
     }

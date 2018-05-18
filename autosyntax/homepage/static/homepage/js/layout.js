@@ -1,3 +1,11 @@
+let w = window.screen.availWidth;
+console.log(w);
+let div_by_avg = w / 11;
+console.log(div_by_avg);
+if (w < 1300) {
+    set_style("pad_body", "paddingLeft", div_by_avg);
+}
+
 set_style("whatisit_block", "paddingTop", window.screen.availHeight);
 increase_opacity(by_id("pad_body"), 1);
 
