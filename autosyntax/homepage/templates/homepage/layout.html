@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="height=device-height, initial-scale=1">
+<link rel="shortcut icon" href="{% static 'favicon_terminal_29ffdb_2.png' %}">
+<link rel="stylesheet" type="text/css"
+      href="{% static 'homepage/css/style.css' %}"/>
+<link rel="stylesheet" type="text/css"
+      href="{% static 'homepage/css/proportions.css' %}"/>
+<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+<div class="height text"></div>
+<div class="width text"></div>
+<div class="grid-container">
+    <div class="grid-item item0">
+        <a class="space console-menu" id="console_menu">></a>
+        <div class="space-reg sidebar" id="sidebar">
+            {% for item in sidebar_items %}
+                <button type="button" class="sidebar-item" id="sidebar_item_{{ forloop.counter }}">
+                    {{ item }}
+                </button><br><br>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="grid-item item1">
+        <div class="pad-body">
+
+            {% block landing %}
+            {% endblock %}<br>
+        </div>
+    </div>
+</div>
+
+
+{#<button type="button" class="continue-arrow" id="continue_arrow"></button>#}
+
+<img src="/static/homepage/img/continue_new.svg"
+     alt="hi"
+     height="80px"
+     width="80px"
+     id="continue_arrow"
+     class="continue-arrow"
+/>
+{#<svg xmlns="https://drive.google.com/file/d/1d2tmCshz5mp6omQT3WEUbxRqP8VvInLx/view?usp=sharing"#}
+{#     viewbox="0 0 80 80"#}
+{#     alt="hi"#}
+{#     height="80px"#}
+{#     width="80px"#}
+{#     id="continue_arrow"#}
+{#     class="continue-arrow"#}
+{#></svg>#}
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+{#<script src="{% static '/ts/landing.js' %}"></script>#}
+<script src="{% static 'homepage/js/utils.js' %}"></script>
+<script src="{% static 'homepage/js/landing_fns.js' %}"></script>
+<script src="{% static 'homepage/js/layout.js' %}"></script>

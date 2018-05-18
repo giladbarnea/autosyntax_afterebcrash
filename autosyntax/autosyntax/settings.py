@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'unb%i2gpq9*uy()rp*ni0+6cw55xnmucr%#gc6i_1%=f(l+1v6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['autosyntax-dev-aftercrash.us-west-2.elasticbeanstalk.com',
                  '127.0.0.1',
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['autosyntax-dev-aftercrash.us-west-2.elasticbeanstalk.com',
 # Application definition
 
 INSTALLED_APPS = [
-	'home',
+	'homepage',
 	'django.contrib.admin',
 	'django.contrib.auth',
 	'django.contrib.contenttypes',
@@ -116,3 +116,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
+# STATICFILES_DIRS = [
+# 	os.path.join("c:/Sync/Code/Python/autosyntax_afterebcrash/autosyntax/homepage/static"),
+# 	]
+# STATICFILES_FINDERS = [
+# 	'django.contrib.staticfiles.finders.FileSystemFinder',
+# 	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# 	]
