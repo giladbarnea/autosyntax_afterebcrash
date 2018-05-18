@@ -1,0 +1,2 @@
+virtualenv venv
+django-admin startproject autosyntax
