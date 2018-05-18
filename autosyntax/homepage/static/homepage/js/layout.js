@@ -1,20 +1,32 @@
-let w = window.screen.availWidth;
-console.log('width:', w);
-let div_by_avg = w / 11;
-console.log('width / 11: ', div_by_avg);
-console.log('Math.pow(w, 0.46): ', Math.pow(w, 0.46));
-if (w < 1300) {
-    set_style("pad_body", "paddingLeft", div_by_avg);
-    let spaces = by_class("space");
-    for (let i = 0; i < spaces.length; i++) {
-        set_style(spaces[i], "fontSize", w / 20);
+window.addEventListener("resize", response);
+response();
+
+function response() {
+    let w = window.screen.availWidth;
+    console.log(w);
+    let div_by_avg = w / 11;
+    if (w < 1300) {
+        set_style("pad_body", "paddingLeft", div_by_avg);
+        let spaces = by_class("space");
+        set_style_to_collection(spaces, "fontSize", w / 20);
     }
-}
-if (w < 950) {
     let works = by_class("work");
-    for (let i = 0; i < works.length; i++) {
-        set_style(works[i], "fontSize", Math.pow(w, 0.46));
+    if (w < 1000 && w > 800) {
+
     }
+    else if (w <= 800 && w > 650) {
+        set_style_to_collection(works, "fontSize", Math.pow(w, 0.46));
+        console.log('work size (0.46): ', Math.pow(w, 0.46));
+    }
+    else if (w <= 650) {
+        set_style_to_collection(works, "fontSize", Math.pow(w, 0.43));
+        console.log('work size (0.43): ', Math.pow(w, 0.43));
+    }
+    else {
+        set_style_to_collection(works, "fontSize", 30);
+        console.log('work size (30-c): ', 30);
+    }
+
 }
 
 set_style("whatisit_block", "paddingTop", window.screen.availHeight);

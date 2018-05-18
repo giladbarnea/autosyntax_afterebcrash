@@ -1,3 +1,22 @@
+let w = window.screen.availWidth;
+console.log('width:', w);
+let div_by_avg = w / 11;
+console.log('width / 11: ', div_by_avg);
+console.log('Math.pow(w, 0.46): ', Math.pow(w, 0.46));
+if (w < 1300) {
+    set_style("pad_body", "paddingLeft", div_by_avg);
+    let spaces = by_class("space");
+    for (let i = 0; i < spaces.length; i++) {
+        set_style(spaces[i], "fontSize", w / 20);
+    }
+}
+if (w < 950) {
+    let works = by_class("work");
+    for (let i = 0; i < works.length; i++) {
+        set_style(works[i], "fontSize", Math.pow(w, 0.46));
+    }
+}
+
 set_style("whatisit_block", "paddingTop", window.screen.availHeight);
 increase_opacity(by_id("pad_body"), 1);
 
