@@ -9,7 +9,14 @@
 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
 <div class="grid-container">
     <div class="grid-item item0">
-        <a class="space console-menu" id="console_menu">></a>
+        <img src="{% static '/homepage/img/console_menu.svg' %}"
+             alt="hi"
+             height="30px"
+             width="30px"
+             id="console_menu"
+             class="console-menu"
+        />
+        {#        <a class="space console-menu" id="console_menu">></a>#}
         <div class="space-reg sidebar" id="sidebar">
             {% for item in sidebar_items %}
                 <button type="button" class="sidebar-item" id="sidebar_item_{{ forloop.counter }}">

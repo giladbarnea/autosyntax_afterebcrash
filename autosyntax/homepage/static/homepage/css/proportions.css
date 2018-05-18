@@ -1,6 +1,6 @@
 
 body {
-margin: 50px 60px 60px;
+    margin: 50px 60px 60px;
 }
 
 @media screen and (min-height: 658px) {
@@ -233,16 +233,14 @@ and (min-width: 424px) {
     /*font-size: 15px;*/
     /*}*/
     /*body {*/
-        /*margin: 50px 40px 60px;*/
+    /*margin: 50px 40px 60px;*/
     /*}*/
-
-    #console_menu {
-        font-size: 30px;
-    }
-
-    .width:after {
-        content: 'w424'
-    }
+    /*#console_menu {*/
+    /*font-size: 30px;*/
+    /*}*/
+    /*.width:after {*/
+    /*content: 'w424'*/
+    /*}*/
 }
 
 @media screen and (max-width: 424px)
@@ -257,16 +255,14 @@ and (min-width: 390px) {
     /*font-size: 15px;*/
     /*}*/
     /*body {*/
-        /*margin: 50px 40px 60px;*/
+    /*margin: 50px 40px 60px;*/
     /*}*/
-
-    #console_menu {
-        font-size: 30px;
-    }
-
-    .width:after {
-        content: 'w390'
-    }
+    /*#console_menu {*/
+    /*font-size: 30px;*/
+    /*}*/
+    /*.width:after {*/
+    /*content: 'w390'*/
+    /*}*/
 }
 
 @media all and (max-width: 390px)
@@ -281,16 +277,14 @@ and (min-width: 343px) {
     /*font-size: 12.5px;*/
     /*}*/
     /*body {*/
-        /*margin: 50px 35px 60px;*/
+    /*margin: 50px 35px 60px;*/
     /*}*/
-
-    #console_menu {
-        font-size: 27px;
-    }
-
-    .width:after {
-        content: 'w343'
-    }
+    /*#console_menu {*/
+    /*font-size: 27px;*/
+    /*}*/
+    /*.width:after {*/
+    /*content: 'w343'*/
+    /*}*/
 }
 
 @media all and (max-width: 343px)
@@ -305,16 +299,14 @@ and (min-width: 301px) {
     /*font-size: 12.5px;*/
     /*}*/
     /*body {*/
-        /*margin: 50px 35px 60px;*/
+    /*margin: 50px 35px 60px;*/
     /*}*/
-
-    #console_menu {
-        font-size: 27px;
-    }
-
-    .width:after {
-        content: 'w301'
-    }
+    /*#console_menu {*/
+    /*font-size: 27px;*/
+    /*}*/
+    /*.width:after {*/
+    /*content: 'w301'*/
+    /*}*/
 }
 
 @media all and (max-width: 301px)
@@ -329,25 +321,23 @@ and (min-width: 250px) {
     /*font-size: 10px;*/
     /*}*/
     /*body {*/
-        /*margin: 50px 30px 60px;*/
+    /*margin: 50px 30px 60px;*/
     /*}*/
-
-    #console_menu {
-        font-size: 20px;
-    }
-
-    .width:after {
-        content: 'w250'
-    }
+    /*#console_menu {*/
+    /*font-size: 20px;*/
+    /*}*/
+    /*.width:after {*/
+    /*content: 'w250'*/
+    /*}*/
 }
 
 .title {
     padding-top: 20px;
 }
 
-.console-menu {
-    font-size: 40px;
-}
+/*.console-menu {*/
+/*font-size: 40px;*/
+/*}*/
 
 .sidebar {
     padding-left: 20px;
