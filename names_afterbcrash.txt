@@ -1,2 +1,11 @@
 virtualenv venv
+location of console:
+cd autosyntax_afterbcrash\autosyntax
 django-admin startproject autosyntax
+us-west-2
+application name: autosyntax
+keypair name: aws-eb
+passphrase:
+eb environment: autosyntax-dev
+DNS CNAME prefix: autosyntax-dev-aftercrash
+load balancer: classic
