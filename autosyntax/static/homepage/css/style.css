@@ -15,7 +15,7 @@ body {
 .text,
 .space,
 .work,
-.space-reg {
+.space-font {
     color: white;
 }
 
@@ -23,7 +23,7 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.space, .space-reg, .sidebar-item {
+.space, .space-font, .sidebar-item {
     font-family: 'Space Mono', monospace;
 
 }
