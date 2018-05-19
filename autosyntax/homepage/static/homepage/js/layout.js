@@ -15,7 +15,7 @@ function hide_console_menu() {
         // hide menu
         let sidebar_items = by_class("sidebar-item");
         for (let i = 0; i < sidebar_items.length; i++)
-            decrease_opacity(sidebar_items[i], 0);
+            decrease_opacity(sidebar_items[i], 0, factor = 1);
 
         // flag menu hidden
         is_cons_menu_vis = false;
@@ -28,7 +28,7 @@ function show_console_menu() {
         let sidebar_items = by_class("sidebar-item");
         // foreach(sidebar_items, increase_opacity, 1);
         for (let i = 0; i < sidebar_items.length; i++)
-            increase_opacity(sidebar_items[i], 1);
+            increase_opacity(sidebar_items[i], 1, factor = 1);
 
         // flag menu visible
         is_cons_menu_vis = true;

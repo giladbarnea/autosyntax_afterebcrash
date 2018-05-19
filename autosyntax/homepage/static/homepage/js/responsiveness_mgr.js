@@ -6,13 +6,16 @@ on_resize();
 function display_totop_button() {
     if (window.scrollY > 200 && !is_go_up_visible) {
         is_go_up_visible = true;
-        increase_opacity(by_id("go_up"), 0.7);
-        console.log("showing go up");
+        increase_opacity(by_id("go_up"), 0.7, factor = 1);
+        set_style("continue_arrow", "left", "10%");
+        debugger;
+        decrease_opacity(by_id("continue_arrow"), 0.7, factor = 0.05);
     }
     else if (window.scrollY <= 200 && is_go_up_visible) {
         is_go_up_visible = false;
-        decrease_opacity(by_id("go_up"), 0);
-        console.log("hiding go up");
+        decrease_opacity(by_id("go_up"), 0, factor = 1);
+        set_style("continue_arrow", "left", "49.8%");
+        increase_opacity(by_id("continue_arrow"), 1, factor = 0.05);
     }
 }
 
