@@ -10,34 +10,35 @@ on_call("console_menu", "click", hide_console_menu);
 on_call("sidebar_item_1", "click", scroll_to_whatisit);
 
 function scroll_to_top() {
-    // window.scrollTop();
-    // window.scrollBy((0, 0), {behavior: "smooth", block: "start", inline: "nearest"});
-    // let what_is_it_content = by_id("what_is_it_content");
-    document.body.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	// window.scrollTop();
+	// window.scrollBy((0, 0), {behavior: "smooth", block: "start", inline: "nearest"});
+	// let what_is_it_content = by_id("what_is_it_content");
+	document.body.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 function hide_console_menu() {
-    if (is_cons_menu_vis) { //if menu visible
-        // hide menu
-        let sidebar_items = by_class("sidebar-item");
-        for (let i = 0; i < sidebar_items.length; i++) {
-            decrease_opacity(sidebar_items[i], 0);
-        }
-        // flag menu hidden
-        is_cons_menu_vis = false;
-    }
+	if (is_cons_menu_vis) { //if menu visible
+		// hide menu
+		let sidebar_items = by_class("sidebar-item");
+		for (let i = 0; i < sidebar_items.length; i++)
+			decrease_opacity(sidebar_items[i], 0);
+
+		// flag menu hidden
+		is_cons_menu_vis = false;
+	}
 }
 
 function show_console_menu() {
-    if (!is_cons_menu_vis) { //if menu hidden
-        // show menu
-        let sidebar_items = by_class("sidebar-item");
-        for (let i = 0; i < sidebar_items.length; i++) {
-            increase_opacity(sidebar_items[i], 1);
-        }
-        // flag menu visible
-        is_cons_menu_vis = true;
-    }
+	if (!is_cons_menu_vis) { //if menu hidden
+		// show menu
+		let sidebar_items = by_class("sidebar-item");
+		// foreach(sidebar_items, increase_opacity, 1);
+		for (let i = 0; i < sidebar_items.length; i++)
+			increase_opacity(sidebar_items[i], 1);
+
+		// flag menu visible
+		is_cons_menu_vis = true;
+	}
 
 
 }

@@ -11,7 +11,7 @@ function scroll(target) {
 }
 
 function element_or_by_fn(element, fn) {
-    return typeof element === "string"?fn(element):element;
+    return typeof element === "string" ? fn(element) : element;
     // if (typeof element === "string")
     //     return fn(element);
     //
@@ -30,11 +30,11 @@ function on_call(element, event, fn) {
 
 function set_style_to_collection(collection, att, val) {
     let new_collection = element_or_by_fn(collection, by_class);
-
     for (let i = 0; i < new_collection.length; i++)
         set_style(new_collection[i], att, val);
 
 }
+
 
 function number_to_string(val) {
     return typeof val === "number" ? val.toString() : val;
