@@ -22,7 +22,8 @@ body {
 
 .monospace {
     font-family: Consolas, 'sans-serif';
-    color: #bbbbbb;
+    /*color: #bbbbbb;*/
+    opacity: 0.8;
     /*background-color: #1f1f1f;*/
     background-color: #1a1a1a;
 }
@@ -37,7 +38,8 @@ body {
 }
 
 .sub-title {
-    opacity: 0.8;
+    /*opacity: 0.8;*/
+    color: #bbbbbb;
 }
 
 .console-menu {
