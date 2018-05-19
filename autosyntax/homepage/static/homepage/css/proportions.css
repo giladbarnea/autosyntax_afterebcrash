@@ -27,8 +27,11 @@ body {
 .code-ex-1-line {
     max-height: 25px;
 }
+.code-ex-2-line {
+    max-height: 65px;
+}
 
-.code-ex-mult-line {
+.code-ex-3-line {
     max-height: 105px;
 }
 
