@@ -58,67 +58,91 @@ function fade_opacity(element, limit, factor = 1, up = true) {
 
         let direction = up ? 1 : -1;
         let condition;
+        let new_opacity = parseFloat(current_opacity) + (direction * 0.07);
         if (up) {
-            condition = () => new_opacity >= limit - 0.04;
+            condition = () => {
+                return new_opacity >= limit - 0.04
+            };
         }
         else {
-            condition = () => new_opacity <= limit + 0.04;
+            condition = () => {
+                return new_opacity <= limit + 0.04
+            };
         }
-        let new_opacity = parseFloat(current_opacity) + (direction * 0.07);
-        // if (new_opacity >= limit - 0.04) {
-        if (condition) {
+        // debugger;
+        if (condition()) {
             element.style.opacity = limit;
             clearInterval(timer);
         }
         else {
             element.style.opacity = new_opacity.toString();
         }
+
+
+        // if (up) {
+        //     if (new_opacity >= limit - 0.04) {
+        //
+        //         element.style.opacity = limit;
+        //         clearInterval(timer);
+        //     }
+        //     else {
+        //         element.style.opacity = new_opacity.toString();
+        //     }
+        // } else {
+        //     if (new_opacity <= limit + 0.04) {
+        //         element.style.opacity = limit;
+        //         clearInterval(timer);
+        //     }
+        //     else {
+        //         element.style.opacity = new_opacity.toString();
+        //     }
+        // }
     }
 
     let timer = setInterval(_fade_opacity, 20 * factor);
 }
 
 function increase_opacity(element, limit, factor = 1) {
-
-    function _increase_opacity() {
-        let current_opacity = element.style.opacity;
-
-        if (current_opacity === "")
-            current_opacity = 0;
-
-
-        let new_opacity = parseFloat(current_opacity) + (0.07);
-        if (new_opacity >= limit - 0.04) {
-            element.style.opacity = limit;
-            clearInterval(timer);
-        }
-        else {
-            element.style.opacity = new_opacity.toString();
-        }
-    }
-
-    let timer = setInterval(_increase_opacity, 20 * factor);
+    fade_opacity(element, limit, factor);
+    // function _increase_opacity() {
+    //     let current_opacity = element.style.opacity;
+    //
+    //     if (current_opacity === "")
+    //         current_opacity = 0;
+    //
+    //
+    //     let new_opacity = parseFloat(current_opacity) + (0.07);
+    //     if (new_opacity >= limit - 0.04) {
+    //         element.style.opacity = limit;
+    //         clearInterval(timer);
+    //     }
+    //     else {
+    //         element.style.opacity = new_opacity.toString();
+    //     }
+    // }
+    //
+    // let timer = setInterval(_increase_opacity, 20 * factor);
 
 }
 
 function decrease_opacity(element, limit, factor = 1) {
-
-    function _decrease_opacity() {
-        let current_opacity = element.style.opacity;
-        if (current_opacity === "") {
-            current_opacity = 0;
-        }
-
-        let new_opacity = parseFloat(current_opacity) - 0.15;
-        if (new_opacity <= limit + 0.04) {
-            element.style.opacity = limit;
-            clearInterval(timer);
-        }
-        else {
-            element.style.opacity = new_opacity.toString();
-        }
-    }
-
-    let timer = setInterval(_decrease_opacity, 20 * factor);
+    fade_opacity(element, limit, factor, false);
+    // function _decrease_opacity() {
+    //     let current_opacity = element.style.opacity;
+    //     if (current_opacity === "") {
+    //         current_opacity = 0;
+    //     }
+    //
+    //     let new_opacity = parseFloat(current_opacity) - 0.15;
+    //     if (new_opacity <= limit + 0.04) {
+    //         element.style.opacity = limit;
+    //         clearInterval(timer);
+    //     }
+    //     else {
+    //         element.style.opacity = new_opacity.toString();
+    //     }
+    // }
+    //
+    // let timer = setInterval(_decrease_opacity, 20 * factor);
 
 }
