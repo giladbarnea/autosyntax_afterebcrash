@@ -7,7 +7,10 @@ function by_class(name) {
 }
 
 function scroll(target) {
-
+    target.scrollIntoView({
+        behavior: "smooth",
+        block: "start", inline: "nearest"
+    });
 }
 
 function element_or_by_fn(element, fn) {
@@ -51,7 +54,7 @@ function set_style(element, att, val) {
 
 }
 
-function fade_opacity(element, limit, factor = 1, up = true) {
+function fade_opacity(element, limit = 1, factor = 1, up = true) {
     function _fade_opacity() {
         let current_opacity = element.style.opacity;
 
@@ -59,7 +62,7 @@ function fade_opacity(element, limit, factor = 1, up = true) {
             current_opacity = 0;
 
         let direction = up ? 1 : -1;
-        let new_opacity = parseFloat(current_opacity) + (direction * 0.07);
+        let new_opacity = parseFloat(current_opacity) + (direction * 0.07 * factor);
         let condition = up ? () => {
             return new_opacity >= limit - 0.04
         } : () => {
@@ -106,7 +109,7 @@ function fade_opacity(element, limit, factor = 1, up = true) {
         // }
     }
 
-    let timer = setInterval(_fade_opacity, 20 * factor);
+    let timer = setInterval(_fade_opacity, 10);
 }
 
 function increase_opacity(element, limit, factor = 1) {
