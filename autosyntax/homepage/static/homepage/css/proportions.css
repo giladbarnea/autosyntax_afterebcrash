@@ -7,6 +7,17 @@ body {
     padding-top: 20px;
 }
 
+.sub-title {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.monospace {
+    font-size: 25px;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
 .go-up {
     bottom: 5%;
     left: 90%;

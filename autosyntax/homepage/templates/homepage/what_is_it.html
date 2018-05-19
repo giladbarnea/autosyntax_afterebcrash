@@ -5,8 +5,36 @@
             What is it?<br>
         </div>
         <br>
-        <div style="padding-left: 40px" class="work">autosyntax turns simple words into to code.
+
+        <div style="padding-left: 40px" class="work">
+            <span class="turquoise">autosyntax</span>
+            turns simple words into to code.
         </div>
         <div class="space-font sub-title">For example:</div>
+        <div class="monospace">list milk eggs coffee nutella</div>
+        <div class="space-font sub-title">becomes ></div>
+        <div class="monospace">['milk', 'eggs', 'coffee', 'nutella']</div>
+        <br>
+        <br>
+        <br>
+        <div class="space-font sub-title">similarily,</div>
+        <div class="monospace">dict meaning 42 happy pizza</div>
+        <div class="space-font sub-title">></div>
+        <div class="monospace">{'meaning': 42, 'happy', 'pizza'}</div>
+        <br>
+        <br>
+        <br>
+        <div class="space-font sub-title">autosyntax can also do more complicated stuff, like:</div>
+        <div class="monospace">class Dog Animal init fluffy True</div>
+        <div class="space-font sub-title">></div>
+        <div class="monospace">
+            class Dog(Animal):
+            <br>
+            &emsp;
+            def __init__(fluffy=True):
+            <br>
+            &emsp;&emsp;super().__init__()
+        </div>
+
     </div>
 {% endblock %}

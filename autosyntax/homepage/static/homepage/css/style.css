@@ -15,8 +15,16 @@ body {
 .text,
 .space,
 .work,
-.space-font {
+.space-font,
+.monospace {
     color: white;
+}
+
+.monospace {
+    font-family: Consolas, 'sans-serif';
+    color: #bbbbbb;
+    /*background-color: #1f1f1f;*/
+    background-color: #1a1a1a;
 }
 
 .work {
@@ -29,9 +37,7 @@ body {
 }
 
 .sub-title {
-    font-size: 25px;
     opacity: 0.8;
-    margin-top: 40px;
 }
 
 .console-menu {

@@ -15,8 +15,16 @@ body {
 .text,
 .space,
 .work,
-.space-font {
+.space-font,
+.monospace {
     color: white;
+}
+
+.monospace {
+    font-family: Consolas, 'sans-serif';
+    color: #bbbbbb;
+    /*background-color: #1f1f1f;*/
+    background-color: #1a1a1a;
 }
 
 .work {
@@ -26,6 +34,10 @@ body {
 .space, .space-font, .sidebar-item {
     font-family: 'Space Mono', monospace;
 
+}
+
+.sub-title {
+    opacity: 0.8;
 }
 
 .console-menu {
@@ -78,8 +90,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: fixed;
-    /*margin-top: 500px;*/
     transition: width 400ms, height 400ms, left 400ms;
+    opacity: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
 }
 
 .sidebar-item {
