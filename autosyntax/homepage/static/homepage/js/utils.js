@@ -6,16 +6,24 @@ function by_class(name) {
     return document.getElementsByClassName(name);
 }
 
-function on_call(element, event, fn) {
-    if (typeof element === "string") {
-        let ret_element = by_id(element);
+function scroll(target) {
 
-        ret_element.addEventListener(event, fn);
-        return ret_element;
+}
+
+function element_or_by_id(element) {
+    if (typeof element === "string") {
+        return by_id(element);
     }
     else {
-        element.addEventListener(event, fn)
+        return element;
     }
+}
+
+function on_call(element, event, fn) {
+    let ret = element_or_by_id(element);
+    ret.addEventListener(event, fn);
+    return ret;
+
 }
 
 function set_style_to_collection(collection, att, val) {
@@ -41,21 +49,8 @@ function set_style(element, att, val) {
     }
 
     let new_element;
-
-    if (typeof element === "string") {
-        new_element = by_id(element);
-    }
-    else {
-        new_element = element;
-    }
-    // let before = new_element.style[att];
-    // new_element.style[att] = new_val;
-    // if (before === new_element.style[att]) {
-    //     new_element.style[att] = new_val + "px";
-    // }
-    // else {
-    //     new_element.style[att] = new_val + "px";
-    // }
+    new_element = element_or_by_id(element);
+  
 
     new_element.style[att] = new_val + "px";
 

@@ -11,6 +11,7 @@ function on_resize() {
     let dyn_works = true;
     let dyn_sidebar = true;
     let dyn_space = true;
+    let dyn_go_up = true;
     resize_body_left();
     resize_body_right();
     resize_pad_body();
@@ -18,6 +19,21 @@ function on_resize() {
     resize_console_menu();
     resize_space();
     resize_sidebar();
+    resize_go_up();
+
+    function resize_go_up() {
+        if (w < 1300 && w > 1050) {
+            set_style("go_up", "marginLeft", Math.pow(w, 0.6));
+        }
+        else if (w <= 1050) {
+            set_style("go_up", "marginLeft", Math.pow(w, 0.5));
+        }
+        else {
+            set_style("go_up", "marginLeft", w / 10);
+            // set_style("go_up", "marginLeft", Math.pow(w, 0.8));
+            // console.log('go up: ', Math.pow(w, 0.8))
+        }
+    }
 
     function resize_console_menu() {
         if (w < 700 && w > 550) {

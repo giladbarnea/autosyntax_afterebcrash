@@ -1,5 +1,20 @@
-window.addEventListener("resize", on_resize);
+on_call(window, "resize", on_resize);
+on_call(window, "scroll", display_totop_button);
+let is_go_up_visible = false;
 on_resize();
+
+function display_totop_button() {
+    if (window.scrollY > 200 && !is_go_up_visible) {
+        is_go_up_visible = true;
+        increase_opacity(by_id("go_up"), 0.7);
+        console.log("showing go up");
+    }
+    else if (window.scrollY <= 200 && is_go_up_visible) {
+        is_go_up_visible = false;
+        decrease_opacity(by_id("go_up"), 0);
+        console.log("hiding go up");
+    }
+}
 
 function on_resize() {
     let w = window.screen.availWidth;
@@ -15,26 +30,32 @@ function on_resize() {
     resize_body_right();
     resize_pad_body();
     resize_work();
-    resize_console_menu();
+    resize_nav_buttons();
     resize_space();
     resize_sidebar();
 
-    function resize_console_menu() {
+    // display_totop_button();
+
+
+    function resize_nav_buttons() {
         if (w < 700 && w > 550) {
             dyn_console_menu = true;
             set_style("console_menu", "height", w / 24);
             set_style("continue_arrow", "height", w / 14.4);
+            set_style("go_up", "height", w / 14.4);
 
         }
         else if (w <= 550) {
             dyn_console_menu = true;
             set_style("console_menu", "height", w / 20);
             set_style("continue_arrow", "height", w / 12);
+            set_style("go_up", "height", w / 12);
         }
         else if (dyn_console_menu) {
             dyn_console_menu = false;
             set_style("console_menu", "height", 30);
             set_style("continue_arrow", "height", 50);
+            set_style("go_up", "height", 50);
         }
     }
 
@@ -57,7 +78,7 @@ function on_resize() {
         if (w <= 500) {
             dyn_body_right = true;
             set_style(document.body, "marginRight", w / 10);
-            console.log('body margin right: ', w / 10);
+            // console.log('body margin right: ', w / 10);
         }
         else if (dyn_body_right) {
             dyn_body_right = false;

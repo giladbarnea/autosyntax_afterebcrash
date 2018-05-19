@@ -22,6 +22,7 @@ body {
 .work {
     font-family: 'Work Sans', sans-serif;
 }
+
 .space, .space-reg, .sidebar-item {
     font-family: 'Space Mono', monospace;
 
@@ -73,6 +74,14 @@ body {
     transition: width 400ms, height 400ms, left 400ms;
 }
 
+.go-up {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    /*margin-top: 500px;*/
+    transition: width 400ms, height 400ms, left 400ms;
+}
+
 .sidebar-item {
     background-color: #111111;
     border: #111111;
@@ -90,13 +99,18 @@ body {
     display: inline-grid;
 }
 
-.item0 {
+.grid_0 {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.item1 {
+.grid_1 {
     grid-column-start: 2;
     grid-column-end: 3;
+}
+
+.grid_2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 

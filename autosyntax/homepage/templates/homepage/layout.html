@@ -7,48 +7,62 @@
 <link rel="stylesheet" type="text/css"
       href="{% static 'homepage/css/proportions.css' %}"/>
 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-{#<div style="color:white" id="width_flag">hi</div>#}
-<div class="grid-container">
-    <div class="grid-item item0">
-        <img src="{% static '/homepage/img/console_menu_trans.svg' %}"
-             alt="hi"
-             height="30px"
-             width="30px"
-             id="console_menu"
-             class="console-menu"
-        />
-        <div class="space-reg sidebar" id="sidebar">
-            {% for item in sidebar_items %}
-                <button type="button" class="sidebar-item" id="sidebar_item_{{ forloop.counter }}">
-                    {{ item }}
-                </button><br><br>
-            {% endfor %}
+<div id="all" style="opacity: 0">
+    <div class="grid-container">
+        <div class="grid-item grid_0">
+            <img src="{% static '/homepage/img/console_menu_trans.svg' %}"
+                 alt="hi"
+                 height="30px"
+                 width="30px"
+                 id="console_menu"
+                 class="console-menu"
+            />
+            <div class="space-reg sidebar" id="sidebar">
+                {% for item in sidebar_items %}
+                    <button type="button" class="sidebar-item" id="sidebar_item_{{ forloop.counter }}">
+                        {{ item }}
+                    </button><br><br>
+                {% endfor %}
+            </div>
         </div>
-    </div>
-
-    <div class="grid-item item1">
-        <div style="opacity: 0" id="pad_body" class="pad-body">
-
-            {% block landing %}
-            {% endblock %}<br>
+        {# end grid_0#}
+        <div class="grid-item grid_1">
+            <div
+                    {#                    style="opacity: 0" #}
+                    id="pad_body" class="pad-body">
+                {% block landing %}
+                {% endblock %}<br>
+            </div>
         </div>
+        {# end grid_1#}
+
     </div>
+    {#end grid-container#}
+
+
+    <img src="{% static '/homepage/img/continue_new_trans.svg' %}"
+         alt="hi"
+         height="80px"
+         width="80px"
+         id="continue_arrow"
+         class="continue-arrow"
+    />
+    {#    <img src="{% static '/homepage/img/go_up_internet.svg' %}"#}
+    {#         alt="hi"#}
+    {#         height="80px"#}
+    {#         width="80px"#}
+    {#         id="go_up"#}
+    {#         class="go-up"#}
+    {#    />#}
+    <svg id="go_up" class="go-up">
+        <text x="0" y="20" fill="white">TOP</text>
+    </svg>
 </div>
-
-
-<img src="{% static '/homepage/img/continue_new_trans.svg' %}"
-     alt="hi"
-     height="80px"
-     width="80px"
-     id="continue_arrow"
-     class="continue-arrow"
-/>
-
+{#end all#}
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-{#<script src="{% static '/ts/landing.js' %}"></script>#}
 <script src="{% static 'homepage/js/utils.js' %}"></script>
-<script src="{% static 'homepage/js/responsiveness_manager.js' %}"></script>
+<script src="{% static 'homepage/js/responsiveness_mgr.js' %}"></script>
 <script src="{% static 'homepage/js/landing_fns.js' %}"></script>
 <script src="{% static 'homepage/js/layout.js' %}"></script>
