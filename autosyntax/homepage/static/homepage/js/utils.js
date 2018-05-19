@@ -10,53 +10,76 @@ function scroll(target) {
 
 }
 
-function element_or_by_id(element) {
-    if (typeof element === "string") {
-        return by_id(element);
-    }
-    else {
+function element_or_by_fn(element, fn) {
+    if (typeof element === "string")
+        return fn(element);
+
+    else
         return element;
-    }
+
 }
 
+
 function on_call(element, event, fn) {
-    let ret = element_or_by_id(element);
+    let ret = element_or_by_fn(element, by_id);
     ret.addEventListener(event, fn);
     return ret;
 
 }
 
 function set_style_to_collection(collection, att, val) {
-    let new_collection;
-    if (typeof collection === "string") {
-        new_collection = by_class(collection);
-    }
-    else {
-        new_collection = collection;
-    }
-    for (let i = 0; i < new_collection.length; i++) {
+    let new_collection = element_or_by_fn(collection, by_class);
+
+    for (let i = 0; i < new_collection.length; i++)
         set_style(new_collection[i], att, val);
-    }
+
+}
+
+function number_to_string(val) {
+    if (typeof val === "number")
+        return val.toString();
+
+    else
+        return val;
 }
 
 function set_style(element, att, val) {
-    let new_val;
-    if (typeof val === "number") {
-        new_val = val.toString();
-    }
-    else {
-        new_val = val;
-    }
-
-    let new_element;
-    new_element = element_or_by_id(element);
-  
-
-    new_element.style[att] = new_val + "px";
+    element_or_by_fn(element, by_id)
+        .style[att] = number_to_string(val) + "px";
 
 }
 
-function increase_opacity(element, limit) {
+function fade_opacity(element, limit, factor = 1, up = true) {
+    function _fade_opacity() {
+        let current_opacity = element.style.opacity;
+
+        if (current_opacity === "")
+            current_opacity = 0;
+
+        let direction = up ? 1 : -1;
+        let condition;
+        if (up) {
+            condition = () => new_opacity >= limit - 0.04;
+        }
+        else {
+            condition = () => new_opacity <= limit + 0.04;
+        }
+        let new_opacity = parseFloat(current_opacity) + (direction * 0.07);
+        // if (new_opacity >= limit - 0.04) {
+        if (condition) {
+            element.style.opacity = limit;
+            clearInterval(timer);
+        }
+        else {
+            element.style.opacity = new_opacity.toString();
+        }
+    }
+
+    let timer = setInterval(_fade_opacity, 20 * factor);
+}
+
+function increase_opacity(element, limit, factor = 1) {
+
     function _increase_opacity() {
         let current_opacity = element.style.opacity;
 
@@ -64,7 +87,7 @@ function increase_opacity(element, limit) {
             current_opacity = 0;
 
 
-        let new_opacity = parseFloat(current_opacity) + 0.07;
+        let new_opacity = parseFloat(current_opacity) + (0.07);
         if (new_opacity >= limit - 0.04) {
             element.style.opacity = limit;
             clearInterval(timer);
@@ -74,11 +97,11 @@ function increase_opacity(element, limit) {
         }
     }
 
-    let timer = setInterval(_increase_opacity, 20);
+    let timer = setInterval(_increase_opacity, 20 * factor);
 
 }
 
-function decrease_opacity(element, limit) {
+function decrease_opacity(element, limit, factor = 1) {
 
     function _decrease_opacity() {
         let current_opacity = element.style.opacity;
@@ -96,6 +119,6 @@ function decrease_opacity(element, limit) {
         }
     }
 
-    let timer = setInterval(_decrease_opacity, 20);
+    let timer = setInterval(_decrease_opacity, 20 * factor);
 
 }
