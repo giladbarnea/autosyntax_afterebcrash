@@ -11,11 +11,12 @@ function scroll(target) {
 }
 
 function element_or_by_fn(element, fn) {
-    if (typeof element === "string")
-        return fn(element);
-
-    else
-        return element;
+    return typeof element === "string"?fn(element):element;
+    // if (typeof element === "string")
+    //     return fn(element);
+    //
+    // else
+    //     return element;
 
 }
 
@@ -36,11 +37,12 @@ function set_style_to_collection(collection, att, val) {
 }
 
 function number_to_string(val) {
-    if (typeof val === "number")
-        return val.toString();
-
-    else
-        return val;
+    return typeof val === "number" ? val.toString() : val;
+    // if (typeof val === "number")
+    //     return val.toString();
+    //
+    // else
+    //     return val;
 }
 
 function set_style(element, att, val) {
@@ -57,19 +59,24 @@ function fade_opacity(element, limit, factor = 1, up = true) {
             current_opacity = 0;
 
         let direction = up ? 1 : -1;
-        let condition;
         let new_opacity = parseFloat(current_opacity) + (direction * 0.07);
-        if (up) {
-            condition = () => {
-                return new_opacity >= limit - 0.04
-            };
-        }
-        else {
-            condition = () => {
-                return new_opacity <= limit + 0.04
-            };
-        }
-        // debugger;
+        let condition = up ? () => {
+            return new_opacity >= limit - 0.04
+        } : () => {
+            return new_opacity <= limit + 0.04
+        };
+
+        // if (up) {
+        //     condition = () => {
+        //         return new_opacity >= limit - 0.04
+        //     };
+        // }
+        // else {
+        //     condition = () => {
+        //         return new_opacity <= limit + 0.04
+        //     };
+        // }
+
         if (condition()) {
             element.style.opacity = limit;
             clearInterval(timer);
