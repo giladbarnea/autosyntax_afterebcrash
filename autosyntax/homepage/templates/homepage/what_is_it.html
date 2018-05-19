@@ -1,4 +1,5 @@
 {% extends 'homepage/landing.html' %}
+{% load staticfiles %}
 {% block what_is_it %}
     <div id="what_is_it_content">
         <div class="space title">
@@ -13,28 +14,37 @@
         <div class="space-font sub-title">For example:</div>
         <div class="monospace">list milk eggs coffee nutella</div>
         <div class="space-font sub-title">becomes ></div>
-        <div class="monospace">['milk', 'eggs', 'coffee', 'nutella']</div>
+        <img class="code-ex-1-line"
+             src="{% static '/homepage/img/code_ex/list milk eggs coffee nutella_orig.png' %}"
+        />
+        {#        <div class="monospace">['milk', 'eggs', 'coffee', 'nutella']</div>#}
         <br>
         <br>
         <br>
         <div class="space-font sub-title">similarily,</div>
         <div class="monospace">dict meaning 42 happy pizza</div>
         <div class="space-font sub-title">></div>
-        <div class="monospace">{'meaning': 42, 'happy', 'pizza'}</div>
+        {#        <div class="monospace">{'meaning': 42, 'happy', 'pizza'}</div>#}
+        <img class="code-ex-1-line"
+             src="{% static '/homepage/img/code_ex/dict_orig.png' %}"
+        />
         <br>
         <br>
         <br>
         <div class="space-font sub-title">autosyntax can also do more complicated stuff, like:</div>
         <div class="monospace">class Dog Animal init fluffy True</div>
         <div class="space-font sub-title">></div>
-        <div class="monospace">
-            class Dog(Animal):
-            <br>
-            &emsp;
-            def __init__(fluffy=True):
-            <br>
-            &emsp;&emsp;super().__init__()
-        </div>
+        {#        <div class="monospace">#}
+        {#            class Dog(Animal):#}
+        {#            <br>#}
+        {#            &emsp;#}
+        {#            def __init__(fluffy=True):#}
+        {#            <br>#}
+        {#            &emsp;&emsp;super().__init__()#}
+        {#        </div>#}
+        <img class="code-ex-mult-line"
+             src="{% static '/homepage/img/code_ex/class.png' %}"
+        />
 
     </div>
 {% endblock %}
