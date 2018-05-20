@@ -3,6 +3,11 @@ body {
     margin: 50px 60px 60px;
 }
 
+.code-line {
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
 /*font-size: 25px*/
 .sub-title,
 .monospace,

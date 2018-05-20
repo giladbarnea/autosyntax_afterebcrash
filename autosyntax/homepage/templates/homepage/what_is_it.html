@@ -61,24 +61,34 @@
         <div class="space-font sub-title">turns into ></div>
         <div class="code-block" style="font-size:0;margin-top: 20px;
 	padding-left: 40px;">
+            {#			<span class="code-line">#}
             <span class="kept">class</span>
-            <span class="code-literal">&nbsp;Dog(Animal):</span><br>
-
-            <span class="kept">&emsp;&emsp;def</span>
+            <span class="code-literal">&nbsp;Dog(Animal):</span>
+            <span style="font-size:31px">
+				<br>&emsp;&emsp;
+			</span>
+            <span class="kept">def</span>
             <span class="magic">&nbsp;__init__</span>
             <span class="code-literal">&nbsp;(</span>
             <span class="self">self</span>
             <span class="kept">,</span>
             <span class="code-literal">&nbsp;fluffy=</span>
             <span class="kept">True</span>
-            <span class="code-literal">):<br>&emsp;&emsp;&emsp;&emsp;</span>
+            <span class="code-literal">):
+				<span style="font-size:31px">
+				<br>&emsp;&emsp;&emsp;&emsp;
+				</span>
+				</span>
             <span class="self">self</span>
-            <span class="code-literal">.fluffy = fluffy<br>&emsp;&emsp;&emsp;&emsp;</span>
-
+            <span class="code-literal">.fluffy = fluffy
+				<span style="font-size:31px">
+				<br>&emsp;&emsp;&emsp;&emsp;</span>
+			</span>
             <span class="super">super</span>
             <span class="code-literal">().</span>
             <span class="magic">__init__</span>
             <span class="code-literal">()</span>
+            {#			</span>#}
         </div>
         {#        <img class="code-ex-3-line"#}
         {#             src="{% static '/homepage/img/code_ex/class.png' %}"#}

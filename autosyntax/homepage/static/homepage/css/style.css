@@ -31,13 +31,7 @@ body {
 }
 
 .monospace-bg, .monospace,
-.code-block,
-.str,
-.int,
-.kept,
-.magic,
-.self,
-.super {
+.code-block {
     background-color: #1a1a1a;
 }
 
