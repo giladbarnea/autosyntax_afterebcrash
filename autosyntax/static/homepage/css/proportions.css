@@ -15,11 +15,12 @@ body {
 .monospace {
     font-size: 25px;
     margin-top: 20px;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 .code-ex-1-line,
-.code-ex-mult-line {
+.code-ex-2-line,
+.code-ex-3-line {
     margin-top: 20px;
     padding-left: 30px;
 }
@@ -27,12 +28,33 @@ body {
 .code-ex-1-line {
     max-height: 25px;
 }
+
 .code-ex-2-line {
     max-height: 65px;
 }
 
 .code-ex-3-line {
     max-height: 105px;
+}
+
+.easter-egg {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 15%;
+    left: 90%;
+    width: 70px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+    background-color: #111111;
+    color: white;
+    border-color: white;
+    font-size: 20px;
+}
+
+.easter-egg:hover {
+    opacity: 0.5;
 }
 
 .go-up {

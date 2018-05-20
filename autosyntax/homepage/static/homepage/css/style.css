@@ -15,24 +15,27 @@ body {
 .text,
 .space,
 .work,
-.space-font,
-.monospace {
+.space-font {
     color: white;
+
 }
 
-.monospace-bg, .monospace {
+.code-literal {
+    font-family: monospace;
+}
+
+.monospace-bg, .monospace,
+.code-literal {
     background-color: #1a1a1a;
 }
 
 .monospace {
     font-family: Consolas, 'sans-serif';
-    /*color: #bbbbbb;*/
-    opacity: 0.8;
-    /*background-color: #1f1f1f;*/
-
+    color: #cfcfcf;
 }
 
-.work {
+.work,
+.go-up {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -41,12 +44,11 @@ body {
 
 }
 
-.sub-title {
-    /*opacity: 0.8;*/
-    color: #bbbbbb;
-}
-
-.console-menu {
+/*position: fixed*/
+.console-menu,
+.continue-arrow,
+.go-up,
+.sidebar-item {
     position: fixed;
 }
 
@@ -85,28 +87,59 @@ body {
 }
 
 .continue-arrow {
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    position: fixed;
     transition: width 400ms, height 400ms, left 800ms;
+}
+
+/*opacity 0*/
+.go-up,
+.sidebar-item {
+    opacity: 0;
 }
 
 .go-up {
     margin-left: auto;
     margin-right: auto;
-    position: fixed;
     transition: width 400ms, height 400ms, left 400ms;
-    opacity: 0;
-    font-family: 'Work Sans', sans-serif;
 
+}
+
+.code-literal {
+    /*color: #a9b7c6;*/
+    color: #C4D5E6;
+}
+
+.str {
+    color: #708F5D
+}
+
+.int {
+    color: #79B2DE
+}
+
+.kept {
+    color: #EE8B36
+}
+
+.magic {
+    color: #B903B9
+}
+
+.self {
+    color: #9E5E97
+}
+
+.super {
+    color: #8B8BCC;
+}
+
+.sub-title,
+.sidebar-item {
+    color: #bbbbbb;
 }
 
 .sidebar-item {
     background-color: #111111;
     border: #111111;
-    color: #bbbbbb;
-    opacity: 0;
-    position: fixed;
     transition: font-size 500ms, color 500ms;
 }
 

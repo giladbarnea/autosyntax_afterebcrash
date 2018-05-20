@@ -1,5 +1,11 @@
 on_call(window, "resize", on_resize);
-on_call(window, "scroll", display_totop_button);
+on_call(window, "scroll",
+    () => {
+        display_totop_button();
+        let sidebar_items = by_class("sidebar-item");
+        for (let i = 0; i < sidebar_items.length; i++)
+            increase_opacity(sidebar_items[i], 1, factor = 1);
+    });
 let is_go_up_visible = false;
 on_resize();
 
@@ -8,7 +14,6 @@ function display_totop_button() {
         is_go_up_visible = true;
         increase_opacity(by_id("go_up"), 0.7, factor = 1);
         set_style("continue_arrow", "left", "10%");
-        debugger;
         decrease_opacity(by_id("continue_arrow"), 0.7, factor = 0.05);
     }
     else if (window.scrollY <= 200 && is_go_up_visible) {

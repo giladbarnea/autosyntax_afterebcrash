@@ -9,36 +9,76 @@
 
         <div style="padding-left: 40px" class="work">
             <span class="turquoise">autosyntax</span>
-            turns simple words into to code.
+            turns simple words into python code.
         </div>
+        <br>
+        <br>
         <div class="space-font sub-title">For example:</div>
-        <div class="monospace">list milk eggs coffee nutella</div>
+        <div class="monospace">list milk eggs nutella</div>
         <div class="space-font sub-title">becomes ></div>
-        <img class="code-ex-1-line"
-             src="{% static '/homepage/img/code_ex/list milk eggs coffee nutella_orig.png' %}"
-        />
+        <div class="code-literal">
+            [
+            <span class="str">'milk'</span>
+            <span class="kept">,</span>
+            <span class="str">'eggs'</span>
+            <span class="kept">,</span>
+            <span class="str">'nutella'</span>
+            ]
+        </div>
         <br>
         <br>
         <br>
         <div class="space-font sub-title">similarily,</div>
         <div class="monospace">dict meaning 42 happy pizza</div>
-        <div class="space-font sub-title">></div>
-        {#        <div class="monospace">{'meaning': 42, 'happy', 'pizza'}</div>#}
-        <img class="code-ex-1-line"
-             src="{% static '/homepage/img/code_ex/dict_orig.png' %}"
-        />
+        <div class="space-font sub-title">becomes ></div>
+        <div class="code-literal"> {
+            <span class="str">'meaning'</span>
+            :
+            <span class="int"> 42</span>
+            <span class="kept">,</span>
+            :
+            <span class="str">'happiness'</span>
+            :
+            <span class="str">'pizza'</span>
+            }
+        </div>
+        {#        <img class="code-ex-1-line"#}
+        {#             src="{% static '/homepage/img/code_ex/dict_orig.png' %}"#}
+        {#        />#}
         <br>
         <br>
         <br>
-        <div class="space-font sub-title">autosyntax can also do more complicated stuff, like:</div>
-
-
+        <br>
+        <br>
+        <br>
+        <br>
+        {#        <div class="space-font sub-title">autosyntax can also do more complicated stuff, like:</div>#}
+        <div class="work">
+            It can also do more complicated stuff, like:
+        </div>
+        <br>
         <div class="monospace">class Dog Animal init fluffy True</div>
-        <div class="space-font sub-title">></div>
+        <div class="space-font sub-title">turns into ></div>
+        <div class="code-literal" style="font-size:0">
+            <span class="kept">class</span>
+            Dog(Animal):<br>&emsp;&emsp;
+            <span class="kept">def</span>
+            <span class="magic">__init__</span>
+            (
+            <span class="self">self</span>
 
-        <img class="code-ex-3-line"
-             src="{% static '/homepage/img/code_ex/class.png' %}"
-        />
+            <span class="kept">,</span>
+            <span>fluffy=</span>
+            <span class="kept">True</span>
+            ):<br>&emsp;&emsp;&emsp;&emsp;
+            <span class="super">super</span>
+            ().
+            <span class="magic">__init__</span>
+            ()
+        </div>
+        {#        <img class="code-ex-3-line"#}
+        {#             src="{% static '/homepage/img/code_ex/class.png' %}"#}
+        {#        />#}
         <br>
         <div class="space-font sub-title">check out the inheritance, the default
             <span class="monospace-bg" style="font-style: italic">fluffy</span>
@@ -51,14 +91,17 @@
         <br>
         <br>
         <br>
-        <div class="work">
+        <br>
+        <br>
+        <br>
+        <div style="padding-left: 40px" class="work">
             it needs only
             <span class="turquoise">1</span>
             global hotkey to do everything,<br>
             but it's also flexible.
         </div>
         <div class="space-font sub-title">Variables:</div>
-        <div class="monospace">some_words = tuple foo bar .baz</div>
+        <div class="monospace">words = tuple foo bar .baz</div>
         <div class="space-font sub-title">></div>
         <img
                 class="code-ex-3-line"
@@ -73,6 +116,9 @@
                 class="code-ex-1-line"
                 src="{% static '/homepage/img/code_ex/for.png' %}"
         />
+        <a class="easter-egg"
+           href="/homepage/templates/homepage/talia.html">
+            you found me!</a>
 
     </div>
 {% endblock %}

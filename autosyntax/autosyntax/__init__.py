@@ -1,5 +1,5 @@
 #
-# j=['milk', 'eggs', 'coffee', 'nutella']
+j=['milk', 'eggs', 'coffee', 'nutella']
 # i = {'meaning': 42, 'happy': 'pizza'}
 #
 # class Dog(Animal):
