@@ -31,8 +31,12 @@
         <br>
         <br>
         <div class="space-font sub-title">similarily,</div>
-        <div class="monospace">dict meaning 42 happy pizza</div>
-        <div class="space-font sub-title">becomes ></div>
+        <div class="monospace">dict meaning 42 happy pizza
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            >
+        </div>
+        {#        <div class="space-font sub-title">becomes ></div>#}
         <div class="code-block">
             <span class="code-literal"> {</span>
             <span class="str">'meaning'</span>
@@ -52,10 +56,10 @@
         <br>
         <br>
         <div class="work">
-            It can also do more complicated stuff,<br> like handling classes:
+            It can also do more complicated stuff,<br> like classes:
         </div>
         <br>
-        <div class="monospace">class Dog Animal init fluffy True</div>
+        <div class="monospace">class Dog Animal init fluffy True args</div>
         <div class="space-font sub-title">turns into ></div>
 
 
@@ -73,7 +77,9 @@
             <span class="kept">,</span>
             <span class="code-literal">&nbsp;fluffy=</span>
             <span class="kept">True</span>
-            <span class="code-literal">):</span>
+            <span class="kept">, </span>
+            <span class="code-literal">*args):</span>
+            {#            <span class="code-literal">):</span>#}
             <span class="code-break">
 							<br>&emsp;&emsp;&emsp;&emsp;
 							</span>
@@ -91,13 +97,17 @@
         </div>
     </div>
     <br>
-    <div class="space-font sub-title">check out the inheritance, the
-        <span class="monospace-bg italic">__init__</span> declaration and arguments,
-        the automatic
-        <span class="monospace-bg italic">self.fluffy</span> datamember creation,
-        <span class="monospace-bg italic">super()</span>
-        etc.
+    <div class="space-font sub-title">A LOT of annoying typing was saved.<br>
+        Including all the non ABC characters.<br>
+
     </div>
+    {#    <div class="space-font sub-title">check out the inheritance, the#}
+    {#        <span class="monospace-bg italic">__init__</span> declaration and arguments,#}
+    {#        the automatic#}
+    {#        <span class="monospace-bg italic">self.fluffy</span> datamember creation,#}
+    {#        <span class="monospace-bg italic">super()</span>#}
+    {#        etc.#}
+    {#    </div>#}
     <br>
     <br>
     <br>
@@ -117,29 +127,33 @@
         <br>Given:
     </div>
     <div class="code-block">
-        <span class="code-literal">buzz = </span>
-        <span class="str">'lightyear'</span>
+        <span class="code-literal">trait = </span>
+        <span class="str">'lazy'</span>
     </div>
     <div class="space-font sub-title">then</div>
-    <div class="monospace f-size-0"
-    >
-        <span class="code-literal">words = tuple foo bar </span>
+    <div class="monospace f-size-0">
+        <span class="code-literal">desc = str I am </span>
         <span class="code-literal" style="color: #29ffdb">.</span>
-        <span class="code-literal">buzz</span>
+        <span class="code-literal">trait
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		>
+			</span>
     </div>
-    <div class="space-font sub-title">will generate ></div>
+    {#    <div class="space-font sub-title">will generate ></div>#}
 
     <div class="code-block">
-        <span class="code-literal">words = (</span>
-        <span class="str">'foo'</span>
-        <span class="kept">, </span>
-        <span class="str">'bar'</span>
-        <span class="kept">, </span>
-        <span class="code-literal">buzz)</span>
+        <span class="code-literal">desc = </span>
+        <span class="str">f'I am {</span>
+        <span class="code-literal">trait</span>
+        <span class="str">}'</span>
     </div>
     <div class="space-font sub-title">thanks to the
         <span class="monospace-bg italic">.</span>
-        preceding "buzz".
+        preceding "buzz".<br>
+        Did you like that f-string?
+        <span class="turquoise">autosyntax</span>
+        does this only when needed.
     </div>
     <br><br><br>
 
@@ -147,19 +161,88 @@
     <div class="space-font sub-title">
         <span class="white">Inline methods:</span>
     </div>
-    <div class="monospace">for range numbers</div>
-    <div class="space-font sub-title">becomes ></div>
+    <div class="monospace">for range max numbers
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        >
+    </div>
 
     <div class="code-block">
         <span class="kept">for </span>
         <span class="code-literal">number </span>
         <span class="kept">in </span>
-        <span class="super">range </span>
-        <span class="code-literal">(numbers):</span>
+        <span class="super">range</span>
+        <span class="code-literal">(</span>
+        <span class="super">max</span>
+        <span class="code-literal">(</span>
+        <span class="code-literal">numbers)):</span>
+        {#        <span class="code-break">#}
+        {#			<br>&emsp;</span>#}
+        {#        <span class="code-literal dark-grey">|</span>#}
+    </div>
+    <br><br><br>
+    <div class="space-font sub-title">
+        <span class="white">List comprehensions:</span>
+    </div>
+    <div class="monospace">listcomp print letters
+        &emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        >
+    </div>
+
+    <div class="code-block">
+        <span class="code-literal">[</span>
+        <span class="super">print</span>
+        <span class="code-literal">(letter) </span>
+        <span class="kept">for </span>
+        <span class="code-literal">letter </span>
+        <span class="kept">in </span>
+        <span class="code-literal">letters]</span>
+        {#        <span class="code-break">#}
+        {#			<br>&emsp;</span>#}
+        {#        <span class="code-literal dark-grey">|</span>#}
+    </div>
+
+
+    <br><br><br>
+
+
+    <div class="space-font sub-title">
+        <span class="white">Typing:</span>
+    </div>
+    <div class="monospace">def is_easy bool autosyntax str kwargs
+        &emsp;&emsp;&emsp;&emsp;
+        >
+    </div>
+    {#    <div class="space-font sub-title">translates to ></div>#}
+
+    <div class="code-block">
+        <span class="kept">def </span>
+        <span class="code-literal">is_easy(autosyntax</span>
+        <span class="kept">, </span>
+        <span class="code-literal">**kwargs):</span>
+        <span class="kept">, </span>
+        <span class="code-break">
+			<br>&emsp;</span>
+        <span class="doc bold">"""</span>
+        <span class="code-break">
+			<br>&emsp;</span>
+        <span class="doc bold">:type </span>
+        <span class="str">autosyntax: str </span>
+        <span class="code-break">
+			<br>&emsp;</span>
+        <span class="doc bold">:rtype: </span>
+        <span class="str">bool</span>
+        <span class="code-break">
+			<br>&emsp;</span>
+        <span class="doc bold">"""</span>
         <span class="code-break">
 			<br>&emsp;</span>
         <span class="code-literal dark-grey">|</span>
     </div>
+
     <a class="easter-egg"
        href="/homepage/templates/homepage/talia.html">
         you found me!</a>

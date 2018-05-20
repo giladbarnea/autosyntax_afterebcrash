@@ -27,14 +27,14 @@ body {
 .kept,
 .magic,
 .self,
-.super {
+.super,
+.doc{
     font-family: monospace;
 }
 
-.bolder {
+.bold {
     font-weight: bolder;
 }
-
 .monospace-bg, .monospace,
 .code-block {
     background-color: #1a1a1a;
@@ -141,6 +141,10 @@ body {
 
 .super {
     color: #8B8BCC;
+}
+
+.doc {
+    color: #699F5B
 }
 
 .sub-title,
