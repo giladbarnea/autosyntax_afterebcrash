@@ -4,29 +4,71 @@ on_event_do(window, "scroll",
     () => {
         display_totop_button();
         show_console_menu();
+        continue_arrow_handler();
     });
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
 
-on_event_do("continue_arrow", "click", () => scroll_to(by_id("what_is_it_content")));
 on_event_do("go_up", "click", () => scroll_to(document.body));
 
+let download_content_orig_top = get_rect("download_content").top;
+let whatisit_content_orig_top = get_rect("what_is_it_content").top;
+let user_currently_viewing = {
+    'landing': true,
+    'whatisit': false,
+    'download': false
+};
 
 let is_cons_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
 on_event_do("console_menu", "click", hide_console_menu);
-on_event_do("sidebar_item_1", "click", () => scroll_to(by_id("what_is_it_content")));
 
-set_download_links();
+on_event_do("sidebar_item_1", "click",
+    () => scroll_to(by_id("what_is_it_content")));
 
-function set_download_links() {
-    let download_links = by_class("download-link");
-    for (let i = 0; i < download_links.length; i++) {
-        on_event_do(download_links[i], "click", () => scroll_to(by_id("download_content")));
+on_event_do("sidebar_item_2", "click",
+    () => scroll_to(by_id("download_content")));
+on_event_do_to_collection("download-link", "click",
+    () => scroll_to(by_id("download_content")));
+
+on_event_do("continue_arrow", "click",
+    () => scroll_to(by_id("what_is_it_content")));
+
+function continue_arrow_handler() {
+    function _set_all_viewing_false_but(key) {
+		
+        for (let k in user_currently_viewing)
+            user_currently_viewing[k] = k === key;
     }
+
+    if (!user_currently_viewing['whatisit'] &&
+        user_below(whatisit_content_orig_top)) {
+
+        _set_all_viewing_false_but('whatisit');
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(by_id("download_content")));
+    }
+    // above whatisit
+    else if (!user_currently_viewing["download"] &&
+        user_below(download_content_orig_top)) {
+
+        _set_all_viewing_false_but('download');
+        // FUTURE: TO WHO AM I
+    }
+    else if (!user_currently_viewing["landing"] &&
+        !user_below(whatisit_content_orig_top)) {
+
+        debugger;
+        _set_all_viewing_false_but('landing');
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(by_id("what_is_it_content")));
+    }
+
+
 }
 
 function display_totop_button() {
+
     if (window.scrollY > 200 && !is_go_up_visible) {
         is_go_up_visible = true;
         increase_opacity(by_id("go_up"), 0.7, factor = 1);

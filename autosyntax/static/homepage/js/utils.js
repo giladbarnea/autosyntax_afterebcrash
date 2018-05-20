@@ -23,12 +23,27 @@ function element_or_by_fn(element, fn) {
 
 }
 
+function on_event_do_to_collection(collection, event, fn) {
+    let new_collection = element_or_by_fn(collection, by_class);
+    for (let i = 0; i < new_collection.length; i++)
+        on_event_do(new_collection[i], event, fn);
+}
 
 function on_event_do(element, event, fn) {
     let ret = element_or_by_fn(element, by_id);
     ret.addEventListener(event, fn);
     return ret;
 
+}
+
+function get_rect(element) {
+    return element_or_by_fn(element, by_id)
+        .getBoundingClientRect();
+
+}
+
+function user_below(threshold) {
+    return window.scrollY + 600 > threshold;
 }
 
 function set_style_to_collection(collection, att, val) {
@@ -38,22 +53,22 @@ function set_style_to_collection(collection, att, val) {
 
 }
 
-
-function number_to_string(val) {
-    return typeof val === "number" ? val.toString() : val;
-    // if (typeof val === "number")
-    //     return val.toString();
-    //
-    // else
-    //     return val;
-}
-
 function set_style(element, att, val) {
     let new_val = typeof val === "number" ? val.toString() + "px" : val;
     element_or_by_fn(element, by_id)
         .style[att] = new_val;
 
 }
+
+// function number_to_string(val) {
+//     return typeof val === "number" ? val.toString() : val;
+//     // if (typeof val === "number")
+//     //     return val.toString();
+//     //
+//     // else
+//     //     return val;
+// }
+
 
 function fade_opacity(element, limit, factor, up) {
     function _fade_opacity() {

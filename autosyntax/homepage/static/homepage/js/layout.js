@@ -15,11 +15,9 @@ let download_content_orig_top = get_rect("download_content").top;
 let whatisit_content_orig_top = get_rect("what_is_it_content").top;
 let user_currently_viewing = {
     'landing': true,
-    'whatisit': false, 'download': false
+    'whatisit': false,
+    'download': false
 };
-// let user_currently_viewing_download = false;
-// let user_currently_viewing_whatisit = false;
-// let user_currently_viewing_landing = true;
 
 let is_cons_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
@@ -37,27 +35,31 @@ on_event_do("continue_arrow", "click",
     () => scroll_to(by_id("what_is_it_content")));
 
 function continue_arrow_handler() {
-    function _set_all_user_viewing_states_false_but(key) {
+    function _set_all_viewing_false_but(key) {
+
         for (let k in user_currently_viewing)
             user_currently_viewing[k] = k === key;
     }
 
     if (!user_currently_viewing['whatisit'] &&
         user_below(whatisit_content_orig_top)) {
-        _set_all_user_viewing_states_false_but('whatisit');
+
+        _set_all_viewing_false_but('whatisit');
         on_event_do("continue_arrow", "click",
             () => scroll_to(by_id("download_content")));
     }
     // above whatisit
     else if (!user_currently_viewing["download"] &&
         user_below(download_content_orig_top)) {
-        _set_all_user_viewing_states_false_but('download');
+
+        _set_all_viewing_false_but('download');
         // FUTURE: TO WHO AM I
     }
     else if (!user_currently_viewing["landing"] &&
         !user_below(whatisit_content_orig_top)) {
+
         debugger;
-        _set_all_user_viewing_states_false_but('landing');
+        _set_all_viewing_false_but('landing');
         on_event_do("continue_arrow", "click",
             () => scroll_to(by_id("what_is_it_content")));
     }
