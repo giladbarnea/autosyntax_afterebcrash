@@ -59,22 +59,26 @@
         <br>
         <div class="monospace">class Dog Animal init fluffy True</div>
         <div class="space-font sub-title">turns into ></div>
-        <div class="code-literal" style="font-size:0">
+        <div class="code-block" style="font-size:0;margin-top: 20px;
+	padding-left: 40px;">
             <span class="kept">class</span>
-            Dog(Animal):<br>&emsp;&emsp;
-            <span class="kept">def</span>
-            <span class="magic">__init__</span>
-            (
-            <span class="self">self</span>
+            <span class="code-literal">&nbsp;Dog(Animal):</span><br>
 
+            <span class="kept">&emsp;&emsp;def</span>
+            <span class="magic">&nbsp;__init__</span>
+            <span class="code-literal">&nbsp;(</span>
+            <span class="self">self</span>
             <span class="kept">,</span>
-            <span>fluffy=</span>
+            <span class="code-literal">&nbsp;fluffy=</span>
             <span class="kept">True</span>
-            ):<br>&emsp;&emsp;&emsp;&emsp;
+            <span class="code-literal">):<br>&emsp;&emsp;&emsp;&emsp;</span>
+            <span class="self">self</span>
+            <span class="code-literal">.fluffy = fluffy<br>&emsp;&emsp;&emsp;&emsp;</span>
+
             <span class="super">super</span>
-            ().
+            <span class="code-literal">().</span>
             <span class="magic">__init__</span>
-            ()
+            <span class="code-literal">()</span>
         </div>
         {#        <img class="code-ex-3-line"#}
         {#             src="{% static '/homepage/img/code_ex/class.png' %}"#}

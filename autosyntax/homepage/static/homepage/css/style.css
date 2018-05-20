@@ -20,12 +20,24 @@ body {
 
 }
 
-.code-literal {
+.code-literal,
+.str,
+.int,
+.kept,
+.magic,
+.self,
+.super {
     font-family: monospace;
 }
 
 .monospace-bg, .monospace,
-.code-literal {
+.code-block,
+.str,
+.int,
+.kept,
+.magic,
+.self,
+.super {
     background-color: #1a1a1a;
 }
 
