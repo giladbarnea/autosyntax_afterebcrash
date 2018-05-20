@@ -11,19 +11,20 @@
             <span class="turquoise">autosyntax</span>
             turns simple words into python code.
         </div>
+
+
         <br>
         <br>
         <div class="space-font sub-title">For example:</div>
         <div class="monospace">list milk eggs nutella</div>
         <div class="space-font sub-title">becomes ></div>
-        <div class="code-literal">
-            [
+        <div class="code-block"><span class="code-literal">[</span>
             <span class="str">'milk'</span>
-            <span class="kept">,</span>
+            <span class="kept">,&nbsp;</span>
             <span class="str">'eggs'</span>
-            <span class="kept">,</span>
+            <span class="kept">,&nbsp;</span>
             <span class="str">'nutella'</span>
-            ]
+            <span class="code-literal">            ]</span>
         </div>
         <br>
         <br>
@@ -31,16 +32,18 @@
         <div class="space-font sub-title">similarily,</div>
         <div class="monospace">dict meaning 42 happy pizza</div>
         <div class="space-font sub-title">becomes ></div>
-        <div class="code-literal"> {
-            <span class="str">'meaning'</span>
-            :
-            <span class="int"> 42</span>
-            <span class="kept">,</span>
-            :
-            <span class="str">'happiness'</span>
-            :
-            <span class="str">'pizza'</span>
-            }
+        <div class="code-block">
+            <div class="code-literal"> {
+                <span class="str">'meaning'</span>
+                :
+                <span class="int"> 42</span>
+                <span class="kept">,</span>
+                :
+                <span class="str">'happiness'</span>
+                :
+                <span class="str">'pizza'</span>
+                }
+            </div>
         </div>
         <br>
         <br>
@@ -56,12 +59,13 @@
         <div class="monospace">class Dog Animal init fluffy True</div>
         <div class="space-font sub-title">turns into ></div>
 
+
         <div class="code-block">
             <span class="kept">class</span>
             <span class="code-literal">&nbsp;Dog(Animal):</span>
             <span class="code-break">
-				<br>&emsp;&emsp;
-			</span>
+							<br>&emsp;&emsp;
+						</span>
 
             <span class="kept">def</span>
             <span class="magic">&nbsp;__init__</span>
@@ -72,8 +76,8 @@
             <span class="kept">True</span>
             <span class="code-literal">):</span>
             <span class="code-break">
-				<br>&emsp;&emsp;&emsp;&emsp;
-				</span>
+							<br>&emsp;&emsp;&emsp;&emsp;
+							</span>
 
             <span class="self">self</span>
             <span class="code-literal">.fluffy = fluffy</span>
@@ -85,50 +89,69 @@
             <span class="code-literal">().</span>
             <span class="magic">__init__</span>
             <span class="code-literal">()</span>
-            {#            <span class="code-break">#}
-            {#				<br>&emsp;&emsp;&emsp;&emsp;#}
-            {#			</span>#}
         </div>
-        <br>
-        <div class="space-font sub-title">check out the inheritance, the default
-            <span class="monospace-bg italic">fluffy</span>
-            value, the automatic
-            <span class="monospace-bg italic">self</span>,
-            <span class="monospace-bg italic">super()</span>
-            etc.
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="work indented">
-            it needs only
-            <span class="turquoise">1</span>
-            global hotkey to do everything,<br>
-            but it's also flexible.
-        </div>
-        <div class="space-font sub-title">Variables:</div>
-        <div class="monospace">words = tuple foo bar .baz</div>
-        <div class="space-font sub-title">></div>
-        <img
-                class="code-ex-3-line"
-                style="max-height: 65px"
-                src="{% static '/homepage/img/code_ex/tuple_variables.png' %}"
-        />
-        <br><br><br>
-        <div class="space-font sub-title">Cool use of inline methods:</div>
-        <div class="monospace">for len range numbers</div>
-        <div class="space-font sub-title">></div>
-        <img
-                class="code-ex-1-line"
-                src="{% static '/homepage/img/code_ex/for.png' %}"
-        />
-        <a class="easter-egg"
-           href="/homepage/templates/homepage/talia.html">
-            you found me!</a>
+    </div>
+    <br>
+    <div class="space-font sub-title">check out the inheritance, the
+        <span class="monospace-bg italic">__init__</span> declaration and arguments,
+        the automatic
+        <span class="monospace-bg italic">self.fluffy</span> datamember creation,
+        <span class="monospace-bg italic">super()</span>
+        etc.
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="work indented">
+        it needs only
+        <span class="turquoise">1</span>
+        global hotkey to do everything,<br>
+        but it's also flexible.
+    </div>
+    <br>
+    <div class="space-font sub-title">Variables.
+        <br>Say you have the following parameter:
+    </div>
+    <div class="code-block">
+        <span class="code-literal">buzz = </span>
+        <span class="str">'lightyear'</span>
+    </div>
+    <div class="space-font sub-title">then</div>
+    <div class="monospace f-size-0"
+    >
+        <span class="code-literal">words = tuple foo bar </span>
+        <span class="code-literal" style="color: #29ffdb">.</span>
+        <span class="code-literal">buzz</span>
+    </div>
+    <div class="space-font sub-title">will generate ></div>
+
+    <div class="code-block">
+        <span class="code-literal">words = (</span>
+        <span class="str">'foo'</span>
+        <span class="kept">, </span>
+        <span class="str">'bar'</span>
+        <span class="kept">, </span>
+        <span class="code-literal">buzz)</span>
+    </div>
+    <div class="space-font sub-title">thanks to the
+        <span class="monospace-bg italic">.</span>
+        preceding "buzz".
+    </div>
+    <br><br><br>
+    <div class="space-font sub-title">Cool use of inline methods:</div>
+    <div class="monospace">for len range numbers</div>
+    <div class="space-font sub-title">></div>
+    <img
+            class="code-ex-1-line"
+            src="{% static '/homepage/img/code_ex/for.png' %}"
+    />
+    <a class="easter-egg"
+       href="/homepage/templates/homepage/talia.html">
+        you found me!</a>
 
     </div>
 {% endblock %}
