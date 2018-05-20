@@ -1,4 +1,4 @@
-on_call(window, "resize", on_resize);
+on_event_do(window, "resize", on_resize);
 
 let is_go_up_visible = false;
 on_resize();

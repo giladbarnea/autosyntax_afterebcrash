@@ -6,7 +6,7 @@ function by_class(name) {
     return document.getElementsByClassName(name);
 }
 
-function scroll(target) {
+function scroll_to(target) {
     target.scrollIntoView({
         behavior: "smooth",
         block: "start", inline: "nearest"
@@ -24,7 +24,7 @@ function element_or_by_fn(element, fn) {
 }
 
 
-function on_call(element, event, fn) {
+function on_event_do(element, event, fn) {
     let ret = element_or_by_fn(element, by_id);
     ret.addEventListener(event, fn);
     return ret;

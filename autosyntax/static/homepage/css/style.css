@@ -28,13 +28,14 @@ body {
 .magic,
 .self,
 .super,
-.doc{
+.doc {
     font-family: monospace;
 }
 
 .bold {
     font-weight: bolder;
 }
+
 .monospace-bg, .monospace,
 .code-block {
     background-color: #1a1a1a;
@@ -105,6 +106,19 @@ body {
 .go-up,
 .sidebar-item {
     opacity: 0;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+.download-link:hover,
+.go-up,
+.continue-arrow,
+.console-menu,
+.sidebar-item {
+    cursor: pointer;
+
 }
 
 .go-up {

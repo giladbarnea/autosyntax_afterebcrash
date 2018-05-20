@@ -34,7 +34,7 @@ body {
 
 /*margin-right: 300px*/
 .sub-title,
-.monospace,
+.m-right-300,
 .code-block {
     margin-right: 300px;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .sidebar-item:hover {
-    font-size: 23.5px;
+    font-size: 24px;
 }
 
 .continue-arrow {

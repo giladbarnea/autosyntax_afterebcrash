@@ -108,6 +108,19 @@ body {
     opacity: 0;
 }
 
+.download-link:hover {
+    text-decoration: underline;
+}
+
+.download-link:hover,
+.go-up,
+.continue-arrow,
+.console-menu,
+.sidebar-item {
+    cursor: pointer;
+
+}
+
 .go-up {
     margin-left: auto;
     margin-right: auto;
