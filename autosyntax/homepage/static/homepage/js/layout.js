@@ -1,5 +1,5 @@
-set_style("whatisit_block", "paddingTop", window.screen.availHeight);
-set_style("download_block", "paddingTop", window.screen.availHeight);
+set_style("whatisit_block", "paddingTop", window.screen.availHeight / 1.5);
+set_style("download_block", "paddingTop", window.screen.availHeight / 1.5);
 on_event_do(window, "scroll",
     () => {
         display_totop_button();

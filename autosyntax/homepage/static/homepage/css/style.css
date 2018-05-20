@@ -121,6 +121,10 @@ body {
 
 }
 
+.no-decor {
+    text-decoration: none;
+}
+
 .go-up {
     margin-left: auto;
     margin-right: auto;
