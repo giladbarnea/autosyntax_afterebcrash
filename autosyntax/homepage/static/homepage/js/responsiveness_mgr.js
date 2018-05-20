@@ -4,7 +4,6 @@ let is_go_up_visible = false;
 on_resize();
 
 
-
 function on_resize() {
     let w = window.screen.availWidth;
     console.log(w);

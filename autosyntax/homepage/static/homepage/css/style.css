@@ -28,13 +28,14 @@ body {
 .magic,
 .self,
 .super,
-.doc{
+.doc {
     font-family: monospace;
 }
 
 .bold {
     font-weight: bolder;
 }
+
 .monospace-bg, .monospace,
 .code-block {
     background-color: #1a1a1a;
