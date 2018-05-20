@@ -77,13 +77,9 @@ def index(request):
 	# 		return self.name + hi
 
 	context = {
-		'sidebar_items': ['What is it?', 'Download', 'Who am I?'],
-		# 'range':         rng,
-		# 'str':           str,
-		# 'what':          What(),
-		# 'something':     something
+		'sidebar_items': ['What is it?', 'Download', 'Who am I?', 'Features'],
 		}
-	return render(request, 'homepage/what_is_it.html', context)
+	return render(request, 'homepage/download.html', context)
 
 
 # return HttpResponse(template.render)

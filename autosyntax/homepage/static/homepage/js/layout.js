@@ -8,6 +8,7 @@ increase_opacity(by_id("all"), 1, factor = 0.5);
 
 
 on_call("continue_arrow", "click", () => scroll(by_id("what_is_it_content")));
+on_call("whatisit_andmore", "click", () => scroll(by_id("what_is_it_content")));
 on_call("go_up", "click", () => scroll(document.body));
 
 let is_cons_menu_vis = false;
