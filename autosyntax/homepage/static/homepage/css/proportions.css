@@ -34,14 +34,23 @@ body {
     margin-right: 300px;
 }
 
+.code-block {
+    font-size: 0;
+}
+
 .sub-title {
     margin-top: 25px;
 
 }
 
-.monospace {
+.monospace,
+.code-block {
     margin-top: 20px;
     padding-left: 40px;
+}
+
+.code-break {
+    font-size: 32px;
 }
 
 .go-up {
