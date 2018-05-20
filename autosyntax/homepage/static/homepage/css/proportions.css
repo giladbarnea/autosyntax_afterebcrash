@@ -8,6 +8,10 @@ body {
     margin-top: 100px;
 }
 
+.work {
+    font-size: 30px;
+}
+
 /*font-size: 25px*/
 .sub-title,
 .monospace,
@@ -46,6 +50,11 @@ body {
 .monospace,
 .code-block {
     margin-top: 20px;
+}
+
+.monospace,
+.code-block,
+.indented {
     padding-left: 40px;
 }
 
