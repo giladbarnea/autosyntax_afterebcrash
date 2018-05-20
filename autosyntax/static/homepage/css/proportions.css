@@ -38,7 +38,8 @@ body {
     margin-right: 300px;
 }
 
-.code-block {
+.code-block,
+.f-size-0 {
     font-size: 0;
 }
 

@@ -18,7 +18,8 @@
         <div class="space-font sub-title">For example:</div>
         <div class="monospace">list milk eggs nutella</div>
         <div class="space-font sub-title">becomes ></div>
-        <div class="code-block"><span class="code-literal">[</span>
+        <div class="code-block">
+            <span class="code-literal">[</span>
             <span class="str">'milk'</span>
             <span class="kept">,&nbsp;</span>
             <span class="str">'eggs'</span>
@@ -33,17 +34,15 @@
         <div class="monospace">dict meaning 42 happy pizza</div>
         <div class="space-font sub-title">becomes ></div>
         <div class="code-block">
-            <div class="code-literal"> {
-                <span class="str">'meaning'</span>
-                :
-                <span class="int"> 42</span>
-                <span class="kept">,</span>
-                :
-                <span class="str">'happiness'</span>
-                :
-                <span class="str">'pizza'</span>
-                }
-            </div>
+            <span class="code-literal"> {</span>
+            <span class="str">'meaning'</span>
+            <span class="code-literal">: </span>
+            <span class="int">42</span>
+            <span class="kept">, </span>
+            <span class="str">'happiness'</span>
+            <span class="code-literal">: </span>
+            <span class="str">'pizza'</span>
+            <span class="code-literal">}</span>
         </div>
         <br>
         <br>
@@ -53,7 +52,7 @@
         <br>
         <br>
         <div class="work">
-            It can also do more complicated stuff, like:
+            It can also do more complicated stuff,<br> like handling classes:
         </div>
         <br>
         <div class="monospace">class Dog Animal init fluffy True</div>
@@ -113,8 +112,9 @@
         but it's also flexible.
     </div>
     <br>
-    <div class="space-font sub-title">Variables.
-        <br>Say you have the following parameter:
+    <div class="space-font sub-title">
+        <span class="white">Variables.</span>
+        <br>Given:
     </div>
     <div class="code-block">
         <span class="code-literal">buzz = </span>
@@ -142,16 +142,26 @@
         preceding "buzz".
     </div>
     <br><br><br>
-    <div class="space-font sub-title">Cool use of inline methods:</div>
-    <div class="monospace">for len range numbers</div>
-    <div class="space-font sub-title">></div>
-    <img
-            class="code-ex-1-line"
-            src="{% static '/homepage/img/code_ex/for.png' %}"
-    />
+
+
+    <div class="space-font sub-title">
+        <span class="white">Inline methods:</span>
+    </div>
+    <div class="monospace">for range numbers</div>
+    <div class="space-font sub-title">becomes ></div>
+
+    <div class="code-block">
+        <span class="kept">for </span>
+        <span class="code-literal">number </span>
+        <span class="kept">in </span>
+        <span class="super">range </span>
+        <span class="code-literal">(numbers):</span>
+        <span class="code-break">
+			<br>&emsp;</span>
+        <span class="code-literal dark-grey">|</span>
+    </div>
     <a class="easter-egg"
        href="/homepage/templates/homepage/talia.html">
         you found me!</a>
 
-    </div>
 {% endblock %}
