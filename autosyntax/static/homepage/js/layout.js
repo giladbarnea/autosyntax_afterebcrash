@@ -1,5 +1,5 @@
-set_style("whatisit_block", "paddingTop", window.screen.availHeight);
-set_style("download_block", "paddingTop", window.screen.availHeight);
+set_style("whatisit_block", "paddingTop", window.screen.availHeight / 1.5);
+set_style("download_block", "paddingTop", window.screen.availHeight / 1.5);
 on_event_do(window, "scroll",
     () => {
         display_totop_button();
@@ -36,7 +36,7 @@ on_event_do("continue_arrow", "click",
 
 function continue_arrow_handler() {
     function _set_all_viewing_false_but(key) {
-		
+
         for (let k in user_currently_viewing)
             user_currently_viewing[k] = k === key;
     }
