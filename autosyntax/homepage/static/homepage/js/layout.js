@@ -5,7 +5,7 @@ on_call(window, "scroll",
         show_console_menu();
     });
 increase_opacity(by_id("all"), 1, factor = 0.5);
-place_tabs_before_arrows_in_whatisit();
+
 
 on_call("continue_arrow", "click", () => scroll(by_id("what_is_it_content")));
 on_call("go_up", "click", () => scroll(document.body));
@@ -15,50 +15,6 @@ on_call("console_menu", "mouseover", show_console_menu);
 on_call("console_menu", "click", hide_console_menu);
 on_call("sidebar_item_1", "click", () => scroll(by_id("what_is_it_content")));
 
-function place_tabs_before_arrows_in_whatisit() {
-    let tabs_16 = by_class("tabs-16");
-    for (let i = 0; i < tabs_16.length; i++) {
-        for (let j = 0; j < 16; j++)
-            tabs_16[i].innerHTML += "&emsp;";
-        tabs_16[i].innerHTML += ">";
-    }
-    let tabs_15 = by_class("tabs-15");
-    for (let i = 0; i < tabs_15.length; i++) {
-        for (let j = 0; j < 15; j++)
-            tabs_15[i].innerHTML += "&emsp;";
-        tabs_15[i].innerHTML += ">";
-    }
-    let tabs_17 = by_class("tabs-17");
-    for (let i = 0; i < tabs_17.length; i++) {
-        for (let j = 0; j < 17; j++)
-            tabs_17[i].innerHTML += "&emsp;";
-        tabs_17[i].innerHTML += ">";
-    }
-    let tabs_5 = by_class("tabs-5");
-    for (let i = 0; i < tabs_5.length; i++) {
-        for (let j = 0; j < 5; j++)
-            tabs_5[i].innerHTML += "&emsp;";
-        tabs_5[i].innerHTML += ">";
-    }
-    let tabs_21 = by_class("tabs-21");
-    for (let i = 0; i < tabs_21.length; i++) {
-        for (let j = 0; j < 21; j++)
-            tabs_21[i].innerHTML += "&emsp;";
-        tabs_21[i].innerHTML += ">";
-    }
-    let tabs_22 = by_class("tabs-22");
-    for (let i = 0; i < tabs_22.length; i++) {
-        for (let j = 0; j < 22; j++)
-            tabs_22[i].innerHTML += "&emsp;";
-        tabs_22[i].innerHTML += ">";
-    }
-    let tabs_19 = by_class("tabs-19");
-    for (let i = 0; i < tabs_19.length; i++) {
-        for (let j = 0; j < 19; j++)
-            tabs_19[i].innerHTML += "&emsp;";
-        tabs_19[i].innerHTML += ">";
-    }
-}
 
 function display_totop_button() {
     if (window.scrollY > 200 && !is_go_up_visible) {
