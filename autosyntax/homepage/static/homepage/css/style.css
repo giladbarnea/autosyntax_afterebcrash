@@ -172,3 +172,7 @@ body {
     grid-column-end: 4;
 }
 
+.continue-arrow {
+    position: fixed;
+    transition: width 400ms, height 400ms, left 800ms;
+}

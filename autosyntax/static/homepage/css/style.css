@@ -93,6 +93,12 @@ body {
 }
 
 .continue-arrow {
+<<<<<<< HEAD
+=======
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    position: fixed;
+>>>>>>> parent of 3e816ab... good2
     transition: width 400ms, height 400ms, left 800ms;
 }
 
