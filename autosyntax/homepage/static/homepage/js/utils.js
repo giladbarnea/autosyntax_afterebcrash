@@ -36,6 +36,12 @@ function on_event_do(element, event, fn) {
 
 }
 
+function get_rect(element) {
+    return element_or_by_fn(element, by_id)
+        .getBoundingClientRect();
+
+}
+
 function set_style_to_collection(collection, att, val) {
     let new_collection = element_or_by_fn(collection, by_class);
     for (let i = 0; i < new_collection.length; i++)

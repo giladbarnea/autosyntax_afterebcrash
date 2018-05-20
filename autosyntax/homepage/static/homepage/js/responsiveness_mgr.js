@@ -21,8 +21,8 @@ function on_resize() {
     resize_nav_buttons();
     resize_space();
     resize_sidebar();
-
     place_tabs_before_arrows_in_whatisit();
+
 
     function place_tabs_before_arrows_in_whatisit() {
         function _place_tabs(class_num, tabs_num) {
