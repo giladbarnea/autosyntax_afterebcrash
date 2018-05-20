@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block what_is_it %}
     <div id="what_is_it_content">
-        <div class="space title">
+        <div class="space p-top-20">
             What is it?<br>
         </div>
         <br>
@@ -55,12 +55,14 @@
         <br>
         <div class="monospace">class Dog Animal init fluffy True</div>
         <div class="space-font sub-title">turns into ></div>
+
         <div class="code-block">
             <span class="kept">class</span>
             <span class="code-literal">&nbsp;Dog(Animal):</span>
             <span class="code-break">
 				<br>&emsp;&emsp;
 			</span>
+
             <span class="kept">def</span>
             <span class="magic">&nbsp;__init__</span>
             <span class="code-literal">&nbsp;(</span>
@@ -68,20 +70,24 @@
             <span class="kept">,</span>
             <span class="code-literal">&nbsp;fluffy=</span>
             <span class="kept">True</span>
-            <span class="code-literal">):
-				<span class="code-break">
+            <span class="code-literal">):</span>
+            <span class="code-break">
 				<br>&emsp;&emsp;&emsp;&emsp;
 				</span>
-				</span>
+
             <span class="self">self</span>
-            <span class="code-literal">.fluffy = fluffy
-				<span class="code-break">
-				<br>&emsp;&emsp;&emsp;&emsp;</span>
+            <span class="code-literal">.fluffy = fluffy</span>
+            <span class="code-break">
+				<br>&emsp;&emsp;&emsp;&emsp;
 			</span>
+
             <span class="super">super</span>
             <span class="code-literal">().</span>
             <span class="magic">__init__</span>
             <span class="code-literal">()</span>
+            {#            <span class="code-break">#}
+            {#				<br>&emsp;&emsp;&emsp;&emsp;#}
+            {#			</span>#}
         </div>
         <br>
         <div class="space-font sub-title">check out the inheritance, the default

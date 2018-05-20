@@ -19,7 +19,8 @@
             />
             <div class="space-font sidebar" id="sidebar">
                 {% for item in sidebar_items %}
-                    <button type="button" class="sidebar-item" id="sidebar_item_{{ forloop.counter }}">
+                    <button type="button" class="sidebar-item"
+                            id="sidebar_item_{{ forloop.counter }}">
                         {{ item }}
                     </button><br><br>
                 {% endfor %}
