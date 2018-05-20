@@ -1,9 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
-# from django.template.loader import get_template, render_to_string
-from django.template import loader
-from jinja2 import Template
 from django import template
 
 
@@ -67,25 +63,25 @@ def index(request):
 	# template = Template(real_html)
 	# real_html.render()
 
-	register = template.Library()
-
-	@register.simple_tag
-	def something(p1):
-		return p1 + '!!!!'
-
-	class What:
-		def __init__(self):
-			self.name = "what!!!"
-
-		def p(self, hi):
-			return self.name + hi
+	# register = template.Library()
+	#
+	# @register.simple_tag
+	# def something(p1):
+	# 	return p1 + '!!!!'
+	#
+	# class What:
+	# 	def __init__(self):
+	# 		self.name = "what!!!"
+	#
+	# 	def p(self, hi):
+	# 		return self.name + hi
 
 	context = {
 		'sidebar_items': ['What is it?', 'Download', 'Who am I?'],
 		# 'range':         rng,
 		# 'str':           str,
-		'what':          What(),
-		'something':     something
+		# 'what':          What(),
+		# 'something':     something
 		}
 	return render(request, 'homepage/what_is_it.html', context)
 

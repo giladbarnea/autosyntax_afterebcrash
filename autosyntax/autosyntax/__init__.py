@@ -18,5 +18,5 @@
 # 	hi="hi"
 # letters = ""
 # printed = [print(letter) for letter in letters]
-w='s'
-hi = f'{w} you'
+# w='s'
+# hi = f'{w} you'

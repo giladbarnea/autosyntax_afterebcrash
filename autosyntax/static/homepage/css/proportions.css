@@ -22,7 +22,8 @@ body {
 .kept,
 .magic,
 .self,
-.super {
+.super,
+.doc {
     font-size: 25px;
 }
 
