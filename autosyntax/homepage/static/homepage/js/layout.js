@@ -10,8 +10,9 @@ increase_opacity(by_id("all"), 1, factor = 0.5);
 
 
 on_event_do("go_up", "click", () => scroll_to(document.body));
+
 let download_content_orig_top = get_rect("download_content").top;
-console.log('download_content_orig_top: ', download_content_orig_top);
+let whatisit_content_orig_top = get_rect("what_is_it_content").top;
 
 let is_cons_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
@@ -25,20 +26,21 @@ on_event_do("sidebar_item_2", "click",
 on_event_do_to_collection("download-link", "click",
     () => scroll_to(by_id("download_content")));
 
+on_event_do("continue_arrow", "click",
+    () => scroll_to(by_id("what_is_it_content")));
 
 function continue_arrow_handler() {
-    let download_content_rect = get_rect("download_content");
-    console.log('scrollY: ', window.scrollY);
-    console.log('download_content_orig_top: ', download_content_orig_top);
-    console.log('bottom: ', download_content_rect.bottom);
-    console.log('top: ', download_content_rect.top);
-    console.log('download_content_orig_top - download_content_rect.bottom: ', download_content_orig_top - download_content_rect.bottom);
-    // if (window.scrollY - 100 < download_content_orig_top - download_content_rect.bottom) {
-    if (window.scrollY + 600 > download_content_orig_top) {
-        console.log('\n\n\t\t!!YESH!!\n\n')
+    if (user_below(whatisit_content_orig_top)) {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(by_id("download_content")));
     }
-    on_event_do("continue_arrow", "click",
-        () => scroll_to(by_id("what_is_it_content")));
+    // above whatisit
+    else {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(by_id("what_is_it_content")));
+    }
+
+
 }
 
 function display_totop_button() {
