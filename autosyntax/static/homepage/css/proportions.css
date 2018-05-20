@@ -3,38 +3,74 @@ body {
     margin: 50px 60px 60px;
 }
 
+.code-line {
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+/*font-size: 25px*/
+.sub-title,
+.monospace,
+.go-up,
+.code-literal,
+.str,
+.int,
+.kept,
+.magic,
+.self,
+.super {
+    font-size: 25px;
+}
+
+/*padding-top: 20px*/
 .title {
     padding-top: 20px;
 }
 
-.sub-title {
-    font-size: 25px;
-    margin-top: 25px;
+/*margin-right: 300px*/
+.sub-title,
+.monospace,
+.code-block {
+    margin-right: 300px;
 }
 
-.monospace {
-    font-size: 25px;
+.code-block {
+    font-size: 0;
+}
+
+.sub-title {
+    margin-top: 25px;
+
+}
+
+.monospace,
+.code-block {
     margin-top: 20px;
     padding-left: 40px;
 }
 
-.code-ex-1-line,
-.code-ex-2-line,
-.code-ex-3-line {
-    margin-top: 20px;
-    padding-left: 30px;
+.code-break {
+    font-size: 32px;
 }
 
-.code-ex-1-line {
-    max-height: 25px;
+.go-up {
+    bottom: 5%;
+    left: 90%;
+    width: 50px;
 }
 
-.code-ex-2-line {
-    max-height: 65px;
+.sidebar {
+    padding-left: 20px;
+    padding-top: 70px;
 }
 
-.code-ex-3-line {
-    max-height: 105px;
+.sidebar-item {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.sidebar-item:hover {
+    font-size: 23.5px;
 }
 
 .easter-egg {
@@ -57,109 +93,88 @@ body {
     opacity: 0.5;
 }
 
-.go-up {
-    font-size: 25px;
-    bottom: 5%;
-    left: 90%;
-    width: 50px;
-}
+/*@media screen and (min-height: 658px) {*/
+/*.space {*/
+/*font-size: 60px;*/
+/*}*/
 
-.sidebar {
-    padding-left: 20px;
-    padding-top: 70px;
-}
+/*.continue-arrow {*/
+/*bottom: 10%;*/
+/*height: 60px;*/
+/*left: 50%;*/
+/*width: 60px;*/
+/*}*/
 
-.sidebar-item {
-    font-size: 23px;
-    margin-bottom: 10px;
-}
+/*#continue_arrow:hover {*/
+/*height: 63px;*/
+/*left: 49.8%;*/
+/*width: 63px;*/
+/*}*/
 
-.sidebar-item:hover {
-    font-size: 23.5px;
-}
+/*.work {*/
+/*font-size: 30px;*/
+/*}*/
 
-@media screen and (min-height: 658px) {
-    .space {
-        font-size: 60px;
-    }
+/*.height:after {*/
+/*content: 'h658';*/
+/*}*/
+/*}*/
 
-    .continue-arrow {
-        bottom: 10%;
-        height: 60px;
-        left: 50%;
-        width: 60px;
-    }
+/*@media screen and (max-height: 658px)*/
+/*and (min-height: 600px) {*/
+/*.space {*/
+/*font-size: 55px;*/
+/*}*/
 
-    #continue_arrow:hover {
-        height: 63px;
-        left: 49.8%;
-        width: 63px;
-    }
+/*.continue-arrow {*/
+/*bottom: 6%;*/
+/*height: 55px;*/
+/*left: 50%;*/
+/*width: 55px;*/
+/*}*/
 
-    .work {
-        font-size: 30px;
-    }
+/*#continue_arrow:hover {*/
+/*height: 58px;*/
+/*left: 49.8%;*/
+/*width: 58px;*/
+/*}*/
 
-    .height:after {
-        content: 'h658';
-    }
-}
+/*.work {*/
+/*font-size: 27.5px;*/
+/*}*/
 
-@media screen and (max-height: 658px)
-and (min-height: 600px) {
-    .space {
-        font-size: 55px;
-    }
+/*.height:after {*/
+/*content: 'h600';*/
+/*}*/
+/*}*/
 
-    .continue-arrow {
-        bottom: 6%;
-        height: 55px;
-        left: 50%;
-        width: 55px;
-    }
+/*@media screen and (max-height: 600px)*/
+/*and (min-height: 0px) {*/
+/*.space {*/
+/*font-size: 50px;*/
+/*}*/
 
-    #continue_arrow:hover {
-        height: 58px;
-        left: 49.8%;
-        width: 58px;
-    }
+/*.continue-arrow {*/
+/*bottom: 5%;*/
+/*height: 50px;*/
+/*left: 50%;*/
+/*width: 50px;*/
+/*}*/
 
-    .work {
-        font-size: 27.5px;
-    }
+/*#continue_arrow:hover {*/
+/*height: 55px;*/
+/*left: 49.8%;*/
+/*width: 55px;*/
+/*}*/
 
-    .height:after {
-        content: 'h600';
-    }
-}
+/*.work {*/
+/*font-size: 25px;*/
+/*}*/
 
-@media screen and (max-height: 600px)
-and (min-height: 0px) {
-    .space {
-        font-size: 50px;
-    }
-
-    .continue-arrow {
-        bottom: 5%;
-        height: 50px;
-        left: 50%;
-        width: 50px;
-    }
-
-    #continue_arrow:hover {
-        height: 55px;
-        left: 49.8%;
-        width: 55px;
-    }
-
-    .work {
-        font-size: 25px;
-    }
-
-    .height:after {
-        content: 'h0';
-    }
-}
+/*.height:after {*/
+/*content: 'h0';*/
+/*}*/
+/*}*/
 
 /*@media screen and (min-width: 1300px) {*/
 /*!*.pad-body {*!*/
