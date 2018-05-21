@@ -84,8 +84,25 @@ body {
     font-size: 24px;
 }
 
+.continue-arrow-lbl,
 .continue-arrow {
     bottom: 10%;
+}
+
+.continue-arrow-lbl {
+    left: 48.6%;
+    height: 90px;
+    opacity: 0;
+    font-size: 20px;
+    width: 120px;
+
+}
+
+/*.continue-arrow-lbl:after {*/
+/*content: "what is it";*/
+/*}*/
+
+.continue-arrow {
     height: 60px;
     left: 50%;
     width: 60px;

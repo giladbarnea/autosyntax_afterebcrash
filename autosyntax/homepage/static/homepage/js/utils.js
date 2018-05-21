@@ -7,7 +7,7 @@ function by_class(name) {
 }
 
 function scroll_to(target) {
-    target.scrollIntoView({
+    element_or_by_fn(target, by_id).scrollIntoView({
         behavior: "smooth",
         block: "start", inline: "nearest"
     });
