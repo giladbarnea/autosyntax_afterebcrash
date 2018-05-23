@@ -79,7 +79,7 @@ def index(request):
 	context = {
 		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I?'],
 		}
-	return render(request, 'homepage/howtouse.html', context)
+	return render(request, 'homepage/whoami.html', context)
 
 
 # return HttpResponse(template.render)

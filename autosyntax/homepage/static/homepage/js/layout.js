@@ -1,5 +1,6 @@
 set_style("whatisit_block", "paddingTop", window.screen.availHeight / 1.5);
 set_style("download_block", "paddingTop", window.screen.availHeight / 1.5);
+set_style("whoami_block", "paddingTop", window.screen.availHeight / 1.5);
 
 on_event_do(window, "scroll",
     () => {
@@ -14,14 +15,21 @@ let is_console_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
 on_event_do("console_menu", "click", hide_console_menu);
 
+// What is it?
 on_event_do("sidebar_item_1", "click",
     () => scroll_to("what_is_it_content"));
 
+// Download
 on_event_do("sidebar_item_2", "click",
     () => scroll_to("download_content"));
 
+// How to use
 on_event_do("sidebar_item_3", "click",
-    () => scroll_to("howotuse_content"));
+    () => scroll_to("howtouse_content"));
+
+// Who am I?
+on_event_do("sidebar_item_4", "click",
+    () => scroll_to("whoami_content"));
 
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));

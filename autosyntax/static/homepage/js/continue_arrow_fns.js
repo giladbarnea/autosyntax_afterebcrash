@@ -47,7 +47,7 @@ function continue_arrow_handler() {
     // && (!user_currently_viewing["download"])
     ) {
         on_event_do("continue_arrow", "click",
-            () => scroll_to("howotuse_content"));
+            () => scroll_to("howtouse_content"));
 
         by_id("continue_arrow_lbl").innerHTML = "How to use"
     }

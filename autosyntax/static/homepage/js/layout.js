@@ -21,7 +21,7 @@ on_event_do("sidebar_item_2", "click",
     () => scroll_to("download_content"));
 
 on_event_do("sidebar_item_3", "click",
-    () => scroll_to("howotuse_content"));
+    () => scroll_to("howtouse_content"));
 
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));

@@ -1,11 +1,12 @@
 {% extends 'homepage/download.html' %}
 {% load staticfiles %}
 {% block howtouse_block %}
-    <div id="howotuse_content">
+    <div id="howtouse_content">
         <div class="space p-top-20">
             How to use<br>
         </div>
         <br>
+        {#    G E N R A L  B E H A V I O U R#}
         <div class="work indented">
             <span class="turquoise">General</span>
             behaviour
@@ -27,6 +28,7 @@
 
         </div>
         <br><br>
+        {#    W I T H  B A S I C  O P E R A T O R S (anim 1-2)#}
         <div class="basic-text white">
             With the basic Operators, autosyntax converts words to strings, unless marked with a dot.
         </div>
@@ -66,19 +68,21 @@
             </div>
         </div>
         <br><br><br><br>
+        {#    W I T H  O T H E R  O P E R A T O R S#}
         <div class="basic-text white">
-            With other Operators, the default is to keep as-is, unless marked with a dot.
+            With other Operators, the default is to keep as-is, unless marked with a dot.<br><br>
+            These are cases where you'd most likely use a variable.
         </div>
         <br>
         <div class="basic-text f-size-23 m-right-200 indented">
-            A dot converts the word to a string:
+            dot >> string:
         </div>
-
+        {#    F O R  C H A R A C T E R S (anim 3-4)#}
         <div class="animation">
             <div id="animation_3">
                 <div class="monospace m-right-300">
                     <span>for .characters</span>
-                    <span class="op-05 m-left-150">
+                    <span class="op-05 m-left-136">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
                 </div>
@@ -92,7 +96,7 @@
             </div>
             <div id="animation_4" style="display: none">
                 <div class="monospace m-right-300">for characters
-                    <span class="op-05 m-left-136">
+                    <span class="op-05 m-left-150">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
                 </div>
@@ -101,6 +105,41 @@
                     <span class="code-literal">c </span>
                     <span class="kept">in </span>
                     <span class="code-literal">characters:</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        {#    D E F  F O O (anim 5-6)#}
+        <div class="basic-text f-size-23 m-right-200 indented">
+            dot >> default argument value:
+        </div>
+
+        <div class="animation">
+            <div id="animation_5">
+                <div class="monospace m-right-300">
+                    <span>def foo name .John</span>
+                    <span class="op-05 m-left-136">
+					PRESS TO TOGGLE EXAMPLE
+			</span>
+                </div>
+                <div class="code-block">
+                    <span class="kept">def </span>
+                    <span class="code-literal">foo(name=</span>
+                    <span class="str">'John'</span>
+                    <span class="code-literal">):</span>
+                </div>
+            </div>
+            <div id="animation_6" style="display: none">
+                <div class="monospace m-right-300">def foo name John
+                    <span class="op-05 m-left-150">
+					PRESS TO TOGGLE EXAMPLE
+			</span>
+                </div>
+                <div class="code-block">
+                    <span class="kept">def </span>
+                    <span class="code-literal">foo(name</span>
+                    <span class="kept">, </span>
+                    <span class="code-literal">John):</span>
                 </div>
             </div>
         </div>

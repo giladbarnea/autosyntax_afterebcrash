@@ -1,0 +1,27 @@
+{% extends 'homepage/howtouse.html' %}
+{% load staticfiles %}
+{% block whoami_block %}
+    <div id="whoami_content">
+        <div class="space p-top-20">
+            Who am I?<br>
+        </div>
+        <br>
+        <div class="work indented">
+            <span class="turquoise">Some</span>
+            title
+        </div>
+        <br>
+        <div class="basic-text white">
+            basic-text white<br>
+        </div>
+        <br>
+        <div class="basic-text f-size-23 m-right-200 indented">
+            basic text f-size-23
+        </div>
+
+        <div id="future_block">
+            {% block future_block %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
