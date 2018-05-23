@@ -101,8 +101,16 @@ body {
 /*opacity 0*/
 .go-up,
 .sidebar-item,
-.op-0{
+.op-0 {
     opacity: 0;
+}
+
+.op-05 {
+    opacity: 0.5;
+}
+
+.op-03 {
+    opacity: 0.3;
 }
 
 .download-link:hover {
