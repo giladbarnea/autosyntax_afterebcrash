@@ -1,4 +1,4 @@
-let continue_arrow_lbl_visible = false;
+// let continue_arrow_lbl_visible = false;
 by_id("continue_arrow_lbl").innerHTML = "What is it";
 let user_currently_viewing = {
     'landing': true,
@@ -11,19 +11,19 @@ on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
 function display_continue_arrow_lbl() {
-    if (!continue_arrow_lbl_visible) {
-        increase_opacity(by_id("continue_arrow_lbl"), 0.5, factor = 0.5);
-        continue_arrow_lbl_visible = true;
-    }
+    // if (!continue_arrow_lbl_visible) {
+    increase_opacity(by_id("continue_arrow_lbl"), 0.5, factor = 0.5);
+    // continue_arrow_lbl_visible = true;
+    // }
 }
 
 function hide_continue_arrow_lbl() {
-    if (continue_arrow_lbl_visible) {
-        setTimeout(() => {
-            decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1)
-        }, 700);
-        continue_arrow_lbl_visible = false;
-    }
+    // if (continue_arrow_lbl_visible) {
+    setTimeout(() => {
+        decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1)
+    }, 700);
+    // continue_arrow_lbl_visible = false;
+    // }
 }
 
 function continue_arrow_handler() {

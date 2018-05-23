@@ -1,5 +1,5 @@
 virtualenv venv
-location of console:
+location of EB console AND regular console:
 cd autosyntax_afterbcrash\autosyntax
 django-admin startproject autosyntax
 us-west-2

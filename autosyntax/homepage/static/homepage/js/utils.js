@@ -71,24 +71,30 @@ function set_style(element, att, val) {
 // }
 
 
-function fade_opacity(element, limit, factor, up) {
-    function _fade_opacity() {
-        let current_opacity = element.style.opacity;
+function fade_opacity(element, limit, factor, up, then = "") {
+    // element = element_or_by_fn(element, by_id);
 
-        if (current_opacity === "")
+    function _fade_opacity() {
+        let current_opacity = element.style["opacity"];
+
+        if (current_opacity === "") {
+            console.log('current_opacity === ""');
             current_opacity = 0;
+        }
 
         let direction = up ? 1 : -1;
         let new_opacity = parseFloat(current_opacity) + (direction * 0.07 * factor);
-        let condition = up ? () => {
-            return new_opacity >= limit - 0.04
-        } : () => {
-            return new_opacity <= limit + 0.04
-        };
+        let condition;
+        if (up)
+            condition = new_opacity >= limit - 0.04;
+        else
+            condition = new_opacity <= limit + 0.04;
 
-        if (condition()) {
+        if (condition) {
             element.style.opacity = limit;
             clearInterval(timer);
+            if (then !== "")
+                then();
         }
         else {
             element.style.opacity = new_opacity.toString();
@@ -108,4 +114,8 @@ function increase_opacity(element, limit, factor) {
 function decrease_opacity(element, limit, factor) {
     fade_opacity(element, limit, factor, false);
 
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

@@ -32,6 +32,13 @@ on_event_do("continue_arrow", "click",
         decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
     }
 );
+on_event_do("animation_1", "click",
+    () => {
+        fade_opacity(by_id("animation_1"), 0, 1.4, false, then = () => {
+            set_style("animation_1", "display", "none");
+            increase_opacity(by_id("animation_2"), 1, 1.4);
+        })
+    });
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
 

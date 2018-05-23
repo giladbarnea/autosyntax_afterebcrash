@@ -7,10 +7,56 @@
         </div>
         <br>
         <div class="work indented">
-            General behaviour
+            <span class="turquoise">General</span>
+            behaviour
         </div>
-        <div class="sub-title white">
-            autosyntax design is dictated by the following rules:
+        <br>
+        <div class="basic-text white">
+            autosyntax knows what to do based on "Operators".<br>
+        </div>
+        <br>
+        <div class="basic-text f-size-23 m-right-200 indented">
+            Operators are almost always built-in words from the python standard library,
+            to keep a 0 learning curve (e.g
+            <span class="monospace-bg italic">list</span>,
+            <span class="monospace-bg italic">def</span>,
+            <span class="monospace-bg italic">class</span> and so on).
+            <br>
+            <br>
+            In a given line, the Operator is the first word.
+
+        </div>
+        <br><br>
+        <div class="basic-text white">
+            With the basic Operators, autosyntax converts words to strings, unless marked with a dot.
+        </div>
+        <br>
+        <div class="basic-text f-size-23 m-right-200 indented">
+            In which case, the word remains as-is to be used as a variable.
+        </div>
+
+        <div id="animation_1" style="opacity:1">
+            <div class="monospace m-right-300">list milk eggs nutella</div>
+            <div class="code-block">
+                <span class="code-literal">[</span>
+                <span class="str">'milk'</span>
+                <span class="kept">,&nbsp;</span>
+                <span class="str">'eggs'</span>
+                <span class="kept">,&nbsp;</span>
+                <span class="str">'nutella'</span>
+                <span class="code-literal">]</span>
+            </div>
+        </div>
+        <div id="animation_2" style="opacity:0;">
+            <div class="monospace m-right-300">list milk eggs .nutella</div>
+            <div class="code-block">
+                <span class="code-literal">[</span>
+                <span class="str">'milk'</span>
+                <span class="kept">,&nbsp;</span>
+                <span class="str">'eggs'</span>
+                <span class="kept">,&nbsp;</span>
+                <span class="code-literal">nutella]</span>
+            </div>
         </div>
         <div id="whoami_block">
             {% block whoami_block %}
