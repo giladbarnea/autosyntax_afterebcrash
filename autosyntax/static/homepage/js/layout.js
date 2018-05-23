@@ -32,6 +32,8 @@ on_event_do("continue_arrow", "click",
         decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
     }
 );
+
+
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
 

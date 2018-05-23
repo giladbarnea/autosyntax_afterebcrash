@@ -22,6 +22,14 @@ body {
     font-size: 25px;
 }
 
+.m-left-150 {
+    margin-left: 150px;
+}
+
+.m-left-136 {
+    margin-left: 136px;
+}
+
 /*#continue_arrow {*/
 /*padding-left: 50px;*/
 /*padding-right: 50px;*/
@@ -52,6 +60,10 @@ body {
 .m-right-300,
 .code-block {
     margin-right: 300px;
+}
+
+.m-right-200 {
+    margin-right: 200px;
 }
 
 .code-block,
@@ -90,8 +102,12 @@ body {
     padding-top: 70px;
 }
 
+.f-size-23,
 .sidebar-item {
     font-size: 23px;
+}
+
+.sidebar-item {
     margin-bottom: 10px;
 }
 
@@ -102,6 +118,10 @@ body {
 .continue-arrow-lbl,
 .continue-arrow {
     bottom: 5%;
+}
+
+.op-05 {
+    opacity: 0.5;
 }
 
 .continue-arrow-lbl {

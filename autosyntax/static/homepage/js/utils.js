@@ -29,9 +29,22 @@ function on_event_do_to_collection(collection, event, fn) {
         on_event_do(new_collection[i], event, fn);
 }
 
-function on_event_do(element, event, fn) {
+//
+// function on_event_do_once(element, event, fn) {
+//     let ret = element_or_by_fn(element, by_id);
+//
+//     function _fn_w_remove(some_func) {
+//         by_id("animation_2").removeEventListener("click", some_func, true);
+//         some_func();
+//     }
+//
+//     ret.addEventListener(event, () => _fn_w_remove(fn), true);
+//     return ret;
+// }
+
+function on_event_do(element, event, fn, once = false) {
     let ret = element_or_by_fn(element, by_id);
-    ret.addEventListener(event, fn);
+    ret.addEventListener(event, fn, {once: once});
     return ret;
 
 }
@@ -71,24 +84,29 @@ function set_style(element, att, val) {
 // }
 
 
-function fade_opacity(element, limit, factor, up) {
-    function _fade_opacity() {
-        let current_opacity = element.style.opacity;
+function fade_opacity(element, limit, factor, up, then = "") {
+    // element = element_or_by_fn(element, by_id);
 
-        if (current_opacity === "")
+    function _fade_opacity() {
+        let current_opacity = element.style["opacity"];
+
+        if (current_opacity === "") {
             current_opacity = 0;
+        }
 
         let direction = up ? 1 : -1;
         let new_opacity = parseFloat(current_opacity) + (direction * 0.07 * factor);
-        let condition = up ? () => {
-            return new_opacity >= limit - 0.04
-        } : () => {
-            return new_opacity <= limit + 0.04
-        };
+        let condition;
+        if (up)
+            condition = new_opacity >= limit - 0.04;
+        else
+            condition = new_opacity <= limit + 0.04;
 
-        if (condition()) {
+        if (condition) {
             element.style.opacity = limit;
             clearInterval(timer);
+            if (then !== "")
+                then();
         }
         else {
             element.style.opacity = new_opacity.toString();
@@ -108,4 +126,8 @@ function increase_opacity(element, limit, factor) {
 function decrease_opacity(element, limit, factor) {
     fade_opacity(element, limit, factor, false);
 
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
