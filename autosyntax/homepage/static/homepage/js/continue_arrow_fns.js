@@ -37,7 +37,7 @@ function continue_arrow_handler() {
     if (user_below(whatisit_content_orig_top)
     // && !user_currently_viewing['whatisit']
     ) {
-        _set_all_viewing_false_but('whatisit');
+        // _set_all_viewing_false_but('whatisit');
         on_event_do("continue_arrow", "click",
             () => scroll_to("download_content"));
         by_id("continue_arrow_lbl").innerHTML = "Download"
@@ -46,14 +46,15 @@ function continue_arrow_handler() {
     else if (user_below(download_content_orig_top)
     // && (!user_currently_viewing["download"])
     ) {
-        console.log('below DOWNLOAD');
-        _set_all_viewing_false_but('download');
-        // FUTURE: TO WHO AM I
+        on_event_do("continue_arrow", "click",
+            () => scroll_to("howotuse_content"));
+
+        by_id("continue_arrow_lbl").innerHTML = "How to use"
     }
     else if (!user_below(whatisit_content_orig_top)
     // && !user_currently_viewing["landing"]
     ) {
-        _set_all_viewing_false_but('landing');
+        // _set_all_viewing_false_but('landing');
         on_event_do("continue_arrow", "click",
             () => scroll_to("what_is_it_content"));
 

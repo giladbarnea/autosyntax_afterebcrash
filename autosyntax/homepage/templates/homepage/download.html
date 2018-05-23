@@ -2,8 +2,6 @@
 {% load staticfiles %}
 {% block download %}
     <div id="download_content">
-
-
         <div class="space p-top-20">
             Download<br>
         </div>
@@ -11,5 +9,10 @@
         <a class="download-link indented sub-title" href="{% static '/autosyntax_win_1.01.rar' %}">
             autosyntax_win_1.01</a>
         <span class="sub-title">23/05/2018</span>
+        {#        <br><br><br><br>#}
+        <div class="p-top-80" id="howtouse_block">
+            {% block howtouse_block %}
+            {% endblock %}
+        </div>
     </div>
 {% endblock %}

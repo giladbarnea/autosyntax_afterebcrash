@@ -1,0 +1,20 @@
+{% extends 'homepage/download.html' %}
+{% load staticfiles %}
+{% block howtouse_block %}
+    <div id="howotuse_content">
+        <div class="space p-top-20">
+            How to use<br>
+        </div>
+        <br>
+        <div class="work indented">
+            General behaviour
+        </div>
+        <div class="sub-title white">
+            autosyntax design is dictated by the following rules:
+        </div>
+        <div id="whoami_block">
+            {% block whoami_block %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

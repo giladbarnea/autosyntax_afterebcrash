@@ -3,11 +3,6 @@ body {
     margin: 50px 60px 60px;
 }
 
-.code-line {
-    padding-top: 100px;
-    margin-top: 100px;
-}
-
 .work {
     font-size: 30px;
 }
@@ -26,6 +21,11 @@ body {
 .doc {
     font-size: 25px;
 }
+
+/*#continue_arrow {*/
+/*padding-left: 50px;*/
+/*padding-right: 50px;*/
+/*}*/
 
 /*padding-top: 20px*/
 .p-top-20 {
@@ -86,7 +86,7 @@ body {
 
 .continue-arrow-lbl,
 .continue-arrow {
-    bottom: 10%;
+    bottom: 5%;
 }
 
 .continue-arrow-lbl {
@@ -97,10 +97,6 @@ body {
     width: 120px;
 
 }
-
-/*.continue-arrow-lbl:after {*/
-/*content: "what is it";*/
-/*}*/
 
 .continue-arrow {
     height: 60px;
