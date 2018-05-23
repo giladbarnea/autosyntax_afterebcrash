@@ -34,9 +34,10 @@ on_event_do("continue_arrow", "click",
 );
 on_event_do("animation_1", "click",
     () => {
-        fade_opacity(by_id("animation_1"), 0, 1.4, false, then = () => {
+        fade_opacity(by_id("animation_1"), 0.5, 1, false, then = () => {
             set_style("animation_1", "display", "none");
-            increase_opacity(by_id("animation_2"), 1, 1.4);
+            set_style("animation_2", "display", "inherit");
+            increase_opacity(by_id("animation_2"), 1, 1);
         })
     });
 increase_opacity(by_id("all"), 1, factor = 0.5);
