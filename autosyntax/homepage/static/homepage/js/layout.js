@@ -32,14 +32,14 @@ on_event_do("continue_arrow", "click",
         decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
     }
 );
+
 on_event_do("animation_1", "click",
-    () => {
-        fade_opacity(by_id("animation_1"), 0.5, 1, false, then = () => {
-            set_style("animation_1", "display", "none");
-            set_style("animation_2", "display", "inherit");
-            increase_opacity(by_id("animation_2"), 1, 1);
-        })
-    });
+    () => animations_toggle("animation_1",
+        "animation_2"));
+
+on_event_do("animation_2", "click",
+    () => animations_toggle("animation_2",
+        "animation_1"));
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
 
