@@ -27,7 +27,7 @@
 
         </div>
         <br><br>
-        <div class="basic-text white">
+        <div id="dot_explanation" class="basic-text white">
             With the basic Operators, autosyntax converts words to strings, unless marked with a dot.
         </div>
         <br>
@@ -35,23 +35,34 @@
             In which case, the word remains as-is to be used as a variable.
         </div>
 
-        <div id="animation_1">
-            <div class="monospace m-right-300">list milk nutella</div>
-            <div class="code-block">
-                <span class="code-literal">[</span>
-                <span class="str">'milk'</span>
-                <span class="kept">,&nbsp;</span>
-                <span class="str">'nutella'</span>
-                <span class="code-literal">]</span>
+        <div class="animation">
+            <div id="animation_1">
+                <div class="monospace m-right-300">
+                    <span>list milk nutella</span>
+                    <span class="op-05 m-left-150">
+					PRESS TO TOGGLE EXAMPLE
+			</span>
+                </div>
+                <div class="code-block">
+                    <span class="code-literal">[</span>
+                    <span class="str">'milk'</span>
+                    <span class="kept">,&nbsp;</span>
+                    <span class="str">'nutella'</span>
+                    <span class="code-literal">]</span>
+                </div>
             </div>
-        </div>
-        <div id="animation_2" style="display: none">
-            <div class="monospace m-right-300">list milk .nutella</div>
-            <div class="code-block">
-                <span class="code-literal">[</span>
-                <span class="str">'milk'</span>
-                <span class="kept">,&nbsp;</span>
-                <span class="code-literal">nutella]</span>
+            <div id="animation_2" style="display: none">
+                <div class="monospace m-right-300">list milk .nutella
+                    <span class="op-05 m-left-136">
+					PRESS TO TOGGLE EXAMPLE
+			</span>
+                </div>
+                <div class="code-block">
+                    <span class="code-literal">[</span>
+                    <span class="str">'milk'</span>
+                    <span class="kept">,&nbsp;</span>
+                    <span class="code-literal">nutella]</span>
+                </div>
             </div>
         </div>
         <div id="whoami_block">

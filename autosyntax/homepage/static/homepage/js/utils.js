@@ -29,9 +29,22 @@ function on_event_do_to_collection(collection, event, fn) {
         on_event_do(new_collection[i], event, fn);
 }
 
-function on_event_do(element, event, fn) {
+//
+// function on_event_do_once(element, event, fn) {
+//     let ret = element_or_by_fn(element, by_id);
+//
+//     function _fn_w_remove(some_func) {
+//         by_id("animation_2").removeEventListener("click", some_func, true);
+//         some_func();
+//     }
+//
+//     ret.addEventListener(event, () => _fn_w_remove(fn), true);
+//     return ret;
+// }
+
+function on_event_do(element, event, fn, once = false) {
     let ret = element_or_by_fn(element, by_id);
-    ret.addEventListener(event, fn);
+    ret.addEventListener(event, fn, {once: once});
     return ret;
 
 }
@@ -78,7 +91,6 @@ function fade_opacity(element, limit, factor, up, then = "") {
         let current_opacity = element.style["opacity"];
 
         if (current_opacity === "") {
-            console.log('current_opacity === ""');
             current_opacity = 0;
         }
 
