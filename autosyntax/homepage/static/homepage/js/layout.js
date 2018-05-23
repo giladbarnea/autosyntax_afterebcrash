@@ -33,13 +33,7 @@ on_event_do("continue_arrow", "click",
     }
 );
 
-on_event_do("animation_1", "click",
-    () => animations_toggle("animation_1",
-        "animation_2"));
 
-on_event_do("animation_2", "click",
-    () => animations_toggle("animation_2",
-        "animation_1"));
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
 
