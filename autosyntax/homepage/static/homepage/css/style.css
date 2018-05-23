@@ -42,7 +42,8 @@ body {
     background-color: #1a1a1a;
 }
 
-.monospace {
+.monospace,
+.monospace-color {
     font-family: Consolas, 'sans-serif';
     color: #cfcfcf;
 }
@@ -53,7 +54,7 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.space, .space-font, .sidebar-item {
+.space, .space-font, .sidebar-item, .sub-title {
     font-family: 'Space Mono', monospace;
 
 }

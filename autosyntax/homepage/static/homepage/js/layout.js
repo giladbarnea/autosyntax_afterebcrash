@@ -5,30 +5,30 @@ on_event_do(window, "scroll",
     () => {
         first_scroll_fade_ins();
         show_console_menu();
-        continue_arrow_handler();
+        // continue_arrow_handler();
         // increase_opacity(by_id("continue_arrow_lbl"), 0.5, factor = 0.05)
     });
 on_event_do("go_up", "click", () => scroll_to(document.body));
-by_id("continue_arrow_lbl").innerHTML = "What is it";
-on_event_do("continue_arrow", "mouseover",
-
-    () => {
-        if (!continue_arrow_lbl_visible) {
-            increase_opacity(by_id("continue_arrow_lbl"), 0.5, factor = 2);
-            continue_arrow_lbl_visible = true;
-        }
-    });
-on_event_do("continue_arrow", "mouseleave",
-    () => {
-        if (continue_arrow_lbl_visible) {
-            setTimeout(() => {
-                decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 2)
-            }, 700);
-            continue_arrow_lbl_visible = false;
-        }
-
-    }
-);
+// by_id("continue_arrow_lbl").innerHTML = "What is it";
+// on_event_do("continue_arrow", "mouseover",
+//
+//     () => {
+//         if (!continue_arrow_lbl_visible) {
+//             increase_opacity(by_id("continue_arrow_lbl"), 0.5, factor = 2);
+//             continue_arrow_lbl_visible = true;
+//         }
+//     });
+// on_event_do("continue_arrow", "mouseleave",
+//     () => {
+//         if (continue_arrow_lbl_visible) {
+//             setTimeout(() => {
+//                 decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 2)
+//             }, 700);
+//             continue_arrow_lbl_visible = false;
+//         }
+//
+//     }
+// );
 
 
 let download_content_orig_top = get_rect("download_content").top;

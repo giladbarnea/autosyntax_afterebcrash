@@ -14,9 +14,9 @@
         <br>
         <br>
         {#        L I S T  M I L K  E G G S  N U T E L L A#}
-        <div class="space-font sub-title">For example:</div>
+        <div class="sub-title">For example:</div>
         <div class="monospace m-right-300">list milk eggs nutella</div>
-        <div class="space-font sub-title">becomes ></div>
+        <div class="sub-title">becomes ></div>
         <div class="code-block">
             <span class="code-literal">[</span>
             <span class="str">'milk'</span>
@@ -30,7 +30,7 @@
         <br>
         <br>
         {#        D I C T  M E A N I N G  4 2  H A P P Y  P I Z Z A #}
-        <div class="space-font sub-title">similarily,</div>
+        <div class="sub-title">similarily,</div>
         <div class="monospace m-right-300">dict meaning 42 happy pizza
             <span class="tabs-16">
 			</span>
@@ -59,7 +59,7 @@
         </div>
         <br>
         <div class="monospace m-right-300">class Dog Animal init fluffy True args</div>
-        <div class="space-font sub-title">turns into ></div>
+        <div class="sub-title">turns into ></div>
 
 
         <div class="code-block">
@@ -95,11 +95,12 @@
         </div>
 
         <br>
-        <div class="space-font sub-title">A LOT of annoying typing was saved.<br>
-            Including all the non ABC characters.<br>
-
+        <div class="sub-title">A LOT of annoying typing is saved
+            when you only type words.<br>
+            no more all those typo-prone
+            <span class="monospace-bg monospace-color italic">{[('*:,</span>.
         </div>
-        {#    <div class="space-font sub-title">check out the inheritance, the#}
+        {#    <div class="sub-title">check out the inheritance, the#}
         {#        <span class="monospace-bg italic">__init__</span> declaration and arguments,#}
         {#        the automatic#}
         {#        <span class="monospace-bg italic">self.fluffy</span> datamember creation,#}
@@ -120,32 +121,30 @@
             but it's also flexible.
         </div>
         <br>
-        <div class="space-font sub-title">
+        <div class="sub-title">
             <span class="white">Variables.</span>
             <br>Given:
         </div>
         <div class="code-block">
-            <span class="code-literal">trait = </span>
-            <span class="str">'lazy'</span>
+            <span class="code-literal">wish = </span>
+            <span class="str">'time'</span>
         </div>
         {#    V A R I A B L E S#}
-        <div class="space-font sub-title">then</div>
+        <div class="sub-title">then</div>
         <div class="monospace m-right-300">
-            <span>desc = str I am .trait</span>
-            {#            <span style="color: #29ffdb">.</span>#}
-            {#            <span>trait</span>#}
+            <span>i_wish = str I had more .wish</span>
             <span class="tabs-21"></span>
         </div>
 
         <div class="code-block">
-            <span class="code-literal">desc = </span>
-            <span class="str">f'I am {</span>
-            <span class="code-literal">trait</span>
+            <span class="code-literal">i_wish = </span>
+            <span class="str">f'I had more {</span>
+            <span class="code-literal">wish</span>
             <span class="str">}'</span>
         </div>
-        <div class="space-font sub-title">thanks to the
+        <div class="sub-title">thanks to the
             <span class="monospace-bg italic">.</span>
-            preceding "trait".<br>
+            preceding "wish".<br>
             Did you like that f-string?
             <span class="download-link turquoise">autosyntax</span>
             does this only when needed.
@@ -153,7 +152,7 @@
         <br><br><br>
 
         {#        I N L I N E  M E T H O D S#}
-        <div class="space-font sub-title">
+        <div class="sub-title">
             <span class="white">Inline methods:</span>
         </div>
         <div class="monospace m-right-300">for range max numbers
@@ -173,7 +172,7 @@
         </div>
         <br><br><br>
         {#        L I S T  C O M P R E H E N S I O N S#}
-        <div class="space-font sub-title">
+        <div class="sub-title">
             <span class="white">List comprehensions:</span>
         </div>
         <div class="monospace m-right-300">listcomp print letters
@@ -194,7 +193,7 @@
         <br><br><br>
 
 
-        <div class="space-font sub-title">
+        <div class="sub-title">
             <span class="white">Methods with typing:</span>
         </div>
         {#        D E F  T Y P I N G#}
@@ -227,10 +226,12 @@
             <span class="code-literal dark-grey">|</span>
         </div>
         <br><br>
-        <div class="space-font sub-title download-link">
-            {#            <span id="whatisit_andmore" class="white">Full list of features.</span>#}
-            <span id="whatisit_andmore" class="white">Download</span>
-            <span class="turquoise">autosyntax.</span>
+        <div class="sub-title">
+            <span class="white">And more, built with those little details in mind.</span><br><br>
+            <div class="download-link white">
+                <span>Download</span>
+                <span class="turquoise">autosyntax.</span>
+            </div>
         </div>
         <div id="download_block">
             {% block download %}
@@ -239,6 +240,6 @@
     </div>
     <a class="easter-egg"
        href="/homepage/templates/homepage/talia.html">
-        you found me!</a>
+        easter egg :)</a>
 
 {% endblock %}

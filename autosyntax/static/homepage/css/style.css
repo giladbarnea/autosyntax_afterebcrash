@@ -16,7 +16,8 @@ body {
 .space,
 .work,
 .space-font,
-.white {
+.white,
+.continue-arrow-lbl {
     color: white;
 
 }
@@ -41,17 +42,19 @@ body {
     background-color: #1a1a1a;
 }
 
-.monospace {
+.monospace,
+.monospace-color {
     font-family: Consolas, 'sans-serif';
     color: #cfcfcf;
 }
 
 .work,
-.go-up {
+.go-up,
+.continue-arrow-lbl {
     font-family: 'Work Sans', sans-serif;
 }
 
-.space, .space-font, .sidebar-item {
+.space, .space-font, .sidebar-item, .sub-title {
     font-family: 'Space Mono', monospace;
 
 }
@@ -60,7 +63,8 @@ body {
 .console-menu,
 .continue-arrow,
 .go-up,
-.sidebar-item {
+.sidebar-item,
+.continue-arrow-lbl {
     position: fixed;
 }
 
@@ -98,8 +102,11 @@ body {
     font-style: italic;
 }
 
-.continue-arrow {
-    transition: width 400ms, height 400ms, left 800ms;
+.continue-arrow,
+.continue-arrow-lbl {
+    transition: width 400ms,
+    height 400ms, left 800ms,
+    content 800ms;
 }
 
 /*opacity 0*/
@@ -122,7 +129,8 @@ body {
 }
 
 .no-decor {
-    text-decoration: none;
+    /*text-decoration: underline;*/
+    text-decoration-color: white;
 }
 
 .go-up {
@@ -165,6 +173,10 @@ body {
     color: #699F5B
 }
 
+.scroll-hover:hover {
+
+}
+
 .sub-title,
 .sidebar-item,
 .grey {
@@ -205,7 +217,8 @@ body {
     grid-column-end: 4;
 }
 
-.continue-arrow {
-    position: fixed;
-    transition: width 400ms, height 400ms, left 800ms;
-}
+/*.continue-arrow,*/
+/*#continue_arrow_lbl {*/
+/*position: fixed;*/
+/*transition: width 400ms, height 400ms, left 800ms;*/
+/*}*/
