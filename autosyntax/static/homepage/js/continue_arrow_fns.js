@@ -8,7 +8,7 @@
 by_id("continue_arrow_lbl").innerHTML = "What is it";
 let user_currently_viewing = "landing";
 console.log(user_currently_viewing);
-let whatisit_content_orig_top = get_rect("what_is_it_content").top;
+let whatisit_content_orig_top = get_rect("whatisit_content").top;
 let download_content_orig_top = get_rect("download_content").top;
 let howtouse_content_orig_top = get_rect("howtouse_content").top;
 
