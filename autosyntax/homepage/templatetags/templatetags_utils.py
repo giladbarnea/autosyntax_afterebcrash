@@ -1,6 +1,3 @@
-from django.utils.html import format_html
-
-
 def _span(cls, inner):
 	return '<span class="{}">{}</span>'.format(cls, inner)
 
