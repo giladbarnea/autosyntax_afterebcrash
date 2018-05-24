@@ -1,19 +1,9 @@
 from django import template
 from django.utils.html import format_html
 
+from homepage.templatetags.templatetags_utils import _span, _div, _join
+
 register = template.Library()
-
-
-def _span(cls, inner):
-	return f'<span class="{cls}">{inner}</span>'
-
-
-def _div(cls, inner):
-	return f'<div class="{cls}">{inner}</div>'
-
-
-def _join(value, args):
-	return value + ' ' + ''.join(args)
 
 
 @register.filter()
@@ -27,8 +17,25 @@ def dl_turq(value):
 
 
 @register.simple_tag
+def br(num):
+	return format_html('<br>' * num)
+
+
+@register.simple_tag
+def list_tag(*args):
+	new_value = [_span("code-literal", '[')]
+
+	for i, c in enumerate(args):
+		new_value.append(_span("str", c))
+		if i < len(args) - 1:
+			new_value.append(_span("kept", ', '))
+
+	new_value.append(_span("code-literal", ']'))
+	return format_html(''.join(new_value))
+
+
+@register.simple_tag
 def div(value, *args, **kwargs):
-	# value = ''.join([value, *args])
 	value = _join(value, args)
 	value = _div(kwargs['cls'], value)
 	return format_html(value)
@@ -36,7 +43,6 @@ def div(value, *args, **kwargs):
 
 @register.simple_tag
 def work(value, *args):
-	# value = ''.join([value, *args])
 	value = _join(value, args)
 	value = _div("work", value)
 	return format_html(value)
@@ -52,7 +58,6 @@ def work_indented(value, *args):
 @register.simple_tag
 def page_title(value, *args):
 	"""div, space p-top-20, 2 <br>"""
-	# value = ''.join([value, *args])
 	value = _join(value, args)
 	value = _div("space p-top-20", value)
 	value += '<br>' * 2

@@ -6,20 +6,20 @@
         {% page_title "What is it?" %}
         {% work_indented "autosyntax"|dl_turq "turns simple words into python code." %}
     </div>
-    <br>
-    <br>
+    {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
     <div class="basic-text">For example:</div>
     <div class="monospace m-right-300">list milk eggs nutella</div>
     <div class="basic-text">becomes ></div>
     <div class="code-block">
-        <span class="code-literal">[</span>
-        <span class="str">'milk'</span>
-        <span class="kept">,&nbsp;</span>
-        <span class="str">'eggs'</span>
-        <span class="kept">,&nbsp;</span>
-        <span class="str">'nutella'</span>
-        <span class="code-literal">]</span>
+        {% list_tag 'milk' 'eggs' 'nutella' %}
+        {#        <span class="code-literal">[</span>#}
+        {#        <span class="str">'milk'</span>#}
+        {#        <span class="kept">,&nbsp;</span>#}
+        {#        <span class="str">'eggs'</span>#}
+        {#        <span class="kept">,&nbsp;</span>#}
+        {#        <span class="str">'nutella'</span>#}
+        {#        <span class="code-literal">]</span>#}
     </div>
     <br>
     <br>
