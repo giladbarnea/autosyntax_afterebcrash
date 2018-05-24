@@ -5,9 +5,7 @@
 //     'download': false
 // };
 // try {
-by_id("continue_arrow_lbl").innerHTML = "What is it";
-let user_currently_viewing = "landing";
-console.log(user_currently_viewing);
+by_id("continue_arrow_lbl").innerHTML = "What is it?";
 let whatisit_content_orig_top = get_rect("whatisit_content").top + window.scrollY;
 let download_content_orig_top = get_rect("download_content").top + window.scrollY;
 let howtouse_content_orig_top = get_rect("howtouse_content").top + window.scrollY;
@@ -16,19 +14,13 @@ on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
 function display_continue_arrow_lbl() {
-    // if (!continue_arrow_lbl_visible) {
     increase_opacity(by_id("continue_arrow_lbl"), 0.5, factor = 0.5);
-    // continue_arrow_lbl_visible = true;
-    // }
 }
 
 function hide_continue_arrow_lbl() {
-    // if (continue_arrow_lbl_visible) {
     setTimeout(() => {
         decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1)
     }, 700);
-    // continue_arrow_lbl_visible = false;
-    // }
 }
 
 function continue_arrow_handler() {

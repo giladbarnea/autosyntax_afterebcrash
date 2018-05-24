@@ -6,6 +6,7 @@ let filename = window.location.pathname
     .pop();
 on_event_do(window, "scroll",
     () => {
+        console.log(window.scrollY);
         first_scroll_fade_ins();
         show_console_menu();
         if (filename === undefined)
