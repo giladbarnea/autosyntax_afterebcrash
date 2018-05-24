@@ -1,9 +1,12 @@
+from django.utils.html import format_html
+
+
 def _span(cls, inner):
-	return f'<span class="{cls}">{inner}</span>'
+	return '<span class="{}">{}</span>'.format(cls, inner)
 
 
 def _div(cls, inner):
-	return f'<div class="{cls}">{inner}</div>'
+	return '<div class="{}">{}</div>'.format(cls, inner)
 
 
 def _join(value, args):

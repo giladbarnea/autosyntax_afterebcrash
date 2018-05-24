@@ -1,5 +1,7 @@
+import sys
 from django import template
 from django.utils.html import format_html
+from django.utils.safestring import mark_safe
 
 from homepage.templatetags.templatetags_utils import _span, _div, _join
 
@@ -22,7 +24,7 @@ def br(num):
 
 
 @register.simple_tag
-def list_tag(*args):
+def list_block(*args):
 	new_value = [_span("code-literal", '[')]
 
 	for i, c in enumerate(args):
@@ -31,7 +33,27 @@ def list_tag(*args):
 			new_value.append(_span("kept", ', '))
 
 	new_value.append(_span("code-literal", ']'))
-	return format_html(''.join(new_value))
+	return format_html(div(''.join(new_value), cls='code-block'))
+
+
+@register.simple_tag
+def dict_block(*args):
+	new_value = [_span("code-literal", ' {')]
+
+	for i, c in enumerate(args):
+		# print(sys.stderr, 'Goodbye, cruel world!')
+		if isinstance(c, str):
+			new_value.append(_span("str", c))
+		else:
+			new_value.append(_span("int", c))
+		if i < len(args) - 1:
+			if i % 2 != 0:
+				new_value.append(_span("kept", ', '))
+			else:
+				new_value.append(_span("code-literal", ': '))
+	new_value.append(_span("code-literal", '}'))
+
+	return mark_safe(_div('code-block', ''.join(new_value)))
 
 
 @register.simple_tag

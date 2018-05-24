@@ -11,36 +11,33 @@
     <div class="basic-text">For example:</div>
     <div class="monospace m-right-300">list milk eggs nutella</div>
     <div class="basic-text">becomes ></div>
-    <div class="code-block">
-        {% list_tag 'milk' 'eggs' 'nutella' %}
-        {#        <span class="code-literal">[</span>#}
-        {#        <span class="str">'milk'</span>#}
-        {#        <span class="kept">,&nbsp;</span>#}
-        {#        <span class="str">'eggs'</span>#}
-        {#        <span class="kept">,&nbsp;</span>#}
-        {#        <span class="str">'nutella'</span>#}
-        {#        <span class="code-literal">]</span>#}
-    </div>
-    <br>
-    <br>
-    <br>
+    {#    <div class="code-block">#}
+    {% list_block 'milk' 'eggs' 'nutella' %}
+    {#        <span class="code-literal">[</span>#}
+    {#        <span class="str">'milk'</span>#}
+    {#        <span class="kept">,&nbsp;</span>#}
+    {#        <span class="str">'eggs'</span>#}
+    {#        <span class="kept">,&nbsp;</span>#}
+    {#        <span class="str">'nutella'</span>#}
+    {#        <span class="code-literal">]</span>#}
+    {#    </div>#}
+    {% br 3 %}
     {#        D I C T  M E A N I N G  4 2  H A P P Y  P I Z Z A #}
     <div class="basic-text">similarily,</div>
     <div class="monospace m-right-300">dict meaning 42 happy pizza
-        <span class="tabs-16">
-			</span>
     </div>
-    <div class="code-block">
-        <span class="code-literal"> {</span>
-        <span class="str">'meaning'</span>
-        <span class="code-literal">: </span>
-        <span class="int">42</span>
-        <span class="kept">, </span>
-        <span class="str">'happiness'</span>
-        <span class="code-literal">: </span>
-        <span class="str">'pizza'</span>
-        <span class="code-literal">}</span>
-    </div>
+    {% dict_block 'meaning' 42 'happiness' 'pizza' %}
+    {#        <div class="code-block">#}
+    {#            <span class="code-literal"> {</span>#}
+    {#            <span class="str">'meaning'</span>#}
+    {#            <span class="code-literal">: </span>#}
+    {#            <span class="int">42</span>#}
+    {#            <span class="kept">, </span>#}
+    {#            <span class="str">'happiness'</span>#}
+    {#            <span class="code-literal">: </span>#}
+    {#            <span class="str">'pizza'</span>#}
+    {#            <span class="code-literal">}</span>#}
+    {#        </div>#}
     <br>
     <br>
     <br>
