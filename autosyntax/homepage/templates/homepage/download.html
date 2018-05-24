@@ -1,15 +1,13 @@
 {% extends 'homepage/whatisit.html' %}
 {% load staticfiles %}
 {% block download %}
+    {% load extras %}
     <div id="download_content">
-        <div class="space p-top-20">
-            Download<br>
-        </div>
-        <br>
-        <a class="download-link indented basic-text" href="{% static '/autosyntax_win_1.01.rar' %}">
+        {% page_title 'Download' %}
+        <a class="download-link indented basic-text"
+           href="{% static '/autosyntax_win_1.01.rar' %}">
             autosyntax_win_1.01</a>
-        <span class="basic-text">23/05/2018</span>
-        {#        <br><br><br><br>#}
+        {{ '23/05/2018'|span:'basic-text' }}
         <div class="p-top-80" id="howtouse_block">
             {% block howtouse_block %}
             {% endblock %}

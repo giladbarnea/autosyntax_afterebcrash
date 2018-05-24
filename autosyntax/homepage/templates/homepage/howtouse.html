@@ -2,36 +2,30 @@
 {% load staticfiles %}
 {% block howtouse_block %}
     <div id="howtouse_content">
-        <div class="space p-top-20">
-            How to use<br>
-        </div>
+        {% load extras %}
+        {% page_title 'How to use' %}
+        {% work_indented 'General'|turq 'behaviour' %}
         <br>
-        {#    G E N R A L  B E H A V I O U R#}
-        <div class="work indented">
-            <span class="turquoise">General</span>
-            behaviour
-        </div>
-        <br>
-        <div class="basic-text white">
-            There are only 3 mechanisms in action:<br>
-        </div>
-        <br>
+        {% basic_text 'There are only 3 mechanisms in action:'|white %}
+        {% br 2 %}
+        {#        {% join '(e.g' 'list'|mono_bg_it 'def'|mono_bg_it 'class'|mono_bg_it sep=',' as joined %}#}
+        {#        {% arrow_list '>' 'An Operator must appear before the arguments<br>'|ind_half joined|ind %}#}
+
+        {##}
         <div class="basic-text f-size-23 m-right-200 indented">
             >
-            <span class="indented-half">
-				An Operator must appear before the arguments<br></span>
+            {{ 'An Operator must appear before the arguments<br>'|ind_half }}
             <span class="indented">
-				(e.g
-				<span class="monospace-bg italic">list</span>,
-				<span class="monospace-bg italic">def</span>,
-				<span class="monospace-bg italic">class</span> and so on).
-				<br>
-				<br>
-				>
-			</span>
+						(e.g
+				{{ 'list'|mono_bg_it }},
+				{{ 'def'|mono_bg_it }},
+				{{ 'class'|mono_bg_it }} and so on).
+				{% br 2 %}
+						>
+					</span>
             <span class="indented-half">
-			An argument can be marked with a dot.<br>
-			</span>
+					An argument can be marked with a dot.<br>
+					</span>
             <span class="indented">This toggles a specific behaviour on/off.</span>
             <br>
             <br>

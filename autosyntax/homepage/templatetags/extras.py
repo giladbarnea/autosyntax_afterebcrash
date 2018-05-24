@@ -23,6 +23,16 @@ def dl_turq(value):
 
 
 @register.filter()
+def ind(value):
+	return format_html(_span("indented", value))
+
+
+@register.filter()
+def ind_half(value):
+	return format_html(_span("indented-half", value))
+
+
+@register.filter()
 def white(value):
 	return format_html(_span("white", value))
 
@@ -63,7 +73,7 @@ def cb(value, tabs):
 
 
 @register.filter()
-def mono_bg_italic(value):
+def mono_bg_it(value):
 	return format_html(_span("monospace-bg italic", value))
 
 
@@ -119,6 +129,23 @@ def div(value, *args, **kwargs):
 	return format_html(value)
 
 
+# @register.simple_tag()
+# def join(value, *args, **kwargs):
+# 	ret = []
+# 	new_args = [value, *args]
+# 	for i, arg in enumerate(new_args):
+# 		append = f'{arg}{kwargs["sep"]} ' if i < len(new_args) - 1 else arg
+# 		ret.append(append)
+# 	return format_html(''.join(ret))
+
+
+# @register.simple_tag()
+# def arrow_list(value, *args):
+# 	value = _join(value, args)
+# 	value = _div("basic-text f-size-23 m-right-200 indented", value)
+# 	return format_html(value)
+
+
 @register.simple_tag()
 def space_ptop_20(value, *args):
 	value = _join(value, args)
@@ -126,11 +153,11 @@ def space_ptop_20(value, *args):
 	return format_html(value)
 
 
-@register.simple_tag
-def work(value, *args):
-	value = _join(value, args)
-	value = _div("work", value)
-	return format_html(value)
+# @register.simple_tag
+# def work(value, *args):
+# 	value = _join(value, args)
+# 	value = _div("work", value)
+# 	return format_html(value)
 
 
 @register.simple_tag
