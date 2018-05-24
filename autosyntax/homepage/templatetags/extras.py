@@ -7,14 +7,24 @@ from homepage.templatetags.templatetags_utils import _span, _div, _join, quote
 register = template.Library()
 
 
-# @register.filter()
-# def span(value, cls):
-# 	return format_html(_span(cls, value))
+@register.filter()
+def span(value, cls):
+	return format_html(_span(cls, value))
+
+
+@register.filter()
+def turq(value):
+	return format_html(_span("turquoise", value))
 
 
 @register.filter()
 def dl_turq(value):
 	return format_html(_span("download-link turquoise", value))
+
+
+@register.filter()
+def white(value):
+	return format_html(_span("white", value))
 
 
 @register.filter()
@@ -38,6 +48,11 @@ def self(value):
 
 
 @register.filter()
+def string(value):
+	return mark_safe(_span("str", value))
+
+
+@register.filter()
 def sup(value):
 	return format_html(_span("super", value))
 
@@ -45,6 +60,21 @@ def sup(value):
 @register.filter()
 def cb(value, tabs):
 	return format_html(_span("code-break", value + '&emsp;' * tabs))
+
+
+@register.filter()
+def mono_bg_italic(value):
+	return format_html(_span("monospace-bg italic", value))
+
+
+@register.filter()
+def doc_bold(value):
+	return format_html(_span("doc bold", value))
+
+
+@register.filter()
+def dark_grey(value):
+	return format_html(_span("dark grey", value))
 
 
 @register.simple_tag
@@ -82,11 +112,25 @@ def dict_block(*args):
 	return mark_safe(_div('code-block', ''.join(new_value)))
 
 
-# @register.simple_tag
-# def div(value, *args, **kwargs):
-# 	value = _join(value, args)
-# 	value = _div(kwargs['cls'], value)
-# 	return format_html(value)
+@register.simple_tag
+def div(value, *args, **kwargs):
+	value = _join(value, args)
+	value = _div(kwargs['cls'], value)
+	return format_html(value)
+
+
+@register.simple_tag()
+def dl(value, *args):
+	value = _join(value, args)
+	value = _div("download-link", value)
+	return format_html(value)
+
+
+@register.simple_tag
+def work(value, *args):
+	value = _join(value, args)
+	value = _div("work", value)
+	return format_html(value)
 
 
 @register.simple_tag
