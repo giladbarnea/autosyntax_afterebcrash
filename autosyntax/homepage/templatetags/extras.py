@@ -2,14 +2,14 @@ from django import template
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from homepage.templatetags.templatetags_utils import _span, _div, _join
+from homepage.templatetags.templatetags_utils import _span, _div, _join, quote
 
 register = template.Library()
 
 
-@register.filter()
-def span(value, cls):
-	return format_html(_span(cls, value))
+# @register.filter()
+# def span(value, cls):
+# 	return format_html(_span(cls, value))
 
 
 @register.filter()
@@ -57,12 +57,12 @@ def list_block(*args):
 	new_value = [_span("code-literal", '[')]
 
 	for i, c in enumerate(args):
-		new_value.append(_span("str", c))
+		new_value.append(_span("str", quote(c)))
 		if i < len(args) - 1:
 			new_value.append(_span("kept", ', '))
 
 	new_value.append(_span("code-literal", ']'))
-	return format_html(div(''.join(new_value), cls='code-block'))
+	return format_html(_div('code-block', ''.join(new_value)))
 
 
 @register.simple_tag
@@ -70,7 +70,7 @@ def dict_block(*args):
 	new_value = [_span("code-literal", ' {')]
 
 	for i, c in enumerate(args):
-		line = _span("str", c) if isinstance(c, str) else _span("int", c)
+		line = _span("str", quote(c)) if isinstance(c, str) else _span("int", c)
 		new_value.append(line)
 
 		if i < len(args) - 1:
@@ -82,11 +82,11 @@ def dict_block(*args):
 	return mark_safe(_div('code-block', ''.join(new_value)))
 
 
-@register.simple_tag
-def div(value, *args, **kwargs):
-	value = _join(value, args)
-	value = _div(kwargs['cls'], value)
-	return format_html(value)
+# @register.simple_tag
+# def div(value, *args, **kwargs):
+# 	value = _join(value, args)
+# 	value = _div(kwargs['cls'], value)
+# 	return format_html(value)
 
 
 @register.simple_tag

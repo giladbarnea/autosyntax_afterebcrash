@@ -8,3 +8,7 @@ def _div(cls, inner):
 
 def _join(value, args):
 	return value + ' ' + ''.join(args)
+
+
+def quote(value):
+	return f"'{value}'"
