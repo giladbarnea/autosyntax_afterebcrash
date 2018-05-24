@@ -22,11 +22,13 @@
             {{ 'Currently available Operators:<br>'|ind_half }}
             <span class="indented">
 			{% for operator in operators %}
-                {% ifequal operator 'print' %}
-                    {{ operator|mono_bg_it }}.
-                {% else %}
-                    {{ operator|mono_bg_it }},
-                {% endifequal %}
+                <span id="operator_{{ forloop.counter }}">
+						{% ifequal operator 'print' %}
+                            {{ operator|mono_bg_it }}.
+                        {% else %}
+                            {{ operator|mono_bg_it }},
+                        {% endifequal %}
+				</span>
             {% endfor %}
 			</span>
 
