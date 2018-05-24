@@ -144,6 +144,13 @@ def div(value, *args, **kwargs):
 # 	value = _join(value, args)
 # 	value = _div("basic-text f-size-23 m-right-200 indented", value)
 # 	return format_html(value)
+@register.simple_tag
+def a(inner, href, cls, innercls):
+	return format_html(f"""<br><br>
+	<a href="{href}" class="{cls}">
+		{_div(innercls,inner)}
+		</a>
+	""")
 
 
 @register.simple_tag()

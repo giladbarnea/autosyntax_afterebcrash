@@ -4,42 +4,34 @@
     <div id="howtouse_content">
         {% load extras %}
         {% page_title 'How to use' %}
-        {% work_indented 'General'|turq 'behaviour' %}
+        {% work_indented 'Basic'|turq 'behaviour' %}
         <br>
-        {% basic_text 'There are only 3 mechanisms in action:'|white %}
+        {% basic_text 'There are only 4 guiding principles:'|white %}
         {% br 2 %}
-        {#        {% join '(e.g' 'list'|mono_bg_it 'def'|mono_bg_it 'class'|mono_bg_it sep=',' as joined %}#}
-        {#        {% arrow_list '>' 'An Operator must appear before the arguments<br>'|ind_half joined|ind %}#}
 
-        {##}
         <div class="basic-text f-size-23 m-right-200 indented">
+            >
+            {{ 'Merely words and spaces are usually enough.<br>'|ind_half }}
+            {{ 'This yields the most common and obvious use-case.'|ind }}
+            {% br 2 %}
             >
             {{ 'An Operator must appear before the arguments<br>'|ind_half }}
             <span class="indented">
 						(e.g
 				{{ 'list'|mono_bg_it }},
 				{{ 'def'|mono_bg_it }},
-				{{ 'class'|mono_bg_it }} and so on).
-				{% br 2 %}
-						>
-					</span>
-            <span class="indented-half">
-					An argument can be marked with a dot.<br>
-					</span>
-            <span class="indented">This toggles a specific behaviour on/off.</span>
-            <br>
-            <br>
+				{{ 'class'|mono_bg_it }}
+				and so on).
+				{% br 2 %}>
+			</span>
+            {{ 'An argument can be marked with a dot.<br>'|ind_half }}
+            {{ 'This toggles a specific behaviour on/off.'|ind }}
+            {% br 2 %}
             >
-            <span class="indented-half">An argument can be preceded by a built-in method.<br></span>
-            <span class="indented">The method is then applied to the argument.</span>
+            {{ 'An argument can be preceded by a built-in method.<br>'|ind_half }}
+            {{ 'It is then passed to this method.'|ind }}
         </div>
-
-        <br><br>
-        <a href="how" class="no-decor">
-            <div class="basic-text white">
-                For more details, click here.
-            </div>
-        </a>
+        {% a 'For more details, click here.' 'how' 'no-decor' 'basic-text white' %}
         <br>
     </div>
     {#    D O T T E D  A R G U M E N T S#}
