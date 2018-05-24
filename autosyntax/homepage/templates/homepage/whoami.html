@@ -1,21 +1,13 @@
 {% extends 'homepage/howtouse.html' %}
 {% load staticfiles %}
 {% block whoami_block %}
+    {% load extras %}
     <div id="whoami_content">
-        <div class="space p-top-20">
-            Who am I?<br>
-        </div>
-        <br>
-        <div class="work indented">
-            <span class="turquoise">Some</span>
-            title
-        </div>
-        <br>
-        <a href="cv" class="no-decor">
-            <div class="basic-text white">
-                For my full CV, click here.
-            </div>
-        </a>
+
+        {% page_title 'Who am I?' %}
+        {% work_indented "some"|dl_turq "title" %}
+        {% a 'For my full CV, click here.' 'cv' 'no-decor' 'basic-text white' %}
+
         <br>
         <div class="basic-text f-size-23 m-right-200 indented">
             basic text f-size-23

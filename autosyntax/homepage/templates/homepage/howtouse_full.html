@@ -2,31 +2,43 @@
 {% load staticfiles %}
 {% block landing %}
     <div id="howtouse_full_content">
-        <div class="space p-top-20">
-            How to use<br>
-        </div>
-        <br>
+        {% load extras %}
+        {% page_title 'How to use' %}
         {#    G E N R A L  B E H A V I O U R#}
-        <div class="work indented">
-            <span class="turquoise">General</span>
-            behaviour
-        </div>
+        {% work_indented 'Operators'|turq %}
         <br>
-        <div class="basic-text white">
-            autosyntax knows what to do based on "Operators".<br>
-        </div>
-        <br>
+        {% basic_text '"Operators" tell autosyntax which type of code to generate.'|white %}
+        {% br 1 %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            Operators are almost always built-in words from the python standard library,
-            to keep a 0 learning curve (e.g
-            <span class="monospace-bg italic">list</span>,
-            <span class="monospace-bg italic">def</span>,
-            <span class="monospace-bg italic">class</span> and so on).
-            <br>
-            <br>
-            In a given line, the Operator is the first argument.
+            >
+            {{ 'Operators are almost always built-in elements<br>'|ind_half }}
+            {{ 'from the python standard library, to keep a<br>'|ind }}
+            {{ '0 learning curve.'|ind }}
+            {% br 2 %}
+            >
+            {{ 'In a given line, the Operator is the first argument.'|ind_half }}
+            {% br 2 %}
+            >
+            {{ 'Currently available Operators:<br>'|ind_half }}
+            <span class="indented">
+			{% for operator in operators %}
+                {% ifequal operator 'print' %}
+                    {{ operator|mono_bg_it }}.
+                {% else %}
+                    {{ operator|mono_bg_it }},
+                {% endifequal %}
+            {% endfor %}
+			</span>
 
+            {#            {{ 'list, tuple, set, dict, for, def, class, str, print.'|ind }}#}
         </div>
+        {#        <div class="basic-text f-size-23 m-right-200 indented">#}
+        {#            Operators are almost always built-in elements from the python standard library,#}
+        {#            to keep a 0 learning curve.#}
+        {#            {% br 2 %}#}
+        {#            In a given line, the Operator is the first argument.#}
+        {##}
+        {#        </div>#}
         <br><br><br>
         {#    D O T T E D  A R G U M E N T S#}
         <div class="work">
