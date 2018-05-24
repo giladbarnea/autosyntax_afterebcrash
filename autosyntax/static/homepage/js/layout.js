@@ -1,5 +1,5 @@
 // let is_main_page = true;
-screen.orientation.lock('landscape');
+// screen.orientation.lock('landscape');
 let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)
@@ -11,7 +11,8 @@ on_event_do(window, "scroll",
         if (filename === undefined)
             continue_arrow_handler();
     });
-on_event_do("go_up", "click", () => scroll_to(document.body));
+on_event_do("go_up", "click",
+    () => scroll_to(document.body));
 
 
 let is_console_menu_vis = false;

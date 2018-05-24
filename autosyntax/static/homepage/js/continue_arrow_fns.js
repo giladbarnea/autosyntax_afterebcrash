@@ -32,14 +32,29 @@ function hide_continue_arrow_lbl() {
 }
 
 function continue_arrow_handler() {
-    // console.log(user_currently_viewing);
+    if (user_below(download_content_orig_top)) {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to("whoami_content"));
+        by_id("continue_arrow_lbl").innerHTML = "Who am I"
+    }
+    else if (user_below(whatisit_content_orig_top)) {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to("download_content"));
 
-    // function _set_all_viewing_false_but(key) {
-    //     for (let k in user_currently_viewing)
-    //         user_currently_viewing[k] = k === key;
-    // }
+        by_id("continue_arrow_lbl").innerHTML = "Download"
+    }
+    else {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to("whatisit_content"));
+
+        by_id("continue_arrow_lbl").innerHTML = "What is it?"
+    }
+
+}
+
+function continue_arrow_handler_old() {
     if (user_below(whatisit_content_orig_top)
-        && user_currently_viewing === 'landing'
+    // && user_currently_viewing === 'landing'
     ) {
         console.log('Continue arrow: user below whatisit. Changing lbl to Download');
         user_currently_viewing = "whatisit";
@@ -50,7 +65,7 @@ function continue_arrow_handler() {
     }
     // above whatisit
     else if (user_below(download_content_orig_top)
-        && user_currently_viewing === "whatisit"
+    // && user_currently_viewing === "whatisit"
     ) {
         console.log('Continue arrow: user below download. Changing lbl to How to use');
         user_currently_viewing = "download";
@@ -60,7 +75,7 @@ function continue_arrow_handler() {
         by_id("continue_arrow_lbl").innerHTML = "How to use"
     }
     else if (user_below(howtouse_content_orig_top)
-        && user_currently_viewing === "download"
+    // && user_currently_viewing === "download"
     ) {
         console.log('Continue arrow: user below howtouse. Changing lbl to Who am I');
         user_currently_viewing = "howtouse";
@@ -70,12 +85,12 @@ function continue_arrow_handler() {
         by_id("continue_arrow_lbl").innerHTML = "Who am I?"
     }
     else if (!user_below(whatisit_content_orig_top)
-        && user_currently_viewing === "howtouse"
+    // && user_currently_viewing === "howtouse"
     ) {
         console.log('Continue arrow: user NOT below whatisit. Changing lbl to What is it?');
         user_currently_viewing = "landing";
         on_event_do("continue_arrow", "click",
-            () => scroll_to("what_is_it_content"));
+            () => scroll_to("whatisit_content"));
 
         by_id("continue_arrow_lbl").innerHTML = "What is it?"
     }
@@ -84,7 +99,6 @@ function continue_arrow_handler() {
         console.log('\tuser_currently_viewing: ', user_currently_viewing);
     }
 
-    // }
 }
 
 // catch (err) {

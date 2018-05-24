@@ -3,13 +3,13 @@ set_style("download_block", "paddingTop", window.screen.availHeight / 3);
 set_style("whoami_block", "paddingTop", window.screen.availHeight / 4);
 on_event_do("continue_arrow", "click",
     () => {
-        scroll_to("what_is_it_content");
+        scroll_to("whatisit_content");
         decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
     }
 );
 // What is it?
 on_event_do("sidebar_item_1", "click",
-    () => scroll_to("what_is_it_content"));
+    () => scroll_to("whatisit_content"));
 
 // Download
 on_event_do("sidebar_item_2", "click",

@@ -45,7 +45,7 @@ function get_rect(element) {
 
 function user_below(threshold) {
     // return window.scrollY - 200 > threshold;
-    return window.scrollY > threshold;
+    return window.scrollY + 100 > threshold;
 }
 
 
