@@ -1,16 +1,9 @@
 {% extends 'homepage/layout.html' %}
 {% block landing %}
-    <div class="space">
-        <div class="p-top-20">
-            Hi! My name is Gilad.<br>
-            I love to code FAST.<br><br>
-            This is why I created<br>
-        </div>
-        <span class="download-link italic turquoise">autosyntax.</span>
-        <br>
-        <br>
-    </div>
-    <div class="work indented">It's completely free and I know you'll like it.</div>
+    {% load extras %}
+    {% space_ptop_20 'Hi! My name is Gilad.<br>I love to code FAST.<br><br>This is why I created<br>' 'autosyntax.'|span:'download-link italic turquoise' %}
+    {% br 2 %}
+    {% work_indented "It's completely free and I know you'll like it." %}
 
     <div id="whatisit_block">
         {% block what_is_it %}

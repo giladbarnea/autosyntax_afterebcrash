@@ -120,9 +120,9 @@ def div(value, *args, **kwargs):
 
 
 @register.simple_tag()
-def dl(value, *args):
+def space_ptop_20(value, *args):
 	value = _join(value, args)
-	value = _div("download-link", value)
+	value = _div("space p-top-20", value)
 	return format_html(value)
 
 
