@@ -4,230 +4,227 @@
     {% load extras %}
     <div id="whatisit_content">
         {% page_title "What is it?" %}
-
-        <div class="work indented">
-            <span class="download-link turquoise">autosyntax</span>
-            turns simple words into python code.
-        </div>
-        <br>
-        <br>
-        {#        L I S T  M I L K  E G G S  N U T E L L A#}
-        <div class="basic-text">For example:</div>
-        <div class="monospace m-right-300">list milk eggs nutella</div>
-        <div class="basic-text">becomes ></div>
-        <div class="code-block">
-            <span class="code-literal">[</span>
-            <span class="str">'milk'</span>
-            <span class="kept">,&nbsp;</span>
-            <span class="str">'eggs'</span>
-            <span class="kept">,&nbsp;</span>
-            <span class="str">'nutella'</span>
-            <span class="code-literal">]</span>
-        </div>
-        <br>
-        <br>
-        <br>
-        {#        D I C T  M E A N I N G  4 2  H A P P Y  P I Z Z A #}
-        <div class="basic-text">similarily,</div>
-        <div class="monospace m-right-300">dict meaning 42 happy pizza
-            <span class="tabs-16">
+        {% work_indented "autosyntax"|dl_turq "turns simple words into python code." %}
+    </div>
+    <br>
+    <br>
+    {#        L I S T  M I L K  E G G S  N U T E L L A#}
+    <div class="basic-text">For example:</div>
+    <div class="monospace m-right-300">list milk eggs nutella</div>
+    <div class="basic-text">becomes ></div>
+    <div class="code-block">
+        <span class="code-literal">[</span>
+        <span class="str">'milk'</span>
+        <span class="kept">,&nbsp;</span>
+        <span class="str">'eggs'</span>
+        <span class="kept">,&nbsp;</span>
+        <span class="str">'nutella'</span>
+        <span class="code-literal">]</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    {#        D I C T  M E A N I N G  4 2  H A P P Y  P I Z Z A #}
+    <div class="basic-text">similarily,</div>
+    <div class="monospace m-right-300">dict meaning 42 happy pizza
+        <span class="tabs-16">
 			</span>
-        </div>
-        <div class="code-block">
-            <span class="code-literal"> {</span>
-            <span class="str">'meaning'</span>
-            <span class="code-literal">: </span>
-            <span class="int">42</span>
-            <span class="kept">, </span>
-            <span class="str">'happiness'</span>
-            <span class="code-literal">: </span>
-            <span class="str">'pizza'</span>
-            <span class="code-literal">}</span>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        {#        C L A S S E S#}
-        <div class="work">
-            It can also do more complicated stuff,<br> like classes:
-        </div>
-        <br>
-        <div class="monospace m-right-300">class Dog Animal init fluffy True args</div>
-        <div class="basic-text">turns into ></div>
+    </div>
+    <div class="code-block">
+        <span class="code-literal"> {</span>
+        <span class="str">'meaning'</span>
+        <span class="code-literal">: </span>
+        <span class="int">42</span>
+        <span class="kept">, </span>
+        <span class="str">'happiness'</span>
+        <span class="code-literal">: </span>
+        <span class="str">'pizza'</span>
+        <span class="code-literal">}</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {#        C L A S S E S#}
+    <div class="work">
+        It can also do more complicated stuff,<br> like classes:
+    </div>
+    <br>
+    <div class="monospace m-right-300">class Dog Animal init fluffy True args</div>
+    <div class="basic-text">turns into ></div>
 
 
-        <div class="code-block">
-            <span class="kept">class</span>
-            <span class="code-literal">&nbsp;Dog(Animal):</span>
-            <span class="code-break">
+    <div class="code-block">
+        <span class="kept">class</span>
+        <span class="code-literal">&nbsp;Dog(Animal):</span>
+        <span class="code-break">
 							<br>&emsp;&emsp;
 						</span>
 
-            <span class="kept">def</span>
-            <span class="magic">&nbsp;__init__</span>
-            <span class="code-literal">(</span>
-            <span class="self">self</span>
-            <span class="kept">,</span>
-            <span class="code-literal">&nbsp;fluffy=</span>
-            <span class="kept">True</span>
-            <span class="kept">, </span>
-            <span class="code-literal">*args):</span>
-            <span class="code-break">
+        <span class="kept">def</span>
+        <span class="magic">&nbsp;__init__</span>
+        <span class="code-literal">(</span>
+        <span class="self">self</span>
+        <span class="kept">,</span>
+        <span class="code-literal">&nbsp;fluffy=</span>
+        <span class="kept">True</span>
+        <span class="kept">, </span>
+        <span class="code-literal">*args):</span>
+        <span class="code-break">
 							<br>&emsp;&emsp;&emsp;&emsp;
 							</span>
 
-            <span class="self">self</span>
-            <span class="code-literal">.fluffy = fluffy</span>
-            <span class="code-break">
+        <span class="self">self</span>
+        <span class="code-literal">.fluffy = fluffy</span>
+        <span class="code-break">
 				<br>&emsp;&emsp;&emsp;&emsp;
 			</span>
 
-            <span class="super">super</span>
-            <span class="code-literal">().</span>
-            <span class="magic">__init__</span>
-            <span class="code-literal">()</span>
-        </div>
+        <span class="super">super</span>
+        <span class="code-literal">().</span>
+        <span class="magic">__init__</span>
+        <span class="code-literal">()</span>
+    </div>
 
-        <br>
-        <div class="basic-text">How much time would it take you to type the end result?
-            {#<br>            no more typo-prone#}
-            {#            <span class="monospace-bg monospace-color italic">{[('*:,</span>.#}
-        </div>
+    <br>
+    <div class="basic-text">How much time would it take you to type the end result?
+        {#<br>            no more typo-prone#}
+        {#            <span class="monospace-bg monospace-color italic">{[('*:,</span>.#}
+    </div>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="work indented">
-            It needs only
-            <span class="turquoise">1</span>
-            global hotkey to do everything,<br>
-            but it's also flexible.
-        </div>
-        <br>
-        <div class="basic-text">
-            <span class="white">Variables.</span>
-            <br>Given:
-        </div>
-        <div class="code-block">
-            <span class="code-literal">wish = </span>
-            <span class="str">'easy'</span>
-        </div>
-        {#    V A R I A B L E S#}
-        <div class="basic-text">then</div>
-        <div class="monospace m-right-300">
-            <span>i_wish = str everything was .wish</span>
-            <span class="tabs-21"></span>
-        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="work indented">
+        It needs only
+        <span class="turquoise">1</span>
+        global hotkey to do everything,<br>
+        but it's also flexible.
+    </div>
+    <br>
+    <div class="basic-text">
+        <span class="white">Variables.</span>
+        <br>Given:
+    </div>
+    <div class="code-block">
+        <span class="code-literal">wish = </span>
+        <span class="str">'easy'</span>
+    </div>
+    {#    V A R I A B L E S#}
+    <div class="basic-text">then</div>
+    <div class="monospace m-right-300">
+        <span>i_wish = str everything was .wish</span>
+        <span class="tabs-21"></span>
+    </div>
 
-        <div class="code-block">
-            <span class="code-literal">i_wish = </span>
-            <span class="str">f'I had more {</span>
-            <span class="code-literal">wish</span>
-            <span class="str">}'</span>
-        </div>
-        <div class="basic-text">thanks to the
-            <span class="monospace-bg italic">.</span>
-            preceding "wish".<br>
-            Did you like that f-string?
-            <span class="download-link turquoise">autosyntax</span>
-            does this only when needed.
-        </div>
-        <br><br><br>
+    <div class="code-block">
+        <span class="code-literal">i_wish = </span>
+        <span class="str">f'I had more {</span>
+        <span class="code-literal">wish</span>
+        <span class="str">}'</span>
+    </div>
+    <div class="basic-text">thanks to the
+        <span class="monospace-bg italic">.</span>
+        preceding "wish".<br>
+        Did you like that f-string?
+        <span class="download-link turquoise">autosyntax</span>
+        does this only when needed.
+    </div>
+    <br><br><br>
 
-        {#        I N L I N E  M E T H O D S#}
-        <div class="basic-text">
-            <span class="white">Inline methods:</span>
-        </div>
-        <div class="monospace m-right-300">for range len numbers
-            <span class="tabs-22">
+    {#        I N L I N E  M E T H O D S#}
+    <div class="basic-text">
+        <span class="white">Inline methods:</span>
+    </div>
+    <div class="monospace m-right-300">for range len numbers
+        <span class="tabs-22">
 		</span>
-        </div>
+    </div>
 
-        <div class="code-block">
-            <span class="kept">for </span>
-            <span class="code-literal">number </span>
-            <span class="kept">in </span>
-            <span class="super">range</span>
-            <span class="code-literal">(</span>
-            <span class="super">len</span>
-            <span class="code-literal">(</span>
-            <span class="code-literal">numbers)):</span>
-        </div>
-        <br><br><br>
-        {#        L I S T  C O M P R E H E N S I O N S#}
-        <div class="basic-text">
-            <span class="white">List comprehensions:</span>
-        </div>
-        <div class="monospace m-right-300">listcomp print letters
-            <span class="tabs-21"></span>
-        </div>
+    <div class="code-block">
+        <span class="kept">for </span>
+        <span class="code-literal">number </span>
+        <span class="kept">in </span>
+        <span class="super">range</span>
+        <span class="code-literal">(</span>
+        <span class="super">len</span>
+        <span class="code-literal">(</span>
+        <span class="code-literal">numbers)):</span>
+    </div>
+    <br><br><br>
+    {#        L I S T  C O M P R E H E N S I O N S#}
+    <div class="basic-text">
+        <span class="white">List comprehensions:</span>
+    </div>
+    <div class="monospace m-right-300">listcomp print letters
+        <span class="tabs-21"></span>
+    </div>
 
-        <div class="code-block">
-            <span class="code-literal">[</span>
-            <span class="super">print</span>
-            <span class="code-literal">(letter) </span>
-            <span class="kept">for </span>
-            <span class="code-literal">letter </span>
-            <span class="kept">in </span>
-            <span class="code-literal">letters]</span>
-        </div>
-
-
-        <br><br><br>
+    <div class="code-block">
+        <span class="code-literal">[</span>
+        <span class="super">print</span>
+        <span class="code-literal">(letter) </span>
+        <span class="kept">for </span>
+        <span class="code-literal">letter </span>
+        <span class="kept">in </span>
+        <span class="code-literal">letters]</span>
+    </div>
 
 
-        <div class="basic-text">
-            <span class="white">Methods with typing:</span>
-        </div>
-        {#        D E F  T Y P I N G#}
-        <div class="monospace m-right-300">def is_easy bool autosyntax str kwargs
-            <span class="tabs-5"></span>
-        </div>
+    <br><br><br>
 
-        <div class="code-block">
-            <span class="kept">def </span>
-            <span class="code-literal">is_easy(autosyntax</span>
-            <span class="kept">, </span>
-            <span class="code-literal">**kwargs):</span>
-            <span class="kept">, </span>
-            <span class="code-break">
+
+    <div class="basic-text">
+        <span class="white">Methods with typing:</span>
+    </div>
+    {#        D E F  T Y P I N G#}
+    <div class="monospace m-right-300">def is_easy bool autosyntax str kwargs
+        <span class="tabs-5"></span>
+    </div>
+
+    <div class="code-block">
+        <span class="kept">def </span>
+        <span class="code-literal">is_easy(autosyntax</span>
+        <span class="kept">, </span>
+        <span class="code-literal">**kwargs):</span>
+        <span class="kept">, </span>
+        <span class="code-break">
 			<br>&emsp;</span>
-            <span class="doc bold">"""</span>
-            <span class="code-break">
+        <span class="doc bold">"""</span>
+        <span class="code-break">
 			<br>&emsp;</span>
-            <span class="doc bold">:type </span>
-            <span class="str">autosyntax: str </span>
-            <span class="code-break">
+        <span class="doc bold">:type </span>
+        <span class="str">autosyntax: str </span>
+        <span class="code-break">
 			<br>&emsp;</span>
-            <span class="doc bold">:rtype: </span>
-            <span class="str">bool</span>
-            <span class="code-break">
+        <span class="doc bold">:rtype: </span>
+        <span class="str">bool</span>
+        <span class="code-break">
 			<br>&emsp;</span>
-            <span class="doc bold">"""</span>
-            <span class="code-break">
+        <span class="doc bold">"""</span>
+        <span class="code-break">
 			<br>&emsp;</span>
-            <span class="code-literal dark-grey">|</span>
+        <span class="code-literal dark-grey">|</span>
+    </div>
+    <br><br>
+    <div class="basic-text">
+        <span class="white">And more, built with those little details in mind.</span><br><br>
+        <div class="download-link white">
+            <span>Download</span>
+            <span class="turquoise">autosyntax.</span>
         </div>
-        <br><br>
-        <div class="basic-text">
-            <span class="white">And more, built with those little details in mind.</span><br><br>
-            <div class="download-link white">
-                <span>Download</span>
-                <span class="turquoise">autosyntax.</span>
-            </div>
-        </div>
-        <div id="download_block">
-            {% block download %}
-            {% endblock %}
-        </div>
+    </div>
+    <div id="download_block">
+        {% block download %}
+        {% endblock %}
+    </div>
     </div>
     <a class="easter-egg"
        href="/homepage/templates/homepage/talia.html">
