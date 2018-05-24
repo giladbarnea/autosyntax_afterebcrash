@@ -44,8 +44,8 @@ def sup(value):
 
 
 @register.filter()
-def cb(value):
-	return format_html(_span("code-break", value))
+def cb(value, tabs):
+	return format_html(_span("code-break", value + '&emsp;' * tabs))
 
 
 @register.simple_tag

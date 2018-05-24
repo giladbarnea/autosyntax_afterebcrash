@@ -27,9 +27,7 @@
     <div class="code-block">
         {{ "class "|k }}
         {{ "Dog(Animal):"|cl }}
-        <span class="code-break">
-							<br>&emsp;&emsp;
-						</span>
+        {{ "<br>"|cb:2 }}
         {{ "def "|k }}
         {{ "__init__"|m }}
         {{ "("|cl }}
@@ -38,14 +36,10 @@
         {{ "fluffy="|cl }}
         {{ "True, "|k }}
         {{ "*args):"|cl }}
-        <span class="code-break">
-							<br>&emsp;&emsp;&emsp;&emsp;
-							</span>
+        {{ "<br>"|cb:4 }}
         {{ "self"|self }}
         {{ ".fluffy = fluffy"|cl }}
-        <span class="code-break">
-				<br>&emsp;&emsp;&emsp;&emsp;
-			</span>
+        {{ "<br>"|cb:4 }}
         {{ "super"|sup }}
         {{ "()."|cl }}
         {{ "__init__"|m }}
