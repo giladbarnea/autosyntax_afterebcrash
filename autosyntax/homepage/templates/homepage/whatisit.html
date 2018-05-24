@@ -1,11 +1,13 @@
 {% extends 'homepage/landing.html' %}
 {% load staticfiles %}
 {% block what_is_it %}
+    {% load extras %}
     <div id="whatisit_content">
-        <div class="space p-top-20">
-            What is it?<br>
-        </div>
-        <br>
+    {% page_title "What is it?" %}
+{#        <div class="space p-top-20">#}
+        {#            What is it?<br>#}
+        {#        </div>#}
+        {#        <br>#}
 
         <div class="work indented">
             <span class="download-link turquoise">autosyntax</span>
@@ -95,7 +97,7 @@
         </div>
 
         <br>
-        <div class="basic-text">How much time would it take for you to type the end result?
+        <div class="basic-text">How much time would it take you to type the end result?
             {#<br>            no more typo-prone#}
             {#            <span class="monospace-bg monospace-color italic">{[('*:,</span>.#}
         </div>

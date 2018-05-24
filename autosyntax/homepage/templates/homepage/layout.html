@@ -12,15 +12,11 @@
     <div class="grid-container">
         <div class="grid-item grid_0">
             <img src="{% static '/homepage/img/console_menu_trans.svg' %}"
-                 alt="hi"
                  height="30px"
                  width="30px"
                  id="console_menu"
                  class="console-menu"
             />
-            {#            {% for foo in test2 %}#}
-            {#                <span class="basic-text">{{ foo }}</span>#}
-            {#            {% endfor %}#}
 
             <div class="space-font sidebar" id="sidebar">
                 {% for item in sidebar_items %}
@@ -50,7 +46,6 @@
     {#end grid-container#}
     <div id="continue_arrow_lbl" class="continue-arrow-lbl"></div>
     <img src="{% static '/homepage/img/continue_new_trans.svg' %}"
-         alt="hi"
          height="80px"
          width="80px"
          id="continue_arrow"
