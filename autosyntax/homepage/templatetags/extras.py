@@ -1,32 +1,21 @@
 from django import template
-from django.http import HttpResponse
-from django.utils.safestring import mark_safe
+from django.utils.html import format_html
 
 register = template.Library()
 
 
+def wrap(cls, inner, tag="span"):
+	return f'<{tag} class="{cls}">{inner}</{tag}>'
+
+
 @register.filter()
-def add_enthusiasm(value, enth):
-	"""Removes all values of arg from the given string"""
-	return value + '!' * enth
-
-
-@register.simple_tag()
-def add_br(value, br_num):
-	"""Removes all values of arg from the given string"""
-	return '<br>' * br_num + value
+def turq(value):
+	return format_html(wrap("turquoise", value))
 
 
 @register.simple_tag
-def work_white(value):
-	return mark_safe(f'<div class="work white">{value}</div>')
-
-
-@register.simple_tag
-def work_turq(value):
-	return mark_safe(f'<div class="work turqoise">{value}</div>')
-
-
-@register.simple_tag
-def page_title(value):
-	return mark_safe(f'<div class="space p-top-20">{value}<br></div><br>')
+def page_title(value, *args):
+	value = ''.join([value, *args])
+	value = wrap("space p-top-20", value, "div")
+	value += '<br>' * 2
+	return format_html(value)
