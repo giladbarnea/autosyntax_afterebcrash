@@ -13,167 +13,308 @@
         </div>
         <br>
         <div class="basic-text white">
-            autosyntax knows what to do based on "Operators".<br>
+            There are only 3 mechanisms in action:<br>
         </div>
         <br>
         <div class="basic-text f-size-23 m-right-200 indented">
-            Operators are almost always built-in words from the python standard library,
-            to keep a 0 learning curve (e.g
+            An Operator must appear before the arguments (e.g
             <span class="monospace-bg italic">list</span>,
             <span class="monospace-bg italic">def</span>,
             <span class="monospace-bg italic">class</span> and so on).
             <br>
             <br>
-            In a given line, the Operator is the first argument.
+            An argument can be marked with a dot, to toggle a certain behaviour
+            <br>
+            <br>
+            A built-in method that precedes an argument, is applied to that argument
+        </div>
 
-        </div>
-        <br><br><br>
-        {#    D O T T E D  A R G U M E N T S#}
-        <div class="work">
-            <span class="turquoise">.Dotted</span>
-            arguments
-        </div>
-        <div class="basic-text white">
-            Mark an argument with a dot for less common use-cases.
-        </div>
-        {#    W I T H  B A S I C  O P E R A T O R S (anim 1-2)#}
-
-        {#        <div class="basic-text white">#}
-        {#            With the basic Operators, autosyntax converts words to strings, unless marked with a dot.#}
-        {#        </div>#}
+        <br><br>
+        <a href="howtouse_full.html" class="no-decor">
+            <div class="basic-text white">
+                For more details, click here.
+            </div>
+        </a>
         <br>
-        <div class="basic-text f-size-23 m-right-200 indented">
-            With basic operators, no dot = string; <br>Whereas "dotting" an argument denotes a variable.
-        </div>
-        {#        <div class="basic-text f-size-23 m-right-200 indented">#}
-        {#            In which case, the word remains as-is to be used as a variable.#}
-        {#        </div>#}
-
-        <div class="animation">
-            <div id="animation_1">
-                <div class="monospace m-right-300">
-                    <span>list milk nutella</span>
-                    <span class="op-03 m-left-150">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="code-literal">[</span>
-                    <span class="str">'milk'</span>
-                    <span class="kept">,&nbsp;</span>
-                    <span class="str">'nutella'</span>
-                    <span class="code-literal">]</span>
-                </div>
-            </div>
-            <div id="animation_2" style="display: none">
-                <div class="monospace m-right-300">list milk .nutella
-                    <span class="op-03 m-left-136">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="code-literal">[</span>
-                    <span class="str">'milk'</span>
-                    <span class="kept">,&nbsp;</span>
-                    <span class="code-literal">nutella]</span>
-                </div>
-            </div>
-        </div>
-        <br><br><br><br>
-        <div class="basic-text white m-right-200">
-            Sometimes, you're much more likely to use a variable than a string.
-        </div>
-        {#    W I T H  O T H E R  O P E R A T O R S#}
-        {#        <div class="basic-text white">#}
-        {#            With other Operators, the default is to keep as-is, unless marked with a dot.<br><br>#}
-        {#            These are cases where you'd most likely use a variable.#}
-        {#        </div>#}
-        <br>
-        <div class="basic-text f-size-23 m-right-200 indented">
-            In these cases, no dot = variable.
-        </div>
-        {#    F O R  C H A R A C T E R S (anim 3-4)#}
-        <div class="animation">
-            <div id="animation_3">
-                <div class="monospace m-right-300">
-                    <span>for .characters</span>
-                    <span class="op-03 m-left-136">
-					PRESS TO TOGGLE EXAMPLE</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">for </span>
-                    <span class="code-literal">character </span>
-                    <span class="kept">in </span>
-                    <span class="str">'characters'</span>
-                    <span class="code-literal">: </span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					Less common, uses dot</span>#}
-                </div>
-            </div>
-            <div id="animation_4" style="display: none">
-                <div class="monospace m-right-300">for characters
-                    <span class="op-03 m-left-150">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">for </span>
-                    <span class="code-literal">character </span>
-                    <span class="kept">in </span>
-                    <span class="code-literal">characters:&emsp;&emsp;</span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					More common, default</span>#}
-                </div>
-            </div>
-        </div>
-        <br><br><br>
-        <div class="basic-text white m-right-200">
-            With
-            <span class="monospace-bg italic">def</span> and
-            <span class="monospace-bg italic">class</span> Operators, dotting makes a default value.
-        </div>
-        <br>
-        {#    D E F  F O O (anim 5-6)#}
-        <div class="basic-text f-size-23 m-right-200 indented">
-            Any regular argument will create an additional parameter.
-        </div>
-
-        <div class="animation">
-            <div id="animation_5">
-                <div class="monospace m-right-300">
-                    <span>def foo name .John</span>
-                    <span class="op-03 m-left-136">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">def </span>
-                    <span class="code-literal">foo(name=</span>
-                    <span class="str">'John'</span>
-                    <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>
-{#                    <span class="op-03 monospace">#}
-{#					Marks a default value</span>#}
-                </div>
-            </div>
-            <div id="animation_6" style="display: none">
-                <div class="monospace m-right-300">def foo name John
-                    <span class="op-03 m-left-150">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">def </span>
-                    <span class="code-literal">foo(name</span>
-                    <span class="kept">, </span>
-                    <span class="code-literal">John):</span>
-{#                    <span class="op-03 monospace">&emsp;&emsp;&emsp;&emsp;&emsp;#}
-                    {#					No dot; simply more params</span>#}
-                </div>
-            </div>
-        </div>
-        <div id="whoami_block">
-            {% block whoami_block %}
-            {% endblock %}
-        </div>
+    </div>
+    {#    D O T T E D  A R G U M E N T S#}
+    {#    <div class="work">#}
+    {#        <span class="turquoise">.Dotted</span>#}
+    {#        arguments#}
+    {#    </div>#}
+    {#    <div class="basic-text white">#}
+    {#        Mark an argument with a dot for less common use-cases.#}
+    {#    </div>#}
+    {#    W I T H  B A S I C  O P E R A T O R S (anim 1-2)#}
+    {##}
+    {#        <div class="basic-text white">#}
+    {#            With the basic Operators, autosyntax converts words to strings, unless marked with a dot.#}
+    {#        </div>#}
+    {#    <br>#}
+    {#    <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#        With basic operators, no dot = string; <br>Whereas "dotting" an argument denotes a variable.#}
+    {#    </div>#}
+    {#        <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#            In which case, the word remains as-is to be used as a variable.#}
+    {#        </div>#}
+    {##}
+    {#    <div class="animation">#}
+    {#        <div id="animation_1">#}
+    {#            <div class="monospace m-right-300">#}
+    {#                <span>list milk nutella</span>#}
+    {#                <span class="op-03 m-left-150">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="code-literal">[</span>#}
+    {#                <span class="str">'milk'</span>#}
+    {#                <span class="kept">,&nbsp;</span>#}
+    {#                <span class="str">'nutella'</span>#}
+    {#                <span class="code-literal">]</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_2" style="display: none">#}
+    {#            <div class="monospace m-right-300">list milk .nutella#}
+    {#                <span class="op-03 m-left-136">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="code-literal">[</span>#}
+    {#                <span class="str">'milk'</span>#}
+    {#                <span class="kept">,&nbsp;</span>#}
+    {#                <span class="code-literal">nutella]</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <br><br><br>#}
+    {#    <div class="basic-text white m-right-200">#}
+    {#        Sometimes, you're much more likely to use a variable than a string.#}
+    {#    </div>#}
+    {#    W I T H  O T H E R  O P E R A T O R S#}
+    {#        <div class="basic-text white">#}
+    {#            With other Operators, the default is to keep as-is, unless marked with a dot.<br><br>#}
+    {#            These are cases where you'd most likely use a variable.#}
+    {#        </div>#}
+    {#    <br>#}
+    {#    <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#        In these cases, no dot = variable.#}
+    {#    </div>#}
+    {#    F O R  C H A R A C T E R S (anim 3-4)#}
+    {#    <div class="animation">#}
+    {#        <div id="animation_3">#}
+    {#            <div class="monospace m-right-300">#}
+    {#                <span>for .characters</span>#}
+    {#                <span class="op-03 m-left-136">#}
+    {#					PRESS TO TOGGLE EXAMPLE</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">for </span>#}
+    {#                <span class="code-literal">character </span>#}
+    {#                <span class="kept">in </span>#}
+    {#                <span class="str">'characters'</span>#}
+    {#                <span class="code-literal">: </span>#}
+    {#                    <span class="op-03 monospace">#}
+    {#					Less common, uses dot</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_4" style="display: none">#}
+    {#            <div class="monospace m-right-300">for characters#}
+    {#                <span class="op-03 m-left-150">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">for </span>#}
+    {#                <span class="code-literal">character </span>#}
+    {#                <span class="kept">in </span>#}
+    {#                <span class="code-literal">characters:&emsp;&emsp;</span>#}
+    {#                    <span class="op-03 monospace">#}
+    {#					More common, default</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <br><br><br>#}
+    {#    <div class="basic-text white m-right-200">#}
+    {#        With#}
+    {#        <span class="monospace-bg italic">def</span> and#}
+    {#        <span class="monospace-bg italic">class</span> Operators, dotting makes a default value.#}
+    {#    </div>#}
+    {#    <br>#}
+    {#    D E F  F O O (anim 5-6)#}
+    {#    <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#        Any regular argument will create an additional parameter.#}
+    {#    </div>#}
+    {##}
+    {#    <div class="animation">#}
+    {#        <div id="animation_5">#}
+    {#            <div class="monospace m-right-300">#}
+    {#                <span>def foo name .John</span>#}
+    {#                <span class="op-03 m-left-136">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">def </span>#}
+    {#                <span class="code-literal">foo(name=</span>#}
+    {#                <span class="str">'John'</span>#}
+    {#                <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>#}
+    {#                    <span class="op-03 monospace">#}
+    {#					Marks a default value</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_6" style="display: none">#}
+    {#            <div class="monospace m-right-300">def foo name John#}
+    {#                <span class="op-03 m-left-150">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">def </span>#}
+    {#                <span class="code-literal">foo(name</span>#}
+    {#                <span class="kept">, </span>#}
+    {#                <span class="code-literal">John):</span>#}
+    {#                    <span class="op-03 monospace">&emsp;&emsp;&emsp;&emsp;&emsp;#}
+    {#					No dot; simply more params</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <br><br><br>#}
+    {#    I N L I N E  M E T H O D S#}
+    {#    <div class="work">Inline#}
+    {#        <span class="turquoise">methods()</span>#}
+    {#    </div>#}
+    {#    <div class="basic-text white">#}
+    {#        Type a built-in method before an argument to apply it.#}
+    {#    </div>#}
+    {#    <br>#}
+    {#    <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#        This is useful in various cases:#}
+    {#    </div>#}
+    {#    <div class="animation">#}
+    {#        <div id="animation_7">#}
+    {#            <div class="monospace m-right-300">#}
+    {#                <span>max_values = listcomp max arrays</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="code-literal">max_values = [</span>#}
+    {#                <span class="super">max</span>#}
+    {#                <span class="code-literal">(array) </span>#}
+    {#                <span class="kept">for </span>#}
+    {#                <span class="code-literal">array </span>#}
+    {#                <span class="kept">in </span>#}
+    {#                <span class="code-literal">arrays]</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_8" style="display: none">#}
+    {#            <div class="monospace m-right-300">list milk .nutella#}
+    {#                <span class="op-03 m-left-136">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="code-literal">[</span>#}
+    {#                <span class="str">'milk'</span>#}
+    {#                <span class="kept">,&nbsp;</span>#}
+    {#                <span class="code-literal">nutella]</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <br><br><br><br>#}
+    {#    <div class="basic-text white m-right-200">#}
+    {#        Sometimes, you're much more likely to use a variable than a string.#}
+    {#    </div>#}
+    {#    W I T H  O T H E R  O P E R A T O R S#}
+    {#        <div class="basic-text white">#}
+    {#            With other Operators, the default is to keep as-is, unless marked with a dot.<br><br>#}
+    {#            These are cases where you'd most likely use a variable.#}
+    {#        </div>#}
+    {#    <br>#}
+    {#    <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#        In these cases, no dot = variable.#}
+    {#    </div>#}
+    {#    F O R  C H A R A C T E R S (anim 3-4)#}
+    {#    <div class="animation">#}
+    {#        <div id="animation_3">#}
+    {#            <div class="monospace m-right-300">#}
+    {#                <span>for .characters</span>#}
+    {#                <span class="op-03 m-left-136">#}
+    {#					PRESS TO TOGGLE EXAMPLE</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">for </span>#}
+    {#                <span class="code-literal">character </span>#}
+    {#                <span class="kept">in </span>#}
+    {#                <span class="str">'characters'</span>#}
+    {#                <span class="code-literal">: </span>#}
+    {#                    <span class="op-03 monospace">#}
+    {#					Less common, uses dot</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_4" style="display: none">#}
+    {#            <div class="monospace m-right-300">for characters#}
+    {#                <span class="op-03 m-left-150">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">for </span>#}
+    {#                <span class="code-literal">character </span>#}
+    {#                <span class="kept">in </span>#}
+    {#                <span class="code-literal">characters:&emsp;&emsp;</span>#}
+    {#                    <span class="op-03 monospace">#}
+    {#					More common, default</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <br><br><br>#}
+    {#    <div class="basic-text white m-right-200">#}
+    {#        With#}
+    {#        <span class="monospace-bg italic">def</span> and#}
+    {#        <span class="monospace-bg italic">class</span> Operators, dotting makes a default value.#}
+    {#    </div>#}
+    {#    <br>#}
+    {#    D E F  F O O (anim 5-6)#}
+    {#    <div class="basic-text f-size-23 m-right-200 indented">#}
+    {#        Any regular argument will create an additional parameter.#}
+    {#    </div>#}
+    {##}
+    {#    <div class="animation">#}
+    {#        <div id="animation_5">#}
+    {#            <div class="monospace m-right-300">#}
+    {#                <span>def foo name .John</span>#}
+    {#                <span class="op-03 m-left-136">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">def </span>#}
+    {#                <span class="code-literal">foo(name=</span>#}
+    {#                <span class="str">'John'</span>#}
+    {#                <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>#}
+    {#                    <span class="op-03 monospace">#}
+    {#					Marks a default value</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_6" style="display: none">#}
+    {#            <div class="monospace m-right-300">def foo name John#}
+    {#                <span class="op-03 m-left-150">#}
+    {#					PRESS TO TOGGLE EXAMPLE#}
+    {#			</span>#}
+    {#            </div>#}
+    {#            <div class="code-block">#}
+    {#                <span class="kept">def </span>#}
+    {#                <span class="code-literal">foo(name</span>#}
+    {#                <span class="kept">, </span>#}
+    {#                <span class="code-literal">John):</span>#}
+    {#                    <span class="op-03 monospace">&emsp;&emsp;&emsp;&emsp;&emsp;#}
+    {#					No dot; simply more params</span>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+    <div id="whoami_block">
+        {% block whoami_block %}
+        {% endblock %}
     </div>
 {% endblock %}

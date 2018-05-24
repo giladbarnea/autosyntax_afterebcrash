@@ -29,18 +29,6 @@ function on_event_do_to_collection(collection, event, fn) {
         on_event_do(new_collection[i], event, fn);
 }
 
-//
-// function on_event_do_once(element, event, fn) {
-//     let ret = element_or_by_fn(element, by_id);
-//
-//     function _fn_w_remove(some_func) {
-//         by_id("animation_2").removeEventListener("click", some_func, true);
-//         some_func();
-//     }
-//
-//     ret.addEventListener(event, () => _fn_w_remove(fn), true);
-//     return ret;
-// }
 
 function on_event_do(element, event, fn, once = false) {
     let ret = element_or_by_fn(element, by_id);

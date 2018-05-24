@@ -1,12 +1,28 @@
-set_style("whatisit_block", "paddingTop", window.screen.availHeight / 1.5);
-set_style("download_block", "paddingTop", window.screen.availHeight / 1.5);
-set_style("whoami_block", "paddingTop", window.screen.availHeight / 1.5);
+// let is_main_page = true;
+let filename = window.location.pathname
+    .split("/")
+    .filter(function (c) {
+        return c.length;
+    })
+    .pop();
 
+if (filename === undefined) {
+    set_style("whatisit_block", "paddingTop", window.screen.availHeight / 1.5);
+    set_style("download_block", "paddingTop", window.screen.availHeight / 1.5);
+    set_style("whoami_block", "paddingTop", window.screen.availHeight / 1.5);
+    on_event_do("continue_arrow", "click",
+        () => {
+            scroll_to("what_is_it_content");
+            decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
+        }
+    );
+}
 on_event_do(window, "scroll",
     () => {
         first_scroll_fade_ins();
         show_console_menu();
-        continue_arrow_handler();
+        if (filename === undefined)
+            continue_arrow_handler();
     });
 on_event_do("go_up", "click", () => scroll_to(document.body));
 
@@ -33,13 +49,6 @@ on_event_do("sidebar_item_4", "click",
 
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));
-
-on_event_do("continue_arrow", "click",
-    () => {
-        scroll_to("what_is_it_content");
-        decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
-    }
-);
 
 
 increase_opacity(by_id("all"), 1, factor = 0.5);
