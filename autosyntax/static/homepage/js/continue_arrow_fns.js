@@ -1,14 +1,17 @@
 // let continue_arrow_lbl_visible = false;
-by_id("continue_arrow_lbl").innerHTML = "What is it";
 // let user_currently_viewing = {
 //     'landing': true,
 //     'whatisit': false,
 //     'download': false
 // };
+// try {
+by_id("continue_arrow_lbl").innerHTML = "What is it";
 let user_currently_viewing = "landing";
+console.log(user_currently_viewing);
 let whatisit_content_orig_top = get_rect("what_is_it_content").top;
 let download_content_orig_top = get_rect("download_content").top;
 let howtouse_content_orig_top = get_rect("howtouse_content").top;
+
 on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
@@ -35,7 +38,6 @@ function continue_arrow_handler() {
     //     for (let k in user_currently_viewing)
     //         user_currently_viewing[k] = k === key;
     // }
-
     if (user_below(whatisit_content_orig_top)
         && user_currently_viewing === 'landing'
     ) {
@@ -74,5 +76,9 @@ function continue_arrow_handler() {
         by_id("continue_arrow_lbl").innerHTML = "What is it?"
     }
 
-
+    // }
 }
+
+// catch (err) {
+//     console.log('continue_arrow_fns error!: ', err);
+// }

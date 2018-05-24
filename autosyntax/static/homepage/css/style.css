@@ -39,7 +39,8 @@ body {
 
 .work,
 .go-up,
-.continue-arrow-lbl {
+.continue-arrow-lbl,
+.back {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -53,7 +54,8 @@ body {
 .continue-arrow,
 .go-up,
 .sidebar-item,
-.continue-arrow-lbl {
+.continue-arrow-lbl,
+.back {
     position: fixed;
 }
 
@@ -105,12 +107,16 @@ body {
     opacity: 0;
 }
 
+.op-03 {
+    opacity: 0.3;
+}
+
 .op-05 {
     opacity: 0.5;
 }
 
-.op-03 {
-    opacity: 0.3;
+.op-07 {
+    opacity: 0.7;
 }
 
 .download-link:hover {
@@ -122,7 +128,8 @@ body {
 .continue-arrow,
 .console-menu,
 .sidebar-item,
-.animation {
+.animation,
+.back {
     cursor: pointer;
 
 }
@@ -142,7 +149,7 @@ body {
     text-decoration-color: white;
 }
 
-.go-up {
+.go-up, .back {
     margin-left: auto;
     margin-right: auto;
     transition: width 400ms, height 400ms, left 400ms;
