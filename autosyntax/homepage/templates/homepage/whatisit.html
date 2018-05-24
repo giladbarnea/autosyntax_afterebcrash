@@ -8,82 +8,48 @@
     </div>
     {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
-    <div class="basic-text">For example:</div>
-    <div class="monospace m-right-300">list milk eggs nutella</div>
-    <div class="basic-text">becomes ></div>
-    {#    <div class="code-block">#}
+    {% basic_text "For example:" %}
+    {% mono_mright_300 "list milk eggs nutella" %}
+    {% basic_text "becomes >" %}
     {% list_block 'milk' 'eggs' 'nutella' %}
-    {#        <span class="code-literal">[</span>#}
-    {#        <span class="str">'milk'</span>#}
-    {#        <span class="kept">,&nbsp;</span>#}
-    {#        <span class="str">'eggs'</span>#}
-    {#        <span class="kept">,&nbsp;</span>#}
-    {#        <span class="str">'nutella'</span>#}
-    {#        <span class="code-literal">]</span>#}
-    {#    </div>#}
     {% br 3 %}
-    {#        D I C T  M E A N I N G  4 2  H A P P Y  P I Z Z A #}
-    <div class="basic-text">similarily,</div>
-    <div class="monospace m-right-300">dict meaning 42 happy pizza
-    </div>
+    {% basic_text "similarly," %}
+    {% mono_mright_300 "dict meaning 42 happy pizza" %}
     {% dict_block 'meaning' 42 'happiness' 'pizza' %}
-    {#        <div class="code-block">#}
-    {#            <span class="code-literal"> {</span>#}
-    {#            <span class="str">'meaning'</span>#}
-    {#            <span class="code-literal">: </span>#}
-    {#            <span class="int">42</span>#}
-    {#            <span class="kept">, </span>#}
-    {#            <span class="str">'happiness'</span>#}
-    {#            <span class="code-literal">: </span>#}
-    {#            <span class="str">'pizza'</span>#}
-    {#            <span class="code-literal">}</span>#}
-    {#        </div>#}
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    {% br 7 %}
     {#        C L A S S E S#}
-    <div class="work">
-        It can also do more complicated stuff,<br> like classes:
-    </div>
+    {% work "It can also do more complicated stuff,<br> like classes:" %}
     <br>
-    <div class="monospace m-right-300">class Dog Animal init fluffy True args</div>
-    <div class="basic-text">turns into ></div>
+    {% mono_mright_300 "class Dog Animal init fluffy True args" %}
+    {% basic_text "turns into >" %}
 
 
     <div class="code-block">
-        <span class="kept">class</span>
-        <span class="code-literal">&nbsp;Dog(Animal):</span>
+        {{ "class "|k }}
+        {{ "Dog(Animal):"|cl }}
         <span class="code-break">
 							<br>&emsp;&emsp;
 						</span>
-
-        <span class="kept">def</span>
-        <span class="magic">&nbsp;__init__</span>
-        <span class="code-literal">(</span>
-        <span class="self">self</span>
-        <span class="kept">,</span>
-        <span class="code-literal">&nbsp;fluffy=</span>
-        <span class="kept">True</span>
-        <span class="kept">, </span>
-        <span class="code-literal">*args):</span>
+        {{ "def "|k }}
+        {{ "__init__"|m }}
+        {{ "("|cl }}
+        {{ "self"|self }}
+        {{ ", "|k }}
+        {{ "fluffy="|cl }}
+        {{ "True, "|k }}
+        {{ "*args):"|cl }}
         <span class="code-break">
 							<br>&emsp;&emsp;&emsp;&emsp;
 							</span>
-
-        <span class="self">self</span>
-        <span class="code-literal">.fluffy = fluffy</span>
+        {{ "self"|self }}
+        {{ ".fluffy = fluffy"|cl }}
         <span class="code-break">
 				<br>&emsp;&emsp;&emsp;&emsp;
 			</span>
-
-        <span class="super">super</span>
-        <span class="code-literal">().</span>
-        <span class="magic">__init__</span>
-        <span class="code-literal">()</span>
+        {{ "super"|sup }}
+        {{ "()."|cl }}
+        {{ "__init__"|m }}
+        {{ "()"|cl }}
     </div>
 
     <br>

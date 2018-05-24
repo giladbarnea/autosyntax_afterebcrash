@@ -18,6 +18,36 @@ def dl_turq(value):
 	return format_html(_span("download-link turquoise", value))
 
 
+@register.filter()
+def k(value):
+	return format_html(_span("kept", value))
+
+
+@register.filter()
+def cl(value):
+	return format_html(_span("code-literal", value))
+
+
+@register.filter()
+def m(value):
+	return format_html(_span("magic", value))
+
+
+@register.filter()
+def self(value):
+	return format_html(_span("self", value))
+
+
+@register.filter()
+def sup(value):
+	return format_html(_span("super", value))
+
+
+@register.filter()
+def cb(value):
+	return format_html(_span("code-break", value))
+
+
 @register.simple_tag
 def br(num):
 	return format_html('<br>' * num)
@@ -41,16 +71,13 @@ def dict_block(*args):
 	new_value = [_span("code-literal", ' {')]
 
 	for i, c in enumerate(args):
-		# print(sys.stderr, 'Goodbye, cruel world!')
-		if isinstance(c, str):
-			new_value.append(_span("str", c))
-		else:
-			new_value.append(_span("int", c))
+		line = _span("str", c) if isinstance(c, str) else _span("int", c)
+		new_value.append(line)
+
 		if i < len(args) - 1:
-			if i % 2 != 0:
-				new_value.append(_span("kept", ', '))
-			else:
-				new_value.append(_span("code-literal", ': '))
+			line = _span("kept", ', ') if i % 2 != 0 else _span("code-literal", ': ')
+			new_value.append(line)
+
 	new_value.append(_span("code-literal", '}'))
 
 	return mark_safe(_div('code-block', ''.join(new_value)))
@@ -83,4 +110,18 @@ def page_title(value, *args):
 	value = _join(value, args)
 	value = _div("space p-top-20", value)
 	value += '<br>' * 2
+	return format_html(value)
+
+
+@register.simple_tag
+def basic_text(value, *args):
+	value = _join(value, args)
+	value = _div("basic-text", value)
+	return format_html(value)
+
+
+@register.simple_tag
+def mono_mright_300(value, *args):
+	value = _join(value, args)
+	value = _div("monospace m-right-300", value)
 	return format_html(value)
