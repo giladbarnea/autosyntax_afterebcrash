@@ -1,0 +1,24 @@
+{% extends 'homepage/layout.html' %}
+{% load staticfiles %}
+{% block landing %}
+    <div id="cv_content">
+        <div class="space p-top-20">
+            Gilad Barnea - CV<br>
+        </div>
+        <br>
+        <div class="work indented">
+            <span class="turquoise">Some</span>
+            title
+        </div>
+        <br>
+        <div class="basic-text white">
+            basic-text white<br>
+        </div>
+        <br>
+        <div class="basic-text f-size-23 m-right-200 indented">
+            basic-text f-size-23 m-right-200 indented
+        </div>
+    </div>
+    <script src="{% static 'homepage/js/utils.js' %}"></script>
+    <script src="{% static 'homepage/js/cv.js' %}"></script>
+{% endblock %}

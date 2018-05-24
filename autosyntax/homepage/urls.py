@@ -5,7 +5,8 @@ app_name = 'homepage'
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
 	url(r'talia', views.talia, name='talia'),
-	url(r'howtouse', views.how_to_use, name='howtouse'),
+	# url(r'howtouse', views.how_to_use, name='howtouse'),
 	url(r'how', views.how_to_use, name='howtouse'),
+	url(r'cv', views.cv, name='cv'),
 	# url(r'whoami', views.index, name='whoami'),
 	]

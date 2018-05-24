@@ -41,6 +41,7 @@ function continue_arrow_handler() {
     if (user_below(whatisit_content_orig_top)
         && user_currently_viewing === 'landing'
     ) {
+        console.log('Continue arrow: user below whatisit. Changing lbl to Download');
         user_currently_viewing = "whatisit";
         // _set_all_viewing_false_but('whatisit');
         on_event_do("continue_arrow", "click",
@@ -51,6 +52,7 @@ function continue_arrow_handler() {
     else if (user_below(download_content_orig_top)
         && user_currently_viewing === "whatisit"
     ) {
+        console.log('Continue arrow: user below download. Changing lbl to How to use');
         user_currently_viewing = "download";
         on_event_do("continue_arrow", "click",
             () => scroll_to("howtouse_content"));
@@ -60,6 +62,7 @@ function continue_arrow_handler() {
     else if (user_below(howtouse_content_orig_top)
         && user_currently_viewing === "download"
     ) {
+        console.log('Continue arrow: user below howtouse. Changing lbl to Who am I');
         user_currently_viewing = "howtouse";
         on_event_do("continue_arrow", "click",
             () => scroll_to("whoami_content"));
@@ -69,11 +72,16 @@ function continue_arrow_handler() {
     else if (!user_below(whatisit_content_orig_top)
         && user_currently_viewing === "howtouse"
     ) {
+        console.log('Continue arrow: user NOT below whatisit. Changing lbl to What is it?');
         user_currently_viewing = "landing";
         on_event_do("continue_arrow", "click",
             () => scroll_to("what_is_it_content"));
 
         by_id("continue_arrow_lbl").innerHTML = "What is it?"
+    }
+    else {
+        console.log('Continue arrow: got into final empty else');
+        console.log('\tuser_currently_viewing: ', user_currently_viewing);
     }
 
     // }

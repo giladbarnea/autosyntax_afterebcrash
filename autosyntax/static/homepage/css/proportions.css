@@ -88,6 +88,11 @@ body {
     padding-left: 40px;
 }
 
+.indented-half {
+    /*IN RELATION TO INDENTED*/
+    padding-left: 18px;
+}
+
 .code-break {
     font-size: 32px;
 }

@@ -1,6 +1,6 @@
 set_style("whatisit_block", "paddingTop", window.screen.availHeight / 1.5);
 set_style("download_block", "paddingTop", window.screen.availHeight / 1.5);
-set_style("whoami_block", "paddingTop", window.screen.availHeight / 1.5);
+set_style("whoami_block", "paddingTop", window.screen.availHeight / 4);
 on_event_do("continue_arrow", "click",
     () => {
         scroll_to("what_is_it_content");

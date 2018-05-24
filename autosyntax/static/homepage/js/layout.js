@@ -1,4 +1,5 @@
 // let is_main_page = true;
+screen.orientation.lock('landscape');
 let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)

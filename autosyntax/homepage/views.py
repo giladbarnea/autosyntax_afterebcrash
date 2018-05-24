@@ -89,6 +89,10 @@ def how_to_use(request):
 	return render(request, 'homepage/howtouse_full.html', context)
 
 
+def cv(request):
+	return render(request, 'homepage/cv.html')
+
+
 # return HttpResponse(template.render)
 
 

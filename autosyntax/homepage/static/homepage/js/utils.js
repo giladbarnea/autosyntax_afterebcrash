@@ -44,7 +44,8 @@ function get_rect(element) {
 }
 
 function user_below(threshold) {
-    return window.scrollY - 200 > threshold;
+    // return window.scrollY - 200 > threshold;
+    return window.scrollY > threshold;
 }
 
 
@@ -61,15 +62,6 @@ function set_style(element, att, val) {
         .style[att] = new_val;
 
 }
-
-// function number_to_string(val) {
-//     return typeof val === "number" ? val.toString() : val;
-//     // if (typeof val === "number")
-//     //     return val.toString();
-//     //
-//     // else
-//     //     return val;
-// }
 
 
 function fade_opacity(element, limit, factor, up, then = "") {
