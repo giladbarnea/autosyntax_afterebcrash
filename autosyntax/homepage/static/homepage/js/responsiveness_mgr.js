@@ -57,12 +57,14 @@ function on_resize() {
             set_style("console_menu", "height", w / 20);
             set_style("continue_arrow", "height", w / 12);
             set_style("go_up", "height", w / 12);
+            set_style("back", "height", w / 12);
         }
         else if (dyn_console_menu) {
             dyn_console_menu = false;
             set_style("console_menu", "height", 30);
             set_style("continue_arrow", "height", 50);
             set_style("go_up", "height", 50);
+            set_style("back", "height", 50);
         }
     }
 

@@ -84,7 +84,7 @@ def index(request):
 
 def how_to_use(request):
 	context = {
-		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I?'],
+		'sidebar_items': ['General behaviour', 'Download', 'How to use', 'Who am I?'],
 		}
 	return render(request, 'homepage/howtouse_full.html', context)
 

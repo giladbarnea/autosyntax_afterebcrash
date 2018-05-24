@@ -18,7 +18,8 @@ body {
 .magic,
 .self,
 .super,
-.doc {
+.doc,
+.back {
     font-size: 25px;
 }
 
@@ -91,10 +92,18 @@ body {
     font-size: 32px;
 }
 
-.go-up {
+.go-up,
+.back {
     bottom: 5%;
+    width: 100px;
+}
+
+.go-up {
     left: 90%;
-    width: 50px;
+}
+
+.back {
+    left: 7%
 }
 
 .sidebar {
@@ -119,8 +128,6 @@ body {
 .continue-arrow {
     bottom: 5%;
 }
-
-
 
 .continue-arrow-lbl {
     left: 48.6%;
