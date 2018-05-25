@@ -5,6 +5,7 @@ let filename = window.location.pathname
     .filter(c => c.length)
     .pop();
 console.log('filename: ', filename);
+let is_go_up_visible = false;
 on_event_do(window, "scroll",
     () => {
         console.log(window.scrollY);
