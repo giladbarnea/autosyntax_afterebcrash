@@ -99,8 +99,9 @@
     </div>
     {% br 2 %}
     <div class="basic-text m-right-200">
-        *Note: Any argument passed to an inline method follows this logic too,
-        regardless of Operator. We mostly pass variables to methods.
+        {{ '*'|turq }}
+        Note: Globally, any argument passed to an inline method follows this logic too,
+        regardless of Operator.<br> We mostly pass variables to methods, after all.
         {#        {{ 'list milk any nutella'|mono_bg_it }} ><br>#}
     </div>
     <div class="animation">
@@ -146,9 +147,11 @@
         </div>
     </div>
     {% br 3 %}
-    <div class="basic-text white m-right-200">
-        *Note: A digit is handled as an int.<br>
-        !!! NORMAL EXAMPLE NO ANIMATION !!!
+    <div class="basic-text m-right-200">
+        {{ '*'|turq }}
+        Note: Globally, a digit is left as is by default.<br>
+        {% mono_mright_300 'dict meaning 42 >' %}
+        {% dict_block 'meaning' 42 %}
     </div>
     {% br 3 %}
     {#    I N L I N E  M E T H O D S#}

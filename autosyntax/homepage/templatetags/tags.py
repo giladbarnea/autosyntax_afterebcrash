@@ -110,6 +110,8 @@ def mono_mright_300(value, *args):
 	return format_html(value)
 
 
+
+
 @register.simple_tag
 def basic_white_mright200(value, *args):
 	value = _join(value, args)
