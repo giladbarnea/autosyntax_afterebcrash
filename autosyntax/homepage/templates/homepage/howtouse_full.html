@@ -103,8 +103,16 @@
         regardless of Operator.
         {{ 'list milk any nutella'|mono_bg_it }} ><br>
     </div>
-    {% mono_mright_300 'list milk any nutella' %}
-    {% list_block 'milk' 'any(nutella)'|cl %}
+    <div class="animation">
+        <div id="animation_9">
+            {% mono_mright_300 'list milk any nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
+            {% list_block 'milk' 'any(nutella)'|cl %}
+        </div>
+        <div id="animation_10" style="display: none">
+            {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
+            {% list_block 'milk' 'nutella' %}
+        </div>
+    </div>
     {% br 3 %}
     {#    D E F  A N D  C L A S S  O P E R A T O R S#}
     <div class="basic-text white m-right-200">

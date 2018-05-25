@@ -15,7 +15,6 @@ on_event_do(window, "scroll",
 on_event_do("go_up", "click",
     () => scroll_to(document.body));
 
-
 let is_console_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
 on_event_do("console_menu", "click", hide_console_menu);
