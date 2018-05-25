@@ -1,8 +1,7 @@
 console.log('continue_arrow_mainpage.js\n');
 set_init_lbl_html("What is it?");
 
-on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
-on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
+
 
 let [whoami, howtouse, download, whatisit] = [
     new Section("whoami_content", "Who am I"),

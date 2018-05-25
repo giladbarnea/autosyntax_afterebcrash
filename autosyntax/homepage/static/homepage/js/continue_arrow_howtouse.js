@@ -1,9 +1,6 @@
 console.log('continue_arrow_howtouse.js\n');
 set_init_lbl_html("Operators");
 
-on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
-on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
-
 
 let [operators, dotted, inline] = [
     new Section("operators_htu", "Operators"),
