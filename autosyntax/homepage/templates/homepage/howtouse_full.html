@@ -50,6 +50,7 @@
         </div>
     </div>
     <br>
+    {#    D O T S T R  O P S#}
     <div class="basic-text f-size-23 m-right-200 indented">
         The operators which follow this rule are:<br>
         {% for operator in dotstr_ops %}
@@ -72,22 +73,18 @@
         <div id="animation_3">
             {% mono_mright_300 'for .characters' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
             <div class="code-block">
-                {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ 'characters'|string }}{{ ':'|cl }}
+                {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ "'characters'"|string }}{{ ':'|cl }}
             </div>
         </div>
         <div id="animation_4" style="display: none">
             {% mono_mright_300 'for characters' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
             <div class="code-block">
-                <span class="kept">for </span>
-                <span class="code-literal">character </span>
-                <span class="kept">in </span>
-                <span class="code-literal">characters:&emsp;&emsp;</span>
-                {#                    <span class="op-03 monospace">#}
-                {#					More common, default</span>#}
+                {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ 'characters:'|cl }}
             </div>
         </div>
     </div>
     <br>
+    {#    D O T V A R  O P S#}
     <div class="basic-text f-size-23 m-right-200 indented">
         The operators which follow this rule are:<br>
         {% for operator in dotvar_ops %}
@@ -107,6 +104,7 @@
         {{ 'list milk any nutella'|mono_bg_it }} ><br>
     </div>
     {% br 3 %}
+    {#    D E F  A N D  C L A S S  O P E R A T O R S#}
     <div class="basic-text white m-right-200">
         With {{ 'def'|mono_bg_it }} and {{ 'class'|mono_bg_it }}
         Operators, dotting makes the argument the default value
