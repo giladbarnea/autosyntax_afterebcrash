@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block landing %}
     <div id="howtouse_full_content">
-        {% load extras %}
+        {% load tags %}{% load filters %}
         {% page_title 'How to use' %}
         {#    G E N R A L  B E H A V I O U R#}
         {% work_indented 'Operators'|turq %}
@@ -12,7 +12,7 @@
         <div class="basic-text f-size-23 m-right-200 indented">
             >
             {{ 'Operators are almost always built-in elements<br>'|ind_half }}
-            {{ 'from the python standard library, so no learning is needed'|ind }}
+            {{ 'from the python standard library, so that no learning is needed.'|ind }}
             {% br 2 %}
             >
             {{ 'In a given line, the Operator is the first argument.'|ind_half }}
@@ -40,292 +40,277 @@
 
         <div class="animation">
             <div id="animation_1">
-                <div class="monospace m-right-300">
-                    <span>list milk nutella</span>
-                    <span class="op-03 m-left-150">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="code-literal">[</span>
-                    <span class="str">'milk'</span>
-                    <span class="kept">,&nbsp;</span>
-                    <span class="str">'nutella'</span>
-                    <span class="code-literal">]</span>
-                </div>
+                {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
+                {% list_block 'milk' 'nutella' %}
             </div>
             <div id="animation_2" style="display: none">
-                <div class="monospace m-right-300">list milk .nutella
-                    <span class="op-03 m-left-136">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-                </div>
-                <div class="code-block">
-                    <span class="code-literal">[</span>
-                    <span class="str">'milk'</span>
-                    <span class="kept">,&nbsp;</span>
-                    <span class="code-literal">nutella]</span>
-                </div>
+                {% mono_mright_300 'list milk .nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
+                {% list_block 'milk' 'nutella'|cl %}
+{#                <div class="code-block">#}
+                {#                    <span class="code-literal">[</span>#}
+                {#                    <span class="str">'milk'</span>#}
+                {#                    <span class="kept">,&nbsp;</span>#}
+                {#                    <span class="code-literal">nutella]</span>#}
+                {#                </div>#}
             </div>
         </div>
-        <br>
-        <div class="basic-text f-size-23 m-right-200 indented">
-            The operators which follow this rule are:<br>
-            {% for operator in dotstr_ops %}
-                <span id="operator_{{ forloop.counter }}">
+    </div>
+    <br>
+    <div class="basic-text f-size-23 m-right-200 indented">
+        The operators which follow this rule are:<br>
+        {% for operator in dotstr_ops %}
+            <span id="operator_{{ forloop.counter }}">
 						{% ifequal operator 'print' %}
                             {{ operator|mono_bg_it }}.
                         {% else %}
                             {{ operator|mono_bg_it }},
                         {% endifequal %}
 				</span>
-            {% endfor %}
-        </div>
-        {% br 3 %}
-        <div class="basic-text white m-right-200">
-            In other cases, using a variable is much more likely than a string.
-        </div>
-        {#    W I T H  O T H E R  O P E R A T O R S#}
-        <br>
-        {% basic_text_dim 'These cases are reversed; a dot makes a string.' %}
-        {#    F O R  C H A R A C T E R S (anim 3-4)#}
-        <div class="animation">
-            <div id="animation_3">
-                <div class="monospace m-right-300">
-                    <span>for .characters</span>
-                    <span class="op-03 m-left-136">
+        {% endfor %}
+    </div>
+    {% br 3 %}
+    <div class="basic-text white m-right-200">
+        In other cases, using a variable is much more likely than a string.
+    </div>
+    {#    W I T H  O T H E R  O P E R A T O R S#}
+    <br>
+    {% basic_text_dim 'These cases are reversed; a dot makes a string.' %}
+    {#    F O R  C H A R A C T E R S (anim 3-4)#}
+    <div class="animation">
+        <div id="animation_3">
+            <div class="monospace m-right-300">
+                <span>for .characters</span>
+                <span class="op-03 m-left-136">
 					PRESS TO TOGGLE EXAMPLE</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">for </span>
-                    <span class="code-literal">character </span>
-                    <span class="kept">in </span>
-                    <span class="str">'characters'</span>
-                    <span class="code-literal">: </span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					Less common, uses dot</span>#}
-                </div>
             </div>
-            <div id="animation_4" style="display: none">
-                <div class="monospace m-right-300">for characters
-                    <span class="op-03 m-left-150">
+            <div class="code-block">
+                <span class="kept">for </span>
+                <span class="code-literal">character </span>
+                <span class="kept">in </span>
+                <span class="str">'characters'</span>
+                <span class="code-literal">: </span>
+            </div>
+        </div>
+        <div id="animation_4" style="display: none">
+            <div class="monospace m-right-300">for characters
+                <span class="op-03 m-left-150">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">for </span>
-                    <span class="code-literal">character </span>
-                    <span class="kept">in </span>
-                    <span class="code-literal">characters:&emsp;&emsp;</span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					More common, default</span>#}
-                </div>
+            </div>
+            <div class="code-block">
+                <span class="kept">for </span>
+                <span class="code-literal">character </span>
+                <span class="kept">in </span>
+                <span class="code-literal">characters:&emsp;&emsp;</span>
+                {#                    <span class="op-03 monospace">#}
+                {#					More common, default</span>#}
             </div>
         </div>
-        <br>
-        <div class="basic-text f-size-23 m-right-200 indented">
-            The operators which follow this rule are:<br>
-            {% for operator in dotvar_ops %}
-                <span id="operator_{{ forloop.counter }}">
-						{% ifequal operator 'for' %}
+    </div>
+    <br>
+    <div class="basic-text f-size-23 m-right-200 indented">
+        The operators which follow this rule are:<br>
+        {% for operator in dotvar_ops %}
+            <span id="operator_{{ forloop.counter }}">
+						{% ifequal operator 'listcomp' %}
                             {{ operator|mono_bg_it }}.
                         {% else %}
                             {{ operator|mono_bg_it }},
                         {% endifequal %}
 				</span>
-            {% endfor %}
-        </div>
-        {% br 2 %}
-        <div class="basic-text m-right-200">
-            *Note: An argument passed to any inline method follows this logic too,
-            i.e {{ 'enumerate arrays'|mono_bg_it }}
-            !!! MAKE ANIMATION !!!
-        </div>
-        {% br 3 %}
-        <div class="basic-text white m-right-200">
-            With {{ 'def'|mono_bg_it }} and {{ 'class'|mono_bg_it }}
-            Operators, dotting makes the argument the default value
-            of the preceding argument.
-        </div>
-        <br>
+        {% endfor %}
+    </div>
+    {% br 2 %}
+    <div class="basic-text m-right-200">
+        *Note: Any argument passed to an inline method follows this logic too,
+        regardless of Operator.
+        {{ 'list milk any nutella'|mono_bg_it }} ><br>
+    </div>
+    {% br 3 %}
+    <div class="basic-text white m-right-200">
+        With {{ 'def'|mono_bg_it }} and {{ 'class'|mono_bg_it }}
+        Operators, dotting makes the argument the default value
+        of the preceding argument.
+    </div>
+    <br>
 
-        {#    D E F  F O O (anim 5-6)#}
-        {% basic_text_dim 'Any non-dotted argument will just create an additional parameter.' %}
+    {#    D E F  F O O (anim 5-6)#}
+    {% basic_text_dim 'Any non-dotted argument will just create an additional parameter.' %}
 
-        <div class="animation">
-            <div id="animation_5">
-                <div class="monospace m-right-300">
-                    <span>def foo name .john</span>
-                    <span class="op-03 m-left-136">
+    <div class="animation">
+        <div id="animation_5">
+            <div class="monospace m-right-300">
+                <span>def foo name .john</span>
+                <span class="op-03 m-left-136">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">def </span>
-                    <span class="code-literal">foo(name=</span>
-                    <span class="str">'john'</span>
-                    <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					Marks a default value</span>#}
-                </div>
             </div>
-            <div id="animation_6" style="display: none">
-                <div class="monospace m-right-300">def foo name john
-                    <span class="op-03 m-left-150">
+            <div class="code-block">
+                <span class="kept">def </span>
+                <span class="code-literal">foo(name=</span>
+                <span class="str">'john'</span>
+                <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+                {#                    <span class="op-03 monospace">#}
+                {#					Marks a default value</span>#}
+            </div>
+        </div>
+        <div id="animation_6" style="display: none">
+            <div class="monospace m-right-300">def foo name john
+                <span class="op-03 m-left-150">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">def </span>
-                    <span class="code-literal">foo(name</span>
-                    <span class="kept">, </span>
-                    <span class="code-literal">john):</span>
-                </div>
+            </div>
+            <div class="code-block">
+                <span class="kept">def </span>
+                <span class="code-literal">foo(name</span>
+                <span class="kept">, </span>
+                <span class="code-literal">john):</span>
             </div>
         </div>
-        {% br 3 %}
-        <div class="basic-text white m-right-200">
-            *Note: A digit is handled as an int.<br>
-            !!! NORMAL EXAMPLE NO ANIMATION !!!
-        </div>
-        {% br 3 %}
-        {#    I N L I N E  M E T H O D S#}
-        <div class="work">Inline
-            <span class="turquoise">methods()</span>
-        </div>
-        <div class="basic-text white">
-            Type a built-in method before an argument to apply it.
-        </div>
-        <br>
-        <div class="basic-text f-size-23 m-right-200 indented">
-            This is useful in various cases:
-        </div>
-        <div class="animation">
-            <div id="animation_7">
-                <div class="monospace m-right-300">
-                    <span>for enumerate arrays</span>
-                    !!! FIX ANIMATION !!!
-                </div>
-                <div class="code-block">
-                    <span class="code-literal">max_values = [</span>
-                    <span class="super">max</span>
-                    <span class="code-literal">(array) </span>
-                    <span class="kept">for </span>
-                    <span class="code-literal">array </span>
-                    <span class="kept">in </span>
-                    <span class="code-literal">arrays]</span>
-                </div>
+    </div>
+    {% br 3 %}
+    <div class="basic-text white m-right-200">
+        *Note: A digit is handled as an int.<br>
+        !!! NORMAL EXAMPLE NO ANIMATION !!!
+    </div>
+    {% br 3 %}
+    {#    I N L I N E  M E T H O D S#}
+    <div class="work">Inline
+        <span class="turquoise">methods()</span>
+    </div>
+    <div class="basic-text white">
+        Type a built-in method before an argument to apply it.
+    </div>
+    <br>
+    <div class="basic-text f-size-23 m-right-200 indented">
+        This is useful in various cases:
+    </div>
+    <div class="animation">
+        <div id="animation_7">
+            <div class="monospace m-right-300">
+                <span>for enumerate arrays</span>
+                !!! FIX ANIMATION !!!
             </div>
-            <div id="animation_8" style="display: none">
-                <div class="monospace m-right-300">list milk .nutella
-                    <span class="op-03 m-left-136">
+            <div class="code-block">
+                <span class="code-literal">max_values = [</span>
+                <span class="super">max</span>
+                <span class="code-literal">(array) </span>
+                <span class="kept">for </span>
+                <span class="code-literal">array </span>
+                <span class="kept">in </span>
+                <span class="code-literal">arrays]</span>
+            </div>
+        </div>
+        <div id="animation_8" style="display: none">
+            <div class="monospace m-right-300">list milk .nutella
+                <span class="op-03 m-left-136">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="code-literal">[</span>
-                    <span class="str">'milk'</span>
-                    <span class="kept">,&nbsp;</span>
-                    <span class="code-literal">nutella]</span>
-                </div>
+            </div>
+            <div class="code-block">
+                <span class="code-literal">[</span>
+                <span class="str">'milk'</span>
+                <span class="kept">,&nbsp;</span>
+                <span class="code-literal">nutella]</span>
             </div>
         </div>
-        <br><br><br><br>
-        <div class="basic-text white m-right-200">
-            THIS IS DUPLICATE
-        </div>
-        {#    W I T H  O T H E R  O P E R A T O R S#}
-        {#        <div class="basic-text white">#}
-        {#            With other Operators, the default is to keep as-is, unless marked with a dot.<br><br>#}
-        {#            These are cases where you'd most likely use a variable.#}
-        {#        </div>#}
-        <br>
-        <div class="basic-text f-size-23 m-right-200 indented">
-            In these cases, no dot = variable.
-        </div>
-        {#    F O R  C H A R A C T E R S (anim 3-4)#}
-        <div class="animation">
-            <div id="animation_3">
-                <div class="monospace m-right-300">
-                    <span>for .characters</span>
-                    <span class="op-03 m-left-136">
+    </div>
+    <br><br><br><br>
+    <div class="basic-text white m-right-200">
+        THIS IS DUPLICATE
+    </div>
+    {#    W I T H  O T H E R  O P E R A T O R S#}
+    {#        <div class="basic-text white">#}
+    {#            With other Operators, the default is to keep as-is, unless marked with a dot.<br><br>#}
+    {#            These are cases where you'd most likely use a variable.#}
+    {#        </div>#}
+    <br>
+    <div class="basic-text f-size-23 m-right-200 indented">
+        In these cases, no dot = variable.
+    </div>
+    {#    F O R  C H A R A C T E R S (anim 3-4)#}
+    <div class="animation">
+        <div id="animation_3">
+            <div class="monospace m-right-300">
+                <span>for .characters</span>
+                <span class="op-03 m-left-136">
 					PRESS TO TOGGLE EXAMPLE</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">for </span>
-                    <span class="code-literal">character </span>
-                    <span class="kept">in </span>
-                    <span class="str">'characters'</span>
-                    <span class="code-literal">: </span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					Less common, uses dot</span>#}
-                </div>
             </div>
-            <div id="animation_4" style="display: none">
-                <div class="monospace m-right-300">for characters
-                    <span class="op-03 m-left-150">
+            <div class="code-block">
+                <span class="kept">for </span>
+                <span class="code-literal">character </span>
+                <span class="kept">in </span>
+                <span class="str">'characters'</span>
+                <span class="code-literal">: </span>
+                {#                    <span class="op-03 monospace">#}
+                {#					Less common, uses dot</span>#}
+            </div>
+        </div>
+        <div id="animation_4" style="display: none">
+            <div class="monospace m-right-300">for characters
+                <span class="op-03 m-left-150">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">for </span>
-                    <span class="code-literal">character </span>
-                    <span class="kept">in </span>
-                    <span class="code-literal">characters:&emsp;&emsp;</span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					More common, default</span>#}
-                </div>
+            </div>
+            <div class="code-block">
+                <span class="kept">for </span>
+                <span class="code-literal">character </span>
+                <span class="kept">in </span>
+                <span class="code-literal">characters:&emsp;&emsp;</span>
+                {#                    <span class="op-03 monospace">#}
+                {#					More common, default</span>#}
             </div>
         </div>
-        <br><br><br>
-        <div class="basic-text white m-right-200">
-            With
-            <span class="monospace-bg italic">def</span> and
-            <span class="monospace-bg italic">class</span> Operators, dotting denotes a default value.
-        </div>
-        <br>
-        {#    D E F  F O O (anim 5-6)#}
-        <div class="basic-text f-size-23 m-right-200 indented">
-            Any regular argument will create an additional parameter.
-        </div>
+    </div>
+    <br><br><br>
+    <div class="basic-text white m-right-200">
+        With
+        <span class="monospace-bg italic">def</span> and
+        <span class="monospace-bg italic">class</span> Operators, dotting denotes a default value.
+    </div>
+    <br>
+    {#    D E F  F O O (anim 5-6)#}
+    <div class="basic-text f-size-23 m-right-200 indented">
+        Any regular argument will create an additional parameter.
+    </div>
 
-        <div class="animation">
-            <div id="animation_5">
-                <div class="monospace m-right-300">
-                    <span>def foo name .John</span>
-                    <span class="op-03 m-left-136">
+    <div class="animation">
+        <div id="animation_5">
+            <div class="monospace m-right-300">
+                <span>def foo name .John</span>
+                <span class="op-03 m-left-136">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">def </span>
-                    <span class="code-literal">foo(name=</span>
-                    <span class="str">'John'</span>
-                    <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>
-                    {#                    <span class="op-03 monospace">#}
-                    {#					Marks a default value</span>#}
-                </div>
             </div>
-            <div id="animation_6" style="display: none">
-                <div class="monospace m-right-300">def foo name John
-                    <span class="op-03 m-left-150">
+            <div class="code-block">
+                <span class="kept">def </span>
+                <span class="code-literal">foo(name=</span>
+                <span class="str">'John'</span>
+                <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+                {#                    <span class="op-03 monospace">#}
+                {#					Marks a default value</span>#}
+            </div>
+        </div>
+        <div id="animation_6" style="display: none">
+            <div class="monospace m-right-300">def foo name John
+                <span class="op-03 m-left-150">
 					PRESS TO TOGGLE EXAMPLE
 			</span>
-                </div>
-                <div class="code-block">
-                    <span class="kept">def </span>
-                    <span class="code-literal">foo(name</span>
-                    <span class="kept">, </span>
-                    <span class="code-literal">John):</span>
-                    {#                    <span class="op-03 monospace">&emsp;&emsp;&emsp;&emsp;&emsp;#}
-                    {#					No dot; simply more params</span>#}
-                </div>
+            </div>
+            <div class="code-block">
+                <span class="kept">def </span>
+                <span class="code-literal">foo(name</span>
+                <span class="kept">, </span>
+                <span class="code-literal">John):</span>
+                {#                    <span class="op-03 monospace">&emsp;&emsp;&emsp;&emsp;&emsp;#}
+                {#					No dot; simply more params</span>#}
             </div>
         </div>
-        <div id="whoami_block">
-            {% block whoami_block %}
-            {% endblock %}
-        </div>
+    </div>
+    <div id="whoami_block">
+        {% block whoami_block %}
+        {% endblock %}
+    </div>
 
     </div>
     <script src="{% static 'homepage/js/utils.js' %}"></script>

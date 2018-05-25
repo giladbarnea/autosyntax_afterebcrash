@@ -1,7 +1,7 @@
 {% extends 'homepage/whatisit.html' %}
 {% load staticfiles %}
 {% block download %}
-    {% load extras %}
+    {% load tags %}{% load filters %}
     <div id="download_content">
         {% page_title 'Download' %}
         <a class="download-link indented basic-text"

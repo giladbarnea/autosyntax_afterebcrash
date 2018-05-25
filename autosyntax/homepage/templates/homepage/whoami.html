@@ -1,7 +1,7 @@
 {% extends 'homepage/howtouse.html' %}
 {% load staticfiles %}
 {% block whoami_block %}
-    {% load extras %}
+    {% load tags %}{% load filters %}
     <div id="whoami_content">
 
         {% page_title 'Who am I?' %}

@@ -1,7 +1,7 @@
 {% extends 'homepage/landing.html' %}
 {% load staticfiles %}
 {% block what_is_it %}
-    {% load extras %}
+    {% load tags %}{% load filters %}
     <div id="whatisit_content">
         {% page_title "What is it?" %}
         {% work_indented "autosyntax"|dl_turq "turns simple words into python code." %}
