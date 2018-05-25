@@ -198,6 +198,13 @@ def basic_text(value, *args):
 
 
 @register.simple_tag
+def basic_text_dim(value, *args):
+	value = _join(value, args)
+	value = _div("basic-text f-size-23 m-right-200 indented", value)
+	return format_html(value)
+
+
+@register.simple_tag
 def mono_mright_300(value, *args):
 	value = _join(value, args)
 	value = _div("monospace m-right-300", value)

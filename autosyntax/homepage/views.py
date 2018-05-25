@@ -11,7 +11,9 @@ def index(request):
 def how_to_use(request):
 	context = {
 		'sidebar_items': ['General behaviour', 'Download', 'How to use', 'Who am I?'],
-		'operators':['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'str', 'print']
+		'operators':     ['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'str', 'print'],
+		'dotstr_ops':    ['list', 'tuple', 'set', 'dict', 'str', 'print'],
+		'dotvar_ops':    ['for']
 		}
 	return render(request, 'homepage/howtouse_full.html', context)
 
