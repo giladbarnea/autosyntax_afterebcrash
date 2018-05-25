@@ -1,10 +1,9 @@
 {% extends 'homepage/layout.html' %}
-{% load staticfiles %}
+{% load static %}
+{% load tags %}{% load filters %}
 {% block content %}
     <div id="howtouse_full_content">
-        {% load tags %}{% load filters %}
         {% page_title 'How to use' %}
-        G E N R A L B E H A V I O U R
         {% work_indented 'Operators'|turq %}
         <br>
         {% basic_text '"Operators" tell autosyntax which type of code to generate.'|white %}
@@ -32,7 +31,7 @@
 			</span>
         </div>
         {% br 3 %}
-        D O T T E D A R G U M E N T S
+        {#        D O T T E D  A R G U M E N T S#}
         {% work '.Dotted'|turq 'arguments' %}
         {% basic_text 'Mark an argument with a dot to toggle a less common use-case.'|white %}
         <br>
@@ -50,7 +49,7 @@
         </div>
     </div>
     <br>
-    D O T S T R  O P S
+    {#    D O T S T R  O P S#}
     <div class="basic-text f-size-23 m-right-200 indented">
         The operators which follow this rule are:<br>
         {% for operator in dotstr_ops %}
@@ -65,10 +64,10 @@
     </div>
     {% br 3 %}
     {% basic_white_mright200 'In other cases, using a variable is much more likely than a string.' %}
-    W I T H  O T H E R  O P E R A T O R S
+    {#    W I T H  O T H E R  O P E R A T O R S#}
     <br>
     {% basic_text_dim 'These cases are reversed; a dot makes a string.' %}
-    F O R  C H A R A C T E R S (anim 3-4)
+    {#    F O R  C H A R A C T E R S (anim 3-4)#}
     <div class="animation">
         <div id="animation_3">
             {% mono_mright_300 'for .characters' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
@@ -85,7 +84,7 @@
         </div>
     </div>
     <br>
-    D O T V A R  O P S
+    {#    D O T V A R  O P S#}
     <div class="basic-text f-size-23 m-right-200 indented">
         The operators which follow this rule are:<br>
         {% for operator in dotvar_ops %}
@@ -116,7 +115,7 @@
         </div>
     </div>
     {% br 3 %}
-    D E F  A N D  C L A S S  O P E R A T O R S
+    {#    D E F  A N D  C L A S S  O P E R A T O R S#}
     <div class="basic-text white m-right-200">
         With {{ 'def'|mono_bg_it }} and {{ 'class'|mono_bg_it }}
         Operators, dotting makes the argument the default value
@@ -124,7 +123,7 @@
     </div>
     <br>
 
-    D E F  F O O (anim 5-6)
+    {#    D E F  F O O (anim 5-6)#}
     {% basic_text_dim 'Any non-dotted argument will just create an additional parameter.' %}
 
     <div class="animation">
@@ -155,7 +154,7 @@
         {% dict_block 'meaning' 42 %}
     </div>
     {% br 3 %}
-    I N L I N E  M E T H O D S
+    {#    I N L I N E  M E T H O D S#}
     {% work 'Inline' 'methods()'|turq %}
     {% basic_white_mright200 'Type a built-in method before an argument to apply it.' %}
     <br>
@@ -170,5 +169,6 @@
     {% br 4 %}
 
     {#    <script src="{% static 'homepage/js/utils.js' %}"></script>#}
+    <script src="{% static 'homepage/js/continue_arrow_howtouse.js' %}"></script>
     <script src="{% static 'homepage/js/howtouse.js' %}"></script>
 {% endblock %}

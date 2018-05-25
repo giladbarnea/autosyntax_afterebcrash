@@ -1,12 +1,13 @@
+// window.onload = () => {
 on_event_do(window, "resize", on_resize);
 
-let is_go_up_visible = false;
+
 on_resize();
 
 
 function on_resize() {
     let w = window.screen.availWidth;
-    console.log(w);
+    console.log('w: ', w);
     let dyn_console_menu = true;
     let dyn_body_left = true;
     let dyn_body_right = true;
@@ -21,27 +22,27 @@ function on_resize() {
     resize_nav_buttons();
     resize_space();
     resize_sidebar();
-    place_tabs_before_arrows_in_whatisit();
+    // place_tabs_before_arrows_in_whatisit();
 
 
-    function place_tabs_before_arrows_in_whatisit() {
-        function _place_tabs(class_num, tabs_num) {
-            let tabs = by_class("tabs-" + class_num);
-            for (let i = 0; i < tabs.length; i++) {
-                tabs[i].innerHTML = "";
-                for (let j = 0; j < tabs_num; j++)
-                    tabs[i].innerHTML += "&emsp;";
-                tabs[i].innerHTML += ">";
-            }
-        }
-
-        let base = Math.round(w / 500);
-        _place_tabs("5", base);
-        _place_tabs("16", base + 11);
-        _place_tabs("21", base + 16);
-        _place_tabs("22", base + 17);
-
-    }
+    // function place_tabs_before_arrows_in_whatisit() {
+    //     function _place_tabs(class_num, tabs_num) {
+    //         let tabs = by_class("tabs-" + class_num);
+    //         for (let i = 0; i < tabs.length; i++) {
+    //             tabs[i].innerHTML = "";
+    //             for (let j = 0; j < tabs_num; j++)
+    //                 tabs[i].innerHTML += "&emsp;";
+    //             tabs[i].innerHTML += ">";
+    //         }
+    //     }
+    //
+    //     let base = Math.round(w / 500);
+    //     _place_tabs("5", base);
+    //     _place_tabs("16", base + 11);
+    //     _place_tabs("21", base + 16);
+    //     _place_tabs("22", base + 17);
+    //
+    // }
 
 
     function resize_nav_buttons() {
@@ -181,3 +182,5 @@ function on_resize() {
     }
 
 }
+
+// };

@@ -1,7 +1,7 @@
 // set_style("continue_arrow", "visibility", "none");
 
 // console.log('\n\nHI!@!!\n');
-
+console.log('howtouse.js\n');
 window.onload = () => {
     by_id("continue_arrow").style["display"] = "none";
 

@@ -1,3 +1,5 @@
+console.log('utils.js\n');
+
 function by_id(id) {
     return document.getElementById(id);
 }

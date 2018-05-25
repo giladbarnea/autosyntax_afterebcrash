@@ -5,9 +5,10 @@ let filename = window.location.pathname
     .filter(c => c.length)
     .pop();
 console.log('filename: ', filename);
+let is_go_up_visible = false;
 on_event_do(window, "scroll",
     () => {
-        console.log(window.scrollY);
+        console.log('scrollY: ', window.scrollY);
         first_scroll_fade_ins();
         show_console_menu();
         if (filename === undefined)
@@ -24,7 +25,12 @@ on_event_do("console_menu", "click", hide_console_menu);
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));
 
-
+on_event_do("continue_arrow", "click",
+    () => {
+        scroll_to("whatisit_content");
+        decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
+    }
+);
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
 

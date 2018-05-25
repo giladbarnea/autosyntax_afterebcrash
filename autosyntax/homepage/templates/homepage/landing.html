@@ -1,42 +1,23 @@
 {% extends 'homepage/layout.html' %}
 {% load static %}
+{# B L O C K  C O N T E N T#}
 {% block content %}
+    {% load tags %}{% load filters %}
+    {% page_title 'Hi! My name is Gilad.<br>I love to code FAST.<br><br>This is why I created<br>' 'autosyntax.'|span:'download-link italic turquoise' %}
+    {% work_indented "It's completely free and I know you'll like it." %}
 
+    {#W H A T  I S  I T  B L O C K#}
+    <div id="whatisit_block">
+        {% block what_is_it %}
+        {% endblock %}
 
+    </div>
 
-
-        <div class="grid-item grid_1">
-
-            <div class="pad-body" id="pad_body">
-                {# B L O C K  L A N D I N G#}
-                {% load tags %}{% load filters %}
-                {% page_title 'Hi! My name is Gilad.<br>I love to code FAST.<br><br>This is why I created<br>' 'autosyntax.'|span:'download-link italic turquoise' %}
-                {% work_indented "It's completely free and I know you'll like it." %}
-
-                {#W H A T  I S  I T  B L O C K#}
-                <div id="whatisit_block">
-                    {% block what_is_it %}
-                    {% endblock %}
-                </div>
-            </div>
-        </div>
-        {# end grid_1#}
-
-
-
-
-    {#    C O N T I N U E  A R R O W  L B L#}
-    <div id="continue_arrow_lbl" class="continue-arrow-lbl"></div>
-    <img src="{% static '/homepage/img/continue_new_trans.svg' %}"
-         height="80px"
-         width="80px"
-         id="continue_arrow"
-         class="continue-arrow"
-    />
-
-    <script src="{% static 'homepage/js/utils.js' %}"></script>
+    <script src="{% static 'homepage/js/continue_arrow.js' %}"></script>
+    <script src="{% static 'homepage/js/continue_arrow_mainpage.js' %}"></script>
     <script src="{% static 'homepage/js/main_page.js' %}"></script>
 {% endblock %}
+{# E N D  B L O C K  C O N T E N T#}
 
 
 
