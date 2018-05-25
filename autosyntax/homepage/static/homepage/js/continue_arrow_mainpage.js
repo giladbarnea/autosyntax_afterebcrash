@@ -10,11 +10,13 @@ let [whoami, howtouse, download, whatisit] = [
     new Section("download_content", "Download"),
     new Section("whatisit_content", "What is it?")
 ];
+on_event_do("continue_arrow", "click", () =>
+    scroll_to("whatisit_content"));
 // DOES NOT persist in other pages
-on_event_do(window, "scroll", continue_arrow_hndl_mainpage);
+on_event_do(window, "scroll", continue_arrow_hndl);
 
 
-function continue_arrow_hndl_mainpage() {
+function continue_arrow_hndl() {
     if (user_below(howtouse.init_top)) {
         on_event_do("continue_arrow", "click",
             () => scroll_to(whoami.sect_id));

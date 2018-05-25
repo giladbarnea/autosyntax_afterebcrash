@@ -10,7 +10,7 @@ let is_go_up_visible = false;
 
 on_event_do(window, "scroll",
     () => {
-        // PERSISTS AS LONG AS LAYOUT.HTML IS EXTENDED FROM
+        // PERSISTS AS LONG AS LAYOUT.HTML IS EXTENDED FROM (i.e always)
         first_scroll_fade_ins();
         show_console_menu();
     });
@@ -36,14 +36,15 @@ increase_opacity(by_id("all"), 1, factor = 0.5);
 
 function first_scroll_fade_ins() {
     // PERSISTS
-    if (window.scrollY > 200 && !is_go_up_visible) {
+    if (window.scrollY >= 100 && !is_go_up_visible) {
         is_go_up_visible = true;
         increase_opacity(by_id("go_up"), 0.7, factor = 1);
-        set_style("continue_arrow", "left", "10%");
-        set_style("continue_arrow_lbl", "left", "8.8%");
+        set_style("continue_arrow", "left", "14%");
+        set_style("continue_arrow_lbl", "left", "12.8%");
         decrease_opacity(by_id("continue_arrow"), 0.7, factor = 0.05);
     }
-    else if (window.scrollY <= 200 && is_go_up_visible) {
+    else if (window.scrollY <= 100 && is_go_up_visible) {
+        // console.log('\nscrolled up, lbl 48.6%\n');
         is_go_up_visible = false;
         decrease_opacity(by_id("go_up"), 0, factor = 1);
         set_style("continue_arrow", "left", "49.8%");

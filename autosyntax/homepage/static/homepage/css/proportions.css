@@ -60,6 +60,11 @@ body {
     padding-top: 80px;
 }
 
+/*padding-top: 100px*/
+.p-top-100 {
+    padding-top: 100px;
+}
+
 /*margin-right: 300px*/
 .basic-text,
 .m-right-300,
@@ -143,7 +148,7 @@ body {
     height: 90px;
     opacity: 0;
     font-size: 20px;
-    width: 120px;
+    width: 250px;
 
 }
 
