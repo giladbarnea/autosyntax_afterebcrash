@@ -8,14 +8,48 @@
 <link rel="stylesheet" type="text/css"
       href="{% static 'homepage/css/proportions.css' %}"/>
 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-{% block content %}
-{% endblock %}
+<div id="all" class="no-select op-0">
+    <div class="grid-container">
+        {# C O N S O L E  M E N U#}
+        <div class="grid-item grid_0">
+            <img src="{% static '/homepage/img/console_menu_trans.svg' %}"
+                 height="30px"
+                 width="30px"
+                 id="console_menu"
+                 class="console-menu"
+            />
+            {# S I D E B A R#}
+            <div class="space-font sidebar" id="sidebar">
+                {% for item in sidebar_items %}
+                    <div class="sidebar-item"
+                         id="sidebar_item_{{ forloop.counter }}">
+                        {{ item }}
+                    </div><br><br>
+                {% endfor %}
+            </div>
+            <a href="/">
+                <svg id="back" class="back op-07" style="display:none">
+                    <text x="0" y="20" fill="white">BACK</text>
+                </svg>
+            </a>
+        </div>
+        {#        end grid-0#}
+        {% block content %}
+        {% endblock %}
+        {#G O  U P#}
+        <svg id="go_up" class="go-up">
+            <text x="0" y="20" fill="white">TOP</text>
+        </svg>
+    </div>
+    {#    end grid container#}
+</div>
+{#end all#}
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
 <script src="{% static 'homepage/js/utils.js' %}"></script>
 <script src="{% static 'homepage/js/responsiveness_mgr.js' %}"></script>
-<script src="{% static 'homepage/js/main_page.js' %}"></script>
+
 <script src="{% static 'homepage/js/continue_arrow_fns.js' %}"></script>
 {#<script src="{% static 'homepage/js/howtouse.js' %}"></script>#}
 <script src="{% static 'homepage/js/layout.js' %}"></script>

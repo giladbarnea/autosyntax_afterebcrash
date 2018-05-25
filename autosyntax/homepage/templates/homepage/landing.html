@@ -2,66 +2,41 @@
 {% load static %}
 {% block content %}
 
-    <div id="all" class="no-select op-0">
-        <div class="grid-container">
-            {# C O N S O L E  M E N U#}
-            <div class="grid-item grid_0">
-                <img src="{% static '/homepage/img/console_menu_trans.svg' %}"
-                     height="30px"
-                     width="30px"
-                     id="console_menu"
-                     class="console-menu"
-                />
-                {# S I D E B A R#}
-                <div class="space-font sidebar" id="sidebar">
-                    {% for item in sidebar_items %}
-                        <div class="sidebar-item"
-                             id="sidebar_item_{{ forloop.counter }}">
-                            {{ item }}
-                        </div><br><br>
-                    {% endfor %}
-                </div>
-                <a href="/">
-                    <svg id="back" class="back op-07" style="display:none">
-                        <text x="0" y="20" fill="white">BACK</text>
-                    </svg>
-                </a>
-            </div>
-            {#        end grid-0#}
-            <div class="grid-item grid_1">
 
-                <div class="pad-body" id="pad_body">
-                    {# B L O C K  L A N D I N G#}
-                    {% load tags %}{% load filters %}
-                    {% page_title 'Hi! My name is Gilad.<br>I love to code FAST.<br><br>This is why I created<br>' 'autosyntax.'|span:'download-link italic turquoise' %}
-                    {% work_indented "It's completely free and I know you'll like it." %}
 
-                    {#W H A T  I S  I T  B L O C K#}
-                    <div id="whatisit_block">
-                        {% block what_is_it %}
-                        {% endblock %}
-                    </div>
+
+        <div class="grid-item grid_1">
+
+            <div class="pad-body" id="pad_body">
+                {# B L O C K  L A N D I N G#}
+                {% load tags %}{% load filters %}
+                {% page_title 'Hi! My name is Gilad.<br>I love to code FAST.<br><br>This is why I created<br>' 'autosyntax.'|span:'download-link italic turquoise' %}
+                {% work_indented "It's completely free and I know you'll like it." %}
+
+                {#W H A T  I S  I T  B L O C K#}
+                <div id="whatisit_block">
+                    {% block what_is_it %}
+                    {% endblock %}
                 </div>
             </div>
-            {# end grid_1#}
-
         </div>
-        {#    end grid container#}
+        {# end grid_1#}
 
-        {#    C O N T I N U E  A R R O W  L B L#}
-        <div id="continue_arrow_lbl" class="continue-arrow-lbl"></div>
-        <img src="{% static '/homepage/img/continue_new_trans.svg' %}"
-             height="80px"
-             width="80px"
-             id="continue_arrow"
-             class="continue-arrow"
-        />
-        {#G O  U P#}
-        <svg id="go_up" class="go-up">
-            <text x="0" y="20" fill="white">TOP</text>
-        </svg>
-    </div>
+
+
+
+    {#    C O N T I N U E  A R R O W  L B L#}
+    <div id="continue_arrow_lbl" class="continue-arrow-lbl"></div>
+    <img src="{% static '/homepage/img/continue_new_trans.svg' %}"
+         height="80px"
+         width="80px"
+         id="continue_arrow"
+         class="continue-arrow"
+    />
+
+    <script src="{% static 'homepage/js/utils.js' %}"></script>
+    <script src="{% static 'homepage/js/main_page.js' %}"></script>
 {% endblock %}
-{#end all#}
+
 
 

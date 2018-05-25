@@ -8,7 +8,7 @@ console.log('filename: ', filename);
 let is_go_up_visible = false;
 on_event_do(window, "scroll",
     () => {
-        console.log(window.scrollY);
+        console.log('scrollY: ', window.scrollY);
         first_scroll_fade_ins();
         show_console_menu();
         if (filename === undefined)
