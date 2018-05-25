@@ -4,6 +4,7 @@ let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)
     .pop();
+console.log('filename: ', filename);
 on_event_do(window, "scroll",
     () => {
         console.log(window.scrollY);
@@ -44,6 +45,7 @@ function first_scroll_fade_ins() {
         increase_opacity(by_id("continue_arrow"), 1, factor = 0.05);
     }
 }
+
 
 function hide_console_menu() {
     if (is_console_menu_vis) { //if menu visible

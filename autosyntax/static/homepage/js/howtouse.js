@@ -14,7 +14,7 @@ window.onload = () => {
     set_style("back", "display", "unset");
 
     let sidebar_items = by_id("sidebar").children;
-    let items = ["General behavior", "Dotted arguments",
+    let items = ["General", "Dotted arguments",
         "Inline methods", "something"];
     let counter = 0;
     for (let i = 0; i < sidebar_items.length; i++) {

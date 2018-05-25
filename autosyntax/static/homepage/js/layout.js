@@ -4,6 +4,7 @@ let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)
     .pop();
+console.log('filename: ', filename);
 on_event_do(window, "scroll",
     () => {
         console.log(window.scrollY);
@@ -14,7 +15,6 @@ on_event_do(window, "scroll",
     });
 on_event_do("go_up", "click",
     () => scroll_to(document.body));
-
 
 let is_console_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
@@ -45,6 +45,7 @@ function first_scroll_fade_ins() {
         increase_opacity(by_id("continue_arrow"), 1, factor = 0.05);
     }
 }
+
 
 function hide_console_menu() {
     if (is_console_menu_vis) { //if menu visible
