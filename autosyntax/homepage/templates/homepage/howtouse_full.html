@@ -43,7 +43,7 @@
                 {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
                 {% list_block 'milk' 'nutella' %}
             </div>
-            <div id="animation_2" style="display: none">
+            <div id="animation_2" class="disp-none">
                 {% mono_mright_300 'list milk .nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
                 {% list_block 'milk' 'nutella'|cl %}
             </div>
@@ -76,7 +76,7 @@
                 {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ "'characters'"|string }}{{ ':'|cl }}
             </div>
         </div>
-        <div id="animation_4" style="display: none">
+        <div id="animation_4" class="disp-none">
             {% mono_mright_300 'for characters' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
             <div class="code-block">
                 {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ 'characters:'|cl }}
@@ -100,16 +100,16 @@
     {% br 2 %}
     <div class="basic-text m-right-200">
         *Note: Any argument passed to an inline method follows this logic too,
-        regardless of Operator.
-        {{ 'list milk any nutella'|mono_bg_it }} ><br>
+        regardless of Operator. We mostly pass variables to methods.
+        {#        {{ 'list milk any nutella'|mono_bg_it }} ><br>#}
     </div>
     <div class="animation">
         <div id="animation_9">
-            {% mono_mright_300 'list milk any nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
+            {% mono_mright_300 'list milk any nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft95 %}
             {% list_block 'milk' 'any(nutella)'|cl %}
         </div>
-        <div id="animation_10" style="display: none">
-            {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft136 %}
+        <div id="animation_10" class="disp-none">
+            {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
             {% list_block 'milk' 'nutella' %}
         </div>
     </div>
@@ -127,32 +127,21 @@
 
     <div class="animation">
         <div id="animation_5">
-            <div class="monospace m-right-300">
-                <span>def foo name .john</span>
-                <span class="op-03 m-left-136">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-            </div>
+            {% mono_mright_300 'def foo .john' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft150 %}
             <div class="code-block">
-                <span class="kept">def </span>
-                <span class="code-literal">foo(name=</span>
-                <span class="str">'john'</span>
-                <span class="code-literal">):&emsp;&emsp;&emsp;&emsp;&emsp;</span>
-                {#                    <span class="op-03 monospace">#}
-                {#					Marks a default value</span>#}
+                {{ "def "|k }}
+                {{ "foo(name="|cl }}
+                {{ "'john'"|string }}
+                {{ "):"|cl }}
             </div>
         </div>
-        <div id="animation_6" style="display: none">
-            <div class="monospace m-right-300">def foo name john
-                <span class="op-03 m-left-150">
-					PRESS TO TOGGLE EXAMPLE
-			</span>
-            </div>
+        <div id="animation_6" class="disp-none">
+            {% mono_mright_300 'def foo name john' 'PRESS TO TOGGLE EXAMPLE'|op3_mleft95 %}
             <div class="code-block">
-                <span class="kept">def </span>
-                <span class="code-literal">foo(name</span>
-                <span class="kept">, </span>
-                <span class="code-literal">john):</span>
+                {{ "def "|k }}
+                {{ "foo(name"|cl }}
+                {{ ", "|k }}
+                {{ "john):"|cl }}
             </div>
         </div>
     </div>
@@ -189,7 +178,7 @@
                 <span class="code-literal">arrays]</span>
             </div>
         </div>
-        <div id="animation_8" style="display: none">
+        <div id="animation_8" class="disp-none">
             <div class="monospace m-right-300">list milk .nutella
                 <span class="op-03 m-left-136">
 					PRESS TO TOGGLE EXAMPLE
@@ -234,7 +223,7 @@
                 {#					Less common, uses dot</span>#}
             </div>
         </div>
-        <div id="animation_4" style="display: none">
+        <div id="animation_4" class="disp-none">
             <div class="monospace m-right-300">for characters
                 <span class="op-03 m-left-150">
 					PRESS TO TOGGLE EXAMPLE
@@ -279,7 +268,7 @@
                 {#					Marks a default value</span>#}
             </div>
         </div>
-        <div id="animation_6" style="display: none">
+        <div id="animation_6" class="disp-none">
             <div class="monospace m-right-300">def foo name John
                 <span class="op-03 m-left-150">
 					PRESS TO TOGGLE EXAMPLE

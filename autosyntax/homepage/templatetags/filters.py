@@ -93,3 +93,8 @@ def op3_mleft150(value):
 @register.filter()
 def op3_mleft136(value):
 	return format_html(_span("op-03 m-left-136", value))
+
+
+@register.filter()
+def op3_mleft95(value):
+	return format_html(_span(f"op-03 m-left-95", value))

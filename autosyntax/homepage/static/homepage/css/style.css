@@ -119,6 +119,10 @@ body {
     opacity: 0.7;
 }
 
+.disp-none {
+    display: none;
+}
+
 .download-link:hover {
     text-decoration: underline;
 }
