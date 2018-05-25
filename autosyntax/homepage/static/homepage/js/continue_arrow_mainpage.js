@@ -1,12 +1,8 @@
 console.log('continue_arrow_mainpage.js\n');
 set_init_lbl_html("What is it?");
-// let whatisit_init_top = get_init_top("whatisit_content");
-// let download_init_top = get_init_top("download_content");
-// let howtouse_init_top = get_init_top("howtouse_content");
 
 on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
-
 
 let [whoami, howtouse, download, whatisit] = [
     new Section("whoami_content", "Who am I"),
@@ -14,11 +10,11 @@ let [whoami, howtouse, download, whatisit] = [
     new Section("download_content", "Download"),
     new Section("whatisit_content", "What is it?")
 ];
+// DOES NOT persist in other pages
+on_event_do(window, "scroll", continue_arrow_hndl_mainpage);
 
-window.addEventListener("scroll", continue_arrow_handler);
 
-
-function continue_arrow_handler() {
+function continue_arrow_hndl_mainpage() {
     if (user_below(howtouse.init_top)) {
         on_event_do("continue_arrow", "click",
             () => scroll_to(whoami.sect_id));
@@ -41,8 +37,33 @@ function continue_arrow_handler() {
 
         by_id("continue_arrow_lbl").innerHTML = whatisit.lbl
     }
-
 }
+
+// function continue_arrow_handler() {
+//     if (user_below(howtouse.init_top)) {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to(whoami.sect_id));
+//         by_id("continue_arrow_lbl").innerHTML = whoami.lbl
+//     }
+//     else if (user_below(download.init_top)) {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to(howtouse.sect_id));
+//         by_id("continue_arrow_lbl").innerHTML = howtouse.lbl
+//     }
+//     else if (user_below(whatisit.init_top)) {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to(download.sect_id));
+//
+//         by_id("continue_arrow_lbl").innerHTML = download.lbl
+//     }
+//     else {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to(whatisit.sect_id));
+//
+//         by_id("continue_arrow_lbl").innerHTML = whatisit.lbl
+//     }
+//
+// }
 
 // function continue_arrow_handler_old() {
 //     if (user_below(howtouse_init_top)) {

@@ -7,13 +7,12 @@ let filename = window.location.pathname
     .pop();
 console.log('filename: ', filename);
 let is_go_up_visible = false;
+
 on_event_do(window, "scroll",
     () => {
-        console.log('scrollY: ', window.scrollY);
+        // PERSISTS AS LONG AS LAYOUT.HTML IS EXTENDED FROM
         first_scroll_fade_ins();
         show_console_menu();
-        // if (filename === undefined)
-        //     continue_arrow_handler();
     });
 
 on_event_do("go_up", "click",
@@ -29,7 +28,6 @@ on_event_do_to_collection("download-link", "click",
 
 on_event_do("continue_arrow", "click",
     () => {
-        scroll_to("whatisit_content");
         decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
     }
 );
@@ -37,7 +35,7 @@ increase_opacity(by_id("all"), 1, factor = 0.5);
 
 
 function first_scroll_fade_ins() {
-
+    // PERSISTS
     if (window.scrollY > 200 && !is_go_up_visible) {
         is_go_up_visible = true;
         increase_opacity(by_id("go_up"), 0.7, factor = 1);
@@ -68,13 +66,12 @@ function hide_console_menu() {
 }
 
 function show_console_menu() {
-    if (!is_console_menu_vis) { //if menu hidden
-        // show menu
+    // PERSISTS
+    if (!is_console_menu_vis) {
         let sidebar_items = by_class("sidebar-item");
         for (let i = 0; i < sidebar_items.length; i++)
             increase_opacity(sidebar_items[i], 1, factor = 1);
 
-        // flag menu visible
         is_console_menu_vis = true;
     }
 

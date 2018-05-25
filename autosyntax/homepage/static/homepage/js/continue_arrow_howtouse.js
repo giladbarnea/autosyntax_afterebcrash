@@ -1,9 +1,6 @@
 console.log('continue_arrow_howtouse.js\n');
 set_init_lbl_html("Operators");
-// let operators_init_top = get_init_top("operators_htu");
-// let dotted_init_top = get_init_top("dotted_htu");
-// let inline_init_top = get_init_top("inline_htu");
-//
+
 on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
@@ -14,6 +11,34 @@ let [operators, dotted, inline] = [
     new Section("inline_htu", "Inline methods"),
 ];
 
+on_event_do("continue_arrow", "click",
+    () => {
+        scroll_to("operators_htu");
+        decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1);
+        continue_arrow_hndl_htu();
+    }
+);
+window.addEventListener("scroll", continue_arrow_hndl_htu);
+
+function continue_arrow_hndl_htu() {
+    if (user_below(dotted.init_top)) {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(inline.sect_id));
+        by_id("continue_arrow_lbl").innerHTML = inline.lbl
+    }
+    else if (user_below(operators.init_top)) {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(dotted.sect_id));
+        by_id("continue_arrow_lbl").innerHTML = dotted.lbl
+    }
+    else {
+        on_event_do("continue_arrow", "click",
+            () => scroll_to(operators.sect_id));
+
+        by_id("continue_arrow_lbl").innerHTML = operators.lbl
+    }
+
+}
 
 // function continue_arrow_handler() {
 //     if (user_below(howtouse.init_top)) {

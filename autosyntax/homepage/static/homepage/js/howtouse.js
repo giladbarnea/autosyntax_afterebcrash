@@ -1,7 +1,6 @@
 // console.log('\n\nHI!@!!\n');
 console.log('howtouse.js\n');
 window.onload = () => {
-    by_id("continue_arrow").style["display"] = "none";
 
     toggle_pair("animation_1", "animation_2");
     toggle_pair("animation_3", "animation_4");
@@ -12,7 +11,7 @@ window.onload = () => {
     set_style("back", "display", "unset");
 
     let sidebar_items = by_id("sidebar").children;
-    let items = ["General", "Dotted arguments",
+    let items = ["Operators", "Dotted arguments",
         "Inline methods", "something"];
     let counter = 0;
     for (let i = 0; i < sidebar_items.length; i++) {

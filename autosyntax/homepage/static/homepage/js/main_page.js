@@ -2,6 +2,8 @@ console.log('main_page.js\n');
 set_style("whatisit_block", "paddingTop", window.screen.availHeight / 3);
 set_style("download_block", "paddingTop", window.screen.availHeight / 3);
 set_style("whoami_block", "paddingTop", window.screen.availHeight / 4);
+on_event_do("continue_arrow", "click", () =>
+    scroll_to("whatisit_content"));
 
 // What is it?
 on_event_do("sidebar_item_1", "click",
@@ -18,3 +20,5 @@ on_event_do("sidebar_item_3", "click",
 // Who am I?
 on_event_do("sidebar_item_4", "click",
     () => scroll_to("whoami_content"));
+
+

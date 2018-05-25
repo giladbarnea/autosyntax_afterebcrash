@@ -18,11 +18,6 @@ function scroll_to(target) {
 
 function element_or_by_fn(element, fn) {
     return typeof element === "string" ? fn(element) : element;
-    // if (typeof element === "string")
-    //     return fn(element);
-    //
-    // else
-    //     return element;
 
 }
 
@@ -111,6 +106,4 @@ function decrease_opacity(element, limit, factor) {
 
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+
