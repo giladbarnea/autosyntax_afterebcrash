@@ -1,16 +1,21 @@
 console.log('continue_arrow_mainpage.js\n');
 set_init_lbl_html("What is it?");
-let whatisit_init_top = get_init_top("whatisit_content");
-let download_init_top = get_init_top("download_content");
-let howtouse_init_top = get_init_top("howtouse_content");
+// let whatisit_init_top = get_init_top("whatisit_content");
+// let download_init_top = get_init_top("download_content");
+// let howtouse_init_top = get_init_top("howtouse_content");
 
 on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
-let whoami = new Section("whoami_content", "Who am I");
-let howtouse = new Section("howtouse_content", "How to use");
-let download = new Section("download_content", "Download");
-let whatisit = new Section("whatisit_content", "What is it?");
+
+let [whoami, howtouse, download, whatisit] = [
+    new Section("whoami_content", "Who am I"),
+    new Section("howtouse_content", "How to use"),
+    new Section("download_content", "Download"),
+    new Section("whatisit_content", "What is it?")
+];
+
+window.addEventListener("scroll", continue_arrow_handler);
 
 
 function continue_arrow_handler() {
@@ -39,29 +44,29 @@ function continue_arrow_handler() {
 
 }
 
-function continue_arrow_handler_old() {
-    if (user_below(howtouse_init_top)) {
-        on_event_do("continue_arrow", "click",
-            () => scroll_to("whoami_content"));
-        by_id("continue_arrow_lbl").innerHTML = "Who am I"
-    }
-    else if (user_below(download_init_top)) {
-        on_event_do("continue_arrow", "click",
-            () => scroll_to("howtouse_content"));
-        by_id("continue_arrow_lbl").innerHTML = "How to use"
-    }
-    else if (user_below(whatisit_init_top)) {
-        on_event_do("continue_arrow", "click",
-            () => scroll_to("download_content"));
-
-        by_id("continue_arrow_lbl").innerHTML = "Download"
-    }
-    else {
-        on_event_do("continue_arrow", "click",
-            () => scroll_to("whatisit_content"));
-
-        by_id("continue_arrow_lbl").innerHTML = "What is it?"
-    }
-
-}
+// function continue_arrow_handler_old() {
+//     if (user_below(howtouse_init_top)) {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to("whoami_content"));
+//         by_id("continue_arrow_lbl").innerHTML = "Who am I"
+//     }
+//     else if (user_below(download_init_top)) {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to("howtouse_content"));
+//         by_id("continue_arrow_lbl").innerHTML = "How to use"
+//     }
+//     else if (user_below(whatisit_init_top)) {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to("download_content"));
+//
+//         by_id("continue_arrow_lbl").innerHTML = "Download"
+//     }
+//     else {
+//         on_event_do("continue_arrow", "click",
+//             () => scroll_to("whatisit_content"));
+//
+//         by_id("continue_arrow_lbl").innerHTML = "What is it?"
+//     }
+//
+// }
 
