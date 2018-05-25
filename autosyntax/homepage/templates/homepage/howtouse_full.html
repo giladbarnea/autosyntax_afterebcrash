@@ -4,7 +4,7 @@
 {% block content %}
     <div id="howtouse_full_content">
         {% page_title 'How to use' %}
-        {% work_indented 'Operators'|turq %}
+        {% work_indented 'Operators'|turq id='operators_htu' %}
         <br>
         {% basic_text '"Operators" tell autosyntax which type of code to generate.'|white %}
         {% br 1 %}
@@ -32,7 +32,7 @@
         </div>
         {% br 3 %}
         {#        D O T T E D  A R G U M E N T S#}
-        {% work '.Dotted'|turq 'arguments' %}
+        {% work '.Dotted'|turq 'arguments' id='dotted_htu' %}
         {% basic_text 'Mark an argument with a dot to toggle a less common use-case.'|white %}
         <br>
         {% basic_text_dim 'With basic operators, no dot makes a string;<br>"Dotting" an argument denotes a variable.' %}
@@ -155,7 +155,7 @@
     </div>
     {% br 3 %}
     {#    I N L I N E  M E T H O D S#}
-    {% work 'Inline' 'methods()'|turq %}
+    {% work 'Inline' 'methods()'|turq id='inline_htu' %}
     {% basic_white_mright200 'Type a built-in method before an argument to apply it.' %}
     <br>
     {% basic_text_dim 'This is useful in various cases:' %}

@@ -1,4 +1,5 @@
 // window.onload = () => {
+console.log('responsiveness_mgr.js\n');
 on_event_do(window, "resize", on_resize);
 
 

@@ -67,16 +67,22 @@ def space_ptop_20(value, *args):
 
 
 @register.simple_tag
-def work(value, *args):
+def work(value, *args, **kwargs):
 	value = _join(value, args)
-	value = _div("work", value)
+	if 'id' in kwargs:
+		value = _div("work", value, kwargs['id'])
+	else:
+		value = _div("work", value)
 	return format_html(value)
 
 
 @register.simple_tag
-def work_indented(value, *args):
+def work_indented(value, *args, **kwargs):
 	value = _join(value, args)
-	value = _div("work indented", value)
+	if 'id' in kwargs:
+		value = _div("work indented", value, kwargs['id'])
+	else:
+		value = _div("work indented", value)
 	return format_html(value)
 
 
@@ -108,8 +114,6 @@ def mono_mright_300(value, *args):
 	value = _join(value, args)
 	value = _div("monospace m-right-300", value)
 	return format_html(value)
-
-
 
 
 @register.simple_tag

@@ -1,14 +1,12 @@
-// set_style("continue_arrow", "visibility", "none");
-
 // console.log('\n\nHI!@!!\n');
-
+console.log('howtouse.js\n');
 window.onload = () => {
     by_id("continue_arrow").style["display"] = "none";
 
     toggle_pair("animation_1", "animation_2");
     toggle_pair("animation_3", "animation_4");
     toggle_pair("animation_5", "animation_6");
-    toggle_pair("animation_7", "animation_8");
+    // toggle_pair("animation_7", "animation_8");
     toggle_pair("animation_9", "animation_10");
 
     set_style("back", "display", "unset");

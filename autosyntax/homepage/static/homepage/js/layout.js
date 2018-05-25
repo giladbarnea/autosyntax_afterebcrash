@@ -13,7 +13,12 @@ on_event_do(window, "scroll",
         first_scroll_fade_ins();
         show_console_menu();
         if (filename === undefined)
-            continue_arrow_handler();
+        continue_arrow_handler([
+            Section("whoami_content","Who am I"),
+            Section("howtouse_content","How to use"),
+            Section("download_content","Download"),
+
+        ]);
     });
 on_event_do("go_up", "click",
     () => scroll_to(document.body));
