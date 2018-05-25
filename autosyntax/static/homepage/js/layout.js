@@ -13,6 +13,7 @@ on_event_do(window, "scroll",
         first_scroll_fade_ins();
         show_console_menu();
         if (filename === undefined)
+        // continue_arrow_handler();
             continue_arrow_handler();
     });
 on_event_do("go_up", "click",

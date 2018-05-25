@@ -27,10 +27,3 @@ class Section {
     }
 }
 
-function section_factory(...args) {
-    let ret = [];
-    for (let i = 0; i < args.length; i++) {
-        ret.push(new Section(args[i][0], args[i][1]));
-    }
-    return ret;
-}
