@@ -108,3 +108,10 @@ def mono_mright_300(value, *args):
 	value = _join(value, args)
 	value = _div("monospace m-right-300", value)
 	return format_html(value)
+
+
+@register.simple_tag
+def basic_white_mright200(value, *args):
+	value = _join(value, args)
+	value = _div("basic-text white m-right-200", value)
+	return format_html(value)
