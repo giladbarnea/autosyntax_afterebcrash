@@ -20,7 +20,7 @@
     {#        C L A S S E S#}
     {% work "It can also do more complicated stuff,<br> like classes:" %}
     <br>
-    {% mono_mright_300 "class Dog Animal init fluffy True args" %}
+    {% mono_mright_300 "class Dog Animal init fluffy .True args" %}
     {% basic_text "turns into >" %}
     <div class="code-block">
         {{ "class "|k }}
@@ -106,21 +106,21 @@
         {{ 'is_easy(autosyntax'|cl }}
         {{ ', '|k }}
         {{ '**kwargs):'|cl }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ ':type '|doc_bold }}
         {{ 'autosyntax: str '|string }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ ':rtype: '|doc_bold }}
         {{ 'bool'|string }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
         {{ '|'|span:'code-literal dark-grey' }}
 
     </div>

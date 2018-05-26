@@ -35,7 +35,8 @@
         {% work '.Dotted'|turq 'arguments' id='dotted_htu' %}
         {% basic_text 'Mark an argument with a dot to toggle a less common use-case.'|white %}
         <br>
-        {% basic_text_dim 'With basic operators, no dot makes a string;<br>"Dotting" an argument denotes a variable.' %}
+        {#        {% basic_text_dim 'With basic operators, no dot makes a string;<br>"Dotting" an argument denotes a variable.' %}#}
+        {% basic_text_dim 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}
 
         <div class="animation">
             <div id="animation_1">
@@ -97,66 +98,80 @@
 				</span>
         {% endfor %}
     </div>
-    {% br 2 %}
-    <div class="basic-text m-right-200">
-        {{ '*'|turq }}
-        Note: Globally, any argument passed to an inline method follows this logic too,
-        regardless of Operator.<br> We mostly pass variables to methods, after all.
-    </div>
-    <div class="animation">
-        <div id="animation_9">
-            {% mono_mright_300 'list milk any nutella' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft95 %}
-            {% list_block 'milk' 'any(nutella)'|cl %}
-        </div>
-        <div id="animation_10" class="disp-none">
-            {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft150 %}
-            {% list_block 'milk' 'nutella' %}
-        </div>
-
-    </div>
-    <div class="basic-text m-right-200">
-        See Inline methods below for more.
-    </div>
-    {% br 3 %}
-    {#    D E F  A N D  C L A S S  O P E R A T O R S#}
-    <div class="basic-text white m-right-200">
-        With {{ 'def'|mono_bg_it }} and {{ 'class'|mono_bg_it }}
-        Operators, dotting makes the argument the default value
-        of the preceding argument.
-    </div>
-    <br>
-
-    {#    D E F  F O O (anim 5-6)#}
-    {% basic_text_dim 'Any non-dotted argument will just create an additional parameter.' %}
-
-    <div class="animation">
-        <div id="animation_5">
-            {% mono_mright_300 'def foo name .john' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft136 %}
-            <div class="code-block">
-                {{ "def "|k }}
-                {{ "foo(name="|cl }}
-                {{ "'john'"|string }}
-                {{ "):"|cl }}
-            </div>
-        </div>
-        <div id="animation_6" class="disp-none">
-            {% mono_mright_300 'def foo name john' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft150 %}
-            <div class="code-block">
-                {{ "def "|k }}
-                {{ "foo(name"|cl }}
-                {{ ", "|k }}
-                {{ "john):"|cl }}
-            </div>
-        </div>
-    </div>
-    {% br 3 %}
     {#    N O T E  N U M B E R#}
+    {% br 2 %}
+
     <div class="basic-text m-right-200">
         {{ '*'|turq }}
         Note: Globally, a number is left as is by default.<br>
-        {% mono_mright_300 'dict when_im 64' %}
-        {% dict_block 'when_im' '64'|n %}
     </div>
+    <div class="animation">
+        <div id="animation_5">
+            {% mono_mright_300 'dict when_im 64' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft150 %}
+            {% dict_block 'when_im' '64'|n %}
+        </div>
+        <div id="animation_6" class="disp-none">
+            {% mono_mright_300 'dict when_im .64' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft136 %}
+            {% dict_block 'when_im' '64' %}
+        </div>
+    </div>
+
+    {#    N O T E  I N L I N E#}
+    {#    {% br 2 %}#}
+    {#    <div class="basic-text m-right-200">#}
+    {#        {{ '*'|turq }}#}
+    {#        Note: Globally, any argument passed to an inline method follows this logic too,#}
+    {#        regardless of operator.<br> We mostly pass variables to methods, after all.#}
+    {#    </div>#}
+    {#    <div class="animation">#}
+    {#        <div id="animation_9">#}
+    {#            {% mono_mright_300 'list milk any nutella' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft95 %}#}
+    {#            {% list_block 'milk' 'any(nutella)'|cl %}#}
+    {#        </div>#}
+    {#        <div id="animation_10" class="disp-none">#}
+    {#            {% mono_mright_300 'list milk nutella' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft150 %}#}
+    {#            {% list_block 'milk' 'nutella' %}#}
+    {#        </div>#}
+    {##}
+    {#    </div>#}
+    {#    <div class="basic-text m-right-200">#}
+    {#        See Inline methods below for more.#}
+    {#    </div>#}
+
+
+    {#    {% br 3 %}#}
+    {#    D E F  A N D  C L A S S  O P E R A T O R S#}
+    {#    <div class="basic-text white m-right-200">#}
+    {#        With {{ 'def'|mono_bg_it }} and {{ 'class'|mono_bg_it }}#}
+    {#        Operators, dotting makes the argument the default value#}
+    {#        of the preceding argument.#}
+    {#    </div>#}
+    {#    <br>#}
+    {##}
+    {#    D E F  F O O (anim 5-6)#}
+    {#    {% basic_text_dim 'Any non-dotted argument will just create an additional parameter.' %}#}
+    {##}
+    {#    <div class="animation">#}
+    {#        <div id="animation_5">#}
+    {#            {% mono_mright_300 'def foo name .john' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft136 %}#}
+    {#            <div class="code-block">#}
+    {#                {{ "def "|k }}#}
+    {#                {{ "foo(name="|cl }}#}
+    {#                {{ "'john'"|string }}#}
+    {#                {{ "):"|cl }}#}
+    {#            </div>#}
+    {#        </div>#}
+    {#        <div id="animation_6" class="disp-none">#}
+    {#            {% mono_mright_300 'def foo name john' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft150 %}#}
+    {#            <div class="code-block">#}
+    {#                {{ "def "|k }}#}
+    {#                {{ "foo(name"|cl }}#}
+    {#                {{ ", "|k }}#}
+    {#                {{ "john):"|cl }}#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+
     {% br 7 %}
     {#    I N L I N E  M E T H O D S#}
     {% work 'Inline' 'methods()'|turq id='inline_htu' %}
@@ -172,7 +187,7 @@
 
     {% br 2 %}
 
-    {% basic_text_dim 'Or:' %}
+    {% basic_text_dim 'or:' %}
     {% mono_mright_300 'my_dict = dict zip keys values' %}
     <div class="code-block">
         {{ 'my_dict = '|cl }} {{ 'dict'|sup }}{{ '('|cl }}
@@ -184,7 +199,8 @@
 
     {#    C O M P L E X  O P E R A T O R S#}
     {% work 'Complex'|turq 'operators' id='complex_htu' %}
-    {#    {% basic_white_mright200 'class'|mono_bg_it 'and ' 'def'|mono_bg_it ' are "complex" because they consist of multiple lines.' ind='ind' %}#}
+
+    {#    D E F#}
     {% basic_white_mright200 'def'|mono_bg_it %}
     <br>
     <div class="basic-text f-size-23 m-right-200 indented">
@@ -200,7 +216,7 @@
         >
         {{ "A built in method sets the type of the previous argument"|ind_half }}
     </div>
-    {% basic_text_dim 'fun automatic stuff:'|white %}
+    {% basic_text_dim 'fun stuff:'|white %}
 
     <div class="basic-text f-size-23 m-right-200 indented">
         >
@@ -213,7 +229,7 @@
         {{ "Magic methods are wrapped in __dunder__"|ind_half }}
         {% br 2 %}
     </div>
-    {% mono_mright_300 'def get_age int dob int 1900 earthyears True args kwargs' %}
+    {% mono_mright_300 'def get_age int dob int 1900 earthyears .True args kwargs' %}
     <div class="code-block">
         {{ 'def '|k }}
         {{ 'get_age(dob='|cl }}
@@ -224,36 +240,97 @@
         {{ '*args'|cl }}
         {{ ', '|k }}
         {{ '**kwargs):'|cl }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ ':type '|doc_bold }}
         {{ 'dob: int '|string }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ ':rtype: '|doc_bold }}
         {{ 'int'|string }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
 
         {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:1 }}
+        {{ '<br>'|cb:2 }}
         {{ '|'|span:'code-literal dark-grey' }}
 
     </div>
 
     {% br 2 %}
 
-    {% basic_text_dim 'Or:' %}
-    {% mono_mright_300 'my_dict = dict zip keys values' %}
+    {#    C L A S S#}
+    {% basic_white_mright200 'class'|mono_bg_it %}
+    <br>
+    <div class="basic-text f-size-23 m-right-200 indented">
+        >
+        {{ "1st argument is the class's name"|ind_half }}
+        {% br 2 %}
+        >
+        {{ "2nd+ arguments are its super classes"|ind_half }}
+        {% br 2 %}
+        >
+        {{ "Typing 'init' creates an __init__ method"|ind_half }}
+        {% br 2 %}
+        >
+        {{ "Following 'init', insert parameters, typings and default values"|ind_half }}
+    </div>
+    {% basic_text_dim 'fun stuff:'|white %}
+    <div class="basic-text f-size-23 m-right-200 indented">
+        >
+        {{ "'init' arguments are automatically set as data members"|ind_half }}
+        {% br 2 %}
+        >
+        {{ "If any super class was typed, its __super__ is called."|ind_half }}
+        {% br 2 %}
+    </div>
+    {% mono_mright_300 "class Earth Planet init coords int habitable .True args" %}
     <div class="code-block">
-        {{ 'my_dict = '|cl }} {{ 'dict'|sup }}{{ '('|cl }}
-        {{ 'zip'|sup }}{{ '(keys'|cl }}{{ ', '|k }}
-        {{ "values)):"|cl }}
+        {{ "class "|k }}
+        {{ "Earth(Planet):"|cl }}
+        {{ "<br>"|cb:2 }}
+
+        {{ "def "|k }}
+        {{ "__init__"|m }}
+        {{ "("|cl }}
+        {{ "self"|self }}
+        {{ ", "|k }}
+        {{ "coords"|cl }}
+        {{ ", "|k }}
+        {{ "habitable="|cl }}
+        {{ "True, "|k }}
+        {{ "*args):"|cl }}
+        {{ "<br>"|cb:4 }}
+
+        {{ '"""'|doc_bold }}
+        {{ '<br>'|cb:4 }}
+
+        {{ ':type '|doc_bold }}
+        {{ 'coords: int '|string }}
+        {{ '<br>'|cb:4 }}
+
+        {{ '"""'|doc_bold }}
+        {{ '<br>'|cb:4 }}
+
+        {{ "self"|self }}
+        {{ ".coords = coords"|cl }}
+        {{ "<br>"|cb:4 }}
+
+        {{ "self"|self }}
+        {{ ".habitable = habitable"|cl }}
+        {{ "<br>"|cb:4 }}
+
+        {{ "super"|sup }}
+        {{ "()."|cl }}
+        {{ "__init__"|m }}
+        {{ "()"|cl }}
     </div>
 
-    {#    <script src="{% static 'homepage/js/utils.js' %}"></script>#}
+
+
+
     <script type="module" src="{% static 'homepage/js/continue_arrow_howtouse.js' %}"></script>
     <script src="{% static 'homepage/js/howtouse_page.js' %}"></script>
 {% endblock %}
