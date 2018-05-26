@@ -59,7 +59,7 @@
 
         {% basic_text_ind '&emsp;&emsp;Web & Cloud'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            > {{ 'Angular 2, Amazon Web Services, ASP MVC.'|ind_half }} {% br 2 %}
+            > {{ 'Angular 2, Django, Amazon Web Services, ASP MVC.'|ind_half }} {% br 2 %}
         </div>
 
         {% basic_text_ind '&emsp;&emsp;Editing'|white %}
@@ -94,7 +94,8 @@
         <div class="basic-text f-size-23 m-right-200 indented">
             > {{ 'Pianist, arranger and producer in IDF Military Band.'|ind_half }} {% br 2 %}
             > {{ 'Poros Piano Academy 1st prize winner,<br>'|ind_half }} {{ 'piano duo competition with Guy Pardo (2012, Greece).'|ind }} {% br 2 %}
-            > {{ 'Music Fest Perugia 2nd prize,<br>'|ind_half }} {{ 'piano concerto competition (2010, Italy).'|ind }} {% br 4 %}
+            > {{ 'Music Fest Perugia 2nd prize,<br>'|ind_half }} {{ 'piano concerto competition (2010, Italy).'|ind }}
+            {% br 4 %}
         </div>
 
 
@@ -102,8 +103,33 @@
         <div class="basic-text f-size-23 m-right-200 indented">
             > {{ 'Hebrew - native.'|ind_half }} {% br 2 %}
             > {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }} {% br 2 %}
-            > {{ 'German – Beginner.'|ind_half }} {% br 4 %}
+            > {{ 'German – Beginner.'|ind_half }}
+            {% br 4 %}
         </div>
+
+
+        {#        C O N T A C T#}
+        {% work_indented 'Contact'|turq id='contact_cv' %}
+        {#        {% span 'copied to clipboard' cls="basic-text center turquoise op-0" id='email_msg' %}#}
+        <span class="basic-text center" id="email_msg" style="opacity:0">
+					copied to clipboard
+					</span>
+        <div class="basic-text white m-right-200 indented_plus">
+            You're welcome to email me at
+            <a id="email"
+               class="download-link basic-text white no-decor m-right-100"
+               href="mailto:giladbrn@gmail.com">giladbrn@gmail.com.</a>
+
+        </div>
+        {#        {% basic_text_ind_mright200 "You're welcome to email me at:"|white plus='true' %}#}
+        {#        <div class="basic-text f-size-23 m-right-200 indented">#}
+        {#            > {{ 'Hebrew - native.'|ind_half }}#}
+        {#            {% br 2 %}#}
+        {#            > {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }}#}
+        {#            {% br 2 %}#}
+        {#            > {{ 'German – Beginner.'|ind_half }}#}
+        {#            {% br 4 %}#}
+        {#        </div>#}
 
     </div>
     <script type="module" src="{% static 'homepage/js/cv_page.js' %}"></script>

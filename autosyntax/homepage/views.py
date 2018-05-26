@@ -20,7 +20,7 @@ def how_to_use(request):
 
 def cv(request):
 	context = {
-		'sidebar_items': ['Overview', 'Experience', 'Skills', 'Education', 'M.Service', 'Languages']
+		'sidebar_items': ['Overview', 'Experience', 'Skills', 'Education', 'M.Service', 'Languages', 'Contact']
 		}
 	return render(request, 'homepage/cv.html', context)
 

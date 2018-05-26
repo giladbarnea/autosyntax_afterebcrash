@@ -5,7 +5,30 @@ set_style("back", "display", "unset");
 set_style("pad_body", "paddingLeft", 150);
 let sidebar_items = by_id("sidebar").children;
 let items = ['Overview', 'Experience', 'Skills',
-    'Education', 'M.Service', 'Languages', 'Experience'];
+    'Education', 'M.Service', 'Languages', 'Contact'];
+
+let email = by_id('email');
+on_event_do(email, 'click', () => {
+    copy();
+});
+
+set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
+
+function copy(value = 'giladbrn@gmail.com') {
+    let temp = document.createElement('INPUT');
+    document.body.appendChild(temp);
+    temp.setAttribute('value', value);
+    temp.select();
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+
+    increase_opacity(by_id('email_msg'), 0.7, factor = 0.3);
+    setTimeout(() => {
+        decrease_opacity(by_id('email_msg'), 0, factor = 0.3);
+    }, 1000);
+
+
+}
 
 let counter = 0;
 for (let i = 0; i < sidebar_items.length; i++) {
@@ -37,3 +60,6 @@ on_event_do("sidebar_item_5", "click",
 
 on_event_do("sidebar_item_6", "click",
     () => scroll_to("languages_cv"));
+
+on_event_do("sidebar_item_7", "click",
+    () => scroll_to("contact_cv"));

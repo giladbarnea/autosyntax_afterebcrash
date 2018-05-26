@@ -71,7 +71,8 @@ def dict_block(*args):
 @register.simple_tag
 def div(value, *args, **kwargs):
 	value = _join(value, args)
-	value = _div(kwargs['cls'], value)
+	id = kwargs['id'] if 'id' in kwargs else None
+	value = _div(kwargs['cls'], value, id)
 	return format_html(value)
 
 
@@ -150,9 +151,11 @@ def basic_text(value, *args):
 
 
 @register.simple_tag
-def basic_text_ind_mright200(value, *args):
+def basic_text_ind_mright200(value, *args, **kwargs):
 	value = _join(value, args)
 	cls = "basic-text m-right-200 indented"
+	if 'plus' in kwargs:
+		cls += '_plus'
 	value = _div(cls, value)
 	return format_html(value)
 

@@ -79,7 +79,7 @@ body {
 }
 
 .m-right-100 {
-    margin-right: 10px;
+    margin-right: 100px;
 }
 
 .code-block,
@@ -170,6 +170,10 @@ body {
     opacity: 0;
     font-size: 20px;
     width: 250px;
+
+}
+
+.center {
 
 }
 
