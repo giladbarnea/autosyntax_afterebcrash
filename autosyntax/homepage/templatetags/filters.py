@@ -2,7 +2,7 @@ from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
 from homepage.templatetags.tags import register
-from homepage.templatetags.templatetags_utils import _span, _id
+from homepage.templatetags.templatetags_utils import _span, _span_onlyid, log
 
 
 @register.filter()
@@ -12,7 +12,8 @@ def span(value, cls):
 
 @register.filter()
 def id(value, span_id):
-	return format_html(_id(span_id, value))
+	log(f'in id filter: value={value}, span_id={span_id}')
+	return format_html(_span_onlyid(value, span_id))
 
 
 @register.filter()

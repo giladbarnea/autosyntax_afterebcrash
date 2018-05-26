@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def _id(inner, id):
+def _span_onlyid(inner, id):
 	return '<span id="{}">{}</span>'.format(id, inner)
 
 

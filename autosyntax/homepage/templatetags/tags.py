@@ -2,7 +2,7 @@ from django import template
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from homepage.templatetags.templatetags_utils import _span, _div, _join, quote, log
+from homepage.templatetags.templatetags_utils import _span, _div, _join, quote, log, _span_onlyid
 
 register = template.Library()
 
@@ -50,6 +50,18 @@ def dict_block(*args):
 def div(value, *args, **kwargs):
 	value = _join(value, args)
 	value = _div(kwargs['cls'], value)
+	return format_html(value)
+
+
+@register.simple_tag
+def span(value, *args, **kwargs):
+	""""""
+	value = _join(value, args)
+	if 'cls' in kwargs:
+		id = kwargs['id'] if 'id' in kwargs else None
+		value = _span(kwargs['cls'], value, id)
+	else:
+		value = _span_onlyid(value, kwargs['id'])
 	return format_html(value)
 
 
@@ -121,6 +133,7 @@ def basic_text_white(value, *args):
 
 @register.simple_tag
 def mono_mright_300(value, *args):
+	log(' '.join(args))
 	value = _join(value, args)
 	value = _div("monospace m-right-300", value)
 	return format_html(value)
