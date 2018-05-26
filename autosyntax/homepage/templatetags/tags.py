@@ -118,8 +118,11 @@ def basic_text(value, *args):
 
 
 @register.simple_tag
-def basic_text_ind(value, *args):
-	value = _join(value, args)
+def basic_text_ind(value, *args, **kwargs):
+	if 'no' in kwargs:
+		value = f'{value}{"".join(args)}'
+	else:
+		value = _join(value, args)
 	value = _div("basic-text indented", value)
 	return format_html(value)
 

@@ -1,24 +1,69 @@
 {% extends 'homepage/layout.html' %}
 {% load staticfiles %}
+{% load tags %}
+{% load filters %}
 {% block content %}
     <div id="cv_content">
-        <div class="space p-top-20">
-            Gilad Barnea - CV<br>
-        </div>
-        <br>
-        <div class="work indented">
-            <span class="turquoise">Some</span>
-            title
-        </div>
-        <br>
-        <div class="basic-text white">
-            basic-text white<br>
-        </div>
+        {% page_title 'Gilad Barnea - CV' %}
+        {% work_indented 'Overview'|turq %}
         <br>
         <div class="basic-text f-size-23 m-right-200 indented">
-            basic-text f-size-23 m-right-200 indented
+            >
+            {{ 'I graduated a 1200hr long Full-Stack Developer studies at College of Sela.'|ind_half }}
+            {% br 2 %}
+            >
+            {{ 'I am passionate, self-disciplined and a quick learner. I get things done.'|ind_half }}
+            {% br 2 %}
+            >
+            {{ "I’m looking for a job at which I will both be challenged,<br>"|ind_half }}
+            {{ "and able to contribute significantly.<br>"|ind }}
         </div>
+        {% br 4 %}
+        {#        S K I L L S#}
+        {% work_indented 'Skills'|turq %}
+        <br>
+        {#        L A N G U A G E S#}
+        {% basic_text_ind 'Languages'|white %}
+        <div class="basic-text f-size-23 m-right-200 indented">
+            >
+            {{ 'Python, C#, SQL, Javascript (ES5 & 6),<br>'|ind_half }}
+            {{ 'Typescript, HTML5, CSS3, Autohotkey.'|ind }}
+            {% br 2 %}
+        </div>
+
+        <br>
+        {#        T E C H N O L O G I E S#}
+        <br>
+        {% basic_text_ind 'Technologies<br><br>'|white '&emsp;&emsp;python'|turq no='no' %}
+        <div class="basic-text f-size-23 m-right-200 indented">
+            >
+            {{ 'Pandas, Numpy, Django, PyQt (4 & 5),<br>'|ind_half }}
+            {{ 'AsyncIO, Google APIs, SQLite.'|ind }}
+            {% br 2 %}
+        </div>
+        {% basic_text_ind '&emsp;&emsp;.NET'|turq no='no' %}
+        <div class="basic-text f-size-23 m-right-200 indented">
+            >
+            {{ 'Entity Framework, Linq, Universal Windows Platform (UWP),<br>'|ind_half }}
+            {{ 'Microsoft SQL Server Management Studio.'|ind }}
+            {% br 2 %}
+        </div>
+
+        {% basic_text_ind '&emsp;&emsp;Web & Cloud'|turq no='no' %}
+        <div class="basic-text f-size-23 m-right-200 indented">
+            >
+            {{ 'Angular 2, Amazon Web Services, ASP MVC.'|ind_half }}
+            {% br 2 %}
+        </div>
+
+        {% basic_text_ind '&emsp;&emsp;Editing'|turq no='no' %}
+        <div class="basic-text f-size-23 m-right-200 indented">
+            >
+            {{ 'Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).'|ind_half }}
+            {% br 2 %}
+        </div>
+
+
     </div>
-    <script src="{% static 'homepage/js/utils.js' %}"></script>
-    <script src="{% static 'homepage/js/cv.js' %}"></script>
+    <script type="module" src="{% static 'homepage/js/cv_page.js' %}"></script>
 {% endblock %}
