@@ -3,6 +3,10 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+def _id(inner, id):
+	return '<span id="{}">{}</span>'.format(id, inner)
+
+
 def _span(cls, inner, id=None):
 	if id is not None:
 		return '<span class="{}" id="{}">{}</span>'.format(cls, id, inner)

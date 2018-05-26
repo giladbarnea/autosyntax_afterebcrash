@@ -106,9 +106,16 @@ def basic_text(value, *args):
 
 
 @register.simple_tag
-def basic_text_dim(value, *args):
+def basic_text_ind(value, *args):
 	value = _join(value, args)
-	value = _div("basic-text f-size-23 m-right-200 indented", value)
+	value = _div("basic-text indented", value)
+	return format_html(value)
+
+
+@register.simple_tag
+def basic_text_white(value, *args):
+	value = _join(value, args)
+	value = _div("basic-text white", value)
 	return format_html(value)
 
 

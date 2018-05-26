@@ -6,7 +6,7 @@
         {% page_title 'How to use' %}
         {% work_indented 'Operators'|turq 'overview' id='operators_htu' %}
         <br>
-        {% basic_text '"Operators" tell autosyntax which type of code to generate.'|white %}
+        {% basic_text_white '"Operators" tell autosyntax which type of code to generate.' %}
         {% br 1 %}
         <div class="basic-text f-size-23 m-right-200 indented">
             >
@@ -33,10 +33,9 @@
         {% br 7 %}
         {#        D O T T E D  A R G U M E N T S#}
         {% work '.Dotted'|turq 'arguments' id='dotted_htu' %}
-        {% basic_text 'Mark an argument with a dot to toggle a less common use-case.'|white %}
+        {% basic_text_white 'Mark an argument with a dot to toggle a less common use-case.' %}
         <br>
-        {#        {% basic_text_dim 'With basic operators, no dot makes a string;<br>"Dotting" an argument denotes a variable.' %}#}
-        {% basic_text_dim 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}
+        {% basic_text_ind 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}
 
         <div class="animation">
             <div id="animation_1">
@@ -67,7 +66,7 @@
     {% basic_white_mright200 'In other cases, using a variable is much more likely than a string.' %}
     {#    W I T H  O T H E R  O P E R A T O R S#}
     <br>
-    {% basic_text_dim 'These cases are reversed; a dot makes a string.' %}
+    {% basic_text_ind 'These cases are reversed; a dot makes a string.' %}
     {#    F O R  C H A R A C T E R S (anim 3-4)#}
     <div class="animation">
         <div id="animation_3">
@@ -149,7 +148,7 @@
     {#    <br>#}
     {##}
     {#    D E F  F O O (anim 5-6)#}
-    {#    {% basic_text_dim 'Any non-dotted argument will just create an additional parameter.' %}#}
+    {#    {% basic_text_ind 'Any non-dotted argument will just create an additional parameter.' %}#}
     {##}
     {#    <div class="animation">#}
     {#        <div id="animation_5">#}
@@ -177,7 +176,7 @@
     {% work 'Inline' 'methods()'|turq id='inline_htu' %}
     {% basic_white_mright200 'Type a built-in method before an argument to apply it.' %}
     <br>
-    {% basic_text_dim 'This is useful in cases like:' %}
+    {% basic_text_ind 'This is useful in cases like:' %}
     {% mono_mright_300 'for enumerate things' %}
     <div class="code-block">
         {{ 'for '|k }} {{ 'i'|cl }}{{ ', '|k }}
@@ -187,13 +186,15 @@
 
     {% br 2 %}
 
-    {% basic_text_dim 'or:' %}
+    {% basic_text_ind 'or:' %}
     {% mono_mright_300 'my_dict = dict zip keys values' %}
     <div class="code-block">
         {{ 'my_dict = '|cl }} {{ 'dict'|sup }}{{ '('|cl }}
         {{ 'zip'|sup }}{{ '(keys'|cl }}{{ ', '|k }}
         {{ "values)):"|cl }}
     </div>
+
+
 
     {% br 7 %}
 
@@ -216,7 +217,7 @@
         >
         {{ "A built in method sets the type of the previous argument"|ind_half }}
     </div>
-    {% basic_text_dim 'fun stuff:'|white %}
+    {% basic_text_ind 'fun stuff:'|white %}
 
     <div class="basic-text f-size-23 m-right-200 indented">
         >
@@ -229,7 +230,7 @@
         {{ "Magic methods are wrapped in __dunder__"|ind_half }}
         {% br 2 %}
     </div>
-    {% mono_mright_300 'def get_age int dob int 1900 earthyears .True args kwargs' %}
+    {% mono_mright_300 'def get_age int dob int' '1900'|id:'1900' ' earthyears .True args kwargs' %}
     <div class="code-block">
         {{ 'def '|k }}
         {{ 'get_age(dob='|cl }}
@@ -277,7 +278,7 @@
         >
         {{ "Following 'init', insert parameters, typings and default values"|ind_half }}
     </div>
-    {% basic_text_dim 'fun stuff:'|white %}
+    {% basic_text_ind 'fun stuff:'|white %}
     <div class="basic-text f-size-23 m-right-200 indented">
         >
         {{ "'init' arguments are automatically set as data members"|ind_half }}

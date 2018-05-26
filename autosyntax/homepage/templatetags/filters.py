@@ -2,12 +2,17 @@ from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
 from homepage.templatetags.tags import register
-from homepage.templatetags.templatetags_utils import _span
+from homepage.templatetags.templatetags_utils import _span, _id
 
 
 @register.filter()
 def span(value, cls):
 	return format_html(_span(cls, value))
+
+
+@register.filter()
+def id(value, span_id):
+	return format_html(_id(span_id, value))
 
 
 @register.filter()

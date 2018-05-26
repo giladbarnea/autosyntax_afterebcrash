@@ -202,7 +202,7 @@ function on_resize() {
 
             dyn_sidebar = false;
             set_style("sidebar", "paddingLeft", 20);
-            set_style_to_collection(sidebar_items, "fontSize", 23);
+            // set_style_to_collection(sidebar_items, "fontSize", 23);
         }
         else if (w <= 1000) {
             // dyn_sidebar = true;
@@ -211,12 +211,12 @@ function on_resize() {
 
             dyn_sidebar = false;
             set_style("sidebar", "paddingLeft", 20);
-            set_style_to_collection(sidebar_items, "fontSize", 23);
+            // set_style_to_collection(sidebar_items, "fontSize", 23);
         }
         else if (dyn_sidebar) {
             dyn_sidebar = false;
             set_style("sidebar", "paddingLeft", 20);
-            set_style_to_collection(sidebar_items, "fontSize", 23);
+            // set_style_to_collection(sidebar_items, "fontSize", 23);
         }
     }
 
