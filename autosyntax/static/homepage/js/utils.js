@@ -14,15 +14,45 @@ function scroll_to(target) {
         behavior: "smooth",
         block: "start", inline: "nearest"
     });
+
+    // scroll_to_top(target);
+    // let timer = setInterval(() => {
+    //     if (window.scrollY < 10000) {
+    //         console.log('y: ', window.scrollY);
+    //         clearInterval(timer);
+    //     }
+    // }, 1);
+
 }
+
+// function scroll_to_top(target) {
+//     let factor = 18;
+//     let freq = 1;
+//     let timer = setInterval(
+//         () => {
+//             function _expo(factor) {
+//                 // console.log('factor: ', factor);
+//                 // console.log('Math.pow(window.scrollY / 100, 0.98): ', Math.pow(window.scrollY / 100, 0.98));
+//                 // console.log('1 - (5 / window.scrollY: ', (1 - (5 / window.scrollY)));
+//                 // console.log('Math.pow(window.scrollY, 0.25) : ', Math.pow(window.scrollY, 0.25));
+//                 window.scrollTo(0, window.scrollY - factor);
+//                 // return factor > 1 ? factor * (1 - (Math.pow(window.scrollY / 100, 0.98))) : factor
+//                 // return factor > 1 ? factor * (1 - (Math.pow(window.scrollY / 100, 0.98))) : factor
+//                 // return factor > 1 ? Math.pow(window.scrollY, 0.25) : factor
+//                 return factor > 1 ? Math.pow(factor, 0.999) : factor
+//             }
+//
+//             if (window.scrollY > get_rect(target).top) {
+//                 factor = _expo(factor);
+//             }
+//             else {
+//                 clearInterval(timer);
+//             }
+//         }, freq);
+// }
 
 function element_or_by_fn(element, fn) {
     return typeof element === "string" ? fn(element) : element;
-    // if (typeof element === "string")
-    //     return fn(element);
-    //
-    // else
-    //     return element;
 
 }
 
@@ -68,14 +98,13 @@ function set_style(element, att, val) {
 
 
 function fade_opacity(element, limit, factor, up, then = "") {
-    // element = element_or_by_fn(element, by_id);
 
     function _fade_opacity() {
         let current_opacity = element.style["opacity"];
 
-        if (current_opacity === "") {
+        if (current_opacity === "")
             current_opacity = 0;
-        }
+
 
         let direction = up ? 1 : -1;
         let new_opacity = parseFloat(current_opacity) + (direction * 0.07 * factor);
@@ -91,10 +120,9 @@ function fade_opacity(element, limit, factor, up, then = "") {
             if (then !== "")
                 then();
         }
-        else {
-            element.style.opacity = new_opacity.toString();
-        }
 
+        else
+            element.style.opacity = new_opacity.toString();
 
     }
 
@@ -111,6 +139,4 @@ function decrease_opacity(element, limit, factor) {
 
 }
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+

@@ -1,27 +1,39 @@
-// console.log('\n\nHI!@!!\n');
 console.log('howtouse.js\n');
-window.onload = () => {
-    by_id("continue_arrow").style["display"] = "none";
 
-    toggle_pair("animation_1", "animation_2");
-    toggle_pair("animation_3", "animation_4");
-    toggle_pair("animation_5", "animation_6");
-    // toggle_pair("animation_7", "animation_8");
-    toggle_pair("animation_9", "animation_10");
+toggle_pair("animation_1", "animation_2");
+toggle_pair("animation_3", "animation_4");
+toggle_pair("animation_5", "animation_6");
+// toggle_pair("animation_7", "animation_8");
+toggle_pair("animation_9", "animation_10");
 
-    set_style("back", "display", "unset");
+set_style("back", "display", "unset");
 
-    let sidebar_items = by_id("sidebar").children;
-    let items = ["General", "Dotted arguments",
-        "Inline methods", "something"];
-    let counter = 0;
-    for (let i = 0; i < sidebar_items.length; i++) {
-        if (sidebar_items[i].tagName === "DIV") {
-            sidebar_items[i].innerHTML = items[counter];
-            counter += 1;
-        }
+let sidebar_items = by_id("sidebar").children;
+set_style('sidebar_item_4', 'display', 'none');
+let items = ["Operators", "Dotted arguments",
+    "Inline methods"];
+let counter = 0;
+for (let i = 0; i < sidebar_items.length; i++) {
+    if (sidebar_items[i].tagName === "DIV") {
+        sidebar_items[i].innerHTML = items[counter];
+        counter += 1;
     }
-};
+}
+
+// Operators
+on_event_do("sidebar_item_1", "click",
+    () => scroll_to("operators_htu"));
+
+// .Dotted arguments
+on_event_do("sidebar_item_2", "click",
+    () => scroll_to("dotted_htu"));
+
+// Inline methods()
+on_event_do("sidebar_item_3", "click",
+    () => scroll_to("inline_htu"));
+
+
+// };
 
 function toggle_pair(a, b) {
     a = element_or_by_fn(a, by_id);
