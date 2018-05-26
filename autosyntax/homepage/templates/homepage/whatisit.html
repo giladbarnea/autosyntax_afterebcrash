@@ -15,7 +15,7 @@
     {% br 3 %}
     {% basic_text "similarly," %}
     {% mono_mright_300 "dict meaning 42 happy pizza" %}
-    {% dict_block 'meaning' 42 'happiness' 'pizza' %}
+    {% dict_block 'meaning' '42'|n 'happiness' 'pizza' %}
     {% br 7 %}
     {#        C L A S S E S#}
     {% work "It can also do more complicated stuff,<br> like classes:" %}
@@ -55,15 +55,15 @@
     {% basic_text 'Variables.'|white '<br>Given:' %}
     <div class="code-block">
         {{ 'wish = '|cl }}
-        {{ "'quick'"|string }}
+        {{ "'done'"|string }}
     </div>
     {#    V A R I A B L E S#}
     {% basic_text 'then' %}
-    {% mono_mright_300 'i_wish = str everything was .wish' %}
+    {% mono_mright_300 'i_wish = str I got more things .wish' %}
 
     <div class="code-block">
         {{ 'i_wish = '|cl }}
-        {{ "f'everything was {"|string }}
+        {{ "f'I got more things {"|string }}
         {{ 'wish'|cl }}
         {{ "}'"|string }}
     </div>
@@ -72,16 +72,16 @@
 
     {#        I N L I N E  M E T H O D S#}
     {% basic_text 'Inline methods:'|white %}
-    {% mono_mright_300 'for range len numbers' %}
+    {% mono_mright_300 'for range len factories' %}
 
     <div class="code-block">
         {{ 'for '|k }}
-        {{ 'number '|cl }}
+        {{ 'factory '|cl }}
         {{ 'in '|k }}
         {{ 'range'|sup }}
         {{ '('|cl }}
         {{ 'len'|sup }}
-        {{ '(numbers)):'|cl }}
+        {{ '(factories)):'|cl }}
     </div>
     {% br 3 %}
     {#        L I S T  C O M P R E H E N S I O N S#}

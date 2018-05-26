@@ -31,12 +31,15 @@ def dict_block(*args):
 	new_value = [_span("code-literal", ' {')]
 
 	for i, c in enumerate(args):
-		line = _span("str", quote(c)) if isinstance(c, str) else _span("int", c)
-		new_value.append(line)
+		# append = _span("str", quote(c)) if isinstance(c, str) else _span("int", c)
+
+		append = quote(c) if 'span' not in c else c
+		append = _span("str", append)
+		new_value.append(append)
 
 		if i < len(args) - 1:
-			line = _span("kept", ', ') if i % 2 != 0 else _span("code-literal", ': ')
-			new_value.append(line)
+			append = _span("kept", ', ') if i % 2 != 0 else _span("code-literal", ': ')
+			new_value.append(append)
 
 	new_value.append(_span("code-literal", '}'))
 
@@ -117,7 +120,11 @@ def mono_mright_300(value, *args):
 
 
 @register.simple_tag
-def basic_white_mright200(value, *args):
+def basic_white_mright200(value, *args, **kwargs):
 	value = _join(value, args)
-	value = _div("basic-text white m-right-200", value)
+	if 'ind' in kwargs:
+		cls = "basic-text white m-right-200 indented"
+	else:
+		cls = "basic-text white m-right-200"
+	value = _div(cls, value)
 	return format_html(value)

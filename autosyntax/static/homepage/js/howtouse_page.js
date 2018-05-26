@@ -1,4 +1,4 @@
-console.log('howtouse.js\n');
+console.log('howtouse_page.js\n');
 
 toggle_pair("animation_1", "animation_2");
 toggle_pair("animation_3", "animation_4");
@@ -9,9 +9,9 @@ toggle_pair("animation_9", "animation_10");
 set_style("back", "display", "unset");
 
 let sidebar_items = by_id("sidebar").children;
-set_style('sidebar_item_4', 'display', 'none');
+// set_style('sidebar_item_4', 'display', 'none');
 let items = ["Operators", "Dotted arguments",
-    "Inline methods"];
+    "Inline methods", "Complex operators"];
 let counter = 0;
 for (let i = 0; i < sidebar_items.length; i++) {
     if (sidebar_items[i].tagName === "DIV") {
@@ -31,6 +31,10 @@ on_event_do("sidebar_item_2", "click",
 // Inline methods()
 on_event_do("sidebar_item_3", "click",
     () => scroll_to("inline_htu"));
+
+// Complex operators
+on_event_do("sidebar_item_4", "click",
+    () => scroll_to("complex_htu"));
 
 
 // };

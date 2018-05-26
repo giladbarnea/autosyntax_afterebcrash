@@ -125,18 +125,21 @@ body {
     padding-top: 70px;
 }
 
-.f-size-23,
-.sidebar-item {
+.f-size-23 {
     font-size: 23px;
+}
+
+.sidebar-item {
+    font-size: 20px;
 }
 
 .sidebar-item {
     margin-bottom: 10px;
 }
 
-.sidebar-item:hover {
-    font-size: 24px;
-}
+/*.sidebar-item:hover {*/
+/*font-size: 24px;*/
+/*}*/
 
 .continue-arrow-lbl,
 .continue-arrow {

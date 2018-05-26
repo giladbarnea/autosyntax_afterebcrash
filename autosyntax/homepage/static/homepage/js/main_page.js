@@ -1,6 +1,6 @@
 console.log('main_page.js\n');
 set_style("whatisit_block", "paddingTop", window.screen.availHeight / 3);
-set_style("download_block", "paddingTop", window.screen.availHeight / 3);
+set_style("download_block", "paddingTop", window.screen.availHeight / 5);
 set_style("whoami_block", "paddingTop", window.screen.availHeight / 4);
 
 

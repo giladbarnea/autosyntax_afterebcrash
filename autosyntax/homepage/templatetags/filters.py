@@ -66,6 +66,11 @@ def sup(value):
 
 
 @register.filter()
+def n(value):
+	return format_html(_span("int", value))
+
+
+@register.filter()
 def cb(value, tabs):
 	return format_html(_span("code-break", value + '&emsp;' * tabs))
 
@@ -86,15 +91,15 @@ def dark_grey(value):
 
 
 @register.filter()
-def op3_mleft150(value):
-	return format_html(_span("op-03 m-left-150", value))
+def op7_mleft150(value, id=None):
+	return format_html(_span("op-07 m-left-150", value, id))
 
 
 @register.filter()
-def op3_mleft136(value):
-	return format_html(_span("op-03 m-left-136", value))
+def op7_mleft136(value, id=None):
+	return format_html(_span("op-07 m-left-136", value, id))
 
 
 @register.filter()
-def op3_mleft95(value):
-	return format_html(_span(f"op-03 m-left-95", value))
+def op7_mleft95(value, id=None):
+	return format_html(_span(f"op-07 m-left-95", value, id))
