@@ -1,142 +1,108 @@
-{% extends 'homepage/layout.html' %}
-{% load staticfiles %}
-{% load tags %}
-{% load filters %}
+{% extends 'homepage/layout.html' %}{% load staticfiles %}{% load tags %}{% load filters %}
 {% block content %}
     <div id="cv_content">
         {% page_title 'Gilad Barnea - CV' %}
 
 
-        {#        O V E R V I E W#}
-        {% work_indented 'Overview'|turq id='overview_cv' %}
-        <br>
+        {#        O V E R V I E W#} {% work_indented 'Overview'|turq id='overview_cv' %} <br>
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'I graduated a 1200hr long Full-Stack Developer studies at College of Sela.'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'I am passionate, self-disciplined and a quick learner. I get things done.'|ind_half }}
-            {% br 2 %}
-            >
-            {{ "I’m looking for a job at which I will both be challenged,<br>"|ind_half }}
-            {{ "and able to contribute significantly.<br>"|ind }}
+            > {{ 'I graduated a 1200hr long Full-Stack Developer studies at College of Sela.'|ind_half }} {% br 2 %}
+            > {{ 'I am passionate, self-disciplined and a quick learner. I get things done.'|ind_half }} {% br 2 %}
+            > {{ "I’m looking for a job at which I will both be challenged,<br>"|ind_half }} {{ "and able to contribute significantly.<br>"|ind }}
         </div>
         {% br 4 %}
 
 
-        {#        S K I L L S#}
-        {% work_indented 'Skills'|turq id='skills_cv' %}
+        {#        E X P E R I E N C E#}
+        {% work_indented 'Experience'|turq id='experience_cv' %}
+        <div class="white basic-text indented_plus">my story with {{ 'autosyntax'|it }}</div>
         <br>
-        {#        > L A N G U A G E S#}
-        {% basic_text_ind 'Languages'|white %}
+        <div class="basic-text m-right-200 indented">
+            I don't count the projects I did in college as real-world experience;
+            {{ "autosyntax"|it }} is an actual product that is used by actual users.
+            {% br_25 %}
+            It's evolving through their continuous feedback, and new releases come
+            out on a regular basis.
+            {% br_25 %}
+            It took about 4 months to get it stable for release, in which
+            time I encountered challenges not found in school exercises;
+            {% br_15 %}
+            Making many different libraries, some lacking documentation (or worse - documentated in C)
+            work together organically;
+            {% br_15 %}
+            Letting go of features I thought were good, in favor of features users actually needed;
+            {% br_15 %}
+            And wrapping the whole thing in an intuitive, attractive way.
+            {% br_25 %}
+            I enjoyed every minute of it, and still am.
+
+        </div>
+        {#        {% basic_text_ind_mright200 "I don't count the projects I did in college as real-world experience;" "autosyntax"|it " is an actual product that is used by actual users.<br><br>It's evolving through their continuous feedback, and new releases come out on a regular basis.<br><br>It took about 4 months to get it stable for release, in which time I encountered challenges not found in school exercises; <br>Making many different libraries, some lacking documentation (or worse - documentated in C) work together organically; <br>Letting go of features I liked in favor of features users actually needed;<br>And wrapping the whole thing in a way that makes the users want to use it.<br><br>I enjoyed every minute of it, and still am." %}#}
+        {% br 4 %}
+
+
+        {#        S K I L L S#} {% work_indented 'Skills'|turq id='skills_cv' %} <br>
+        {#        > L A N G U A G E S#} {% basic_text_ind 'Languages'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Python, C#, SQL, Javascript (ES5 & 6),<br>'|ind_half }}
-            {{ 'Typescript, HTML5, CSS3, Autohotkey.'|ind }}
+            > {{ 'Python, C#, SQL, Javascript (ES5 & 6),<br>'|ind_half }} {{ 'Typescript, HTML5, CSS3, Autohotkey.'|ind }}
         </div>
 
         {% br 3 %}
-        {#        > T E C H N O L O G I E S#}
-        {% basic_text_ind 'Technologies<br><br> &emsp;&emsp;python'|white %}
+        {#        > T E C H N O L O G I E S#} {% basic_text_ind 'Technologies<br><br> &emsp;&emsp;python'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Pandas, Numpy, Django, PyQt (4 & 5),<br>'|ind_half }}
-            {{ 'AsyncIO, Google APIs, SQLite.'|ind }}
-            {% br 2 %}
+            > {{ 'Pandas, Numpy, Django, PyQt (4 & 5),<br>'|ind_half }} {{ 'AsyncIO, Google APIs, SQLite.'|ind }} {% br 2 %}
         </div>
         {% basic_text_ind '&emsp;&emsp;.NET'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Entity Framework, Linq, Universal Windows Platform (UWP),<br>'|ind_half }}
-            {{ 'Microsoft SQL Server Management Studio.'|ind }}
-            {% br 2 %}
+            > {{ 'Entity Framework, Linq, Universal Windows Platform (UWP),<br>'|ind_half }} {{ 'Microsoft SQL Server Management Studio.'|ind }} {% br 2 %}
         </div>
 
         {% basic_text_ind '&emsp;&emsp;Web & Cloud'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Angular 2, Amazon Web Services, ASP MVC.'|ind_half }}
-            {% br 2 %}
+            > {{ 'Angular 2, Amazon Web Services, ASP MVC.'|ind_half }} {% br 2 %}
         </div>
 
         {% basic_text_ind '&emsp;&emsp;Editing'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).'|ind_half }}
-            {% br 4 %}
+            > {{ 'Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).'|ind_half }} {% br 4 %}
         </div>
 
 
-        {#        E D U C A T I O N#}
-        {% work_indented 'Academic Education'|turq id='education_cv' %}
-        <br>
-        {#        > F U L L  S T A C K#}
-        {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}
+        {#        E D U C A T I O N#} {% work_indented 'Academic Education'|turq id='education_cv' %} <br>
+        {#        > F U L L  S T A C K#} {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ '"Yahalom" honor of excellency'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'Numerous projects comprising database, business logic,<br>'|ind_half }}
-            {{ 'web, cloud deployment and GUI.'|ind }}
-            {% br 2 %}
-            >
-            {{ 'Average grade: 96.2'|ind_half }}
+            > {{ '"Yahalom" honor of excellency'|ind_half }} {% br 2 %}
+            > {{ 'Numerous projects comprising database, business logic,<br>'|ind_half }} {{ 'web, cloud deployment and GUI.'|ind }} {% br 2 %}
+            > {{ 'Average grade: 96.2'|ind_half }}
         </div>
 
         {% br 3 %}
 
 
-        {#        > B E N  G U R I O N#}
-        {% basic_text_ind 'Relevant courses, Ben-Gurion Uni.'|white '(2015-2016)'|it %}
+        {#        > B E N  G U R I O N#} {% basic_text_ind 'Relevant courses, Ben-Gurion Uni.'|white '(2015-2016)'|it %}
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Differential and Integral Calculus I.'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'Linear Algebra I.'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'Logic I.'|ind_half }}
+            > {{ 'Differential and Integral Calculus I.'|ind_half }} {% br 2 %}
+            > {{ 'Linear Algebra I.'|ind_half }} {% br 2 %} > {{ 'Logic I.'|ind_half }}
         </div>
         {% br 3 %}
 
-        {#        > J E R U S A L E M#}
-        {% basic_text_ind 'Classical Composition and Orchestration, Jerusalem Academy of Music'|white '(2014-2015)'|it %}
-        {% br 4 %}
+        {#        > J E R U S A L E M#} {% basic_text_ind 'Classical Composition and Orchestration, Jerusalem Academy of Music'|white '(2014-2015)'|it %} {% br 4 %}
 
 
-        {#        M I L I T A R Y#}
-        {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text italic' id='military_cv' %}
+        {#        M I L I T A R Y#} {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text italic' id='military_cv' %}
         <br>
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Pianist, arranger and producer in IDF Military Band.'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'Poros Piano Academy 1st prize winner,<br>'|ind_half }}
-            {{ 'piano duo competition with Guy Pardo (2012, Greece).'|ind }}
-            {% br 2 %}
-            >
-            {{ 'Music Fest Perugia 2nd prize,<br>'|ind_half }}
-            {{ 'piano concerto competition (2010, Italy).'|ind }}
-            {% br 4 %}
+            > {{ 'Pianist, arranger and producer in IDF Military Band.'|ind_half }} {% br 2 %}
+            > {{ 'Poros Piano Academy 1st prize winner,<br>'|ind_half }} {{ 'piano duo competition with Guy Pardo (2012, Greece).'|ind }} {% br 2 %}
+            > {{ 'Music Fest Perugia 2nd prize,<br>'|ind_half }} {{ 'piano concerto competition (2010, Italy).'|ind }} {% br 4 %}
         </div>
 
 
-        {#        L A N G U A G E S#}
-        {% work_indented 'Languages'|turq id='languages_cv' %}
-        <br>
+        {#        L A N G U A G E S#} {% work_indented 'Languages'|turq id='languages_cv' %} <br>
         <div class="basic-text f-size-23 m-right-200 indented">
-            >
-            {{ 'Hebrew - native.'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }}
-            {% br 2 %}
-            >
-            {{ 'German – Beginner.'|ind_half }}
-            {% br 4 %}
+            > {{ 'Hebrew - native.'|ind_half }} {% br 2 %}
+            > {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }} {% br 2 %}
+            > {{ 'German – Beginner.'|ind_half }} {% br 4 %}
         </div>
 
     </div>

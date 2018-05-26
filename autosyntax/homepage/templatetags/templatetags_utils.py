@@ -30,5 +30,6 @@ def quote(value):
 	return f"'{value}'"
 
 
+
 def log(value):
 	return logger.warning(f"\n\t{value}\n")

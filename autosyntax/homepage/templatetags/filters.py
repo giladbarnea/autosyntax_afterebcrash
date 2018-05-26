@@ -2,7 +2,7 @@ from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
 from homepage.templatetags.tags import register
-from homepage.templatetags.templatetags_utils import _span, _span_onlyid, log
+from homepage.templatetags.templatetags_utils import _span, _span_onlyid, log, quote
 
 
 @register.filter()
@@ -34,6 +34,12 @@ def ind(value):
 @register.filter()
 def ind_half(value):
 	return format_html(_span("indented-half", value))
+
+
+@register.filter()
+def quote(value):
+	log(value)
+	return quote(value)
 
 
 @register.filter()

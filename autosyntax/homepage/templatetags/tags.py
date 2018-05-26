@@ -13,6 +13,28 @@ def br(num):
 
 
 @register.simple_tag
+def br_15():
+	# return format_html("""
+	# <span class="f-size-10">
+	# 		<br><br>
+	# 		</span>
+	# 		""")
+
+	return format_html(_span('f-size-10', '<br><br>'))
+
+
+@register.simple_tag
+def br_25():
+	# return format_html("""
+	# <span class="f-size-10">
+	# 		<br><br>
+	# 		</span>
+	# 		""")
+
+	return format_html(_span('f-size-40', '<br><br>'))
+
+
+@register.simple_tag
 def list_block(*args):
 	new_value = [_span("code-literal", '[')]
 
@@ -114,6 +136,14 @@ def page_title(value, *args):
 def basic_text(value, *args):
 	value = _join(value, args)
 	value = _div("basic-text", value)
+	return format_html(value)
+
+
+@register.simple_tag
+def basic_text_ind_mright200(value, *args):
+	value = _join(value, args)
+	cls = "basic-text m-right-200 indented"
+	value = _div(cls, value)
 	return format_html(value)
 
 

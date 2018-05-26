@@ -81,6 +81,14 @@ body {
     font-size: 0;
 }
 
+.f-size-10 {
+    font-size: 10px
+}
+
+.f-size-40 {
+    font-size: 35px
+}
+
 .basic-text {
     margin-top: 25px;
 
@@ -95,6 +103,10 @@ body {
 .code-block,
 .indented {
     padding-left: 40px;
+}
+
+.indented_plus {
+    padding-left: 65px;
 }
 
 .indented-half {

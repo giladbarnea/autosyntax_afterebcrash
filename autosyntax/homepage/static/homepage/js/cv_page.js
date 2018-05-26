@@ -4,7 +4,8 @@ by_id("continue_arrow").style["display"] = "none";
 set_style("back", "display", "unset");
 set_style("pad_body", "paddingLeft", 150);
 let sidebar_items = by_id("sidebar").children;
-let items = ['Overview', 'Experience', 'Skills', 'Education', 'M.Service', 'Languages'];
+let items = ['Overview', 'Experience', 'Skills',
+    'Education', 'M.Service', 'Languages', 'Experience'];
 
 let counter = 0;
 for (let i = 0; i < sidebar_items.length; i++) {
@@ -20,7 +21,7 @@ on_event_do("sidebar_item_1", "click",
 
 // .Dotted arguments
 on_event_do("sidebar_item_2", "click",
-    () => scroll_to("_cv"));
+    () => scroll_to("experience_cv"));
 
 // Inline methods()
 on_event_do("sidebar_item_3", "click",
