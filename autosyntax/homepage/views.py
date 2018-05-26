@@ -19,7 +19,10 @@ def how_to_use(request):
 
 
 def cv(request):
-	return render(request, 'homepage/cv.html')
+	context = {
+		'sidebar_items': ['Overview', 'Experience', 'Skills', 'Education', 'M.Service', 'Languages']
+		}
+	return render(request, 'homepage/cv.html', context)
 
 
 def talia(request):

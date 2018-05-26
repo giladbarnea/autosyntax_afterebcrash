@@ -87,6 +87,11 @@ def mono_bg_it(value):
 
 
 @register.filter()
+def it(value):
+	return format_html(_span("italic", value))
+
+
+@register.filter()
 def doc_bold(value):
 	return format_html(_span("doc bold", value))
 
