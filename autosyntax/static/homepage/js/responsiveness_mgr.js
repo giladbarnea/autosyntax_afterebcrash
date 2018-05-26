@@ -70,7 +70,7 @@ function on_resize() {
         else {
             set_style_to_collection(m_right_300, "marginRight", 300);
             set_style_to_collection(code_blocks, "marginRight", 300);
-            set_style_to_collection(basic_texts, "marginRight", 300);
+            set_style_to_collection(basic_texts, "marginRight", 200);
             set_style_to_collection(m_right_200, "marginRight", 200);
         }
     }

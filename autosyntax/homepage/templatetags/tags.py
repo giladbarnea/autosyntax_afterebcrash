@@ -114,6 +114,16 @@ def work(value, *args, **kwargs):
 
 
 @register.simple_tag
+def work_25(value, *args, **kwargs):
+	value = _join(value, args)
+	if 'id' in kwargs:
+		value = _div("work-25", value, kwargs['id'])
+	else:
+		value = _div("work-25", value)
+	return format_html(value)
+
+
+@register.simple_tag
 def work_indented(value, *args, **kwargs):
 	value = _join(value, args)
 	if 'id' in kwargs:

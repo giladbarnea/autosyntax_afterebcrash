@@ -19,7 +19,8 @@ body {
 .self,
 .super,
 .doc,
-.back {
+.back,
+.work-25 {
     font-size: 25px;
 }
 
@@ -66,14 +67,19 @@ body {
 }
 
 /*margin-right: 300px*/
-.basic-text,
+
 .m-right-300,
 .code-block {
     margin-right: 300px;
 }
 
+.basic-text,
 .m-right-200 {
     margin-right: 200px;
+}
+
+.m-right-100 {
+    margin-right: 10px;
 }
 
 .code-block,

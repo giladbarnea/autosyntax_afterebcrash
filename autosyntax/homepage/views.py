@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def index(request):
 	context = {
-		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I?'],
+		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I? (CV)'],
 		}
 	return render(request, 'homepage/whoami.html', context)
 

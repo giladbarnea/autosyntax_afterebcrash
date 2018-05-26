@@ -224,7 +224,7 @@
         {{ "'args' and 'kwargs' are translated to *args and **kwargs"|ind_half }}
         {% br 2 %}
         >
-        {{ "If indentation is found, a 'self' is added as first paramter"|ind_half }}
+        {{ "If indentation is found, a 'self' is added as first parameter"|ind_half }}
         {% br 2 %}
         >
         {{ "Magic methods are wrapped in __dunder__"|ind_half }}
@@ -287,7 +287,7 @@
         {{ "If any super class was typed, its __super__ is called."|ind_half }}
         {% br 2 %}
     </div>
-    {% mono_mright_300 "class Earth Planet init coords int habitable .True args" %}
+    {% mono_mright_300 "class Earth Planet init coords tuple habitable .True args" %}
     <div class="code-block">
         {{ "class "|k }}
         {{ "Earth(Planet):"|cl }}
@@ -309,7 +309,7 @@
         {{ '<br>'|cb:4 }}
 
         {{ ':type '|doc_bold }}
-        {{ 'coords: int '|string }}
+        {{ 'coords: tuple '|string }}
         {{ '<br>'|cb:4 }}
 
         {{ '"""'|doc_bold }}

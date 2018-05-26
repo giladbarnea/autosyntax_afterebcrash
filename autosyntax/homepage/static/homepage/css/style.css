@@ -40,7 +40,8 @@ body {
 .work,
 .go-up,
 .continue-arrow-lbl,
-.back {
+.back,
+.work-25 {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -102,7 +103,7 @@ body {
 
 /*opacity 0*/
 .go-up,
-.sidebar-item,
+    /*.sidebar-item,*/
 .op-0 {
     opacity: 0;
 }
@@ -241,6 +242,7 @@ body {
 .text,
 .space,
 .work,
+.work-25,
 .space-font,
 .white,
 .continue-arrow-lbl {
