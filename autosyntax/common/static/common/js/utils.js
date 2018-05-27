@@ -159,3 +159,16 @@ function add_classes(element, classes) {
         element.classList.add(classes);
 
 }
+
+function span(inner, cls, tail = '', id = undefined) {
+    console.warn('tail = ', tail);
+    let _id = id === undefined ? '' : `id="${id}"`;
+    let _cls = `class="${cls}"`;
+    return `<span ${_cls} ${_id}>${inner}</span>${tail}`;
+}
+
+function add_inner_html(element, add) {
+    element_or_by_fn(element, by_id)
+        .innerHTML += add;
+
+}

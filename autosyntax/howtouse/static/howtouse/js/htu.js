@@ -13,16 +13,15 @@ set_ops_list_overview();
 function set_ops_list_overview() {
 
     let curr_av_ops = ['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'listcomp', 'str', 'print'];
-    by_id('ex1').innerHTML = 'Operators are almost always built-in elements from the python standard library, so that no learning is needed.';
-    by_id('ex2').innerHTML = 'In a given line, the Operator is the first argument.';
-    by_id('ex3').innerHTML = 'Currently available Operators:<br>';
 
     for (let i = 0; i < curr_av_ops.length; i++) {
-        if (i < curr_av_ops.length - 1) {
-            by_id('ex3').innerHTML += `<span class="monospace-bg it">${curr_av_ops[i]}</span>, `;
-        } else {
-            by_id('ex3').innerHTML += `<span class="monospace-bg it">${curr_av_ops[i]}</span>.`;
-        }
+        let li = by_id('ops_list_overview_3');
+
+        if (i < curr_av_ops.length - 1)
+            li.innerHTML += span(curr_av_ops[i], cls = "monospace-bg it", tail = ', ');
+        else
+            li.innerHTML += span(curr_av_ops[i], cls = "monospace-bg it", tail = '.');
+
     }
 }
 
