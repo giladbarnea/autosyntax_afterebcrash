@@ -185,6 +185,10 @@ body {
 
 }
 
+.my-ul {
+    padding-left: 0.8em
+}
+
 .continue-arrow {
     height: 60px;
     left: 50%;

@@ -7,7 +7,7 @@
         <div class="space fs60 pt20">How to use</div>
         {% br 2 %}
         <div class="fs30 work pl40" id="operators_htu">
-            <span class="download-link turquoise">Operators</span>
+            <span class="turquoise">Operators</span>
             overview
         </div>
         <br>
@@ -17,24 +17,21 @@
         {% br 1 %}
 
         <div class="basic-text fs25 mr200">
-            <ul class="my-ul"
-                    {#                style="list-style: outside url({% static 'common/img/NOTSURE/bullet_10.png' %}">#}
-                    {#                style="list-style: outside url('static/common/img/NOTSURE/bullet_10.png')"#}
-            >
+            <ul class="my-ul">
                 <li class="pl40 pt25" id="ex1"></li>
                 <li class="pl40 pt25" id="ex2"></li>
-                <li class="pl40 pt25" id="ex3">
-                    Currently available Operators:<br>
-                    {% for operator in operators %}
-                        <span id="operator_{{ forloop.counter }}">
-				{% if forloop.last %}
-                    {{ operator|mono_bg_it }}.
-                {% else %}
-                    {{ operator|mono_bg_it }},
-                {% endif %}
-				</span>
-                    {% endfor %}
-                </li>
+                <li class="pl40 pt25" id="ex3"></li>
+
+                {#                    {% for operator in operators %}#}
+                {#                        <span id="operator_{{ forloop.counter }}">#}
+                {#				{% if forloop.last %}#}
+                {#                    {{ operator|mono_bg_it }}.#}
+                {#                {% else %}#}
+                {#                    {{ operator|mono_bg_it }},#}
+                {#                {% endif %}#}
+                {#				</span>#}
+                {#                    {% endfor %}#}
+
             </ul>
             {#            >#}
             {#            <span class="pl18" id="ex1"></span>#}
