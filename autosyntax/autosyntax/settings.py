@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['autosyntax-dev-aftercrash.us-west-2.elasticbeanstalk.com',
 
 INSTALLED_APPS = [
 	'homepage',
+	'howtouse',
 	'django.contrib.admin',
 	'django.contrib.auth',
 	'django.contrib.contenttypes',

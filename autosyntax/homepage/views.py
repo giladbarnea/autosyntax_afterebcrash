@@ -15,7 +15,8 @@ def how_to_use(request):
 		'dotstr_ops':    ['list', 'tuple', 'set', 'dict', 'str', 'print'],
 		'dotvar_ops':    ['for', 'listcomp']
 		}
-	return render(request, 'homepage/howtouse_full.html', context)
+	# return render(request, 'homepage/howtouse_full.html', context)
+	return render(request, 'howtouse/howtouse_full_really.html', context)
 
 
 def cv(request):
