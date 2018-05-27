@@ -1,5 +1,5 @@
-// TOP SCRIPT, DONT CALL ANY FNS HERE
-console.log('utils.js\n');
+-// TOP SCRIPT, DONT CALL ANY FNS HERE
+    console.log('utils.js\n');
 
 function by_id(id) {
     return document.getElementById(id);
@@ -138,5 +138,3 @@ function decrease_opacity(element, limit, factor) {
     fade_opacity(element, limit, factor, false);
 
 }
-
-
