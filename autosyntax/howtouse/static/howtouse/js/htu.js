@@ -8,6 +8,10 @@ toggle_pair("animation_5", "animation_6");
 set_style("back", "display", "unset");
 
 create_bullet_list('ops_list_overview');
+create_bullet_list('complex_ops_ul1');
+create_bullet_list('complex_ops_ul2');
+create_bullet_list('complex_ops_ul3');
+create_bullet_list('complex_ops_ul4');
 set_ops_list(
     list = ['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'listcomp', 'str', 'print'],
     id = 'ops_list_overview_3'
@@ -15,6 +19,11 @@ set_ops_list(
 set_ops_list(
     list = ['list', 'tuple', 'set', 'dict', 'str', 'print'],
     id = 'ops_list_dotted'
+);
+
+set_ops_list(
+    list = ['for', 'listcomp'],
+    id = 'ops_list_for'
 );
 
 

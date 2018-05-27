@@ -19,7 +19,7 @@
 
 
         {#        > O V E R V I E W  FOR#}
-        <div class="basic-text fs25 mr200">
+        <div class="basic-text fs23 mr300">
             <ul class="my-ul" id="ops_list_overview">
                 <li>Operators are almost always built-in elements from the python standard library, so that no learning
                     is needed.
@@ -76,7 +76,6 @@
     <div class="basic-text fs25 mr200 pl40">
         The operators which follow this rule are:<br>
         <span id="ops_list_dotted">
-
 		</span>
     </div>
 
@@ -84,20 +83,17 @@
 
     {% br 3 %}
 
+    {#    I N  O T H E R  C A S E S#}
+
     <div class="basic-text fs25 white mr200">
-        {#			<span class="indented">#}
         In other cases, using a variable is much more likely than a string.
-        {#            </span>#}
     </div>
 
-
-    {#    {% basic_white_mright200 'In other cases, using a variable is much more likely than a string.' %}#}
-    {#    W I T H  O T H E R  O P E R A T O R S#}
     <br>
     <div class="basic-text fs25 pl40">
         These cases are reversed; a dot makes a string.
     </div>
-    {#    {% basic_text_ind 'These cases are reversed; a dot makes a string.' %}#}
+
     {#    F O R  C H A R A C T E R S (anim 3-4)#}
     <div class="animation">
         <div id="animation_3">
@@ -123,22 +119,17 @@
         </div>
     </div>
     <br>
+
+
     {#    D O T V A R  O P S#}
     <div class="basic-text fs25 mr200 pl40">
         The operators which follow this rule are:<br>
-        {% for operator in dotvar_ops %}
-            <span id="operator_{{ forloop.counter }}">
-						{% if forloop.last %}
-                            {{ operator|mono_bg_it }}.
-                        {% else %}
-                            {{ operator|mono_bg_it }},
-                        {% endif %}
-				</span>
-        {% endfor %}
+        <span id="ops_list_for">
+		</span>
     </div>
-    {#    N O T E  N U M B E R#}
     {% br 2 %}
 
+    {#    N O T E  N U M B E R#}
     <div class="basic-text fs25 mr200">
         {{ '*'|turq }}
         Note: Globally, a number is left as is by default.<br>
@@ -150,7 +141,6 @@
 						PRESS TO TOGGLE EXAMPLE
 					</span>
             </div>
-            {#            {% mono_mright_300 'dict when_im 64' 'PRESS TO TOGGLE EXAMPLE'|op7_mleft150 %}#}
             {% dict_block 'when_im' '64'|n %}
         </div>
         <div id="animation_6" class="disp-none">
@@ -172,14 +162,12 @@
         Inline
         <span class="turquoise">methods()</span>
     </div>
-    {#    {% work 'Inline' 'methods()'|turq id='inline_htu' %}#}
 
 
     <div class="basic-text fs25 white mr200">
         Type a built-in method before an argument to apply it.
     </div>
 
-    {#    {% basic_white_mright200 'Type a built-in method before an argument to apply it.' %}#}
     <br>
     <div class="basic-text fs25 pl40">
         This is useful in cases like:
@@ -210,43 +198,31 @@
         <span class="turquoise">Complex</span>
         operators
     </div>
-
     {#    >D E F#}
     <div class="basic-text fs25 white mr200">
         <span class="monospace-bg it">def</span>
     </div>
 
-    {#    {% basic_white_mright200 'def'|mono_bg_it %}#}
-    <br>
-    <div class="basic-text fs25 mr200 pl40">
-        >
-        {{ "1st argument is the method's name"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "2nd+ arguments are the method's parameters"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "Dotting an argument makes it the default value of the previous one"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "A built in method sets the type of the previous argument"|pl65 }}
+    <div class="basic-text fs23 mr300">
+        <ul class="my-ul" id="complex_ops_ul1">
+            <li>1st argument is the method's name</li>
+            <li>2nd+ arguments are the method's parameters</li>
+            <li>Dotting an argument makes it the default value of the previous one</li>
+            <li>A built in method sets the type of the previous argument</li>
+        </ul>
     </div>
+
     <div class="basic-text white fs25 pl40">
         fun stuff:
     </div>
-    {#    {% basic_text_ind 'fun stuff:'|white %}#}
-
-    <div class="basic-text fs25 mr200 pl40">
-        >
-        {{ "'args' and 'kwargs' are translated to *args and **kwargs"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "If indentation is found, a 'self' is added as first parameter"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "Magic methods are wrapped in __dunder__"|pl65 }}
-        {% br 2 %}
+    <div class="basic-text fs23 mr300">
+        <ul class="my-ul" id="complex_ops_ul2">
+            <li>'args' and 'kwargs' are translated to *args and **kwargs</li>
+            <li>If indentation is found, a 'self' is added as first parameter</li>
+            <li>Magic methods are wrapped in __dunder__</li>
+        </ul>
     </div>
+    {% br 2 %}
     <div class="monospace fs25 mr300">def get_age int dob int 1900 earthyears .True args kwargs</div>
     <div class="code-block mr300">
         {{ 'def '|k }}
@@ -279,41 +255,40 @@
 
     {% br 2 %}
 
-    {#    C L A S S#}
+
+    {#    >C L A S S#}
     <div class="basic-text fs25 white mr200">
         <span class="monospace-bg it">class</span>
     </div>
-    {#    {% basic_white_mright200 'class'|mono_bg_it %}#}
-    <br>
-    <div class="basic-text fs25 mr200 pl40">
-        >
-        {{ "1st argument is the class's name"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "2nd+ arguments are its super classes"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "Typing 'init' creates an __init__ method"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "Following 'init', insert parameters, typings and default values"|pl65 }}
+
+    <div class="basic-text fs23 mr400">
+        <ul class="my-ul" id="complex_ops_ul3">
+            <li>1st argument is the class's name</li>
+            <li>2nd+ arguments are its super classes</li>
+            <li>Typing 'init' creates an __init__ method</li>
+            <li>Following 'init', insert parameters, typings and default values</li>
+        </ul>
     </div>
+
     <div class="basic-text white fs25 pl40">
         fun stuff:
     </div>
-    {#    {% basic_text_ind 'fun stuff:'|white %}#}
-    <div class="basic-text fs25 mr200 pl40">
-        >
-        {{ "'init' arguments are automatically set as data members"|pl65 }}
-        {% br 2 %}
-        >
-        {{ "If any super class was typed, its __super__ is called."|pl65 }}
-        {% br 2 %}
+    <div class="basic-text fs23 mr300">
+        <ul class="my-ul" id="complex_ops_ul4">
+            <li>'init' arguments are automatically set as data members</li>
+            <li>If any super class was typed, its __super__ is called</li>
+            <li>Type multiple super classes preceding 'init' for mutiple inheritance</li>
+        </ul>
     </div>
-    <div class="monospace fs25 mr300">class Earth Planet init coords tuple habitable .True args</div>
+
+    {% br 2 %}
+
+    <div class="monospace fs25 mr300">class Earth Planet Starstuff init coords tuple habitable .True args</div>
     <div class="code-block mr300">
         {{ "class "|k }}
-        {{ "Earth(Planet):"|cl }}
+        {{ "Earth(Planet"|cl }}
+        {{ ", "|k }}
+        {{ "Starstuff):"|cl }}
         {{ "<br>"|cb:2 }}
 
         {{ "def "|k }}

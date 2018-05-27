@@ -118,8 +118,12 @@ body {
     margin-top: 20px;
 }
 
-.pl18 {
-    padding-left: 18px;
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl30 {
+    padding-left: 30px;
 }
 
 .monospace,
@@ -186,7 +190,7 @@ body {
 }
 
 .my-ul {
-    padding-left: 0.8em
+    padding-left: 2.5em
 }
 
 .continue-arrow {
