@@ -34,10 +34,14 @@ a
 
 
 basic_text_ind
-    <div class="basic-text fs25 indented">
-        With basic operators, arguments turn to strings.
-        <br>"Dotting" and argument denotes a variable.
-    </div>
+	<div class="basic-text fs25 indented">
+		With basic operators, arguments turn to strings.
+		<br>"Dotting" and argument denotes a variable.
+	</div>
+
+
+mono_mright_300
+	<div class="monospace fs25 mr300">
 
 TODO:
 m-right-100 =>mr100

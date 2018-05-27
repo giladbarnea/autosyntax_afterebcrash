@@ -38,7 +38,7 @@ function on_resize() {
 
 
     function resize_margin_right_classes() {
-        let m_right_300 = by_class("m-right-300");
+        let m_right_300 = by_class("mr300");
         let m_right_200 = by_class("m-right-200");
         let code_blocks = by_class("code-block");
         // let basic_texts = by_class("basic-text");

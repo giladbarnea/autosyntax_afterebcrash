@@ -3,7 +3,7 @@
 {% block what_is_it %}
     {% load tags %}{% load filters %}
     <div id="whatisit_content">
-        <div class="space fs60 p-top-20">What is it?</div>
+        <div class="space fs60 pt20">What is it?</div>
         {% br 2 %}
         <div class="fs30 work indented">
             <span class="download-link turquoise">autosyntax</span>
@@ -12,16 +12,14 @@
     </div>
     {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
-    <div class="basic-text fs23 mr200">For example:</div>
-    {#    {% basic_text "For example:" %}#}
-    {% mono_mright_300 "list milk eggs nutella" %}
-    <div class="basic-text fs23 mr200">becomes</div>
-    {#    {% basic_text "becomes >" %}#}
+    <div class="basic-text fs25 mr200">For example:</div>
+    <div class="monospace fs25 mr300">list milk eggs nutella</div>
+    <div class="basic-text fs25 mr200">becomes</div>
     {% list_block 'milk' 'eggs' 'nutella' %}
     {% br 3 %}
-    <div class="basic-text fs23 mr200">Similarly,</div>
+    <div class="basic-text fs25 mr200">Similarly,</div>
     {#    {% basic_text "similarly," %}#}
-    {% mono_mright_300 "dict meaning 42 happy pizza" %}
+    <div class="monospace fs25 mr300">dict meaning 42 happy pizza</div>
     {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
     {% br 7 %}
     {#        C L A S S E S#}
@@ -29,8 +27,8 @@
         It can also do more complicated stuff,<br> like classes:
     </div>
     <br>
-    {% mono_mright_300 "class Dog Animal init fluffy .True args" %}
-    <div class="basic-text fs23 mr200">turns into ></div>
+    <div class="monospace fs25 mr300">class Dog Animal init fluffy .True args</div>
+    <div class="basic-text fs25 mr200">turns into ></div>
     {#    {% basic_text "turns into >" %}#}
     <div class="code-block">
         {{ "class "|k }}
@@ -58,15 +56,16 @@
     </div>
 
     <br>
-    <div class="basic-text fs23 mr200">How much time would it take you to type the end result?</div>
+    <div class="basic-text fs25 mr200">How much time would it take you to type the end result?</div>
     {#    {% basic_text 'How much time would it take you to type the end result?' %}#}
     {% br 7 %}
-    <div class="work fs30 indented">It needs only <span class="turquoise">1</span> global
-                                    hotkey to
-                                    do everything,<br>but it's also flexible.
+    <div class="work fs30 indented">
+        It needs only <span class="turquoise">1</span>
+        global hotkey to do everything,<br>
+        but it's also flexible.
     </div>
     <br>
-    <div class="basic-text fs23 mr200">
+    <div class="basic-text fs25 mr200">
         <span class="white fs25">Variables.</span><br>
         Given:
     </div>
@@ -76,8 +75,8 @@
         {{ "'done'"|string }}
     </div>
     {#    V A R I A B L E S#}
-    <div class="basic-text fs23 mr200">then</div>
-    {% mono_mright_300 'i_wish = str I got more things .wish' %}
+    <div class="basic-text fs25 mr200">then</div>
+    <div class="monospace fs25 mr300">i_wish = str I got more things .wish</div>
 
     <div class="code-block">
         {{ 'i_wish = '|cl }}
@@ -86,7 +85,7 @@
         {{ "}'"|string }}
     </div>
 
-    <div class="basic-text fs23 mr200">
+    <div class="basic-text fs25 mr200">
         thanks to the
         <span class="monospace-bg it">.</span>
         preceding "wish".<br>
@@ -97,31 +96,25 @@
     {% br 3 %}
 
 
-    {#    <div class="basic-text fs23 mr200">#}
-    {##}
-    {#    </div>#}
-    {#    {% basic_text 'thanks to the ' '.'|mono_bg_it ' preceding "wish".<br>Did you like that f-string? ' 'autosyntax'|dl_turq ' does that only when needed.' %}#}
-    {#    {% br 3 %}#}
 
     {#        I N L I N E  M E T H O D S#}
     <div class="basic-text white fs25">Inline methods:</div>
-    {#    {% basic_text_white 'Inline methods:' %}#}
-    {% mono_mright_300 'for range len factories' %}
+    <div class="monospace fs25 mr300">for range len factories</div>
 
     <div class="code-block">
         {{ 'for '|k }}
-        {{ 'factory '|cl }}
+        {{ 'fac()tory '|cl }}
         {{ 'in '|k }}
         {{ 'range'|sup }}
         {{ '('|cl }}
         {{ 'len'|sup }}
         {{ '(factories)):'|cl }}
     </div>
-    {% br 3 %}
+    {% br 3 %}(
     {#        L I S T  C O M P R E H E N S I O N S#}
     <div class="basic-text white fs25">List comprehensions:</div>
     {#    {% basic_text_white 'List comprehensions:' %}#}
-    {% mono_mright_300 'listcomp print letters' %}
+    <div class="monospace fs25 mr300">listcomp print letters</div>
 
     <div class="code-block">
         {{ '['|cl }}
@@ -135,7 +128,7 @@
     {% br 3 %}
     <div class="basic-text white fs25">Method return and arguments typing:</div>
     {#    {% basic_text_white 'Method return and arguments typing:' %}#}
-    {% mono_mright_300 'def is_easy bool autosyntax str kwargs' %}
+    <div class="monospace fs25 mr300">def is_easy bool autosyntax str kwargs</div>
 
     <div class="code-block">
         {{ 'def '|k }}
