@@ -138,3 +138,24 @@ function decrease_opacity(element, limit, factor) {
     fade_opacity(element, limit, factor, false);
 
 }
+
+function create_bullet_list(ul_id) {
+    let list = by_id(ul_id);
+    let list_ch = list.children;
+
+    for (let i = 0; i < list_ch.length; i++)
+        add_classes(list_ch[i], ["pl40", "pt25"]);
+
+}
+
+function add_classes(element, classes) {
+    element = element_or_by_fn(element, by_id);
+
+    if (typeof classes !== 'string')
+        for (let i = 0; i < classes.length; i++)
+            element.classList.add(classes[i]);
+
+    else
+        element.classList.add(classes);
+
+}

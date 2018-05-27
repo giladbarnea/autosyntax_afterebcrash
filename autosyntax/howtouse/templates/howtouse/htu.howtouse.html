@@ -17,42 +17,11 @@
         {% br 1 %}
 
         <div class="basic-text fs25 mr200">
-            <ul class="my-ul">
-                <li class="pl40 pt25" id="ex1"></li>
-                <li class="pl40 pt25" id="ex2"></li>
-                <li class="pl40 pt25" id="ex3"></li>
-
-                {#                    {% for operator in operators %}#}
-                {#                        <span id="operator_{{ forloop.counter }}">#}
-                {#				{% if forloop.last %}#}
-                {#                    {{ operator|mono_bg_it }}.#}
-                {#                {% else %}#}
-                {#                    {{ operator|mono_bg_it }},#}
-                {#                {% endif %}#}
-                {#				</span>#}
-                {#                    {% endfor %}#}
-
+            <ul class="my-ul" id="ops_list_overview">
+                <li id="ex1"></li>
+                <li id="ex2"></li>
+                <li id="ex3"></li>
             </ul>
-            {#            >#}
-            {#            <span class="pl18" id="ex1"></span>#}
-            {#            <br>#}
-            {#            {% br 2 %}#}
-            {#            >#}
-            {#            {{ 'In a given line, the Operator is the first argument.'|pl65 }}#}
-            {#            {% br 2 %}#}
-            {#            >#}
-            {#            {{ 'Currently available Operators:<br>'|pl65 }}#}
-            {#            <span class="pl40">#}
-            {#			{% for operator in operators %}#}
-            {#                <span id="operator_{{ forloop.counter }}">#}
-            {#				{% if forloop.last %}#}
-            {#                    {{ operator|mono_bg_it }}.#}
-            {#                {% else %}#}
-            {#                    {{ operator|mono_bg_it }},#}
-            {#                {% endif %}#}
-            {#				</span>#}
-            {#            {% endfor %}#}
-            {#			</span>#}
         </div>
         {% br 7 %}
         {#        D O T T E D  A R G U M E N T S#}
