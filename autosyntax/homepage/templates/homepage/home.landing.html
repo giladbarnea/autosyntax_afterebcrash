@@ -3,8 +3,18 @@
 {# B L O C K  C O N T E N T#}
 {% block content %}
     {% load tags %}{% load filters %}
-    {% page_title 'Hi! My name is Gilad.<br>I love to code FAST.<br><br>This is why I created<br>' 'autosyntax.'|span:'download-link italic turquoise' %}
-    {% work_indented "It's completely free and I know you'll like it." %}
+    <div class="space fs60 p-top-20">
+        Hi! My name is Gilad.
+        <br>I love to code FAST.
+        <br><br>
+        This is why I created
+        <br>
+        <span class="download-link italic turquoise">autosyntax.</span>
+    </div>
+    {% br 2 %}
+    <div class="fs30 work indented">
+        It's completely free and I know you'll like it.
+    </div>
 
     {#W H A T  I S  I T  B L O C K#}
     <div id="whatisit_block">

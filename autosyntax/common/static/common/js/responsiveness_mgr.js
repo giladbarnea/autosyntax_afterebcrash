@@ -31,8 +31,8 @@ function on_resize() {
     // resize_body_left();
     // resize_body_right();
     resize_pad_body();
-    resize_work();
-    resize_space();
+    // resize_work();
+    // resize_space();
     resize_sidebar();
     resize_margin_right_classes();
 
@@ -208,7 +208,7 @@ function on_resize() {
     }
 
     function resize_work() {
-        let works = by_class("work");
+        let works = by_class("fs30");
         if (w < 1300 && w > 800) {
             // dyn_works = true;
             // set_style_to_collection(works, "fontSize", Math.pow(w, 0.47));

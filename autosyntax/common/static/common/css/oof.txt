@@ -1,0 +1,10 @@
+page_title
+	<div class="space p-top-20">
+	{% br 2 %}
+
+work_indented
+	<div class="fs30 work indented">
+			<span class="download-link turquoise">autosyntax</span>
+			turns simple words into python code.
+		</div>
+

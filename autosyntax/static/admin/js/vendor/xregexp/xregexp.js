@@ -824,7 +824,7 @@ XRegExp = XRegExp || (function (undef) {
 /**
  * Returns an XRegExp object that is the union of the given patterns. Patterns can be provided as
  * regex objects or strings. Metacharacters are escaped in patterns provided as strings.
- * Backreferences in provided regex objects are automatically renumbered to work correctly. Native
+ * Backreferences in provided regex objects are automatically renumbered to fs25 correctly. Native
  * flags used by provided regexes are ignored in favor of the `flags` argument.
  * @memberOf XRegExp
  * @param {Array} patterns Regexes and strings to combine.
@@ -1152,7 +1152,7 @@ XRegExp = XRegExp || (function (undef) {
     add(/\[(\^?)]/,
         function (match) {
             // For cross-browser compatibility with ES3, convert [] to \b\B and [^] to [\s\S].
-            // (?!) should work like \b\B, but is unreliable in Firefox
+            // (?!) should fs25 like \b\B, but is unreliable in Firefox
             return match[1] ? "[\\s\\S]" : "\\b\\B";
         });
 
@@ -2084,7 +2084,7 @@ XRegExp = XRegExp || (function (undef) {
 
 /**
  * Builds regexes using named subpatterns, for readability and pattern reuse. Backreferences in the
- * outer pattern and provided subpatterns are automatically renumbered to work correctly. Native
+ * outer pattern and provided subpatterns are automatically renumbered to fs25 correctly. Native
  * flags used by provided subpatterns are ignored in favor of the `flags` argument.
  * @memberOf XRegExp
  * @param {String} pattern XRegExp pattern using `{{name}}` for embedded subpatterns. Allows
@@ -2199,7 +2199,7 @@ XRegExp = XRegExp || (function (undef) {
 
 /**
  * Adds a collection of methods to `XRegExp.prototype`. RegExp objects copied by XRegExp are also
- * augmented with any `XRegExp.prototype` methods. Hence, the following work equivalently:
+ * augmented with any `XRegExp.prototype` methods. Hence, the following fs25 equivalently:
  *
  * XRegExp('[a-z]', 'ig').xexec('abc');
  * XRegExp(/[a-z]/ig).xexec('abc');

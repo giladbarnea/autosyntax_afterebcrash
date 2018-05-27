@@ -3,8 +3,13 @@
 {% load tags filters %}
 {% block content %}
     <div id="howtouse_full_content">
-        {% page_title 'How to use' %}
-        {% work_indented 'Operators'|turq 'overview' id='operators_htu' %}
+        <div class="space fs60 p-top-20">How to use</div>
+        {% br 2 %}
+        <div class="fs30 work indented" id="operators_htu">
+            <span class="download-link turquoise">Operators</span>
+            overview
+        </div>
+        {#        {% work_indented 'Operators'|turq 'overview' id='operators_htu' %}#}
         <br>
         {% basic_text_white '"Operators" tell autosyntax which type of code to generate.' %}
         {% br 1 %}
@@ -32,7 +37,11 @@
         </div>
         {% br 7 %}
         {#        D O T T E D  A R G U M E N T S#}
-        {% work '.Dotted'|turq 'arguments' id='dotted_htu' %}
+        <div class="fs30 work" id='dotted_htu'>
+            <span class="turquoise">.Dotted</span>
+            arguments
+        </div>
+        {#        {% work '.Dotted'|turq 'arguments' id='dotted_htu' %}#}
         {% basic_text_white 'Mark an argument with a dot to toggle a less common use-case.' %}
         <br>
         {% basic_text_ind 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}
@@ -119,7 +128,11 @@
 
     {% br 7 %}
     {#    I N L I N E  M E T H O D S#}
-    {% work 'Inline' 'methods()'|turq id='inline_htu' %}
+    <div class="fs30 work" id='inline_htu'>
+        Inline
+        <span class="turquoise">methods()</span>
+    </div>
+    {#    {% work 'Inline' 'methods()'|turq id='inline_htu' %}#}
     {% basic_white_mright200 'Type a built-in method before an argument to apply it.' %}
     <br>
     {% basic_text_ind 'This is useful in cases like:' %}
@@ -143,9 +156,12 @@
 
 
     {% br 7 %}
-
+    <div class="fs30 work" id="complex_htu">
+        <span class="turquoise">Complex</span>
+        operators
+    </div>
     {#    C O M P L E X  O P E R A T O R S#}
-    {% work 'Complex'|turq 'operators' id='complex_htu' %}
+    {#    {% work 'Complex'|turq 'operators' id='complex_htu' %}#}
 
     {#    D E F#}
     {% basic_white_mright200 'def'|mono_bg_it %}

@@ -37,11 +37,11 @@ body {
     color: #cfcfcf;
 }
 
-.work,
 .go-up,
 .continue-arrow-lbl,
 .back,
-.work-25 {
+.work-25,
+.work {
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -180,7 +180,6 @@ body {
     color: #C4D5E6;
 }
 
-
 .str {
     color: #708F5D
 }
@@ -252,7 +251,7 @@ body {
 /*all fonts*/
 .text,
 .space,
-.work,
+.fs30,
 .work-25,
 .space-font,
 .white,

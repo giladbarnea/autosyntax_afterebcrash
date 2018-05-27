@@ -3,8 +3,12 @@ body {
     margin: 50px 60px 60px;
 }
 
-.work {
+.fs30 {
     font-size: 30px;
+}
+
+.fs60 {
+    font-size: 60px;
 }
 
 /*font-size: 25px*/

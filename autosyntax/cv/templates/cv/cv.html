@@ -2,10 +2,15 @@
 {% load staticfiles %}{% load tags %}{% load filters %}
 {% block content %}
     <div id="cv_content">
-        {% page_title 'Gilad Barnea - CV' %}
+        <div class="space fs60 p-top-20">Gilad Barnea - CV</div>
+        {% br 2 %}
+        {#        {% page_title 'Gilad Barnea - CV' %}#}
+        <div class="fs30 work indented" id="overview_cv">
+            <span class="download-link turquoise">Overview</span>
+        </div>
 
-
-        {#        O V E R V I E W#} {% work_indented 'Overview'|turq id='overview_cv' %} <br>
+        {#        O V E R V I E W#}
+        {#        {% work_indented 'Overview'|turq id='overview_cv' %} <br>#}
         <div class="basic-text f-size-23 m-right-200 indented">
             > {{ 'I graduated a 1200hr long Full-Stack Developer studies at College of Sela.'|ind_half }} {% br 2 %}
             > {{ 'I am passionate, self-disciplined and a quick learner. I get things done.'|ind_half }} {% br 2 %}
@@ -15,7 +20,10 @@
 
 
         {#        E X P E R I E N C E#}
-        {% work_indented 'Experience'|turq id='experience_cv' %}
+        <div class="fs30 work indented" id="experience_cv">
+            <span class="download-link turquoise">Experience</span>
+        </div>
+        {#        {% work_indented 'Experience'|turq id='experience_cv' %}#}
         <div class="white basic-text indented_plus">my story with {{ 'autosyntax'|it }}</div>
         <br>
         <div class="basic-text m-right-200 indented">
@@ -30,7 +38,7 @@
             {% br_15 %}
             Taking many libraries, which weren't built to work together, and make them work together;
             {#            Making many different libraries, some lacking documentation (or worse - documentated in C)#}
-            {#            work together organically;#}
+            {#            fs25 together organically;#}
             {% br_15 %}
             Letting go of features I thought were good, in favor of features users actually needed;
             {% br_15 %}
@@ -39,12 +47,15 @@
             I enjoyed every minute of it, and still am.
 
         </div>
-        {#        {% basic_text_ind_mright200 "I don't count the projects I did in college as real-world experience;" "autosyntax"|it " is an actual product that is used by actual users.<br><br>It's evolving through their continuous feedback, and new releases come out on a regular basis.<br><br>It took about 4 months to get it stable for release, in which time I encountered challenges not found in school exercises; <br>Making many different libraries, some lacking documentation (or worse - documentated in C) work together organically; <br>Letting go of features I liked in favor of features users actually needed;<br>And wrapping the whole thing in a way that makes the users want to use it.<br><br>I enjoyed every minute of it, and still am." %}#}
+        {#        {% basic_text_ind_mright200 "I don't count the projects I did in college as real-world experience;" "autosyntax"|it " is an actual product that is used by actual users.<br><br>It's evolving through their continuous feedback, and new releases come out on a regular basis.<br><br>It took about 4 months to get it stable for release, in which time I encountered challenges not found in school exercises; <br>Making many different libraries, some lacking documentation (or worse - documentated in C) fs25 together organically; <br>Letting go of features I liked in favor of features users actually needed;<br>And wrapping the whole thing in a way that makes the users want to use it.<br><br>I enjoyed every minute of it, and still am." %}#}
         {% br 4 %}
 
 
         {#        S K I L L S#}
-        {% work_indented 'Skills'|turq id='skills_cv' %} <br>
+        <div class="fs30 work indented" id="skills_cv">
+            <span class="download-link turquoise">Skills</span>
+        </div>
+        {#        {% work_indented 'Skills'|turq id='skills_cv' %} <br>#}
         {#        > L A N G U A G E S#}
         {% basic_text_ind 'Languages'|white %}
         <div class="basic-text f-size-23 m-right-200 indented">
@@ -74,8 +85,16 @@
         </div>
 
 
-        {#        E D U C A T I O N#} {% work_indented 'Academic Education'|turq id='education_cv' %} <br>
-        {#        > F U L L  S T A C K#} {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}
+        {#        E D U C A T I O N#}
+
+        <div class="fs30 work indented" id="education_cv">
+            <span class="download-link turquoise">Academic Education</span>
+        </div>
+        {#        {% work_indented 'Academic Education'|turq id='education_cv' %} <br>#}
+
+        {#        > F U L L  S T A C K#}
+
+        {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}
         <div class="basic-text f-size-23 m-right-200 indented">
             > {{ '"Yahalom" honor of excellency'|ind_half }} {% br 2 %}
             > {{ 'Numerous projects comprising database, business logic,<br>'|ind_half }} {{ 'web, cloud deployment and GUI.'|ind }} {% br 2 %}
@@ -95,7 +114,12 @@
         {#        > J E R U S A L E M#} {% basic_text_ind 'Classical Composition and Orchestration, Jerusalem Academy of Music'|white '(2014-2015)'|it %} {% br 4 %}
 
 
-        {#        M I L I T A R Y#} {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text italic' id='military_cv' %}
+        {#        M I L I T A R Y#}
+
+        <div class="fs30 work indented" id="military_cv">
+            <span class="download-link turquoise">Military service - Military Band</span>
+        </div>
+        {#        {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text italic' id='military_cv' %}#}
         <br>
         <div class="basic-text f-size-23 m-right-200 indented">
             > {{ 'Pianist, arranger and producer in IDF Military Band.'|ind_half }} {% br 2 %}
@@ -105,7 +129,13 @@
         </div>
 
 
-        {#        L A N G U A G E S#} {% work_indented 'Languages'|turq id='languages_cv' %} <br>
+        {#        L A N G U A G E S#}
+
+        <div class="fs30 work indented" id="languages_cv">
+            <span class="download-link turquoise">languages</span>
+        </div>
+
+        {#        {% work_indented 'Languages'|turq id='languages_cv' %} <br>#}
         <div class="basic-text f-size-23 m-right-200 indented">
             > {{ 'Hebrew - native.'|ind_half }} {% br 2 %}
             > {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }} {% br 2 %}
@@ -118,7 +148,12 @@
         <span class="basic-text center" id="email_msg" style="opacity:0">
 					</span>
         {% br 2 %}
-        {% work_indented 'Contact'|turq id='contact_cv' %}
+
+        <div class="fs30 work indented" id="contact_cv">
+            <span class="download-link turquoise">Contact</span>
+        </div>
+
+        {#        {% work_indented 'Contact'|turq id='contact_cv' %}#}
 
         <div class="basic-text white m-right-200 indented_plus">
             You're welcome to email me at

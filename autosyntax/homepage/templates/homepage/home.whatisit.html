@@ -3,8 +3,12 @@
 {% block what_is_it %}
     {% load tags %}{% load filters %}
     <div id="whatisit_content">
-        {% page_title "What is it?" %}
-        {% work_indented "autosyntax"|dl_turq "turns simple words into python code." %}
+        <div class="space fs60 p-top-20">What is it?</div>
+        {% br 2 %}
+        <div class="fs30 work indented">
+            <span class="download-link turquoise">autosyntax</span>
+            turns simple words into python code.
+        </div>
     </div>
     {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
@@ -18,7 +22,9 @@
     {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
     {% br 7 %}
     {#        C L A S S E S#}
-    {% work "It can also do more complicated stuff,<br> like classes:" %}
+    <div class="fs30 work">
+        It can also do more complicated stuff,<br> like classes:
+    </div>
     <br>
     {% mono_mright_300 "class Dog Animal init fluffy .True args" %}
     {% basic_text "turns into >" %}
@@ -50,7 +56,10 @@
     <br>
     {% basic_text 'How much time would it take you to type the end result?' %}
     {% br 7 %}
-    {% work_indented 'It needs only' '1'|turq " global hotkey to do everything,<br>but it's also flexible." %}
+    <div class="work fs30 indented">It needs only <span class="turquoise">1</span> global
+                                    hotkey to
+                                    do everything,<br>but it's also flexible.
+    </div>
     <br>
     {% basic_text 'Variables.'|white '<br>Given:' %}
     <div class="code-block">

@@ -221,7 +221,7 @@ function on_resize() {
     }
 
     function resize_work() {
-        let works = by_class("work");
+        let works = by_class("fs25");
         if (w < 1300 && w > 800) {
             // dyn_works = true;
             // set_style_to_collection(works, "fontSize", Math.pow(w, 0.47));

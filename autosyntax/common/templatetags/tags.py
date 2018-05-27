@@ -17,12 +17,6 @@ def br_15():
 
 @register.simple_tag
 def br_25():
-	# return format_html("""
-	# <span class="f-size-10">
-	# 		<br><br>
-	# 		</span>
-	# 		""")
-
 	return format_html(_span('f-size-40', '<br><br>'))
 
 
@@ -107,13 +101,14 @@ def space_ptop_20(value, *args):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def work(value, *args, **kwargs):
 	value = _join(value, args)
 	if 'id' in kwargs:
-		value = _div("work", value, kwargs['id'])
+		value = _div("fs30", value, kwargs['id'])
 	else:
-		value = _div("work", value)
+		value = _div("fs30", value)
 	return format_html(value)
 
 
@@ -127,13 +122,14 @@ def work_25(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def work_indented(value, *args, **kwargs):
 	value = _join(value, args)
 	if 'id' in kwargs:
-		value = _div("work indented", value, kwargs['id'])
+		value = _div("fs30 indented", value, kwargs['id'])
 	else:
-		value = _div("work indented", value)
+		value = _div("fs30 indented", value)
 	return format_html(value)
 
 

@@ -3,8 +3,12 @@
 {% block howtouse_block %}
     <div id="howtouse_content">
         {% load tags %}{% load filters %}
-        {% page_title 'How to use' %}
-        {% work_indented 'Basic'|turq 'principles' %}
+        <div class="space fs60 p-top-20">How to use</div>
+        {% br 2 %}
+        <div class="fs30 work indented">
+            <span class="download-link turquoise">Basic</span>
+            principles
+        </div>
         <br>
         {% basic_text_white 'There are only 4 guiding principles:' %}
         {% br 2 %}
