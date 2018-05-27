@@ -1,6 +1,6 @@
 // let is_main_page = true;
 // screen.orientation.lock('landscape');
-console.log('layout.js\n');
+console.log('home.layout.js\n');
 let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)

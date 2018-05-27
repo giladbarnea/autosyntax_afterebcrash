@@ -5,7 +5,7 @@ def index(request):
 	context = {
 		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I? (CV)'],
 		}
-	return render(request, 'homepage/whoami.html', context)
+	return render(request, 'homepage/home.whoami.html', context)
 
 
 def how_to_use(request):
@@ -15,8 +15,7 @@ def how_to_use(request):
 		'dotstr_ops':    ['list', 'tuple', 'set', 'dict', 'str', 'print'],
 		'dotvar_ops':    ['for', 'listcomp']
 		}
-	# return render(request, 'homepage/howtouse_full.html', context)
-	return render(request, 'howtouse/howtouse_full_really.html', context)
+	return render(request, 'howtouse/htu.howtouse.html', context)
 
 
 def cv(request):
@@ -27,4 +26,4 @@ def cv(request):
 
 
 def talia(request):
-	return render(request, 'homepage/talia.html')
+	return render(request, 'homepage/_talia.html')

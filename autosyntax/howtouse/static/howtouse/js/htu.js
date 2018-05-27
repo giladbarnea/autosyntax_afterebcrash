@@ -1,4 +1,4 @@
-console.log('howtouse_page.js\n');
+console.log('htu.js\n');
 
 toggle_pair("animation_1", "animation_2");
 toggle_pair("animation_3", "animation_4");

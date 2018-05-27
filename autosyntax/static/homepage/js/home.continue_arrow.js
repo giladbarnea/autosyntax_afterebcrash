@@ -1,6 +1,5 @@
-console.log('continue_arrow_mainpage.js\n');
+console.log('home.continue_arrow.js\n');
 set_init_lbl_html("What is it?");
-
 
 
 let [whoami, howtouse, download, whatisit] = [
