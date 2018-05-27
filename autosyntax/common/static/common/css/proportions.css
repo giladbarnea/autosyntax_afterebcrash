@@ -1,0 +1,214 @@
+
+body {
+    margin: 50px 60px 60px;
+}
+
+.work {
+    font-size: 30px;
+}
+
+/*font-size: 25px*/
+.basic-text,
+.monospace,
+.go-up,
+.code-literal,
+.str,
+.int,
+.kept,
+.magic,
+.self,
+.super,
+.doc,
+.back,
+.work-25 {
+    font-size: 25px;
+}
+
+.m-left-150 {
+    margin-left: 150px;
+}
+
+.m-left-136 {
+    margin-left: 136px;
+}
+
+.m-left-95 {
+    margin-left: 95px;
+}
+
+/*#continue_arrow {*/
+/*padding-left: 50px;*/
+/*padding-right: 50px;*/
+/*}*/
+
+/*padding-top: 20px*/
+.p-top-20 {
+    padding-top: 20px;
+}
+
+/*padding-top: 40px*/
+.p-top-40 {
+    padding-top: 40px;
+}
+
+/*padding-top: 60px*/
+.p-top-60 {
+    padding-top: 60px;
+}
+
+/*padding-top: 80px*/
+.p-top-80 {
+    padding-top: 80px;
+}
+
+/*padding-top: 100px*/
+.p-top-100 {
+    padding-top: 100px;
+}
+
+/*margin-right: 300px*/
+
+.m-right-300,
+.code-block {
+    margin-right: 300px;
+}
+
+.basic-text,
+.m-right-200 {
+    margin-right: 200px;
+}
+
+.m-right-100 {
+    margin-right: 100px;
+}
+
+.code-block,
+.f-size-0 {
+    font-size: 0;
+}
+
+.f-size-10 {
+    font-size: 10px
+}
+
+.f-size-40 {
+    font-size: 35px
+}
+
+.basic-text {
+    margin-top: 25px;
+
+}
+
+.monospace,
+.code-block {
+    margin-top: 20px;
+}
+
+.monospace,
+.code-block,
+.indented {
+    padding-left: 40px;
+}
+
+.indented_plus {
+    padding-left: 65px;
+}
+
+.indented-half {
+    /*IN RELATION TO INDENTED*/
+    padding-left: 18px;
+}
+
+.code-break {
+    font-size: 32px;
+}
+
+.go-up,
+.back {
+    bottom: 5%;
+    width: 100px;
+}
+
+.go-up {
+    left: 90%;
+}
+
+.back {
+    left: 7%
+}
+
+.sidebar {
+    padding-left: 20px;
+    padding-top: 70px;
+}
+
+.f-size-23 {
+    font-size: 23px;
+}
+
+.sidebar-item {
+    font-size: 20px;
+}
+
+.sidebar-item {
+    margin-bottom: 10px;
+}
+
+/*.sidebar-item:hover {*/
+/*font-size: 24px;*/
+/*}*/
+
+.continue-arrow-lbl,
+.continue-arrow {
+    bottom: 5%;
+}
+
+.continue-arrow-lbl {
+    left: 48.6%;
+    height: 90px;
+    opacity: 0;
+    font-size: 20px;
+    width: 250px;
+
+}
+
+.center {
+
+}
+
+.continue-arrow {
+    height: 60px;
+    left: 50%;
+    width: 60px;
+}
+
+/*#continue_arrow:hover {*/
+/*height: 63px;*/
+/*left: 49.8%;*/
+/*width: 63px;*/
+/*}*/
+
+.easter-egg {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 15%;
+    left: 90%;
+    width: 70px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+    background-color: #111111;
+    color: white;
+    border-color: white;
+    font-size: 20px;
+}
+
+.easter-egg:hover {
+    opacity: 0.5;
+}
+
+
+
+
