@@ -1,5 +1,5 @@
 // TOP SCRIPT, DONT CALL ANY FNS HERE
-console.log('continue_arrow_utils.js\n');
+console.log('continue_arrow.js\n');
 
 function set_init_lbl_html(value) {
     by_id("continue_arrow_lbl").innerHTML = value;
