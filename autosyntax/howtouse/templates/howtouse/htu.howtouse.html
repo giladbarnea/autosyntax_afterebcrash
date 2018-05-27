@@ -6,6 +6,7 @@
 
         <div class="space fs60 pt20">How to use</div>
         {% br 2 %}
+        {#        O V E R V I E W#}
         <div class="fs30 work pl40" id="operators_htu">
             <span class="turquoise">Operators</span>
             overview
@@ -16,6 +17,8 @@
         </div>
         {% br 1 %}
 
+
+        {#        > O V E R V I E W  FOR#}
         <div class="basic-text fs25 mr200">
             <ul class="my-ul" id="ops_list_overview">
                 <li>Operators are almost always built-in elements from the python standard library, so that no learning
@@ -25,6 +28,8 @@
                 <li id="ops_list_overview_3">Currently available Operators:<br></li>
             </ul>
         </div>
+
+
         {% br 7 %}
         {#        D O T T E D  A R G U M E N T S#}
         <div class="fs30 work" id='dotted_htu'>
@@ -67,19 +72,16 @@
         </div>
     </div>
     <br>
-    {#    D O T S T R  O P S#}
+    {#    >D O T T E D  FOR#}
     <div class="basic-text fs25 mr200 pl40">
         The operators which follow this rule are:<br>
-        {% for operator in dotstr_ops %}
-            <span id="operator_{{ forloop.counter }}">
-			{% if forloop.last %}
-                {{ operator|mono_bg_it }}.
-            {% else %}
-                {{ operator|mono_bg_it }},
-            {% endif %}
-				</span>
-        {% endfor %}
+        <span id="ops_list_dotted">
+
+		</span>
     </div>
+
+
+
     {% br 3 %}
 
     <div class="basic-text fs25 white mr200">

@@ -8,19 +8,25 @@ toggle_pair("animation_5", "animation_6");
 set_style("back", "display", "unset");
 
 create_bullet_list('ops_list_overview');
-set_ops_list_overview();
+set_ops_list(
+    list = ['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'listcomp', 'str', 'print'],
+    id = 'ops_list_overview_3'
+);
+set_ops_list(
+    list = ['list', 'tuple', 'set', 'dict', 'str', 'print'],
+    id = 'ops_list_dotted'
+);
 
-function set_ops_list_overview() {
 
-    let curr_av_ops = ['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'listcomp', 'str', 'print'];
+function set_ops_list(list, id) {
 
-    for (let i = 0; i < curr_av_ops.length; i++) {
-        let li = by_id('ops_list_overview_3');
+    for (let i = 0; i < list.length; i++) {
+        let li = by_id(id);
 
-        if (i < curr_av_ops.length - 1)
-            li.innerHTML += span(curr_av_ops[i], cls = "monospace-bg it", tail = ', ');
+        if (i < list.length - 1)
+            li.innerHTML += span(list[i], cls = "monospace-bg it", tail = ', ');
         else
-            li.innerHTML += span(curr_av_ops[i], cls = "monospace-bg it", tail = '.');
+            li.innerHTML += span(list[i], cls = "monospace-bg it", tail = '.');
 
     }
 }
