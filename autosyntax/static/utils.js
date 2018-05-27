@@ -1,5 +1,5 @@
 -// TOP SCRIPT, DONT CALL ANY FNS HERE
-    console.log('utils.js\n');
+    console.log('utils_general.js\n');
 
 function by_id(id) {
     return document.getElementById(id);

@@ -119,13 +119,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static'
 # STATICFILES_DIRS = [
-# os.path.join(BASE_DIR, "static"),
-# '/Sync/Code/Python/autosyntax_afterebcrash/autosyntax/homepage/static/',
-# ]
-# STATICFILES_DIRS = [
-# 	os.path.join("c:/Sync/Code/Python/autosyntax_afterebcrash/autosyntax/homepage/static"),
-# 	]
-# STATICFILES_FINDERS = [
-# 	'django.contrib.staticfiles.finders.FileSystemFinder',
-# 	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# 	'static/general/',
+# 	'static/admin/',
+# 	'static/homepage/',
+# 	'static/howtouse/',
+#
 # 	]
