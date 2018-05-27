@@ -10,10 +10,11 @@
             principles
         </div>
         <br>
-        {% basic_text_white 'There are only 4 guiding principles:' %}
+        <div class="basic-text white fs25">There are only 4 guiding principles:</div>
+        {#        {% basic_text_white 'There are only 4 guiding principles:' %}#}
         {% br 2 %}
 
-        <div class="basic-text fs23 m-right-200 indented">
+        <div class="basic-text fs23 mr200 indented">
             >
             {{ 'Merely words and spaces usually does the job.<br>'|ind_half }}
             {{ 'This yields the most common and likely use-case.'|ind }}
@@ -35,8 +36,10 @@
             {{ 'An argument can be preceded by a built-in method.<br>'|ind_half }}
             {{ 'It is then passed to this method.'|ind }}
         </div>
+
         <a href="how" class="no-decor">
-            <div class="basic-text white ">For a full guide, click here.
+            {% br 2 %}
+            <div class="basic-text fs25 white">For a full guide, click here.
             </div>
         </a>
         {#        {% a 'For a full guide, click here.' 'how' 'no-decor' 'basic-text white' %}#}

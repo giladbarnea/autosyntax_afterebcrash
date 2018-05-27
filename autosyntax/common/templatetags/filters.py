@@ -87,12 +87,12 @@ def cb(value, tabs):
 
 @register.filter()
 def mono_bg_it(value):
-	return format_html(_span("monospace-bg italic", value))
+	return format_html(_span("monospace-bg it", value))
 
 
 @register.filter()
 def it(value):
-	return format_html(_span("italic", value))
+	return format_html(_span("it", value))
 
 
 @register.filter()

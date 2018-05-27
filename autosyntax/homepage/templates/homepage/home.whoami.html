@@ -5,13 +5,31 @@
     <div id="whoami_content">
         <div class="space fs60 p-top-20">Who am I?</div>
         {% br 2 %}
-        {% basic_white_mright200 "My name is Gilad Barnea, I'm 26. Two years ago I turned from a career as a concert pianist to software development."|ind %}
+
+        <div class="basic-text fs25 white mr200">
+			<span class="indented">
+				My name is Gilad Barnea, I'm 26.
+				Two years ago I turned from a career as a concert pianist
+				to software development.</span>
+        </div>
+
+
+        {#        <div class="basic-text fs25 white mr200">#}
+        {#            My name is Gilad Barnea, I'm 26. Two years ago I turned from a career as a concert pianist to software#}
+        {#            development.#}
+        {#        </div>#}
+        {#        {% basic_white_mright200 "My name is Gilad Barnea, I'm 26. Two years ago I turned from a career as a concert pianist to software development."|ind %}#}
         <div class="basic-text fs23 mr200">
             This turned out to be a great decision; I love code, and I love making other people's lives easier with
             code.
         </div>
         {#        {% basic_text "This turned out to be a great decision; I love code, and I love making other people's lives easier with code." %}#}
-        {% a 'For my full CV, click here.' 'cv' 'no-decor' 'basic-text white' %}
+
+        <a href="cv" class="no-decor">
+            {% br 2 %}
+            <div class="basic-text fs25 white">For my full CV, click here.</div>
+        </a>
+
 
         <br>
         {#        {% basic_text 'basic_text' %}#}

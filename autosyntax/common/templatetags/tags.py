@@ -133,6 +133,7 @@ def work_indented(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def page_title(value, *args):
 	"""div, space p-top-20, 2 <br>"""
@@ -160,6 +161,7 @@ def basic_text_ind_mright200(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def basic_text_ind(value, *args, **kwargs):
 	if 'no' in kwargs:
@@ -174,6 +176,7 @@ def basic_text_ind(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def basic_text_white(value, *args):
 	value = _join(value, args)
@@ -188,6 +191,7 @@ def mono_mright_300(value, *args):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def basic_white_mright200(value, *args, **kwargs):
 	value = _join(value, args)

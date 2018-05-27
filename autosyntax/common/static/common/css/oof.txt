@@ -13,9 +13,32 @@ basic-text
 
 
 basic_text_white
-	<div class="basic-text white fs25">Inline methods:</div>
+	<div class="basic-text white fs25">
+	Inline methods:
+	</div>
+
+basic_white_mright200
+	 <div class="basic-text fs25 white mr200">
+			<span class="indented">
+				My name is Gilad Barnea, I'm 26.
+				Two years ago I turned from a career as a concert pianist
+				to software development.</span>
+		</div>
 
 
+a
+	 <a href="cv" class="no-decor">
+			{% br 2 %}
+			<div class="basic-text fs25 white">For my full CV, click here.</div>
+		</a>
+
+
+basic_text_ind
+    <div class="basic-text fs25 indented">
+        With basic operators, arguments turn to strings.
+        <br>"Dotting" and argument denotes a variable.
+    </div>
 
 TODO:
 m-right-100 =>mr100
+m-right-200 =>mr200
