@@ -8,3 +8,14 @@ work_indented
 			turns simple words into python code.
 		</div>
 
+basic-text
+	<div class="basic-text fs23 mr200">
+
+
+basic_text_white
+	<div class="basic-text white fs25">Inline methods:</div>
+
+
+
+TODO:
+m-right-100 =>mr100

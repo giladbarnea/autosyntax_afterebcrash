@@ -13,7 +13,7 @@
         <br>
         {% basic_text_white '"Operators" tell autosyntax which type of code to generate.' %}
         {% br 1 %}
-        <div class="basic-text f-size-23 m-right-200 indented">
+        <div class="basic-text fs23 m-right-200 indented">
             >
             {{ 'Operators are almost always built-in elements<br>'|ind_half }}
             {{ 'from the python standard library, so that no learning is needed.'|ind }}
@@ -59,7 +59,7 @@
     </div>
     <br>
     {#    D O T S T R  O P S#}
-    <div class="basic-text f-size-23 m-right-200 indented">
+    <div class="basic-text fs23 m-right-200 indented">
         The operators which follow this rule are:<br>
         {% for operator in dotstr_ops %}
             <span id="operator_{{ forloop.counter }}">
@@ -94,7 +94,7 @@
     </div>
     <br>
     {#    D O T V A R  O P S#}
-    <div class="basic-text f-size-23 m-right-200 indented">
+    <div class="basic-text fs23 m-right-200 indented">
         The operators which follow this rule are:<br>
         {% for operator in dotvar_ops %}
             <span id="operator_{{ forloop.counter }}">
@@ -166,7 +166,7 @@
     {#    D E F#}
     {% basic_white_mright200 'def'|mono_bg_it %}
     <br>
-    <div class="basic-text f-size-23 m-right-200 indented">
+    <div class="basic-text fs23 m-right-200 indented">
         >
         {{ "1st argument is the method's name"|ind_half }}
         {% br 2 %}
@@ -181,7 +181,7 @@
     </div>
     {% basic_text_ind 'fun stuff:'|white %}
 
-    <div class="basic-text f-size-23 m-right-200 indented">
+    <div class="basic-text fs23 m-right-200 indented">
         >
         {{ "'args' and 'kwargs' are translated to *args and **kwargs"|ind_half }}
         {% br 2 %}
@@ -227,7 +227,7 @@
     {#    C L A S S#}
     {% basic_white_mright200 'class'|mono_bg_it %}
     <br>
-    <div class="basic-text f-size-23 m-right-200 indented">
+    <div class="basic-text fs23 m-right-200 indented">
         >
         {{ "1st argument is the class's name"|ind_half }}
         {% br 2 %}
@@ -241,7 +241,7 @@
         {{ "Following 'init', insert parameters, typings and default values"|ind_half }}
     </div>
     {% basic_text_ind 'fun stuff:'|white %}
-    <div class="basic-text f-size-23 m-right-200 indented">
+    <div class="basic-text fs23 m-right-200 indented">
         >
         {{ "'init' arguments are automatically set as data members"|ind_half }}
         {% br 2 %}

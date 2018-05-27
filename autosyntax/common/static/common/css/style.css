@@ -26,6 +26,11 @@ body {
     font-weight: bolder;
 }
 
+.basic-text {
+    color: #bbbbbb;
+    font-family: 'Space Mono', monospace;
+}
+
 .monospace-bg, .monospace,
 .code-block {
     background-color: #1a1a1a;
@@ -45,7 +50,7 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.space, .space-font, .sidebar-item, .basic-text {
+.space, .space-font, .sidebar-item {
     font-family: 'Space Mono', monospace;
 
 }
@@ -208,7 +213,6 @@ body {
     color: #699F5B
 }
 
-.basic-text,
 .sidebar-item,
 .grey {
     color: #bbbbbb;
@@ -253,7 +257,6 @@ body {
 .space,
 .fs30,
 .work-25,
-.space-font,
 .white,
 .continue-arrow-lbl {
     color: white;

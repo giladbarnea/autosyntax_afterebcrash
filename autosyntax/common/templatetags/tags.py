@@ -142,6 +142,7 @@ def page_title(value, *args):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def basic_text(value, *args):
 	value = _join(value, args)

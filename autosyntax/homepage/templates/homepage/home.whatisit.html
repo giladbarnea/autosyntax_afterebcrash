@@ -12,12 +12,15 @@
     </div>
     {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
-    {% basic_text "For example:" %}
+    <div class="basic-text fs23 mr200">For example:</div>
+    {#    {% basic_text "For example:" %}#}
     {% mono_mright_300 "list milk eggs nutella" %}
-    {% basic_text "becomes >" %}
+    <div class="basic-text fs23 mr200">becomes</div>
+    {#    {% basic_text "becomes >" %}#}
     {% list_block 'milk' 'eggs' 'nutella' %}
     {% br 3 %}
-    {% basic_text "similarly," %}
+    <div class="basic-text fs23 mr200">Similarly,</div>
+    {#    {% basic_text "similarly," %}#}
     {% mono_mright_300 "dict meaning 42 happy pizza" %}
     {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
     {% br 7 %}
@@ -27,7 +30,8 @@
     </div>
     <br>
     {% mono_mright_300 "class Dog Animal init fluffy .True args" %}
-    {% basic_text "turns into >" %}
+    <div class="basic-text fs23 mr200">turns into ></div>
+    {#    {% basic_text "turns into >" %}#}
     <div class="code-block">
         {{ "class "|k }}
         {{ "Dog(Animal):"|cl }}
@@ -54,20 +58,25 @@
     </div>
 
     <br>
-    {% basic_text 'How much time would it take you to type the end result?' %}
+    <div class="basic-text fs23 mr200">How much time would it take you to type the end result?</div>
+    {#    {% basic_text 'How much time would it take you to type the end result?' %}#}
     {% br 7 %}
     <div class="work fs30 indented">It needs only <span class="turquoise">1</span> global
                                     hotkey to
                                     do everything,<br>but it's also flexible.
     </div>
     <br>
-    {% basic_text 'Variables.'|white '<br>Given:' %}
+    <div class="basic-text fs23 mr200">
+        <span class="white fs25">Variables.</span><br>
+        Given:
+    </div>
+    {#    {% basic_text 'Variables.'|white '<br>Given:' %}#}
     <div class="code-block">
         {{ 'wish = '|cl }}
         {{ "'done'"|string }}
     </div>
     {#    V A R I A B L E S#}
-    {% basic_text 'then' %}
+    <div class="basic-text fs23 mr200">then</div>
     {% mono_mright_300 'i_wish = str I got more things .wish' %}
 
     <div class="code-block">
@@ -76,11 +85,27 @@
         {{ 'wish'|cl }}
         {{ "}'"|string }}
     </div>
-    {% basic_text 'thanks to the ' '.'|mono_bg_it ' preceding "wish".<br>Did you like that f-string? ' 'autosyntax'|dl_turq ' does that only when needed.' %}
+
+    <div class="basic-text fs23 mr200">
+        thanks to the
+        <span class="monospace-bg italic">.</span>
+        preceding "wish".<br>
+        Did you like that f-string?
+        <span class="download-link turquoise">autosyntax</span>
+        does that only when needed.
+    </div>
     {% br 3 %}
 
+
+    {#    <div class="basic-text fs23 mr200">#}
+    {##}
+    {#    </div>#}
+    {#    {% basic_text 'thanks to the ' '.'|mono_bg_it ' preceding "wish".<br>Did you like that f-string? ' 'autosyntax'|dl_turq ' does that only when needed.' %}#}
+    {#    {% br 3 %}#}
+
     {#        I N L I N E  M E T H O D S#}
-    {% basic_text_white 'Inline methods:' %}
+    <div class="basic-text white fs25">Inline methods:</div>
+    {#    {% basic_text_white 'Inline methods:' %}#}
     {% mono_mright_300 'for range len factories' %}
 
     <div class="code-block">
@@ -94,7 +119,8 @@
     </div>
     {% br 3 %}
     {#        L I S T  C O M P R E H E N S I O N S#}
-    {% basic_text_white 'List comprehensions:' %}
+    <div class="basic-text white fs25">List comprehensions:</div>
+    {#    {% basic_text_white 'List comprehensions:' %}#}
     {% mono_mright_300 'listcomp print letters' %}
 
     <div class="code-block">
@@ -107,7 +133,8 @@
         {{ 'letters]'|cl }}
     </div>
     {% br 3 %}
-    {% basic_text_white 'Method return and arguments typing:' %}
+    <div class="basic-text white fs25">Method return and arguments typing:</div>
+    {#    {% basic_text_white 'Method return and arguments typing:' %}#}
     {% mono_mright_300 'def is_easy bool autosyntax str kwargs' %}
 
     <div class="code-block">
@@ -135,8 +162,10 @@
     </div>
 
     {% br 2 %}
-    {% basic_text_white 'And more, built with those little details in mind.<br>' %}
-    {% div 'Download' 'autosyntax.'|turq cls='basic-text download-link white' %}
+    <div class="basic-text white fs25">And more, built with those little details in mind.</div>
+    <div class="basic-text fs25 download-link white">Download
+        <span class="turquoise">autosyntax.</span>
+    </div>
 
     <div id="download_block">
         {% block download %}
