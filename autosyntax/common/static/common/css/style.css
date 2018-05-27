@@ -36,10 +36,17 @@ body {
     background-color: #1a1a1a;
 }
 
-.monospace,
-.monospace-color {
+.monospace {
     font-family: Consolas, 'sans-serif';
     color: #cfcfcf;
+}
+
+.monospace-color {
+    color: #cfcfcf;
+}
+
+.monospace-font {
+    font-family: Consolas, 'sans-serif';
 }
 
 .go-up,
@@ -262,6 +269,11 @@ body {
     color: white;
 
 }
+
+/*#overview_ul {*/
+/*list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-marker.png);*/
+
+/*}*/
 
 /*.continue-arrow,*/
 /*#continue_arrow_lbl {*/

@@ -27,12 +27,12 @@ def dl_turq(value):
 
 @register.filter()
 def ind(value):
-	return format_html(_span("indented", value))
+	return format_html(_span("pl40", value))
 
 
 @register.filter()
-def ind_half(value):
-	return format_html(_span("indented-half", value))
+def pl65(value):
+	return format_html(_span("pl65", value))
 
 
 @register.filter()

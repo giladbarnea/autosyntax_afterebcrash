@@ -73,6 +73,10 @@ body {
     padding-top: 20px;
 }
 
+.pt25 {
+    padding-top: 25px;
+}
+
 /*padding-top: 40px*/
 .pt40 {
     padding-top: 40px;
@@ -107,7 +111,6 @@ body {
 
 .basic-text {
     margin-top: 25px;
-
 }
 
 .monospace,
@@ -115,19 +118,18 @@ body {
     margin-top: 20px;
 }
 
+.pl18 {
+    padding-left: 18px;
+}
+
 .monospace,
 .code-block,
-.indented {
+.pl40 {
     padding-left: 40px;
 }
 
-.indented_plus {
+.pl65 {
     padding-left: 65px;
-}
-
-.indented-half {
-    /*IN RELATION TO INDENTED*/
-    padding-left: 18px;
 }
 
 .code-break {

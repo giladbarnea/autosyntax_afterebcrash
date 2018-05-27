@@ -107,15 +107,15 @@ body {
 
 .monospace,
 .code-block,
-.indented {
+.pl40 {
     padding-left: 40px;
 }
 
-.indented_plus {
+.pl65 {
     padding-left: 65px;
 }
 
-.indented-half {
+.pl18 {
     /*IN RELATION TO INDENTED*/
     padding-left: 18px;
 }

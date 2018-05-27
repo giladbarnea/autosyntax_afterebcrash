@@ -5,7 +5,7 @@
         {% load tags %}{% load filters %}
         <div class="space fs60 pt20">How to use</div>
         {% br 2 %}
-        <div class="fs30 work indented">
+        <div class="fs30 work pl40">
             <span class="download-link turquoise">Basic</span>
             principles
         </div>
@@ -14,14 +14,14 @@
         {#        {% basic_text_white 'There are only 4 guiding principles:' %}#}
         {% br 2 %}
 
-        <div class="basic-text fs23 mr200 indented">
+        <div class="basic-text fs23 mr200 pl40">
             >
-            {{ 'Merely words and spaces usually does the job.<br>'|ind_half }}
+            {{ 'Merely words and spaces usually does the job.<br>'|pl65 }}
             {{ 'This yields the most common and likely use-case.'|ind }}
             {% br 2 %}
             >
-            {{ 'An Operator must appear before the arguments<br>'|ind_half }}
-            <span class="indented">
+            {{ 'An Operator must appear before the arguments<br>'|pl65 }}
+            <span class="pl40">
 						(e.g
 				{{ 'list'|mono_bg_it }},
 				{{ 'def'|mono_bg_it }},
@@ -29,11 +29,11 @@
 				and so on).
 				{% br 2 %}>
 			</span>
-            {{ 'An argument can be marked with a dot.<br>'|ind_half }}
+            {{ 'An argument can be marked with a dot.<br>'|pl65 }}
             {{ 'This toggles a specific behaviour on/off.'|ind }}
             {% br 2 %}
             >
-            {{ 'An argument can be preceded by a built-in method.<br>'|ind_half }}
+            {{ 'An argument can be preceded by a built-in method.<br>'|pl65 }}
             {{ 'It is then passed to this method.'|ind }}
         </div>
 

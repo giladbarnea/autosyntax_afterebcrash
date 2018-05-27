@@ -7,6 +7,9 @@ toggle_pair("animation_5", "animation_6");
 // toggle_pair("animation_9", "animation_10");
 
 set_style("back", "display", "unset");
+by_class("my-ul")[0].style['listStyle'] = "outside url('static/common/img/NOTSURE/bullet_10.png')";
+by_id('ex1').innerHTML = 'Operators are almost always built-in elements from the python standard library, so that no learning is needed.';
+by_id('ex2').innerHTML = 'In a given line, the Operator is the first argument.';
 
 let sidebar_items = by_id("sidebar").children;
 let items = ["Operators", "Dotted arguments",
