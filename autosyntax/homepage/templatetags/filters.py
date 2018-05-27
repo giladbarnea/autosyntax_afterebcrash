@@ -12,7 +12,6 @@ def span(value, cls):
 
 @register.filter()
 def id(value, span_id):
-	log(f'in id filter: value={value}, span_id={span_id}')
 	return format_html(_span_onlyid(value, span_id))
 
 
@@ -38,7 +37,6 @@ def ind_half(value):
 
 @register.filter()
 def quote(value):
-	log(value)
 	return quote(value)
 
 

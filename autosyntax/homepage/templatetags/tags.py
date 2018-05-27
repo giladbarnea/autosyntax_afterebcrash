@@ -101,7 +101,6 @@ def a(inner, href, cls, innercls, br2=True, _id=None):
 	html = ''.join([html, f"""">
 	{_div(innercls,inner)}</a>
 	"""])
-	log(html)
 	# html = f"""<br><br>
 	# <a href="{href}" class="{cls}">
 	# 	{_div(innercls,inner)}</a>
@@ -178,7 +177,11 @@ def basic_text_ind(value, *args, **kwargs):
 		value = f'{value}{"".join(args)}'
 	else:
 		value = _join(value, args)
-	value = _div("basic-text indented", value)
+
+	cls = "basic-text indented"
+	if 'plus' in kwargs:
+		cls += '_plus'
+	value = _div(cls, value)
 	return format_html(value)
 
 
@@ -191,7 +194,6 @@ def basic_text_white(value, *args):
 
 @register.simple_tag
 def mono_mright_300(value, *args):
-	log(' '.join(args))
 	value = _join(value, args)
 	value = _div("monospace m-right-300", value)
 	return format_html(value)
