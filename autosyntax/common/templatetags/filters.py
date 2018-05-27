@@ -1,10 +1,8 @@
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-# from homepage.templatetags.tags import register
-# from homepage.templatetags.templatetags_utils import _span, _span_onlyid, log, quote
-from common.templatetags.tags import register
-from common.templatetags.templatetags_utils import _span, _span_onlyid
+from common.templatetags import register
+from common.templatetags.utils import _span, _span_onlyid
 
 
 @register.filter()

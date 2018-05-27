@@ -1,10 +1,8 @@
-from django import template
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from common.templatetags.templatetags_utils import _span, _div, _join, quote, log, _span_onlyid
-
-register = template.Library()
+from common.templatetags import register
+from common.templatetags.utils import _span, _div, _join, quote, _span_onlyid
 
 
 @register.simple_tag
