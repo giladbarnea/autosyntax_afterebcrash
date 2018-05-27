@@ -12,12 +12,12 @@ def br(num):
 
 @register.simple_tag
 def br_15():
-	return format_html(_span('f-size-10', '<br><br>'))
+	return format_html(_span('fs10', '<br><br>'))
 
 
 @register.simple_tag
 def br_25():
-	return format_html(_span('f-size-40', '<br><br>'))
+	return format_html(_span('fs40', '<br><br>'))
 
 
 @register.simple_tag
@@ -54,6 +54,7 @@ def dict_block(*args):
 	return mark_safe(_div('code-block', ''.join(new_value)))
 
 
+# DONE
 @register.simple_tag
 def div(value, *args, **kwargs):
 	value = _join(value, args)
@@ -62,6 +63,7 @@ def div(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def span(value, *args, **kwargs):
 	""""""
@@ -74,6 +76,7 @@ def span(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def a(inner, href, cls, innercls, br2=True, _id=None):
 	html = ''
@@ -87,17 +90,14 @@ def a(inner, href, cls, innercls, br2=True, _id=None):
 	html = ''.join([html, f"""">
 	{_div(innercls,inner)}</a>
 	"""])
-	# html = f"""<br><br>
-	# <a href="{href}" class="{cls}">
-	# 	{_div(innercls,inner)}</a>
-	# """
 	return format_html(html)
 
 
+# DONE
 @register.simple_tag()
 def space_ptop_20(value, *args):
 	value = _join(value, args)
-	value = _div("space p-top-20", value)
+	value = _div("space pt20", value)
 	return format_html(value)
 
 
@@ -112,6 +112,7 @@ def work(value, *args, **kwargs):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def work_25(value, *args, **kwargs):
 	value = _join(value, args)
@@ -138,7 +139,7 @@ def work_indented(value, *args, **kwargs):
 def page_title(value, *args):
 	"""div, space p-top-20, 2 <br>"""
 	value = _join(value, args)
-	value = _div("space p-top-20", value)
+	value = _div("space pt20", value)
 	value += '<br>' * 2
 	return format_html(value)
 
@@ -151,6 +152,7 @@ def basic_text(value, *args):
 	return format_html(value)
 
 
+# DONE
 @register.simple_tag
 def basic_text_ind_mright200(value, *args, **kwargs):
 	value = _join(value, args)
@@ -182,6 +184,7 @@ def basic_text_white(value, *args):
 	value = _join(value, args)
 	value = _div("basic-text white", value)
 	return format_html(value)
+
 
 # DONE
 @register.simple_tag
