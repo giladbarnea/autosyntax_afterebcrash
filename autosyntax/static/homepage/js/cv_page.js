@@ -2,12 +2,11 @@ console.log('cv_page.js');
 
 by_id("continue_arrow").style["display"] = "none";
 set_style("back", "display", "unset");
-set_style("pad_body", "paddingLeft", 150);
+set_style("pad_body", "paddingLeft", 250);
 let sidebar_items = by_id("sidebar").children;
 let items = ['Overview', 'Experience', 'Skills',
     'Education', 'M.Service', 'Languages', 'Contact'];
 
-// let email = by_id('email');
 on_event_do('email', 'click', () => {
     copy();
     by_id('email_msg').innerHTML = 'email copied to clipboard'

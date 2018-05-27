@@ -1,4 +1,0 @@
-function scroll_to_whatisit() {
-    let whatisit_content = by_id("whatisit_content");
-    whatisit_content.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-}
