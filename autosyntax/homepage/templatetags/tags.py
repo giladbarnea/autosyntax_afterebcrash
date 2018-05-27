@@ -89,12 +89,24 @@ def span(value, *args, **kwargs):
 
 
 @register.simple_tag
-def a(inner, href, cls, innercls):
-	return format_html(f"""<br><br>
-	<a href="{href}" class="{cls}">
-		{_div(innercls,inner)}
-		</a>
-	""")
+def a(inner, href, cls, innercls, br2=True, _id=None):
+	html = ''
+	if br2:
+		html = ''.join([html, '<br><br>'])
+	html = ''.join([html,
+	                f'<a href="{href}" class="{cls}" '])
+	if _id is not None:
+		html = ''.join([html, f'id="{_id}"'])
+
+	html = ''.join([html, f"""">
+	{_div(innercls,inner)}</a>
+	"""])
+	log(html)
+	# html = f"""<br><br>
+	# <a href="{href}" class="{cls}">
+	# 	{_div(innercls,inner)}</a>
+	# """
+	return format_html(html)
 
 
 @register.simple_tag()

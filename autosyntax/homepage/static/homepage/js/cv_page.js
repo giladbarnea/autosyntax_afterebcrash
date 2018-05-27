@@ -7,12 +7,33 @@ let sidebar_items = by_id("sidebar").children;
 let items = ['Overview', 'Experience', 'Skills',
     'Education', 'M.Service', 'Languages', 'Contact'];
 
-let email = by_id('email');
-on_event_do(email, 'click', () => {
+// let email = by_id('email');
+on_event_do('email', 'click', () => {
     copy();
+    by_id('email_msg').innerHTML = 'email copied to clipboard'
+});
+on_event_do('phone', 'click', () => {
+    copy('0508675854');
+    by_id('email_msg').innerHTML = 'phone copied to clipboard'
+});
+
+on_event_do('linkedin', 'click', () => {
+    open_in_new_tab('https://www.linkedin.com/in/gilad-barnea/');
+});
+
+on_event_do('fb', 'click', () => {
+    open_in_new_tab('https://www.facebook.com/gilad.barnea.3');
 });
 
 set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
+
+
+function open_in_new_tab(url) {
+    let a = document.createElement("a");
+    a.target = "_blank";
+    a.href = url;
+    a.click();
+}
 
 function copy(value = 'giladbrn@gmail.com') {
     let temp = document.createElement('INPUT');

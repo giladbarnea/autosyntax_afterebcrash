@@ -104,32 +104,41 @@
             > {{ 'Hebrew - native.'|ind_half }} {% br 2 %}
             > {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }} {% br 2 %}
             > {{ 'German – Beginner.'|ind_half }}
-            {% br 4 %}
+            {% br 3 %}
         </div>
 
 
         {#        C O N T A C T#}
-        {% work_indented 'Contact'|turq id='contact_cv' %}
-        {#        {% span 'copied to clipboard' cls="basic-text center turquoise op-0" id='email_msg' %}#}
         <span class="basic-text center" id="email_msg" style="opacity:0">
-					copied to clipboard
 					</span>
+        {% br 2 %}
+        {% work_indented 'Contact'|turq id='contact_cv' %}
+
         <div class="basic-text white m-right-200 indented_plus">
             You're welcome to email me at
             <a id="email"
                class="download-link basic-text white no-decor m-right-100"
                href="mailto:giladbrn@gmail.com">giladbrn@gmail.com.</a>
+            {% br 2 %}
+            Here is my
+            <span id="linkedin"
+                  class="download-link basic-text white underline m-right-100">Linkedin profile.</span>
 
+            {% br 2 %}
+            Phone number:
+            <span id="phone"
+                  class="download-link basic-text white underline m-right-100">(+972)508675854</span>
+
+            {% br 2 %}
+            And for mainly pictures of my nephews:
+            <span id="fb"
+                  class="download-link basic-text white underline m-right-100">facebook.</span>
         </div>
-        {#        {% basic_text_ind_mright200 "You're welcome to email me at:"|white plus='true' %}#}
-        {#        <div class="basic-text f-size-23 m-right-200 indented">#}
-        {#            > {{ 'Hebrew - native.'|ind_half }}#}
-        {#            {% br 2 %}#}
-        {#            > {{ 'English – Bilingual fluency (speaking, writing, reading).'|ind_half }}#}
-        {#            {% br 2 %}#}
-        {#            > {{ 'German – Beginner.'|ind_half }}#}
-        {#            {% br 4 %}#}
-        {#        </div>#}
+        {% br 2 %}
+        <div class="basic-text white m-right-200 indented">
+            Thank you.
+        </div>
+
 
     </div>
     <script type="module" src="{% static 'homepage/js/cv_page.js' %}"></script>

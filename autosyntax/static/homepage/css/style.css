@@ -153,6 +153,13 @@ body {
                                      supported by Chrome and Opera */
 }
 
+.yes-select {
+    -webkit-user-select: text; /* Safari */
+    -moz-user-select: text; /* Firefox */
+    -ms-user-select: text; /* Internet Explorer/Edge */
+    user-select: all;
+}
+
 .no-decor {
     /*text-decoration: underline;*/
     text-decoration-color: white;
@@ -162,7 +169,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     transition: width 400ms, height 400ms, left 400ms;
+}
 
+.underline {
+    text-decoration: underline;
 }
 
 .code-literal {
