@@ -93,8 +93,6 @@ body {
     padding-top: 100px;
 }
 
-/*margin-right: 300px*/
-
 .mr300 {
     margin-right: 300px;
 }
@@ -104,10 +102,6 @@ body {
 }
 
 .mr100 {
-    margin-right: 100px;
-}
-
-.m-right-100 {
     margin-right: 100px;
 }
 

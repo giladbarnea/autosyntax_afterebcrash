@@ -31,7 +31,7 @@ def list_block(*args):
 			new_value.append(_span("kept", ', '))
 
 	new_value.append(_span("code-literal", ']'))
-	return format_html(_div('code-block', ''.join(new_value)))
+	return format_html(_div('code-block mr300', ''.join(new_value)))
 
 
 @register.simple_tag
@@ -51,7 +51,7 @@ def dict_block(*args):
 
 	new_value.append(_span("code-literal", '}'))
 
-	return mark_safe(_div('code-block', ''.join(new_value)))
+	return mark_safe(_div('code-block mr300', ''.join(new_value)))
 
 
 # DONE

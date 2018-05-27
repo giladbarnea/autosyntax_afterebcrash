@@ -43,6 +43,3 @@ basic_text_ind
 mono_mright_300
 	<div class="monospace fs25 mr300">
 
-TODO:
-m-right-100 =>mr100
-m-right-200 =>mr200
