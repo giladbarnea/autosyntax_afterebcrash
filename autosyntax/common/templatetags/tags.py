@@ -2,7 +2,7 @@ from django import template
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from homepage.templatetags.templatetags_utils import _span, _div, _join, quote, log, _span_onlyid
+from common.templatetags.templatetags_utils import _span, _div, _join, quote, log, _span_onlyid
 
 register = template.Library()
 
