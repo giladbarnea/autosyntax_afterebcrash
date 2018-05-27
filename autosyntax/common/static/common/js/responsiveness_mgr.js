@@ -40,23 +40,23 @@ function on_resize() {
     function resize_margin_right_classes() {
         let m_right_300 = by_class("mr300");
         let m_right_200 = by_class("m-right-200");
-        let code_blocks = by_class("code-block");
+        // let code_blocks = by_class("code-block");
         // let basic_texts = by_class("basic-text");
         if (w < 1536 && w > 1300) {
             set_style_to_collection(m_right_300, "marginRight", 200);
-            set_style_to_collection(code_blocks, "marginRight", 200);
+            // set_style_to_collection(code_blocks, "marginRight", 200);
             // set_style_to_collection(basic_texts, "marginRight", 200);
             set_style_to_collection(m_right_200, "marginRight", 150);
         }
         else if (w <= 1300 && w > 1000) {
             set_style_to_collection(m_right_300, "marginRight", 150);
-            set_style_to_collection(code_blocks, "marginRight", 150);
+            // set_style_to_collection(code_blocks, "marginRight", 150);
             // set_style_to_collection(basic_texts, "marginRight", 150);
             set_style_to_collection(m_right_200, "marginRight", 100);
         }
         else {
             set_style_to_collection(m_right_300, "marginRight", 300);
-            set_style_to_collection(code_blocks, "marginRight", 300);
+            // set_style_to_collection(code_blocks, "marginRight", 300);
             // set_style_to_collection(basic_texts, "marginRight", 200);
             set_style_to_collection(m_right_200, "marginRight", 200);
         }
