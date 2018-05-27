@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 	'homepage',
 	'howtouse',
 	'common',
+	'cv',
 	'django.contrib.admin',
 	'django.contrib.auth',
 	'django.contrib.contenttypes',

@@ -22,7 +22,7 @@ def cv(request):
 	context = {
 		'sidebar_items': ['Overview', 'Experience', 'Skills', 'Education', 'M.Service', 'Languages', 'Contact']
 		}
-	return render(request, 'homepage/cv.html', context)
+	return render(request, 'cv/cv.html', context)
 
 
 def talia(request):
