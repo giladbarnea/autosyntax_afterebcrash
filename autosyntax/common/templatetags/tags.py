@@ -12,12 +12,6 @@ def br(num):
 
 @register.simple_tag
 def br_15():
-	# return format_html("""
-	# <span class="f-size-10">
-	# 		<br><br>
-	# 		</span>
-	# 		""")
-
 	return format_html(_span('f-size-10', '<br><br>'))
 
 

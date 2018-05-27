@@ -1,5 +1,12 @@
 // window.onload = () => {
 console.log('responsiveness_mgr.js\n');
+let phone_max = 599;
+let tablet_portrait_up = 600;
+let tablet_landscape_up = 900;
+let desktop_up = 1200;
+let big_desktop_up = 1800;
+
+
 on_event_do(window, "resize", on_resize);
 
 // RESOLUTIONS
@@ -28,27 +35,7 @@ function on_resize() {
     resize_space();
     resize_sidebar();
     resize_margin_right_classes();
-    // place_tabs_before_arrows_in_whatisit();
 
-
-    // function place_tabs_before_arrows_in_whatisit() {
-    //     function _place_tabs(class_num, tabs_num) {
-    //         let tabs = by_class("tabs-" + class_num);
-    //         for (let i = 0; i < tabs.length; i++) {
-    //             tabs[i].innerHTML = "";
-    //             for (let j = 0; j < tabs_num; j++)
-    //                 tabs[i].innerHTML += "&emsp;";
-    //             tabs[i].innerHTML += ">";
-    //         }
-    //     }
-    //
-    //     let base = Math.round(w / 500);
-    //     _place_tabs("5", base);
-    //     _place_tabs("16", base + 11);
-    //     _place_tabs("21", base + 16);
-    //     _place_tabs("22", base + 17);
-    //
-    // }
 
     function resize_margin_right_classes() {
         let m_right_300 = by_class("m-right-300");
