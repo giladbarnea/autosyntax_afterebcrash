@@ -31,8 +31,7 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-.monospace-bg, .monospace,
-.code-block {
+.monospace-bg, .monospace {
     background-color: #1a1a1a;
 }
 
@@ -50,8 +49,6 @@ body {
 }
 
 .go-up,
-.continue-arrow-lbl,
-.back,
 .work-25,
 .work {
     font-family: 'Work Sans', sans-serif;

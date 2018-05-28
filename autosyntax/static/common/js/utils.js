@@ -90,9 +90,9 @@ function set_style_to_collection(collection, att, val) {
 }
 
 function set_style(element, att, val) {
+    element = element_or_by_fn(element, by_id);
     let new_val = typeof val === "number" ? val.toString() + "px" : val;
-    element_or_by_fn(element, by_id)
-        .style[att] = new_val;
+    element.style[att] = new_val;
 
 }
 

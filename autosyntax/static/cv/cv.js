@@ -2,7 +2,6 @@ console.log('cv.js');
 
 by_id("continue_arrow").style["display"] = "none";
 set_style("back", "display", "unset");
-set_style("pad_body", "paddingLeft", 250);
 let sidebar_items = by_id("sidebar").children;
 let items = ['Overview', 'Experience', 'Skills',
     'Education', 'M.Service', 'Languages', 'Contact'];

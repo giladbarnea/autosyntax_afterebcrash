@@ -229,7 +229,7 @@ body {
 .sidebar-item {
     background-color: #111111;
     border: #111111;
-    transition: font-size 500ms, color 500ms;
+    /*transition: font-size 500ms, color 500ms;*/
 }
 
 .sidebar-item:hover,
