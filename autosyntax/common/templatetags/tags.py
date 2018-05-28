@@ -22,36 +22,36 @@ def br_25():
 
 @register.simple_tag
 def list_block(*args):
-	new_value = [_span("code-literal", '[')]
+	new_value = [_span("code-literal fs25", '[')]
 
 	for i, c in enumerate(args):
 		append = quote(c) if 'span' not in c else c
-		new_value.append(_span("str", append))
+		new_value.append(_span("str fs25", append))
 		if i < len(args) - 1:
-			new_value.append(_span("kept", ', '))
+			new_value.append(_span("kept fs25", ', '))
 
-	new_value.append(_span("code-literal", ']'))
-	return format_html(_div('code-block', ''.join(new_value)))
+	new_value.append(_span("code-literal fs25", ']'))
+	return format_html(_div('code-block fs25 pl40 mt20', ''.join(new_value)))
 
 
 @register.simple_tag
 def dict_block(*args):
-	new_value = [_span("code-literal", ' {')]
+	new_value = [_span("code-literal fs25", ' {')]
 
 	for i, c in enumerate(args):
 		# append = _span("str", quote(c)) if isinstance(c, str) else _span("int", c)
 
 		append = quote(c) if 'span' not in c else c
-		append = _span("str", append)
+		append = _span("str fs25", append)
 		new_value.append(append)
 
 		if i < len(args) - 1:
-			append = _span("kept", ', ') if i % 2 != 0 else _span("code-literal", ': ')
+			append = _span("kept fs25", ', ') if i % 2 != 0 else _span("code-literal fs25", ': ')
 			new_value.append(append)
 
-	new_value.append(_span("code-literal", '}'))
+	new_value.append(_span("code-literal fs25", '}'))
 
-	return mark_safe(_div('code-block', ''.join(new_value)))
+	return mark_safe(_div('code-block fs25 pl40 mt20', ''.join(new_value)))
 
 
 # DONE
@@ -112,15 +112,15 @@ def work(value, *args, **kwargs):
 	return format_html(value)
 
 
-# DONE
-@register.simple_tag
-def work_25(value, *args, **kwargs):
-	value = _join(value, args)
-	if 'id' in kwargs:
-		value = _div("work-25", value, kwargs['id'])
-	else:
-		value = _div("work-25", value)
-	return format_html(value)
+# # DONE
+# @register.simple_tag
+# def work_25(value, *args, **kwargs):
+# 	value = _join(value, args)
+# 	if 'id' in kwargs:
+# 		value = _div("work-25", value, kwargs['id'])
+# 	else:
+# 		value = _div("work-25", value)
+# 	return format_html(value)
 
 
 # DONE
@@ -190,7 +190,7 @@ def basic_text_white(value, *args):
 @register.simple_tag
 def mono_mright_300(value, *args):
 	value = _join(value, args)
-	value = _div("monospace mr300", value)
+	value = _div("monospace pl40 mt20 mr300", value)
 	return format_html(value)
 
 

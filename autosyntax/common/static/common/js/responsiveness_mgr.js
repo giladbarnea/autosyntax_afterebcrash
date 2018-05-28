@@ -7,19 +7,15 @@ let desktop_up = 1200;
 let big_desktop_up = 1800;
 
 
-on_event_do(window, "resize", on_resize);
-
-// RESOLUTIONS
-// 1920
-// 1536
-// 1200X800 GUY
-
-on_resize();
+// on_event_do(window, "resize", on_resize);
+//
+//
+// on_resize();
 
 
 function on_resize() {
     let w = window.screen.availWidth;
-    console.log('w: ', w);
+    // console.log('w: ', w);
     let dyn_console_menu = true;
     let dyn_body_left = true;
     let dyn_body_right = true;
@@ -27,14 +23,15 @@ function on_resize() {
     let dyn_works = true;
     let dyn_sidebar = true;
     let dyn_space = true;
-    resize_nav_buttons();
+    // resize_nav_buttons();
     // resize_body_left();
     // resize_body_right();
-    resize_pad_body();
+    // resize_pad_body();
     // resize_work();
     // resize_space();
-    resize_sidebar();
-    resize_margin_right_classes();
+    // resize_sidebar();
+
+    // resize_margin_right_classes();
 
 
     function resize_margin_right_classes() {
@@ -175,6 +172,7 @@ function on_resize() {
             set_style("pad_body", "paddingLeft", 250);
         }
         else if (dyn_pad_body) {
+            console.warn('pad body else');
             dyn_pad_body = false;
             set_style("pad_body", "paddingLeft", 350);
         }

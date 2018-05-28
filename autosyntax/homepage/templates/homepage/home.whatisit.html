@@ -13,14 +13,22 @@
     {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
     <div class="fs25 mr400">
-        <div class="basic-text">For example:</div>
-        <div class="monospace">list milk eggs nutella</div>
-        <div class="basic-text">becomes</div>
-        {% list_block 'milk' 'eggs' 'nutella' %}
+        <div class="basic-text mt25">For example:</div>
+        <div class="monospace pl40 mt20">list milk eggs nutella</div>
+        <div class="basic-text mt25">becomes</div>
+        <div class="code-block fs0 pl40 mt20">
+            <span class="fs25 code-literal">[</span>
+            <span class="fs25 str">'milk'</span>
+            <span class="fs25 kept">, </span>
+            <span class="fs25 str">'eggs'</span>
+            <span class="fs25 kept">, </span>
+            <span class="fs25 str">'nutella'</span>
+            <span class="fs25 code-literal">]</span>
+        </div>
+        {#        {% list_block 'milk' 'eggs' 'nutella' %}#}
         {% br 3 %}
-        <div class="basic-text">Similarly,</div>
-        {#    {% basic_text "similarly," %}#}
-        <div class="monospace">dict meaning 42 happy pizza</div>
+        <div class="basic-text mt25">Similarly,</div>
+        <div class="monospace pl40 mt20">dict meaning 42 happy pizza</div>
         {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
         {% br 7 %}
     </div>
@@ -30,10 +38,10 @@
     </div>
     <br>
     <div class="fs25 mr400">
-        <div class="monospace">class Dog Animal init fluffy .True args</div>
-        <div class="basic-text">turns into ></div>
+        <div class="monospace pl40 mt20">class Dog Animal init fluffy .True args</div>
+        <div class="basic-text mt25">turns into ></div>
         {#    {% basic_text "turns into >" %}#}
-        <div class="code-block">
+        <div class="code-block pl40 mt20">
             {{ "class "|k }}
             {{ "Dog(Animal):"|cl }}
             {{ "<br>"|cb:2 }}
@@ -59,39 +67,41 @@
         </div>
 
         <br>
-        <div class="basic-text">How much time would it take you to type the end result?</div>
+        <div class="basic-text mt25">How much time would it take you to type the end result?</div>
     </div>
     {% br 7 %}
     <div class="work fs30 pl40">
-        It needs only <span class="turquoise">1</span>
+        It needs only
+        <span class="turquoise">1</span>
         global hotkey to do everything,<br>
         but it's also flexible.
     </div>
     <br>
     <div class="fs25 mr400">
-        <div class="basic-text">
-            <span class="white">Variables.</span><br>
+        <div class="basic-text mt25">
+            <span class="white">Variables.</span>
+            <br>
             Given:
         </div>
         {#    {% basic_text 'Variables.'|white '<br>Given:' %}#}
-        <div class="code-block">
+        <div class="code-block pl40 mt20">
             {{ 'wish = '|cl }}
             {{ "'done'"|string }}
         </div>
         {#    V A R I A B L E S#}
-        <div class="basic-text">then</div>
-        <div class="monospace">i_wish = str I got more things .wish</div>
+        <div class="basic-text mt25">then</div>
+        <div class="monospace pl40 mt20">i_wish = str I got more things .wish</div>
 
-        <div class="code-block">
+        <div class="code-block pl40 mt20">
             {{ 'i_wish = '|cl }}
             {{ "f'I got more things {"|string }}
             {{ 'wish'|cl }}
             {{ "}'"|string }}
         </div>
 
-        <div class="basic-text">
+        <div class="basic-text mt25">
             thanks to the
-            <span class="monospace-bg it turquoise">.</span>
+            <span class="monospace pl40 mt20-bg it turquoise">.</span>
             preceding "wish".<br>
             Did you like that f-string?
             <span class="download-link turquoise">autosyntax</span>
@@ -101,10 +111,10 @@
 
 
         {#        I N L I N E  M E T H O D S#}
-        <div class="basic-text white">Inline methods:</div>
-        <div class="monospace">for range len factories</div>
+        <div class="basic-text mt25 white">Inline methods:</div>
+        <div class="monospace pl40 mt20">for range len factories</div>
 
-        <div class="code-block">
+        <div class="code-block pl40 mt20">
             {{ 'for '|k }}
             {{ 'factory '|cl }}
             {{ 'in '|k }}
@@ -115,11 +125,11 @@
         </div>
         {% br 3 %}(
         {#        L I S T  C O M P R E H E N S I O N S#}
-        <div class="basic-text white">List comprehensions:</div>
+        <div class="basic-text mt25 white">List comprehensions:</div>
         {#    {% basic_text_white 'List comprehensions:' %}#}
-        <div class="monospace">listcomp print letters</div>
+        <div class="monospace pl40 mt20">listcomp print letters</div>
 
-        <div class="code-block">
+        <div class="code-block pl40 mt20">
             {{ '['|cl }}
             {{ 'print'|sup }}
             {{ '(letter) '|cl }}
@@ -129,11 +139,11 @@
             {{ 'letters]'|cl }}
         </div>
         {% br 3 %}
-        <div class="basic-text white">Methods, with optionally typed arguments:</div>
+        <div class="basic-text mt25 white">Methods, with optionally typed arguments:</div>
         {#    {% basic_text_white 'Method return and arguments typing:' %}#}
-        <div class="monospace">def is_easy bool autosyntax str kwargs</div>
+        <div class="monospace pl40 mt20">def is_easy bool autosyntax str kwargs</div>
 
-        <div class="code-block mr300">
+        <div class="code-block pl40 mt20">
             {{ 'def '|k }}
             {{ 'is_easy(autosyntax'|cl }}
             {{ ', '|k }}
@@ -158,8 +168,8 @@
         </div>
 
         {% br 2 %}
-        <div class="basic-text white">And more, built with those little details in mind.</div>
-        <div class="basic-text download-link white">Download
+        <div class="basic-text mt25 white">And more, built with those little details in mind.</div>
+        <div class="basic-text mt25 download-link white">Download
             <span class="turquoise">autosyntax.</span>
         </div>
     </div>

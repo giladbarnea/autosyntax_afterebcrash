@@ -12,18 +12,17 @@
 <script src="{% static 'common/js/continue_arrow.js' %}"></script>
 <div id="all" class="no-select op0">
     <div class="grid-container">
-        {# C O N S O L E  M E N U#}
         <div class="grid-item grid_0">
+
+            {# C O N S O L E  M E N U#}
             <img src="{% static '/common/img/console_menu.svg' %}"
-                 height="30px"
-                 width="30px"
                  id="console_menu"
-                 class="console-menu"/>
+                 class="console-menu height30 width30"/>
 
             {# S I D E B A R#}
-            <div class="space-font sidebar" id="sidebar">
+            <div class="space-font sidebar pl20 pt70" id="sidebar">
                 {% for item in sidebar_items %}
-                    <div class="sidebar-item"
+                    <div class="sidebar-item fs20 mb10"
                          id="sidebar_item_{{ forloop.counter }}">
                         {{ item }}
                     </div><br><br>
@@ -31,7 +30,7 @@
             </div>
             {#        B A C K#}
             <a href="/">
-                <svg id="back" class="back op7" style="display:none">
+                <svg id="back" class="back op7 fs25 work top88 disp-none">
                     <text x="0" y="20" fill="white">HOME</text>
                 </svg>
             </a>
@@ -39,16 +38,17 @@
         {#        end grid-0#}
 
         {#    C O N T I N U E  A R R O W#}
-        <div id="continue_arrow_lbl" class="continue-arrow-lbl"></div>
+        <div id="continue_arrow_lbl"
+             class="continue-arrow-lbl work fs20 op0 width200 top84"></div>
+
+
         <img src="{% static '/common/img/continue.svg' %}"
-             height="80px"
-             width="80px"
              id="continue_arrow"
-             class="continue-arrow"
+             class="continue-arrow top88 height60 width60"
         />
 
         {#G O  U P#}
-        <svg id="go_up" class="go-up">
+        <svg id="go_up" class="go-up fs25 width100 top88">
             <text x="0" y="20" fill="white">TOP</text>
         </svg>
 
@@ -72,5 +72,5 @@
 {#end all#}
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<script src="{% static 'common/js/responsiveness_mgr.js' %}"></script>
-<script src="{% static 'homepage/js/home.layout.js' %}"></script>
+<script src="{% static 'common/js/responsive_new.js' %}"></script>
+<script src="{% static 'common/js/layout.js' %}"></script>

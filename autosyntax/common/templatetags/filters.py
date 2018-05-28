@@ -47,47 +47,48 @@ def white(value):
 
 @register.filter()
 def k(value):
-	return format_html(_span("kept", value))
+	return format_html(_span("kept fs25", value))
 
 
 @register.filter()
 def cl(value):
-	return format_html(_span("code-literal", value))
+	return format_html(_span("code-literal fs25", value))
 
 
 @register.filter()
 def m(value):
-	return format_html(_span("magic", value))
+	return format_html(_span("magic fs25", value))
 
 
 @register.filter()
 def self(value):
-	return format_html(_span("self", value))
+	return format_html(_span("self fs25", value))
 
 
 @register.filter()
 def string(value):
-	return mark_safe(_span("str", value))
+	return mark_safe(_span("str fs25", value))
 
 
 @register.filter()
 def sup(value):
-	return format_html(_span("super", value))
+	return format_html(_span("super fs25", value))
 
 
 @register.filter()
 def n(value):
-	return format_html(_span("int", value))
+	return format_html(_span("int fs25", value))
 
 
 @register.filter()
 def cb(value, tabs):
-	return format_html(_span("code-break", value + '&emsp;' * tabs))
+	# return format_html(_span("code-break", value + '&emsp;' * tabs))
+	return format_html(_span("fs32", value + '&emsp;' * tabs))
 
 
 @register.filter()
 def mono_bg_it(value):
-	return format_html(_span("monospace-bg it", value))
+	return format_html(_span("monospace pl40 mt20-bg it", value))
 
 
 @register.filter()
@@ -97,12 +98,12 @@ def it(value):
 
 @register.filter()
 def doc_bold(value):
-	return format_html(_span("doc bold", value))
+	return format_html(_span("doc fs25 bold", value))
 
 
 @register.filter()
 def dark_grey(value):
-	return format_html(_span("dark grey", value))
+	return format_html(_span("dark fs25 grey", value))
 
 
 @register.filter()

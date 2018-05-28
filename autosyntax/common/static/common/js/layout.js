@@ -1,6 +1,6 @@
 // let is_main_page = true;
 // screen.orientation.lock('landscape');
-console.log('home.layout.js\n');
+console.log('layout.js\n');
 let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)
@@ -12,7 +12,7 @@ on_event_do(window, "scroll",
     () => {
         // PERSISTS AS LONG AS LAYOUT.HTML IS EXTENDED FROM (i.e always)
         first_scroll_fade_ins();
-        show_console_menu();
+        // show_console_menu();
     });
 
 on_event_do("go_up", "click",

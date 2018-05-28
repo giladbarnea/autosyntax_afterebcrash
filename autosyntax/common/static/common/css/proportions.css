@@ -3,7 +3,11 @@ body {
     margin: 50px 60px 60px;
 }
 
-.code-block,
+.pad-body {
+    padding-left: 350px;
+}
+
+
 .fs0 {
     font-size: 0;
 }
@@ -14,6 +18,10 @@ body {
 
 .fs15 {
     font-size: 15px
+}
+
+.fs20 {
+    font-size: 20px;
 }
 
 .fs23 {
@@ -28,6 +36,10 @@ body {
     font-size: 30px;
 }
 
+.fs32 {
+    font-size: 32px;
+}
+
 .fs35 {
     font-size: 35px
 }
@@ -40,20 +52,10 @@ body {
     font-size: 60px;
 }
 
-/*font-size: 25px*/
-.go-up,
-.code-literal,
-.str,
-.int,
-.kept,
-.magic,
-.self,
-.super,
-.doc,
-.back,
-.work-25 {
-    font-size: 25px;
-}
+/*!*font-size: 25px*!*/
+/*.work-25 {*/
+/*font-size: 25px;*/
+/*}*/
 
 .ml100 {
     margin-left: 100px;
@@ -76,7 +78,6 @@ body {
 /*padding-right: 50px;*/
 /*}*/
 
-/*padding-top: 20px*/
 .pt20 {
     padding-top: 20px;
 }
@@ -85,22 +86,22 @@ body {
     padding-top: 25px;
 }
 
-/*padding-top: 40px*/
 .pt40 {
     padding-top: 40px;
 }
 
-/*padding-top: 60px*/
 .pt60 {
     padding-top: 60px;
 }
 
-/*padding-top: 80px*/
+.pt70 {
+    padding-top: 70px;
+}
+
 .pt80 {
     padding-top: 80px;
 }
 
-/*padding-top: 100px*/
 .pt100 {
     padding-top: 100px;
 }
@@ -129,13 +130,16 @@ body {
     margin-right: 100px;
 }
 
-.basic-text {
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
     margin-top: 25px;
 }
 
-.monospace,
-.code-block {
-    margin-top: 20px;
+mb10 {
+    margin-bottom: 10px;
 }
 
 .pl20 {
@@ -146,8 +150,6 @@ body {
     padding-left: 30px;
 }
 
-.monospace,
-.code-block,
 .pl40 {
     padding-left: 40px;
 }
@@ -156,14 +158,12 @@ body {
     padding-left: 65px;
 }
 
-.code-break {
-    font-size: 32px;
-}
+/*.code-break {*/
+/*font-size: 32px;*/
+/*}*/
 
-.go-up,
 .back {
     bottom: 5%;
-    width: 100px;
 }
 
 .go-up {
@@ -174,35 +174,43 @@ body {
     left: 7%
 }
 
-.sidebar {
-    padding-left: 20px;
-    padding-top: 70px;
-}
-
-.sidebar-item {
-    font-size: 20px;
-}
-
-.sidebar-item {
-    margin-bottom: 10px;
-}
-
 /*.sidebar-item:hover {*/
 /*font-size: 24px;*/
 /*}*/
+.top84 {
+    top: 84%
+}
 
-.continue-arrow-lbl,
-.continue-arrow {
-    bottom: 5%;
+.top88 {
+    top: 88%;
+}
+
+.height30 {
+    height: 30px;
+}
+
+.height60 {
+    height: 60px;
+}
+
+.width30 {
+    width: 30px;
+}
+
+.width60 {
+    width: 60px;
+}
+
+.width100 {
+    width: 100px;
+}
+
+.width200 {
+    width: 200px;
 }
 
 .continue-arrow-lbl {
     left: 48.6%;
-    height: 90px;
-    opacity: 0;
-    font-size: 20px;
-    width: 250px;
-
 }
 
 .center {
@@ -214,9 +222,7 @@ body {
 }
 
 .continue-arrow {
-    height: 60px;
     left: 50%;
-    width: 60px;
 }
 
 /*#continue_arrow:hover {*/
