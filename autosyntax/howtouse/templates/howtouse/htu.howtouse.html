@@ -210,24 +210,28 @@
         Inline
         <span class="turquoise">methods()</span>
     </div>
-    <div class="fs25">
-        <div class="basic-text mt25">
+    <div class="basic-text fs23">
+        <div class="basic-text fs25 mt25">
             <div class="white mr200">
                 Type a built-in method before an argument to apply it.
             </div>
 
-            <br>
-            <div class="pl40">
-                This is useful in cases like:
-            </div>
+        </div>
+        <br>
+        <div class="pl40">
+            This is useful in cases like:
         </div>
         <div class="mr400">
             <div class="monospace pl40 mt20">for enumerate things</div>
 
-            <div class="monospace-bg pl40 mt20">
-                {{ 'for '|k }} {{ 'i'|cl }}{{ ', '|k }}
-                {{ 'thing '|cl }}{{ 'in '|k }}{{ 'enumerate'|sup }}
-                {{ "(things):"|cl }}
+            <div class="monospace-bg fs0 pl40 mt20">
+                <span class="fs23 kept">for </span>
+                <span class="fs23 code-literal">i</span>
+                <span class="fs23 kept">, </span>
+                <span class="fs23 code-literal">thing </span>
+                <span class="fs23 kept">in </span>
+                <span class="fs23 super">enumerate</span>
+                <span class="fs23 code-literal">(things):</span>
             </div>
 
 
@@ -240,11 +244,20 @@
                 <div class="monospace pl40 mt20">
                     my_dict = dict zip keys values
                 </div>
-                <div class="monospace-bg pl40 mt20">
-                    {{ 'my_dict = '|cl }} {{ 'dict'|sup }}{{ '('|cl }}
-                    {{ 'zip'|sup }}{{ '(keys'|cl }}{{ ', '|k }}
-                    {{ "values)):"|cl }}
+
+
+                <div class="monospace-bg fs0 pl40 mt20">
+                    <span class="fs23 code-literal">my_dict = </span>
+                    <span class="fs23 super">dict</span>
+                    <span class="fs23 code-literal">(</span>
+                    <span class="fs23 super">zip</span>
+                    <span class="fs23 code-literal">(</span>
+                    <span class="fs23 code-literal">keys</span>
+                    <span class="fs23 kept">, </span>
+                    <span class="fs23 code-literal">values)):</span>
                 </div>
+
+
             </div>
         </div>
     </div>
