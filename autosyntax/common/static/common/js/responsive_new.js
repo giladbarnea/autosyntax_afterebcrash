@@ -32,9 +32,11 @@ function big_desktop_resize() {
     set_style_to_collection('width30', 'width', 30);
 
     set_style_to_collection('pl30', 'paddingLeft', 30);
+    set_style_to_collection('pl45', 'paddingLeft', 45);
 
     set_style_to_collection('mr400', 'marginRight', 400);
     set_style_to_collection('mr300', 'marginRight', 300);
+
 
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml136', 'marginLeft', 136);
@@ -49,6 +51,11 @@ function desktop_resize() {
     set_style_to_collection('fs23', 'fontSize', 20);
     set_style_to_collection('fs20', 'fontSize', 18);
 
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+
     set_style_to_collection('pad-body', 'paddingLeft', 250);
 
     set_style_to_collection('top88', 'top', "86%");
@@ -62,9 +69,19 @@ function desktop_resize() {
 
     set_style_to_collection('pl30', 'paddingLeft', 25);
     set_style_to_collection('pl40', 'paddingLeft', 35);
+    set_style_to_collection('pl45', 'paddingLeft', 35);
 
-    set_style_to_collection('mr400', 'marginRight', 200);
-    set_style_to_collection('mr300', 'marginRight', 150);
+    if (filename === 'how') {
+        set_style_to_collection('mr400', 'marginRight', 175);
+        set_style_to_collection('mr300', 'marginRight', 125);
+        set_style_to_collection('mr200', 'marginRight', 75);
+    }
+    else {
+        set_style_to_collection('mr400', 'marginRight', 200);
+        set_style_to_collection('mr300', 'marginRight', 150);
+        set_style_to_collection('mr200', 'marginRight', 100);
+    }
+
 
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml136', 'marginLeft', 139);

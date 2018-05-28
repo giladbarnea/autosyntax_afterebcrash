@@ -272,69 +272,78 @@
     </div>
     {#    >D E F#}
     <div class="basic-text mt25 fs25 white mr200">
-        <span class="monospace-bg pl40 mt20 it">def</span>
+		<span class="pl40 it">
+		<span class="monospace-bg">def</span>
+		</span>
     </div>
     <br>
-    <div class="basic-text mt25 fs23 mr300">
-        <ul class="my-ul" id="complex_ops_ul1">
-            <li>1st argument is the method's name</li>
-            <li>2nd+ arguments are the method's parameters</li>
-            <li>Dotting an argument makes it the default value of the previous one</li>
-            <li>A built in method sets the type of the previous argument</li>
-        </ul>
-    </div>
-
-    <div class="basic-text mt25 white fs25 pl40">
-        fun stuff:
-    </div>
-    <div class="basic-text mt25 fs23 mr300">
-        <ul class="my-ul" id="complex_ops_ul2">
-            <li>'args' and 'kwargs' are translated to *args and **kwargs</li>
-            <li>If indentation is found, a 'self' is added as first parameter</li>
-            <li>Magic methods are wrapped in __dunder__</li>
-        </ul>
+    <div class="mr200">
+        <div class="basic-text mt20 fs23">
+            <ul class="my-ul" id="complex_ops_ul1">
+                <li>1st argument is the method's name</li>
+                <li>2nd+ arguments are the method's parameters</li>
+                <li>Dotting an argument makes it the default value of the previous one</li>
+                <li>A built in method sets the type of the previous argument</li>
+            </ul>
+        </div>
+        <br>
+        <div class="basic-text mt25 white fs23 pl40">
+            fun stuff:
+        </div>
+        <div class="basic-text mt25 fs23">
+            <ul class="my-ul" id="complex_ops_ul2">
+                <li>'args' and 'kwargs' are translated to *args and **kwargs</li>
+                <li>If indentation is found, a 'self' is added as first parameter</li>
+                <li>Magic methods are wrapped in __dunder__</li>
+            </ul>
+        </div>
     </div>
     {% br 2 %}
     <div class="mr400">
-        <div class="monospace pl40 mt20 fs25">def get_age int dob int 1900 earthyears .True args kwargs</div>
-        <div class="monospace-bg pl40 mt20">
-            {{ 'def '|k }}
-            {{ 'get_age(dob='|cl }}
-            {{ '1900'|n }}
-            {{ ', '|k }}
-            {{ 'earthyears='|cl }}
-            {{ 'True, '|k }}
-            {{ '*args'|cl }}
-            {{ ', '|k }}
-            {{ '**kwargs):'|cl }}
-            {{ '<br>'|cb:2 }}
+        <div class="monospace pl40 mt20 fs23">def get_age int dob int 1900 earthyears .True args kwargs</div>
 
-            {{ '"""'|doc_bold }}
-            {{ '<br>'|cb:2 }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs23 kept">def </span>
+            <span class="fs23 code-literal">get_age(dob=</span>
+            <span class="fs23 int">1900</span>
+            <span class="fs23 kept">, </span>
+            <span class="fs23 code-literal">earthyears=</span>
+            <span class="fs23 kept">True, </span>
+            <span class="fs23 code-literal">*args</span>
+            <span class="fs23 kept">, </span>
+            <span class="fs23 code-literal">**kwargs):</span>
+            <span class="fs32">&emsp;&emsp;</span>
 
-            {{ ':type '|doc_bold }}
-            {{ 'dob: int '|string }}
-            {{ '<br>'|cb:2 }}
+            <span class="fs23 doc bold">"""<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
 
-            {{ ':rtype: '|doc_bold }}
-            {{ 'int'|string }}
-            {{ '<br>'|cb:2 }}
+            <span class="fs23 doc bold">:type </span>
+            <span class="fs23 str">autosyntax: str<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
 
-            {{ '"""'|doc_bold }}
-            {{ '<br>'|cb:2 }}
-            {{ '|'|span:'code-literal dark-grey' }}
+            <span class="fs23 doc bold">:rtype: </span>
+            <span class="fs23 str">bool</span>
+            <span class="fs32"><br>&emsp;&emsp;</span>
+
+            <span class="fs23 doc bold">"""<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
+            <span class="fs23 code-literal dark-grey">|</span>
 
         </div>
+
+
     </div>
     {% br 2 %}
 
 
     {#    >C L A S S#}
     <div class="basic-text mt25 fs25 white mr200">
-        <span class="monospace-bg pl40 mt20 it">class</span>
+		<span class="pl40 it">
+		<span class="monospace-bg">class</span>
+		</span>
     </div>
 
-    <div class="basic-text mt25 fs23 mr400">
+    <div class="basic-text mt25 fs23 mr200">
         <ul class="my-ul" id="complex_ops_ul3">
             <li>1st argument is the class's name</li>
             <li>2nd+ arguments are its super classes</li>
@@ -342,11 +351,11 @@
             <li>Following 'init', insert parameters, typings and default values</li>
         </ul>
     </div>
-
-    <div class="basic-text mt25 white fs25 pl40">
+    <br>
+    <div class="basic-text mt25 white fs23 pl40">
         fun stuff:
     </div>
-    <div class="basic-text mt25 fs23 mr300">
+    <div class="basic-text mt25 fs23 mr200">
         <ul class="my-ul" id="complex_ops_ul4">
             <li>'init' arguments are automatically set as data members</li>
             <li>If any super class was typed, its __super__ is called</li>
@@ -355,50 +364,95 @@
     </div>
 
     {% br 2 %}
-    <div class="mr400">
-        <div class="monospace pl40 mt20 fs25">class Earth Planet Starstuff init coords tuple habitable .True args</div>
-        <div class="monospace-bg pl40 mt20">
-            {{ "class "|k }}
-            {{ "Earth(Planet"|cl }}
-            {{ ", "|k }}
-            {{ "Starstuff):"|cl }}
-            {{ "<br>"|cb:2 }}
+    <div class="mr200">
+        <div class="monospace pl40 mt20 fs23">class Earth Planet Starstuff init coords tuple habitable .True args</div>
 
-            {{ "def "|k }}
-            {{ "__init__"|m }}
-            {{ "("|cl }}
-            {{ "self"|self }}
-            {{ ", "|k }}
-            {{ "coords"|cl }}
-            {{ ", "|k }}
-            {{ "habitable="|cl }}
-            {{ "True, "|k }}
-            {{ "*args):"|cl }}
-            {{ "<br>"|cb:4 }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs23 kept">class </span>
+            <span class="fs23 code-literal">Earth(Planet</span>
+            <span class="fs23 kept">, </span>
+            <span class="fs23 code-literal">Starstuff):</span>
+            <span class="fs32"><br>&emsp;&emsp;</span>
 
-            {{ '"""'|doc_bold }}
-            {{ '<br>'|cb:4 }}
+            <span class="fs23 kept">def </span>
+            <span class="fs23 magic">__init__</span>
+            <span class="fs23 code-literal">(</span>
+            <span class="fs23 self">self</span>
+            <span class="fs23 kept">, </span>
+            <span class="fs23 code-literal">coords</span>
+            <span class="fs23 kept">, </span>
+            <span class="fs23 code-literal">habitable=</span>
+            <span class="fs23 kept">True, </span>
+            <span class="fs23 code-literal">*args):</span>
+            <span class="fs32"><br>&emsp;&emsp;&emsp;&emsp;</span>
 
-            {{ ':type '|doc_bold }}
-            {{ 'coords: tuple '|string }}
-            {{ '<br>'|cb:4 }}
+            <span class="fs23 doc bold">"""<br></span>
+            <span class="fs32">&emsp;&emsp;&emsp;&emsp;</span>
 
-            {{ '"""'|doc_bold }}
-            {{ '<br>'|cb:4 }}
+            <span class="fs23 doc bold">:type </span>
+            <span class="fs23 str">coords: tuple<br></span>
+            <span class="fs32">&emsp;&emsp;&emsp;&emsp;</span>
 
-            {{ "self"|self }}
-            {{ ".coords = coords"|cl }}
-            {{ "<br>"|cb:4 }}
+            <span class="fs23 doc bold">"""<br></span>
+            <span class="fs32">&emsp;&emsp;&emsp;&emsp;</span>
 
-            {{ "self"|self }}
-            {{ ".habitable = habitable"|cl }}
-            {{ "<br>"|cb:4 }}
+            <span class="fs23 self">self</span>
+            <span class="fs23 code-literal">.coords = coords</span>
+            <span class="fs32"><br>&emsp;&emsp;&emsp;&emsp;</span>
 
-            {{ "super"|sup }}
-            {{ "()."|cl }}
-            {{ "__init__"|m }}
-            {{ "()"|cl }}
+            <span class="fs23 self">self</span>
+            <span class="fs23 code-literal">.habitable = habitable</span>
+            <span class="fs32"><br>&emsp;&emsp;&emsp;&emsp;</span>
+
+            <span class="fs23 super">super</span>
+            <span class="fs23 code-literal">().</span>
+            <span class="fs23 magic">__init__</span>
+            <span class="fs23 code-literal">()</span>
         </div>
+
+
+        {#        <div class="monospace-bg pl40 mt20">#}
+        {#            {{ "class "|k }}#}
+        {#            {{ "Earth(Planet"|cl }}#}
+        {#            {{ ", "|k }}#}
+        {#            {{ "Starstuff):"|cl }}#}
+        {#            {{ "<br>"|cb:2 }}#}
+        {##}
+        {#            {{ "def "|k }}#}
+        {#            {{ "__init__"|m }}#}
+        {#            {{ "("|cl }}#}
+        {#            {{ "self"|self }}#}
+        {#            {{ ", "|k }}#}
+        {#            {{ "coords"|cl }}#}
+        {#            {{ ", "|k }}#}
+        {#            {{ "habitable="|cl }}#}
+        {#            {{ "True, "|k }}#}
+        {#            {{ "*args):"|cl }}#}
+        {#            {{ "<br>"|cb:4 }}#}
+        {##}
+        {#            {{ '"""'|doc_bold }}#}
+        {#            {{ '<br>'|cb:4 }}#}
+        {##}
+        {#            {{ ':type '|doc_bold }}#}
+        {#            {{ 'coords: tuple '|string }}#}
+        {#            {{ '<br>'|cb:4 }}#}
+        {##}
+        {#            {{ '"""'|doc_bold }}#}
+        {#            {{ '<br>'|cb:4 }}#}
+        {##}
+        {#            {{ "self"|self }}#}
+        {#            {{ ".coords = coords"|cl }}#}
+        {#            {{ "<br>"|cb:4 }}#}
+        {##}
+        {#            {{ "self"|self }}#}
+        {#            {{ ".habitable = habitable"|cl }}#}
+        {#            {{ "<br>"|cb:4 }}#}
+        {##}
+        {#            {{ "super"|sup }}#}
+        {#            {{ "()."|cl }}#}
+        {#            {{ "__init__"|m }}#}
+        {#            {{ "()"|cl }}#}
+        {#        </div>#}
     </div>
 
 
