@@ -5,21 +5,34 @@
         <div class="space fs60 pt20">Gilad Barnea - CV</div>
         {% br 2 %}
         {#        {% page_title 'Gilad Barnea - CV' %}#}
-        <div class="fs30 work pl40" id="overview_cv">
+        <div class="fs30 work pl30" id="overview_cv">
             <span class="turquoise">Overview</span>
         </div>
 
         {#        O V E R V I E W#}
+        <div class="basic-text mt25 fs23 mr400">
+            <ul class="pl40" id="overview_cv_list"
+                style="list-style: outside url(static/common/img/NOTSURE/tiny.png);">
+                <li class="pl30">I graduated a 1200hr-long Full-Stack Dev. studies at College of Sela.</li>
 
-        <div class="basic-text mt25 fs23 mr300">
-            <ul class="my-ul" id="overview_cv_list">
-                <li>I graduated a 1200hr long Full-Stack Developer studies at College of Sela.</li>
-                {#                <li>I am passionate, self-disciplined and a quick learner. I get things done.</li>#}
-                <li>I am passionate, curious and self-disciplined. It works well together.</li>
-                <li>I’m looking for a job at which I will both be challenged, and be able to contribute significantly.
+                <li class="pl30 pt25">I am passionate, curious and self-disciplined. It works well together.</li>
+                <li class="pl30 pt25">I’m looking for a job at which I will both be challenged, and be able to
+                                      contribute
+                                      significantly.
                 </li>
             </ul>
         </div>
+
+
+        {#        <div class="basic-text mt25 fs23 mr200">#}
+        {#            <ul class="my-ul" id="overview_cv_list">#}
+        {#                <li>I graduated a 1200hr long Full-Stack Developer studies at College of Sela.</li>#}
+        {#                <li>I am passionate, self-disciplined and a quick learner. I get things done.</li>#}
+        {#                <li>I am passionate, curious and self-disciplined. It works well together.</li>#}
+        {#                <li>I’m looking for a job at which I will both be challenged, and be able to contribute significantly.#}
+        {#                </li>#}
+        {#            </ul>#}
+        {#        </div>#}
 
         {% br 4 %}
 
@@ -31,7 +44,7 @@
         {#        {% work_indented 'Experience'|turq id='experience_cv' %}#}
         <div class="white basic-text mt25 fs25 pl65">my story with {{ 'autosyntax'|it }}</div>
         <br>
-        <div class="basic-text mt25 fs23 mr200 pl40">
+        <div class="basic-text mt25 fs23 mr400 pl40">
             I don't count the projects I did in college as real-world experience;
             {{ "autosyntax"|it }} is an actual product that is used by actual users.
             {% br_25 %}
@@ -121,15 +134,15 @@
             <div class="fs30 work pl40" id="education_cv">
                 <span class="turquoise">Academic Education</span>
             </div>
-
-            {#        > F U L L  S T A C K#}
-            <div class="basic-text mt25 fs25 pl40">
-                <span class="white">Full-Stack Developer Certificate, Sela</span>
-                <span class="it">(Dec 2016 - Jan 2018)</span>
-            </div>
-            {#        {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}#}
-
         </div>
+
+        {#        > F U L L  S T A C K#}
+        <div class="basic-text mt25 fs25 pl40">
+            <span class="white">Full-Stack Developer Certificate, Sela</span>
+            <span class="it fs23">(Dec 2016 - Jan 2018)</span>
+        </div>
+        {#        {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}#}
+
         <div class="basic-text mt25 fs23 mr400">
             <ul class="my-ul" id="education_sela_cv">
                 <li>"Yahalom" honor of excellency</li>
@@ -145,7 +158,7 @@
         {#        > B E N  G U R I O N#}
         <div class="basic-text mt25 fs25 pl40">
             <span class="white">Relevant courses, Ben-Gurion Uni.</span>
-            <span class="it">(2015-2016)</span>
+            <span class="it fs23">(2015-2016)</span>
         </div>
 
         <div class="basic-text mt25 fs23 mr400">
@@ -164,7 +177,7 @@
 			<span class="white">
 				Classical Composition and Orchestration, Jerusalem Academy of Music
 			</span>
-            <span class="it">(2014-2015)</span>
+            <span class="it fs23">(2014-2015)</span>
         </div>
 
         {% br 4 %}
@@ -228,8 +241,9 @@
                href="mailto:giladbrn@gmail.com">giladbrn@gmail.com</a>.
             {% br 2 %}
             Here is my
-            <span id="linkedin"
-                  class="download-link basic-text mt25 white underline">Linkedin profile</span>.
+            <a id="linkedin"
+               class="download-link basic-text mt25 white underline">
+                Linkedin profile</a>.
 
             {% br 2 %}
             Phone number:
@@ -238,15 +252,16 @@
 
             {% br 2 %}
             And for mainly pictures of my nephews:
-            <span id="fb"
-                  class="download-link basic-text mt25 white underline">facebook</span>.
+            <a id="fb"
+               class="download-link basic-text mt25 white underline">
+                facebook</a>.
         </div>
         {% br 2 %}
         <div class="basic-text mt25 fs25 white pl40">
             Thank you.
         </div>
 
-        <div class="fs35">
+        <div class="fs35 op0">
             {% lorem %}
         </div>
 

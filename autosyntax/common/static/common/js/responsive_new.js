@@ -56,7 +56,12 @@ function desktop_resize() {
         .filter(c => c.length)
         .pop();
 
-    set_style_to_collection('pad-body', 'paddingLeft', 250);
+    if (filename === 'cv') {
+        set_style_to_collection('pad-body', 'paddingLeft', 230);
+    }
+    else {
+        set_style_to_collection('pad-body', 'paddingLeft', 250);
+    }
 
     set_style_to_collection('top88', 'top', "86%");
     set_style_to_collection('top84', 'top', "81%");
@@ -69,9 +74,12 @@ function desktop_resize() {
 
     set_style_to_collection('pl30', 'paddingLeft', 25);
     set_style_to_collection('pl40', 'paddingLeft', 35);
+
+    //NO USE TO PL45
     set_style_to_collection('pl45', 'paddingLeft', 35);
 
     if (filename === 'how') {
+
         set_style_to_collection('mr400', 'marginRight', 175);
         set_style_to_collection('mr300', 'marginRight', 125);
         set_style_to_collection('mr200', 'marginRight', 75);
@@ -81,6 +89,7 @@ function desktop_resize() {
         set_style_to_collection('mr300', 'marginRight', 150);
         set_style_to_collection('mr200', 'marginRight', 100);
     }
+    set_style_to_collection('mr500', 'marginRight', 200);
 
 
     //PRESS TO TOGGLE .NUTELLA COMPENSATION

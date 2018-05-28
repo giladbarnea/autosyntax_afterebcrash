@@ -1,57 +1,57 @@
 
 body {
-	margin-top: 50px;
-	margin-right: 60px;
-	margin-bottom: 60px;
-	margin-left: 60px;
+    margin-top: 50px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    margin-left: 60px;
 }
 
 .pad-body {
-	padding-left: 350px;
+    padding-left: 350px;
 }
 
 .fs0 {
-	font-size: 0;
+    font-size: 0;
 }
 
 .fs10 {
-	font-size: 10px
+    font-size: 10px
 }
 
 .fs15 {
-	font-size: 15px
+    font-size: 15px
 }
 
 .fs20 {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 .fs23 {
-	font-size: 23px;
+    font-size: 23px;
 }
 
 .fs25 {
-	font-size: 25px;
+    font-size: 25px;
 }
 
 .fs30 {
-	font-size: 30px;
+    font-size: 30px;
 }
 
 .fs32 {
-	font-size: 32px;
+    font-size: 32px;
 }
 
 .fs35 {
-	font-size: 35px
+    font-size: 35px
 }
 
 .fs40 {
-	font-size: 40px
+    font-size: 40px
 }
 
 .fs60 {
-	font-size: 60px;
+    font-size: 60px;
 }
 
 /*!*font-size: 25px*!*/
@@ -60,19 +60,19 @@ body {
 /*}*/
 
 .ml100 {
-	margin-left: 100px;
+    margin-left: 100px;
 }
 
 .ml150 {
-	margin-left: 150px;
+    margin-left: 150px;
 }
 
 .ml136 {
-	margin-left: 136px;
+    margin-left: 136px;
 }
 
 .ml95 {
-	margin-left: 95px;
+    margin-left: 95px;
 }
 
 /*#continue_arrow {*/
@@ -81,138 +81,139 @@ body {
 /*}*/
 
 .pt20 {
-	padding-top: 20px;
+    padding-top: 20px;
 }
 
 .pt25 {
-	padding-top: 25px;
+    padding-top: 25px;
 }
 
 .pt40 {
-	padding-top: 40px;
+    padding-top: 40px;
 }
 
 .pt60 {
-	padding-top: 60px;
+    padding-top: 60px;
 }
 
 .pt70 {
-	padding-top: 70px;
+    padding-top: 70px;
 }
 
 .pt80 {
-	padding-top: 80px;
+    padding-top: 80px;
 }
 
 .pt100 {
-	padding-top: 100px;
+    padding-top: 100px;
 }
 
 .mr600 {
-	margin-right: 600px;
+    margin-right: 600px;
 }
 
 .mr500 {
-	margin-right: 500px;
+    margin-right: 500px;
 }
 
 .mr400 {
-	margin-right: 400px;
+    margin-right: 400px;
 }
 
 .mr300 {
-	margin-right: 300px;
+    margin-right: 300px;
 }
 
 .mr200 {
-	margin-right: 200px;
+    margin-right: 200px;
 }
 
 .mr100 {
-	margin-right: 100px;
+    margin-right: 100px;
 }
 
 .mt20 {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .mt25 {
-	margin-top: 25px;
+    margin-top: 25px;
 }
 
-mb10 {
-	margin-bottom: 10px;
+.mb10 {
+    margin-bottom: 10px;
 }
 
 .pl20 {
-	padding-left: 20px;
+    padding-left: 20px;
 }
 
 .pl30 {
-	padding-left: 30px;
+    padding-left: 30px;
 }
 
 .pl40 {
-	padding-left: 40px;
+    padding-left: 40px;
 }
 
+/*NO USE TO PL45*/
 .pl45 {
-	padding-left: 45px;
+    padding-left: 45px;
 }
 
 .pl65 {
-	padding-left: 65px;
+    padding-left: 65px;
 }
 
 .back {
-	bottom: 5%;
+    bottom: 5%;
 }
 
 .go-up {
-	left: 90%;
+    left: 90%;
 }
 
 .back {
-	left: 7%
+    left: 7%
 }
 
 /*.sidebar-item:hover {*/
 /*font-size: 24px;*/
 /*}*/
 .top84 {
-	top: 84%
+    top: 84%
 }
 
 .top88 {
-	top: 88%;
+    top: 88%;
 }
 
 .height30 {
-	height: 30px;
+    height: 30px;
 }
 
 .height60 {
-	height: 60px;
+    height: 60px;
 }
 
 .width30 {
-	width: 30px;
+    width: 30px;
 }
 
 .width60 {
-	width: 60px;
+    width: 60px;
 }
 
 .width100 {
-	width: 100px;
+    width: 100px;
 }
 
 .width200 {
-	width: 200px;
+    width: 200px;
 }
 
 .continue-arrow-lbl {
-	left: 48.6%;
+    left: 48.6%;
 }
 
 .center {
@@ -220,11 +221,11 @@ mb10 {
 }
 
 .my-ul {
-	padding-left: 2.5em
+    padding-left: 2.5em
 }
 
 .continue-arrow {
-	left: 50%;
+    left: 50%;
 }
 
 /*#continue_arrow:hover {*/
@@ -234,23 +235,23 @@ mb10 {
 /*}*/
 
 .easter-egg {
-	margin-left: auto;
-	margin-right: auto;
-	position: fixed;
-	bottom: 15%;
-	left: 90%;
-	width: 70px;
-	opacity: 0;
-	transition: opacity 1s;
-	transition-delay: 1s;
-	background-color: #111111;
-	color: white;
-	border-color: white;
-	font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    bottom: 15%;
+    left: 90%;
+    width: 70px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+    background-color: #111111;
+    color: white;
+    border-color: white;
+    font-size: 20px;
 }
 
 .easter-egg:hover {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 
