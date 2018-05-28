@@ -1,5 +1,12 @@
 // window.onload = () => {
 console.log('responsiveness_mgr.js\n');
+let phone_max = 599;
+let tablet_portrait_up = 600;
+let tablet_landscape_up = 900;
+let desktop_up = 1200;
+let big_desktop_up = 1800;
+
+
 on_event_do(window, "resize", on_resize);
 
 // RESOLUTIONS
@@ -24,52 +31,32 @@ function on_resize() {
     // resize_body_left();
     // resize_body_right();
     resize_pad_body();
-    resize_work();
-    resize_space();
+    // resize_work();
+    // resize_space();
     resize_sidebar();
     resize_margin_right_classes();
-    // place_tabs_before_arrows_in_whatisit();
 
-
-    // function place_tabs_before_arrows_in_whatisit() {
-    //     function _place_tabs(class_num, tabs_num) {
-    //         let tabs = by_class("tabs-" + class_num);
-    //         for (let i = 0; i < tabs.length; i++) {
-    //             tabs[i].innerHTML = "";
-    //             for (let j = 0; j < tabs_num; j++)
-    //                 tabs[i].innerHTML += "&emsp;";
-    //             tabs[i].innerHTML += ">";
-    //         }
-    //     }
-    //
-    //     let base = Math.round(w / 500);
-    //     _place_tabs("5", base);
-    //     _place_tabs("16", base + 11);
-    //     _place_tabs("21", base + 16);
-    //     _place_tabs("22", base + 17);
-    //
-    // }
 
     function resize_margin_right_classes() {
         let m_right_300 = by_class("mr300");
         let m_right_200 = by_class("m-right-200");
-        let code_blocks = by_class("code-block");
+        // let code_blocks = by_class("code-block");
         // let basic_texts = by_class("basic-text");
         if (w < 1536 && w > 1300) {
             set_style_to_collection(m_right_300, "marginRight", 200);
-            set_style_to_collection(code_blocks, "marginRight", 200);
+            // set_style_to_collection(code_blocks, "marginRight", 200);
             // set_style_to_collection(basic_texts, "marginRight", 200);
             set_style_to_collection(m_right_200, "marginRight", 150);
         }
         else if (w <= 1300 && w > 1000) {
             set_style_to_collection(m_right_300, "marginRight", 150);
-            set_style_to_collection(code_blocks, "marginRight", 150);
+            // set_style_to_collection(code_blocks, "marginRight", 150);
             // set_style_to_collection(basic_texts, "marginRight", 150);
             set_style_to_collection(m_right_200, "marginRight", 100);
         }
         else {
             set_style_to_collection(m_right_300, "marginRight", 300);
-            set_style_to_collection(code_blocks, "marginRight", 300);
+            // set_style_to_collection(code_blocks, "marginRight", 300);
             // set_style_to_collection(basic_texts, "marginRight", 200);
             set_style_to_collection(m_right_200, "marginRight", 200);
         }
@@ -221,7 +208,7 @@ function on_resize() {
     }
 
     function resize_work() {
-        let works = by_class("fs25");
+        let works = by_class("fs30");
         if (w < 1300 && w > 800) {
             // dyn_works = true;
             // set_style_to_collection(works, "fontSize", Math.pow(w, 0.47));

@@ -7,7 +7,7 @@ let filename = window.location.pathname
     .pop();
 console.log('filename: ', filename);
 let is_go_up_visible = false;
-
+set_style_to_collection("my-ul", 'listStyle', "outside url('static/common/img/NOTSURE/tiny.png')");
 on_event_do(window, "scroll",
     () => {
         // PERSISTS AS LONG AS LAYOUT.HTML IS EXTENDED FROM (i.e always)

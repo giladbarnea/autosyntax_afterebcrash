@@ -3,13 +3,44 @@ body {
     margin: 50px 60px 60px;
 }
 
+.code-block,
+.fs0 {
+    font-size: 0;
+}
+
+.fs10 {
+    font-size: 10px
+}
+
+.fs15 {
+    font-size: 15px
+}
+
+.fs23 {
+    font-size: 23px;
+}
+
+.fs25 {
+    font-size: 25px;
+}
+
 .fs30 {
     font-size: 30px;
 }
 
+.fs35 {
+    font-size: 35px
+}
+
+.fs40 {
+    font-size: 40px
+}
+
+.fs60 {
+    font-size: 60px;
+}
+
 /*font-size: 25px*/
-.basic-text,
-.monospace,
 .go-up,
 .code-literal,
 .str,
@@ -22,6 +53,10 @@ body {
 .back,
 .work-25 {
     font-size: 25px;
+}
+
+.ml100 {
+    margin-left: 100px;
 }
 
 .ml150 {
@@ -46,6 +81,10 @@ body {
     padding-top: 20px;
 }
 
+.pt25 {
+    padding-top: 25px;
+}
+
 /*padding-top: 40px*/
 .pt40 {
     padding-top: 40px;
@@ -66,43 +105,45 @@ body {
     padding-top: 100px;
 }
 
-/*margin-right: 300px*/
+.mr600 {
+    margin-right: 600px;
+}
 
-.mr300,
-.code-block {
+.mr500 {
+    margin-right: 500px;
+}
+
+.mr400 {
+    margin-right: 400px;
+}
+
+.mr300 {
     margin-right: 300px;
 }
 
-.basic-text,
-.m-right-200 {
+.mr200 {
     margin-right: 200px;
 }
 
-.m-right-100 {
+.mr100 {
     margin-right: 100px;
-}
-
-.code-block,
-.fs0 {
-    font-size: 0;
-}
-
-.fs10 {
-    font-size: 10px
-}
-
-.fs35 {
-    font-size: 35px
 }
 
 .basic-text {
     margin-top: 25px;
-
 }
 
 .monospace,
 .code-block {
     margin-top: 20px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl30 {
+    padding-left: 30px;
 }
 
 .monospace,
@@ -113,11 +154,6 @@ body {
 
 .pl65 {
     padding-left: 65px;
-}
-
-.pl20 {
-    /*IN RELATION TO INDENTED*/
-    padding-left: 18px;
 }
 
 .code-break {
@@ -141,10 +177,6 @@ body {
 .sidebar {
     padding-left: 20px;
     padding-top: 70px;
-}
-
-.fs23 {
-    font-size: 23px;
 }
 
 .sidebar-item {
@@ -175,6 +207,10 @@ body {
 
 .center {
 
+}
+
+.my-ul {
+    padding-left: 2.5em
 }
 
 .continue-arrow {
