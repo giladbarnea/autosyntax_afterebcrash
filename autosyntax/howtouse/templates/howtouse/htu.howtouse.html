@@ -7,7 +7,7 @@
         <div class="space fs60 pt20">How to use</div>
         {% br 2 %}
         {#        O V E R V I E W#}
-        <div class="fs30 work pl40" id="operators_htu">
+        <div class="work fs30 pl40" id="operators_htu">
             <span class="turquoise">Operators</span>
             overview
         </div>
@@ -19,55 +19,60 @@
 
 
         {#        > O V E R V I E W  FOR#}
-        <div class="basic-text fs23 mr300">
-            <ul class="my-ul" id="ops_list_overview">
-                <li>Operators are almost always built-in elements from the python standard library, so that no learning
-                    is needed.
-                </li>
-                <li>In a given line, the Operator is the first argument.</li>
-                <li id="ops_list_overview_3">Currently available Operators:<br></li>
-            </ul>
-        </div>
-
-
-        {% br 7 %}
-        {#        D O T T E D  A R G U M E N T S#}
-        <div class="fs30 work" id='dotted_htu'>
-            <span class="turquoise">.Dotted</span>
-            arguments
-        </div>
-        basic_text_white
-        <div class="basic-text white fs25">
-            Mark an argument with a dot to toggle a less common use-case.
-        </div>
-        <br>
-
-        <div class="basic-text fs25 pl40">
-            With basic operators, arguments turn to strings.
-            <br>"Dotting" and argument denotes a variable.
-        </div>
-
-
-        {#        {% basic_text_ind 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}#}
-
-        <div class="animation">
-            <div id="animation_1">
-                <div class="monospace fs25 mr300">list milk nutella
-                    <span class="op7 ml150">
-						PRESS TO TOGGLE EXAMPLE
-					</span>
-                </div>
-
-                {% list_block 'milk' 'nutella' %}
-
+        <div class="mr400">
+            <div class="basic-text fs23">
+                <ul class="my-ul" id="ops_list_overview">
+                    <li>Operators are almost always built-in elements from the python standard library, so that no
+                        learning
+                        is needed.
+                    </li>
+                    <li>In a given line, the Operator is the first argument.</li>
+                    <li id="ops_list_overview_3">Currently available Operators:<br></li>
+                </ul>
             </div>
-            <div id="animation_2" class="disp-none">
-                <div class="monospace fs25 mr300">list milk .nutella
-                    <span class="op7 ml150">
+
+
+            {% br 7 %}
+            {#        D O T T E D  A R G U M E N T S#}
+            <div class="fs30 work" id='dotted_htu'>
+                <span class="turquoise">.Dotted</span>
+                arguments
+            </div>
+
+            <br>
+            <div class="basic-text fs25">
+                <div class="white">
+                    Mark an argument with a dot to toggle a less common use-case.
+                </div>
+                <br>
+
+                <div class="pl40">
+                    With basic operators, arguments turn to strings.
+                    <br>"Dotting" and argument denotes a variable.
+                </div>
+            </div>
+
+
+            {#        {% basic_text_ind 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}#}
+            <div class="animation fs25">
+                <div id="animation_1">
+                    <div class="monospace">list milk nutella
+                        <span class="op7 ml150">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
+                    </div>
+
+                    {% list_block 'milk' 'nutella' %}
+
                 </div>
-                {% list_block 'milk' 'nutella'|cl %}
+                <div id="animation_2" class="disp-none">
+                    <div class="monospace">list milk .nutella
+                        <span class="op7 ml150">
+						PRESS TO TOGGLE EXAMPLE
+					</span>
+                    </div>
+                    {% list_block 'milk' 'nutella'|cl %}
+                </div>
             </div>
         </div>
     </div>
@@ -75,8 +80,7 @@
     {#    >D O T T E D  FOR#}
     <div class="basic-text fs25 mr200 pl40">
         The operators which follow this rule are:<br>
-        <span id="ops_list_dotted">
-		</span>
+        <span id="ops_list_dotted"></span>
     </div>
 
 
@@ -84,59 +88,61 @@
     {% br 3 %}
 
     {#    I N  O T H E R  C A S E S#}
-
-    <div class="basic-text fs25 white mr200">
-        In other cases, using a variable is much more likely than a string.
-    </div>
-
-    <br>
-    <div class="basic-text fs25 pl40">
-        These cases are reversed; a dot makes a string.
-    </div>
-
-    {#    F O R  C H A R A C T E R S (anim 3-4)#}
-    <div class="animation">
-        <div id="animation_3">
-            <div class="monospace fs25 mr300">for .characters
-                <span class="op7 ml150">
-						PRESS TO TOGGLE EXAMPLE
-					</span>
+    <div class="fs25">
+        <div class="basic-text">
+            <div class="white mr200">
+                In other cases, using a variable is much more likely than a string.
             </div>
-            <div class="code-block mr300">
-                {{ 'for '|k }} {{ 'character '|cl }}
-                {{ 'in '|k }}{{ "'characters'"|string }}{{ ':'|cl }}
+
+            <br>
+            <div class="pl40">
+                These cases are reversed; a dot makes a string.
             </div>
         </div>
-        <div id="animation_4" class="disp-none">
-            <div class="monospace fs25 mr300">for characters
-                <span class="op7 ml150">
+        {#    F O R  C H A R A C T E R S (anim 3-4)#}
+        <div class="animation mr400">
+            <div id="animation_3">
+                <div class="monospace">for .characters
+                    <span class="op7 ml150">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
+                </div>
+                <div class="code-block">
+                    {{ 'for '|k }} {{ 'character '|cl }}
+                    {{ 'in '|k }}{{ "'characters'"|string }}{{ ':'|cl }}
+                </div>
             </div>
-            <div class="code-block mr300">
-                {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ 'characters:'|cl }}
+            <div id="animation_4" class="disp-none">
+                <div class="monospace">for characters
+                    <span class="op7 ml150">
+						PRESS TO TOGGLE EXAMPLE
+					</span>
+                </div>
+                <div class="code-block">
+                    {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ 'characters:'|cl }}
+                </div>
             </div>
         </div>
-    </div>
-    <br>
 
+        <br>
 
-    {#    D O T V A R  O P S#}
-    <div class="basic-text fs25 mr200 pl40">
-        The operators which follow this rule are:<br>
-        <span id="ops_list_for">
-		</span>
-    </div>
-    {% br 2 %}
+        <div class="basic-text mr200">
+            {#    D O T V A R  O P S#}
+            <div class=" pl40">
+                The operators which follow this rule are:<br>
+                <span id="ops_list_for"></span>
+            </div>
 
-    {#    N O T E  N U M B E R#}
-    <div class="basic-text fs25 mr200">
-        {{ '*'|turq }}
-        Note: Globally, a number is left as is by default.<br>
+            {% br 2 %}
+
+            {#    N O T E  N U M B E R#}
+            {{ '*'|turq }}
+            Note: Globally, a number is left as is by default.<br>
+        </div>
     </div>
-    <div class="animation">
+    <div class="animation mr400 fs25">
         <div id="animation_5">
-            <div class="monospace fs25 mr300">dict when_im 64
+            <div class="monospace">dict when_im 64
                 <span class="op7 ml150">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
@@ -145,7 +151,7 @@
         </div>
         <div id="animation_6" class="disp-none">
 
-            <div class="monospace fs25 mr300">dict when_im .64
+            <div class="monospace">dict when_im .64
                 <span class="op7 ml150">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
@@ -162,32 +168,43 @@
         Inline
         <span class="turquoise">methods()</span>
     </div>
+    <div class="fs25">
+        <div class="basic-text">
+            <div class="white mr200">
+                Type a built-in method before an argument to apply it.
+            </div>
+
+            <br>
+            <div class="pl40">
+                This is useful in cases like:
+            </div>
+        </div>
+        <div class="mr400">
+            <div class="monospace">for enumerate things</div>
+
+            <div class="code-block">
+                {{ 'for '|k }} {{ 'i'|cl }}{{ ', '|k }}
+                {{ 'thing '|cl }}{{ 'in '|k }}{{ 'enumerate'|sup }}
+                {{ "(things):"|cl }}
+            </div>
 
 
-    <div class="basic-text fs25 white mr200">
-        Type a built-in method before an argument to apply it.
-    </div>
+            {% br 2 %}
+            <div class="basic-text pl40">
+                or:
+            </div>
 
-    <br>
-    <div class="basic-text fs25 pl40">
-        This is useful in cases like:
-    </div>
-    <div class="monospace fs25 mr300">for enumerate things</div>
-    <div class="code-block mr300">
-        {{ 'for '|k }} {{ 'i'|cl }}{{ ', '|k }}
-        {{ 'thing '|cl }}{{ 'in '|k }}{{ 'enumerate'|sup }}
-        {{ "(things):"|cl }}
-    </div>
-
-    {% br 2 %}
-    <div class="basic-text fs25 pl40">
-        or:
-    </div>
-    <div class="monospace fs25 mr300">my_dict = dict zip keys values</div>
-    <div class="code-block mr300">
-        {{ 'my_dict = '|cl }} {{ 'dict'|sup }}{{ '('|cl }}
-        {{ 'zip'|sup }}{{ '(keys'|cl }}{{ ', '|k }}
-        {{ "values)):"|cl }}
+            <div>
+                <div class="monospace">
+                    my_dict = dict zip keys values
+                </div>
+                <div class="code-block">
+                    {{ 'my_dict = '|cl }} {{ 'dict'|sup }}{{ '('|cl }}
+                    {{ 'zip'|sup }}{{ '(keys'|cl }}{{ ', '|k }}
+                    {{ "values)):"|cl }}
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -202,7 +219,7 @@
     <div class="basic-text fs25 white mr200">
         <span class="monospace-bg it">def</span>
     </div>
-
+    <br>
     <div class="basic-text fs23 mr300">
         <ul class="my-ul" id="complex_ops_ul1">
             <li>1st argument is the method's name</li>
@@ -223,36 +240,37 @@
         </ul>
     </div>
     {% br 2 %}
-    <div class="monospace fs25 mr300">def get_age int dob int 1900 earthyears .True args kwargs</div>
-    <div class="code-block mr300">
-        {{ 'def '|k }}
-        {{ 'get_age(dob='|cl }}
-        {{ '1900'|n }}
-        {{ ', '|k }}
-        {{ 'earthyears='|cl }}
-        {{ 'True, '|k }}
-        {{ '*args'|cl }}
-        {{ ', '|k }}
-        {{ '**kwargs):'|cl }}
-        {{ '<br>'|cb:2 }}
+    <div class="mr400">
+        <div class="monospace fs25">def get_age int dob int 1900 earthyears .True args kwargs</div>
+        <div class="code-block">
+            {{ 'def '|k }}
+            {{ 'get_age(dob='|cl }}
+            {{ '1900'|n }}
+            {{ ', '|k }}
+            {{ 'earthyears='|cl }}
+            {{ 'True, '|k }}
+            {{ '*args'|cl }}
+            {{ ', '|k }}
+            {{ '**kwargs):'|cl }}
+            {{ '<br>'|cb:2 }}
 
-        {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:2 }}
+            {{ '"""'|doc_bold }}
+            {{ '<br>'|cb:2 }}
 
-        {{ ':type '|doc_bold }}
-        {{ 'dob: int '|string }}
-        {{ '<br>'|cb:2 }}
+            {{ ':type '|doc_bold }}
+            {{ 'dob: int '|string }}
+            {{ '<br>'|cb:2 }}
 
-        {{ ':rtype: '|doc_bold }}
-        {{ 'int'|string }}
-        {{ '<br>'|cb:2 }}
+            {{ ':rtype: '|doc_bold }}
+            {{ 'int'|string }}
+            {{ '<br>'|cb:2 }}
 
-        {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:2 }}
-        {{ '|'|span:'code-literal dark-grey' }}
+            {{ '"""'|doc_bold }}
+            {{ '<br>'|cb:2 }}
+            {{ '|'|span:'code-literal dark-grey' }}
 
+        </div>
     </div>
-
     {% br 2 %}
 
 
@@ -282,52 +300,51 @@
     </div>
 
     {% br 2 %}
+    <div class="mr400">
+        <div class="monospace fs25">class Earth Planet Starstuff init coords tuple habitable .True args</div>
+        <div class="code-block">
+            {{ "class "|k }}
+            {{ "Earth(Planet"|cl }}
+            {{ ", "|k }}
+            {{ "Starstuff):"|cl }}
+            {{ "<br>"|cb:2 }}
 
-    <div class="monospace fs25 mr300">class Earth Planet Starstuff init coords tuple habitable .True args</div>
-    <div class="code-block mr300">
-        {{ "class "|k }}
-        {{ "Earth(Planet"|cl }}
-        {{ ", "|k }}
-        {{ "Starstuff):"|cl }}
-        {{ "<br>"|cb:2 }}
+            {{ "def "|k }}
+            {{ "__init__"|m }}
+            {{ "("|cl }}
+            {{ "self"|self }}
+            {{ ", "|k }}
+            {{ "coords"|cl }}
+            {{ ", "|k }}
+            {{ "habitable="|cl }}
+            {{ "True, "|k }}
+            {{ "*args):"|cl }}
+            {{ "<br>"|cb:4 }}
 
-        {{ "def "|k }}
-        {{ "__init__"|m }}
-        {{ "("|cl }}
-        {{ "self"|self }}
-        {{ ", "|k }}
-        {{ "coords"|cl }}
-        {{ ", "|k }}
-        {{ "habitable="|cl }}
-        {{ "True, "|k }}
-        {{ "*args):"|cl }}
-        {{ "<br>"|cb:4 }}
+            {{ '"""'|doc_bold }}
+            {{ '<br>'|cb:4 }}
 
-        {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:4 }}
+            {{ ':type '|doc_bold }}
+            {{ 'coords: tuple '|string }}
+            {{ '<br>'|cb:4 }}
 
-        {{ ':type '|doc_bold }}
-        {{ 'coords: tuple '|string }}
-        {{ '<br>'|cb:4 }}
+            {{ '"""'|doc_bold }}
+            {{ '<br>'|cb:4 }}
 
-        {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:4 }}
+            {{ "self"|self }}
+            {{ ".coords = coords"|cl }}
+            {{ "<br>"|cb:4 }}
 
-        {{ "self"|self }}
-        {{ ".coords = coords"|cl }}
-        {{ "<br>"|cb:4 }}
+            {{ "self"|self }}
+            {{ ".habitable = habitable"|cl }}
+            {{ "<br>"|cb:4 }}
 
-        {{ "self"|self }}
-        {{ ".habitable = habitable"|cl }}
-        {{ "<br>"|cb:4 }}
-
-        {{ "super"|sup }}
-        {{ "()."|cl }}
-        {{ "__init__"|m }}
-        {{ "()"|cl }}
+            {{ "super"|sup }}
+            {{ "()."|cl }}
+            {{ "__init__"|m }}
+            {{ "()"|cl }}
+        </div>
     </div>
-
-
 
 
     <script type="module" src="{% static 'howtouse/js/htu.continue_arrow.js' %}"></script>

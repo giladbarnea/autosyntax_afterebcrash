@@ -12,52 +12,55 @@
     </div>
     {% br 2 %}
     {#        L I S T  M I L K  E G G S  N U T E L L A#}
-    <div class="basic-text fs25 mr200">For example:</div>
-    <div class="monospace fs25 mr300">list milk eggs nutella</div>
-    <div class="basic-text fs25 mr200">becomes</div>
-    {% list_block 'milk' 'eggs' 'nutella' %}
-    {% br 3 %}
-    <div class="basic-text fs25 mr200">Similarly,</div>
-    {#    {% basic_text "similarly," %}#}
-    <div class="monospace fs25 mr300">dict meaning 42 happy pizza</div>
-    {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
-    {% br 7 %}
+    <div class="fs25 mr400">
+        <div class="basic-text">For example:</div>
+        <div class="monospace">list milk eggs nutella</div>
+        <div class="basic-text">becomes</div>
+        {% list_block 'milk' 'eggs' 'nutella' %}
+        {% br 3 %}
+        <div class="basic-text">Similarly,</div>
+        {#    {% basic_text "similarly," %}#}
+        <div class="monospace">dict meaning 42 happy pizza</div>
+        {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
+        {% br 7 %}
+    </div>
     {#        C L A S S E S#}
     <div class="fs30 work">
         It can also do more complicated stuff,<br> like classes:
     </div>
     <br>
-    <div class="monospace fs25 mr300">class Dog Animal init fluffy .True args</div>
-    <div class="basic-text fs25 mr200">turns into ></div>
-    {#    {% basic_text "turns into >" %}#}
-    <div class="code-block mr300">
-        {{ "class "|k }}
-        {{ "Dog(Animal):"|cl }}
-        {{ "<br>"|cb:2 }}
+    <div class="fs25 mr400">
+        <div class="monospace">class Dog Animal init fluffy .True args</div>
+        <div class="basic-text">turns into ></div>
+        {#    {% basic_text "turns into >" %}#}
+        <div class="code-block">
+            {{ "class "|k }}
+            {{ "Dog(Animal):"|cl }}
+            {{ "<br>"|cb:2 }}
 
-        {{ "def "|k }}
-        {{ "__init__"|m }}
-        {{ "("|cl }}
-        {{ "self"|self }}
-        {{ ", "|k }}
-        {{ "fluffy="|cl }}
-        {{ "True, "|k }}
-        {{ "*args):"|cl }}
-        {{ "<br>"|cb:4 }}
+            {{ "def "|k }}
+            {{ "__init__"|m }}
+            {{ "("|cl }}
+            {{ "self"|self }}
+            {{ ", "|k }}
+            {{ "fluffy="|cl }}
+            {{ "True, "|k }}
+            {{ "*args):"|cl }}
+            {{ "<br>"|cb:4 }}
 
-        {{ "self"|self }}
-        {{ ".fluffy = fluffy"|cl }}
-        {{ "<br>"|cb:4 }}
+            {{ "self"|self }}
+            {{ ".fluffy = fluffy"|cl }}
+            {{ "<br>"|cb:4 }}
 
-        {{ "super"|sup }}
-        {{ "()."|cl }}
-        {{ "__init__"|m }}
-        {{ "()"|cl }}
+            {{ "super"|sup }}
+            {{ "()."|cl }}
+            {{ "__init__"|m }}
+            {{ "()"|cl }}
+        </div>
+
+        <br>
+        <div class="basic-text">How much time would it take you to type the end result?</div>
     </div>
-
-    <br>
-    <div class="basic-text fs25 mr200">How much time would it take you to type the end result?</div>
-    {#    {% basic_text 'How much time would it take you to type the end result?' %}#}
     {% br 7 %}
     <div class="work fs30 pl40">
         It needs only <span class="turquoise">1</span>
@@ -65,101 +68,101 @@
         but it's also flexible.
     </div>
     <br>
-    <div class="basic-text fs25 mr200">
-        <span class="white fs25">Variables.</span><br>
-        Given:
+    <div class="fs25 mr400">
+        <div class="basic-text">
+            <span class="white">Variables.</span><br>
+            Given:
+        </div>
+        {#    {% basic_text 'Variables.'|white '<br>Given:' %}#}
+        <div class="code-block">
+            {{ 'wish = '|cl }}
+            {{ "'done'"|string }}
+        </div>
+        {#    V A R I A B L E S#}
+        <div class="basic-text">then</div>
+        <div class="monospace">i_wish = str I got more things .wish</div>
+
+        <div class="code-block">
+            {{ 'i_wish = '|cl }}
+            {{ "f'I got more things {"|string }}
+            {{ 'wish'|cl }}
+            {{ "}'"|string }}
+        </div>
+
+        <div class="basic-text">
+            thanks to the
+            <span class="monospace-bg it turquoise">.</span>
+            preceding "wish".<br>
+            Did you like that f-string?
+            <span class="download-link turquoise">autosyntax</span>
+            does that only when needed.
+        </div>
+        {% br 3 %}
+
+
+        {#        I N L I N E  M E T H O D S#}
+        <div class="basic-text white">Inline methods:</div>
+        <div class="monospace">for range len factories</div>
+
+        <div class="code-block">
+            {{ 'for '|k }}
+            {{ 'factory '|cl }}
+            {{ 'in '|k }}
+            {{ 'range'|sup }}
+            {{ '('|cl }}
+            {{ 'len'|sup }}
+            {{ '(factories)):'|cl }}
+        </div>
+        {% br 3 %}(
+        {#        L I S T  C O M P R E H E N S I O N S#}
+        <div class="basic-text white">List comprehensions:</div>
+        {#    {% basic_text_white 'List comprehensions:' %}#}
+        <div class="monospace">listcomp print letters</div>
+
+        <div class="code-block">
+            {{ '['|cl }}
+            {{ 'print'|sup }}
+            {{ '(letter) '|cl }}
+            {{ 'for '|k }}
+            {{ 'letter '|cl }}
+            {{ 'in '|k }}
+            {{ 'letters]'|cl }}
+        </div>
+        {% br 3 %}
+        <div class="basic-text white">Methods, with optionally typed arguments:</div>
+        {#    {% basic_text_white 'Method return and arguments typing:' %}#}
+        <div class="monospace">def is_easy bool autosyntax str kwargs</div>
+
+        <div class="code-block mr300">
+            {{ 'def '|k }}
+            {{ 'is_easy(autosyntax'|cl }}
+            {{ ', '|k }}
+            {{ '**kwargs):'|cl }}
+            {{ '<br>'|cb:2 }}
+
+            {{ '"""'|doc_bold }}
+            {{ '<br>'|cb:2 }}
+
+            {{ ':type '|doc_bold }}
+            {{ 'autosyntax: str '|string }}
+            {{ '<br>'|cb:2 }}
+
+            {{ ':rtype: '|doc_bold }}
+            {{ 'bool'|string }}
+            {{ '<br>'|cb:2 }}
+
+            {{ '"""'|doc_bold }}
+            {{ '<br>'|cb:2 }}
+            {{ '|'|span:'code-literal dark-grey' }}
+
+        </div>
+
+        {% br 2 %}
+        <div class="basic-text white">And more, built with those little details in mind.</div>
+        <div class="basic-text download-link white">Download
+            <span class="turquoise">autosyntax.</span>
+        </div>
     </div>
-    {#    {% basic_text 'Variables.'|white '<br>Given:' %}#}
-    <div class="code-block mr300">
-        {{ 'wish = '|cl }}
-        {{ "'done'"|string }}
-    </div>
-    {#    V A R I A B L E S#}
-    <div class="basic-text fs25 mr200">then</div>
-    <div class="monospace fs25 mr300">i_wish = str I got more things .wish</div>
-
-    <div class="code-block mr300">
-        {{ 'i_wish = '|cl }}
-        {{ "f'I got more things {"|string }}
-        {{ 'wish'|cl }}
-        {{ "}'"|string }}
-    </div>
-
-    <div class="basic-text fs25 mr200">
-        thanks to the
-        <span class="monospace-bg it turquoise">.</span>
-        preceding "wish".<br>
-        Did you like that f-string?
-        <span class="download-link turquoise">autosyntax</span>
-        does that only when needed.
-    </div>
-    {% br 3 %}
-
-
-
-    {#        I N L I N E  M E T H O D S#}
-    <div class="basic-text white fs25">Inline methods:</div>
-    <div class="monospace fs25 mr300">for range len factories</div>
-
-    <div class="code-block mr300">
-        {{ 'for '|k }}
-        {{ 'fac()tory '|cl }}
-        {{ 'in '|k }}
-        {{ 'range'|sup }}
-        {{ '('|cl }}
-        {{ 'len'|sup }}
-        {{ '(factories)):'|cl }}
-    </div>
-    {% br 3 %}(
-    {#        L I S T  C O M P R E H E N S I O N S#}
-    <div class="basic-text white fs25">List comprehensions:</div>
-    {#    {% basic_text_white 'List comprehensions:' %}#}
-    <div class="monospace fs25 mr300">listcomp print letters</div>
-
-    <div class="code-block mr300">
-        {{ '['|cl }}
-        {{ 'print'|sup }}
-        {{ '(letter) '|cl }}
-        {{ 'for '|k }}
-        {{ 'letter '|cl }}
-        {{ 'in '|k }}
-        {{ 'letters]'|cl }}
-    </div>
-    {% br 3 %}
-    <div class="basic-text white fs25">Method return and arguments typing:</div>
-    {#    {% basic_text_white 'Method return and arguments typing:' %}#}
-    <div class="monospace fs25 mr300">def is_easy bool autosyntax str kwargs</div>
-
-    <div class="code-block mr300">
-        {{ 'def '|k }}
-        {{ 'is_easy(autosyntax'|cl }}
-        {{ ', '|k }}
-        {{ '**kwargs):'|cl }}
-        {{ '<br>'|cb:2 }}
-
-        {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:2 }}
-
-        {{ ':type '|doc_bold }}
-        {{ 'autosyntax: str '|string }}
-        {{ '<br>'|cb:2 }}
-
-        {{ ':rtype: '|doc_bold }}
-        {{ 'bool'|string }}
-        {{ '<br>'|cb:2 }}
-
-        {{ '"""'|doc_bold }}
-        {{ '<br>'|cb:2 }}
-        {{ '|'|span:'code-literal dark-grey' }}
-
-    </div>
-
-    {% br 2 %}
-    <div class="basic-text white fs25">And more, built with those little details in mind.</div>
-    <div class="basic-text fs25 download-link white">Download
-        <span class="turquoise">autosyntax.</span>
-    </div>
-
     <div id="download_block">
         {% block download %}
         {% endblock %}

@@ -12,12 +12,12 @@ def br(num):
 
 @register.simple_tag
 def br_15():
-	return format_html(_span('fs10', '<br><br>'))
+	return format_html(_span('fs15', '<br><br>'))
 
 
 @register.simple_tag
 def br_25():
-	return format_html(_span('fs40', '<br><br>'))
+	return format_html(_span('fs35', '<br><br>'))
 
 
 @register.simple_tag
@@ -31,7 +31,7 @@ def list_block(*args):
 			new_value.append(_span("kept", ', '))
 
 	new_value.append(_span("code-literal", ']'))
-	return format_html(_div('code-block mr300', ''.join(new_value)))
+	return format_html(_div('code-block', ''.join(new_value)))
 
 
 @register.simple_tag
@@ -51,7 +51,7 @@ def dict_block(*args):
 
 	new_value.append(_span("code-literal", '}'))
 
-	return mark_safe(_div('code-block mr300', ''.join(new_value)))
+	return mark_safe(_div('code-block', ''.join(new_value)))
 
 
 # DONE

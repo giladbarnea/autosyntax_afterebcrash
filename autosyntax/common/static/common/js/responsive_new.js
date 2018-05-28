@@ -34,23 +34,23 @@ function on_resize() {
     let w = window.screen.availWidth;
     console.log('w: ', w);
     if (w >= big_desktop_up) {
-        console.warn('big_desktop_up. w: ', w);
+        console.log('big_desktop_up. w: ', w);
         big_desktop_resize();
     }
     else if (w >= desktop_up) {
-        console.warn('desktop_up. w: ', w);
+        console.log('desktop_up. w: ', w);
         desktop_resize();
     }
     else if (w >= tablet_landscape_up) {
-        console.warn('tablet_landscape_up. w: ', w);
+        console.log('tablet_landscape_up. w: ', w);
         tablet_landscape_resize();
     }
     else if (w >= tablet_portrait_up) {
-        console.warn('tablet_portrait_up. w: ', w);
+        console.log('tablet_portrait_up. w: ', w);
         tablet_portrait_resize();
     }
     else if (w >= phone_max) {
-        console.warn('phone_max. w: ', w);
+        console.log('phone_max. w: ', w);
         phone_resize();
     }
     else {

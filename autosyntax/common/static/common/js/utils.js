@@ -162,7 +162,6 @@ function add_classes(element, classes) {
 }
 
 function span(inner, cls, tail = '', id = undefined) {
-    console.warn('tail = ', tail);
     let _id = id === undefined ? '' : `id="${id}"`;
     let _cls = `class="${cls}"`;
     return `<span ${_cls} ${_id}>${inner}</span>${tail}`;

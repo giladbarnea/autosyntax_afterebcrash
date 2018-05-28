@@ -12,6 +12,10 @@ body {
     font-size: 10px
 }
 
+.fs15 {
+    font-size: 15px
+}
+
 .fs23 {
     font-size: 23px;
 }
@@ -24,8 +28,12 @@ body {
     font-size: 30px;
 }
 
-.fs40 {
+.fs35 {
     font-size: 35px
+}
+
+.fs40 {
+    font-size: 40px
 }
 
 .fs60 {
@@ -95,6 +103,10 @@ body {
 /*padding-top: 100px*/
 .pt100 {
     padding-top: 100px;
+}
+
+.mr400 {
+    margin-right: 400px;
 }
 
 .mr300 {

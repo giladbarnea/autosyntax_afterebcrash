@@ -6,39 +6,65 @@
         <div class="space fs60 pt20">How to use</div>
         {% br 2 %}
         <div class="fs30 work pl40">
-            <span class="download-link turquoise">Basic</span>
+            <span class="turquoise">Basic</span>
             principles
         </div>
         <br>
         <div class="basic-text white fs25">There are only 4 guiding principles:</div>
-        {#        {% basic_text_white 'There are only 4 guiding principles:' %}#}
         {% br 2 %}
-
-        <div class="basic-text fs23 mr200 pl40">
-            >
-            {{ 'Merely words and spaces usually does the job.<br>'|pl65 }}
-            {{ 'This yields the most common and likely use-case.'|ind }}
-            {% br 2 %}
-            >
-            {{ 'An Operator must appear before the arguments<br>'|pl65 }}
-            <span class="pl40">
+        <div class="basic-text fs23 mr300">
+            <ul class="my-ul" id="principles_htu">
+                <li>
+                    Merely words and spaces usually does the job.<br>
+                    This yields the most common and likely use-case.
+                </li>
+                <li>
+                    An Operator must appear before the arguments
+                    <span>
 						(e.g
 				{{ 'list'|mono_bg_it }},
 				{{ 'def'|mono_bg_it }},
 				{{ 'class'|mono_bg_it }}
 				and so on).
-				{% br 2 %}>
+{#				{% br 2 %}#}
 			</span>
-            {{ 'An argument can be marked with a dot.<br>'|pl65 }}
-            {{ 'This toggles a specific behaviour on/off.'|ind }}
-            {% br 2 %}
-            >
-            {{ 'An argument can be preceded by a built-in method.<br>'|pl65 }}
-            {{ 'It is then passed to this method.'|ind }}
+                </li>
+                <li>
+                    An argument can be marked with a dot.<br>
+                    This toggles a specific behaviour on/off.
+                </li>
+                <li>
+                    An argument can be preceded by a built-in method.<br>
+                    It is then passed to this method.
+                </li>
+            </ul>
         </div>
 
+        {#<div class="basic-text fs23 mr200 pl40">#}
+        {#            >#}
+        {#            {{ 'Merely words and spaces usually does the job.<br>'|pl65 }}#}
+        {#            {{ 'This yields the most common and likely use-case.'|ind }}#}
+        {#            {% br 2 %}#}
+        {#            >#}
+        {#            {{ 'An Operator must appear before the arguments<br>'|pl65 }}#}
+        {#            <span class="pl40">#}
+        {#						(e.g#}
+        {#				{{ 'list'|mono_bg_it }},#}
+        {#				{{ 'def'|mono_bg_it }},#}
+        {#				{{ 'class'|mono_bg_it }}#}
+        {#				and so on).#}
+        {#				{% br 2 %}>#}
+        {#			</span>#}
+        {#            {{ 'An argument can be marked with a dot.<br>'|pl65 }}#}
+        {#            {{ 'This toggles a specific behaviour on/off.'|ind }}#}
+        {#            {% br 2 %}#}
+        {#            >#}
+        {#            {{ 'An argument can be preceded by a built-in method.<br>'|pl65 }}#}
+        {#            {{ 'It is then passed to this method.                       '|ind }}#}
+        {#        </div>#}
+
         <a href="how" class="no-decor">
-            {% br 2 %}
+            {% br 1 %}
             <div class="basic-text fs25 white">For a full guide, click here.
             </div>
         </a>

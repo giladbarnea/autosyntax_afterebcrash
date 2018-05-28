@@ -10,12 +10,17 @@
         </div>
 
         {#        O V E R V I E W#}
-        {#        {% work_indented 'Overview'|turq id='overview_cv' %} <br>#}
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'I graduated a 1200hr long Full-Stack Developer studies at College of Sela.'|pl65 }} {% br 2 %}
-            > {{ 'I am passionate, self-disciplined and a quick learner. I get things done.'|pl65 }} {% br 2 %}
-            > {{ "I’m looking for a job at which I will both be challenged,<br>"|pl65 }} {{ "and able to contribute significantly.<br>"|ind }}
+
+        <div class="basic-text fs23 mr300">
+            <ul class="my-ul" id="overview_cv_list">
+                <li>I graduated a 1200hr long Full-Stack Developer studies at College of Sela.</li>
+                {#                <li>I am passionate, self-disciplined and a quick learner. I get things done.</li>#}
+                <li>I am passionate, curious and self-disciplined. It works well together.</li>
+                <li>I’m looking for a job at which I will both be challenged, and be able to contribute significantly.
+                </li>
+            </ul>
         </div>
+
         {% br 4 %}
 
 
@@ -43,7 +48,7 @@
             Letting go of features I thought were good, in favor of features users actually needed;
             {% br_15 %}
             And wrapping the whole thing in an intuitive, attractive way.
-            {% br_25 %}
+            {% br 3 %}
             I enjoyed every minute of it, and still am.
 
         </div>
@@ -57,37 +62,59 @@
         </div>
         {#        > L A N G U A G E S#}
         <div class="basic-text white fs25 pl40">Languages</div>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Python, C#, SQL, Javascript (ES5 & 6),<br>'|pl65 }}
-            {{ 'Typescript, HTML5, CSS3, Autohotkey.'|ind }}
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="skills_languages_cv">
+                <li>Python, C#, SQL, Javascript (ES5 & 6), Typescript, HTML5, CSS3, Autohotkey.</li>
+            </ul>
         </div>
 
-        {% br 3 %}
+
+        {% br 1 %}
         {#        > T E C H N O L O G I E S#}
         <div class="basic-text white fs25 pl40">
             Technologies
             {% br 2 %}
             &emsp;&emsp;python
         </div>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Pandas, Numpy, Django, PyQt (4 & 5),<br>'|pl65 }} {{ 'AsyncIO, Google APIs, SQLite.'|ind }} {% br 2 %}
+
+
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="skills_tech_py_cv">
+                <li>Pandas, Numpy, Django, PyQt (4 & 5), AsyncIO, Google APIs, SQLite.</li>
+            </ul>
         </div>
+        <br>
         <div class="basic-text fs25 pl40 white">&emsp;&emsp;.NET</div>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Entity Framework, Linq, Universal Windows Platform (UWP),<br>'|pl65 }} {{ 'Microsoft SQL Server Management Studio.'|ind }} {% br 2 %}
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="skills_tech_net_cv">
+                <li>Entity Framework, Linq, Universal Windows Platform (UWP), Microsoft SQL Server Management Studio.
+                </li>
+            </ul>
         </div>
 
+        <br>
         <div class="basic-text fs25 pl40 white">&emsp;&emsp;Web & Cloud</div>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Angular 2, Django, Amazon Web Services, ASP MVC.'|pl65 }} {% br 2 %}
+
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="skills_tech_webcloud_cv">
+                <li>Angular 2, Django, Amazon Web Services, ASP MVC.
+                </li>
+            </ul>
         </div>
 
+        <br>
         <div class="basic-text fs25 pl40 white">&emsp;&emsp;Editing</div>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).'|pl65 }} {% br 4 %}
+
+
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="skills_tech_editing_cv">
+                <li>Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).
+                </li>
+            </ul>
         </div>
 
 
+        {% br 4 %}
         {#        E D U C A T I O N#}
 
         <div class="fs30 work pl40" id="education_cv">
@@ -100,11 +127,22 @@
             <span class="it">(Dec 2016 - Jan 2018)</span>
         </div>
         {#        {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}#}
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ '"Yahalom" honor of excellency'|pl65 }} {% br 2 %}
-            > {{ 'Numerous projects comprising database, business logic,<br>'|pl65 }} {{ 'web, cloud deployment and GUI.'|ind }} {% br 2 %}
-            > {{ 'Average grade: 96.2'|pl65 }}
+
+
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="education_sela_cv">
+                <li>"Yahalom" honor of excellency</li>
+                <li>Numerous projects comprising database, business logic, web, cloud deployment and GUI.</li>
+                <li>Average grade: 96.2</li>
+            </ul>
         </div>
+
+
+        {#        <div class="basic-text fs23 mr200 pl40">#}
+        {#            > {{ '"Yahalom" honor of excellency'|pl65 }} {% br 2 %}#}
+        {#            > {{ 'Numerous projects comprising database, business logic,<br>'|pl65 }} {{ 'web, cloud deployment and GUI.'|ind }} {% br 2 %}#}
+        {#            > {{ 'Average grade: 96.2'|pl65 }}#}
+        {#        </div>#}
 
         {% br 3 %}
 
@@ -114,14 +152,25 @@
             <span class="white">Relevant courses, Ben-Gurion Uni.</span>
             <span class="it">(2015-2016)</span>
         </div>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Differential and Integral Calculus I.'|pl65 }} {% br 2 %}
-            > {{ 'Linear Algebra I.'|pl65 }} {% br 2 %} > {{ 'Logic I.'|pl65 }}
+
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="education_bgu_cv">
+                <li>Differential and Integral Calculus I.</li>
+                <li>Linear Algebra I</li>
+                <li>Logic I.</li>
+            </ul>
         </div>
+
+
+        {#        #}
+        {#        <div class="basic-text fs23 mr200 pl40">#}
+        {#            > {{ 'Differential and Integral Calculus I.'|pl65 }} {% br 2 %}#}
+        {#            > {{ 'Linear Algebra I.'|pl65 }} {% br 2 %} > {{ 'Logic I.'|pl65 }}#}
+        {#        </div>#}
         {% br 3 %}
 
         {#        > J E R U S A L E M#}
-        <div class="basic-text fs25 pl40">
+        <div class="basic-text fs25 pl40 mr200">
 			<span class="white">
 				Classical Composition and Orchestration, Jerusalem Academy of Music
 			</span>
@@ -138,13 +187,24 @@
         </div>
         {#        {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text it' id='military_cv' %}#}
         <br>
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Pianist, arranger and producer in IDF Military Band.'|pl65 }} {% br 2 %}
-            > {{ 'Poros Piano Academy 1st prize winner,<br>'|pl65 }} {{ 'piano duo competition with Guy Pardo (2012, Greece).'|ind }} {% br 2 %}
-            > {{ 'Music Fest Perugia 2nd prize,<br>'|pl65 }} {{ 'piano concerto competition (2010, Italy).'|ind }}
-            {% br 4 %}
+
+
+        <div class="basic-text fs23 mr400">
+            <ul class="my-ul" id="military_list_cv">
+                <li>Pianist, arranger and producer in IDF Military Band.</li>
+                <li>Poros Piano Academy 1st prize winner, piano duo competition with Guy Pardo (2012, Greece).</li>
+                <li>Music Fest Perugia 2nd prize, piano concerto competition (2010, Italy).</li>
+            </ul>
         </div>
 
+
+        {#        <div class="basic-text fs23 mr200 pl40">#}
+        {#            > {{ 'Pianist, arranger and producer in IDF Military Band.'|pl65 }} {% br 2 %}#}
+        {#            > {{ 'Poros Piano Academy 1st prize winner,<br>'|pl65 }} {{ 'piano duo competition with Guy Pardo (2012, Greece).'|ind }} {% br 2 %}#}
+        {#            > {{ 'Music Fest Perugia 2nd prize,<br>'|pl65 }} {{ 'piano concerto competition (2010, Italy).'|ind }}#}
+        {#        </div>#}
+
+        {% br 4 %}
 
         {#        L A N G U A G E S#}
 
@@ -153,12 +213,18 @@
         </div>
 
         {#        {% work_indented 'Languages'|turq id='languages_cv' %} <br>#}
-        <div class="basic-text fs23 mr200 pl40">
-            > {{ 'Hebrew - native.'|pl65 }} {% br 2 %}
-            > {{ 'English – Bilingual fluency (speaking, writing, reading).'|pl65 }} {% br 2 %}
-            > {{ 'German – Beginner.'|pl65 }}
-            {% br 3 %}
+
+
+        <div class="basic-text fs23 mr300">
+            <ul class="my-ul" id="languages_list_cv">
+                <li>Hebrew - native.</li>
+                <li>English – Bilingual fluency (speaking, writing, reading).</li>
+                <li>German – Beginner.</li>
+            </ul>
         </div>
+
+
+        {% br 3 %}
 
 
         {#        C O N T A C T#}
@@ -169,8 +235,7 @@
         <div class="fs30 work pl40" id="contact_cv">
             <span class="download-link turquoise">Contact</span>
         </div>
-
-        {#        {% work_indented 'Contact'|turq id='contact_cv' %}#}
+        {% br 1 %}
 
         <div class="basic-text fs23 white mr200 pl65">
             You're welcome to email me at
@@ -197,6 +262,9 @@
             Thank you.
         </div>
 
+        <div class="fs35">
+            {% lorem %}
+        </div>
 
     </div>
     <script type="module" src="{% static 'cv/cv.js' %}"></script>
