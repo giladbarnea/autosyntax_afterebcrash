@@ -16,7 +16,7 @@
         <div class="basic-text mt25">For example:</div>
         <div class="monospace pl40 mt20">list milk eggs nutella</div>
         <div class="basic-text mt25">becomes</div>
-        <div class="code-block fs0 pl40 mt20">
+        <div class="monospace-bg fs0 pl40 mt20">
             <span class="fs25 code-literal">[</span>
             <span class="fs25 str">'milk'</span>
             <span class="fs25 kept">, </span>
@@ -25,11 +25,23 @@
             <span class="fs25 str">'nutella'</span>
             <span class="fs25 code-literal">]</span>
         </div>
-        {#        {% list_block 'milk' 'eggs' 'nutella' %}#}
         {% br 3 %}
         <div class="basic-text mt25">Similarly,</div>
         <div class="monospace pl40 mt20">dict meaning 42 happy pizza</div>
-        {% dict_block 'meaning' '42'|n 'happy' 'pizza' %}
+
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs25 code-literal"> {</span>
+            <span class="fs25 str">'meaning'</span>
+            <span class="fs25 code-literal">: </span>
+            <span class="fs25 int">42</span>
+            <span class="fs25 kept">, </span>
+            <span class="fs25 str">'happy'</span>
+            <span class="fs25 code-literal">: </span>
+            <span class="fs25 str">'pizza'</span>
+            <span class="fs25 code-literal">}</span>
+        </div>
+
+
         {% br 7 %}
     </div>
     {#        C L A S S E S#}
@@ -40,31 +52,33 @@
     <div class="fs25 mr400">
         <div class="monospace pl40 mt20">class Dog Animal init fluffy .True args</div>
         <div class="basic-text mt25">turns into ></div>
-        {#    {% basic_text "turns into >" %}#}
-        <div class="code-block pl40 mt20">
-            {{ "class "|k }}
-            {{ "Dog(Animal):"|cl }}
-            {{ "<br>"|cb:2 }}
 
-            {{ "def "|k }}
-            {{ "__init__"|m }}
-            {{ "("|cl }}
-            {{ "self"|self }}
-            {{ ", "|k }}
-            {{ "fluffy="|cl }}
-            {{ "True, "|k }}
-            {{ "*args):"|cl }}
-            {{ "<br>"|cb:4 }}
 
-            {{ "self"|self }}
-            {{ ".fluffy = fluffy"|cl }}
-            {{ "<br>"|cb:4 }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs25 kept">class </span>
+            <span class="fs25 code-literal">Dog(Animal):</span>
+            <span class="fs32"><br>&emsp;&emsp;</span>
 
-            {{ "super"|sup }}
-            {{ "()."|cl }}
-            {{ "__init__"|m }}
-            {{ "()"|cl }}
+            <span class="fs25 kept">def </span>
+            <span class="fs25 magic">__init__</span>
+            <span class="fs25 code-literal">(</span>
+            <span class="fs25 self">self</span>
+            <span class="fs25 kept">, </span>
+            <span class="fs25 code-literal">fluffy=</span>
+            <span class="fs25 kept">True, </span>
+            <span class="fs25 code-literal">*args):</span>
+            <span class="fs32"><br>&emsp;&emsp;&emsp;&emsp;</span>
+
+            <span class="fs25 self">self</span>
+            <span class="fs25 code-literal">.fluffy = fluffy</span>
+            <span class="fs32"><br>&emsp;&emsp;&emsp;&emsp;</span>
+
+            <span class="fs25 super">super</span>
+            <span class="fs25 code-literal">().</span>
+            <span class="fs25 magic">__init__</span>
+            <span class="fs25 code-literal">()</span>
         </div>
+
 
         <br>
         <div class="basic-text mt25">How much time would it take you to type the end result?</div>
@@ -84,24 +98,25 @@
             Given:
         </div>
         {#    {% basic_text 'Variables.'|white '<br>Given:' %}#}
-        <div class="code-block pl40 mt20">
-            {{ 'wish = '|cl }}
-            {{ "'done'"|string }}
+        <div class="monospace-bg pl40 mt20">
+            <span class="code-literal">wish = </span>
+            <span class="str">'done'</span>
         </div>
         {#    V A R I A B L E S#}
         <div class="basic-text mt25">then</div>
         <div class="monospace pl40 mt20">i_wish = str I got more things .wish</div>
 
-        <div class="code-block pl40 mt20">
-            {{ 'i_wish = '|cl }}
-            {{ "f'I got more things {"|string }}
-            {{ 'wish'|cl }}
-            {{ "}'"|string }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs25 code-literal">i_wish = </span>
+            <span class="fs25 str">f'I got more things {</span>
+            <span class="fs25 code-literal">wish</span>
+            <span class="fs25 str">}'</span>
         </div>
+
 
         <div class="basic-text mt25">
             thanks to the
-            <span class="monospace pl40 mt20-bg it turquoise">.</span>
+            <span class="monospace-bg mt20 it turquoise">.</span>
             preceding "wish".<br>
             Did you like that f-string?
             <span class="download-link turquoise">autosyntax</span>
@@ -114,58 +129,59 @@
         <div class="basic-text mt25 white">Inline methods:</div>
         <div class="monospace pl40 mt20">for range len factories</div>
 
-        <div class="code-block pl40 mt20">
-            {{ 'for '|k }}
-            {{ 'factory '|cl }}
-            {{ 'in '|k }}
-            {{ 'range'|sup }}
-            {{ '('|cl }}
-            {{ 'len'|sup }}
-            {{ '(factories)):'|cl }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs25 kept">for </span>
+            <span class="fs25 code-literal">factory </span>
+            <span class="fs25 kept">in </span>
+            <span class="fs25 super">range</span>
+            <span class="fs25 code-literal">(</span>
+            <span class="fs25 super">len</span>
+            <span class="fs25 code-literal">(factories)):</span>
         </div>
         {% br 3 %}(
         {#        L I S T  C O M P R E H E N S I O N S#}
         <div class="basic-text mt25 white">List comprehensions:</div>
-        {#    {% basic_text_white 'List comprehensions:' %}#}
         <div class="monospace pl40 mt20">listcomp print letters</div>
 
-        <div class="code-block pl40 mt20">
-            {{ '['|cl }}
-            {{ 'print'|sup }}
-            {{ '(letter) '|cl }}
-            {{ 'for '|k }}
-            {{ 'letter '|cl }}
-            {{ 'in '|k }}
-            {{ 'letters]'|cl }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs25 code-literal">[</span>
+            <span class="fs25 super">print</span>
+            <span class="fs25 code-literal">(letter) </span>
+            <span class="fs25 kept">for </span>
+            <span class="fs25 code-literal">letter </span>
+            <span class="fs25 kept">in </span>
+            <span class="fs25 code-literal">letters]</span>
         </div>
+
+
         {% br 3 %}
         <div class="basic-text mt25 white">Methods, with optionally typed arguments:</div>
-        {#    {% basic_text_white 'Method return and arguments typing:' %}#}
         <div class="monospace pl40 mt20">def is_easy bool autosyntax str kwargs</div>
 
-        <div class="code-block pl40 mt20">
-            {{ 'def '|k }}
-            {{ 'is_easy(autosyntax'|cl }}
-            {{ ', '|k }}
-            {{ '**kwargs):'|cl }}
-            {{ '<br>'|cb:2 }}
+        <div class="monospace-bg fs0 pl40 mt20">
+            <span class="fs25 kept">def </span>
+            <span class="fs25 code-literal">is_easy(autosyntax</span>
+            <span class="fs25 kept">, </span>
+            <span class="fs25 code-literal">**kwargs):<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
 
-            {{ '"""'|doc_bold }}
-            {{ '<br>'|cb:2 }}
+            <span class="fs25 doc bold">"""<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
 
-            {{ ':type '|doc_bold }}
-            {{ 'autosyntax: str '|string }}
-            {{ '<br>'|cb:2 }}
+            <span class="fs25 doc bold">:type </span>
+            <span class="fs25 str">autosyntax: str<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
 
-            {{ ':rtype: '|doc_bold }}
-            {{ 'bool'|string }}
-            {{ '<br>'|cb:2 }}
+            <span class="fs25 doc bold">:rtype: </span>
+            <span class="fs25 str">bool</span>
+            <span class="fs32"><br>&emsp;&emsp;</span>
 
-            {{ '"""'|doc_bold }}
-            {{ '<br>'|cb:2 }}
-            {{ '|'|span:'code-literal dark-grey' }}
+            <span class="fs25 doc bold">"""<br></span>
+            <span class="fs32">&emsp;&emsp;</span>
+            <span class="fs25 code-literal dark-grey">|</span>
 
         </div>
+
 
         {% br 2 %}
         <div class="basic-text mt25 white">And more, built with those little details in mind.</div>

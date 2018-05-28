@@ -31,7 +31,7 @@ def list_block(*args):
 			new_value.append(_span("kept fs25", ', '))
 
 	new_value.append(_span("code-literal fs25", ']'))
-	return format_html(_div('code-block fs25 pl40 mt20', ''.join(new_value)))
+	return format_html(_div('monospace-bg fs25 pl40 mt20', ''.join(new_value)))
 
 
 @register.simple_tag
@@ -51,7 +51,7 @@ def dict_block(*args):
 
 	new_value.append(_span("code-literal fs25", '}'))
 
-	return mark_safe(_div('code-block fs25 pl40 mt20', ''.join(new_value)))
+	return mark_safe(_div('monospace-bg fs25 pl40 mt20', ''.join(new_value)))
 
 
 # DONE

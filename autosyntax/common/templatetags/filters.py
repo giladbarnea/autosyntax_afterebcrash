@@ -88,7 +88,7 @@ def cb(value, tabs):
 
 @register.filter()
 def mono_bg_it(value):
-	return format_html(_span("monospace pl40 mt20-bg it", value))
+	return format_html(_span("monospace-bg pl40 mt20 it", value))
 
 
 @register.filter()
