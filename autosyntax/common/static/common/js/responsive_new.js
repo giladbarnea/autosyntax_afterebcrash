@@ -126,7 +126,7 @@ function on_resize() {
         console.log('tablet_portrait_up. w: ', w);
         tablet_portrait_resize();
     }
-    else if (w >= phone_max) {
+    else if (w <= phone_max) {
         console.log('phone_max. w: ', w);
         phone_resize();
     }
