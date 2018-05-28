@@ -46,7 +46,7 @@
                 </div>
                 <br>
 
-                <div class="pl40">
+                <div class="pl40 fs23">
                     With basic operators, arguments turn to strings.
                     <br>"Dotting" and argument denotes a variable.
                 </div>
@@ -54,7 +54,7 @@
 
 
             {#        {% basic_text_ind 'With basic operators, arguments turn to strings.<br>"Dotting" and argument denotes a variable.' %}#}
-            <div class="animation fs25">
+            <div class="animation fs23">
                 <div id="animation_1">
                     <div class="monospace pl40 mt20">list milk nutella
                         <span class="op7 ml150">
@@ -62,23 +62,37 @@
 					</span>
                     </div>
 
-                    {% list_block 'milk' 'nutella' %}
+                    <div class="monospace-bg fs0 pl40 mt20">
+                        <span class="fs23 code-literal">[</span>
+                        <span class="fs23 str">'milk'</span>
+                        <span class="fs23 kept">, </span>
+                        <span class="fs23 str">'nutella'</span>
+                        <span class="fs23 code-literal">]</span>
+                    </div>
+
 
                 </div>
                 <div id="animation_2" class="disp-none">
                     <div class="monospace pl40 mt20">list milk .nutella
-                        <span class="op7 ml150">
+                        <span class="op7 ml136">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                     </div>
-                    {% list_block 'milk' 'nutella'|cl %}
+
+                    <div class="monospace-bg fs0 pl40 mt20">
+                        <span class="fs23 code-literal">[</span>
+                        <span class="fs23 str">'milk'</span>
+                        <span class="fs23 kept">, </span>
+                        <span class="fs23 code-literal">nutella]</span>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
     <br>
     {#    >D O T T E D  FOR#}
-    <div class="basic-text mt25 fs25 mr200 pl40">
+    <div class="basic-text mt25 fs23 mr200 pl40">
         The operators which follow this rule are:<br>
         <span id="ops_list_dotted"></span>
     </div>
@@ -88,9 +102,9 @@
     {% br 3 %}
 
     {#    I N  O T H E R  C A S E S#}
-    <div class="fs25">
+    <div class="fs23">
         <div class="basic-text mt25">
-            <div class="white mr200">
+            <div class="white fs25 mr200">
                 In other cases, using a variable is much more likely than a string.
             </div>
 
@@ -103,14 +117,19 @@
         <div class="animation mr400">
             <div id="animation_3">
                 <div class="monospace pl40 mt20">for .characters
-                    <span class="op7 ml150">
+                    <span class="op7 ml136">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                 </div>
-                <div class="monospace-bg pl40 mt20">
-                    {{ 'for '|k }} {{ 'character '|cl }}
-                    {{ 'in '|k }}{{ "'characters'"|string }}{{ ':'|cl }}
+
+                <div class="monospace-bg fs0 pl40 mt20">
+                    <span class="fs23 kept">for </span>
+                    <span class="fs23 code-literal">character </span>
+                    <span class="fs23 kept">in </span>
+                    <span class="fs23 str">'characters':</span>
                 </div>
+
+
             </div>
             <div id="animation_4" class="disp-none">
                 <div class="monospace pl40 mt20">for characters
@@ -118,9 +137,14 @@
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                 </div>
-                <div class="monospace-bg pl40 mt20">
-                    {{ 'for '|k }} {{ 'character '|cl }} {{ 'in '|k }}{{ 'characters:'|cl }}
+                <div class="monospace-bg fs0 pl40 mt20">
+                    <span class="fs23 kept">for </span>
+                    <span class="fs23 code-literal">character </span>
+                    <span class="fs23 kept">in </span>
+                    <span class="fs23 code-literal">characters:</span>
                 </div>
+
+
             </div>
         </div>
 
@@ -140,23 +164,41 @@
             Note: Globally, a number is left as is by default.<br>
         </div>
     </div>
-    <div class="animation mr400 fs25">
+    <div class="animation mr400 fs23">
         <div id="animation_5">
             <div class="monospace pl40 mt20">dict when_im 64
                 <span class="op7 ml150">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
             </div>
-            {% dict_block 'when_im' '64'|n %}
+
+            <div class="monospace-bg fs0 pl40 mt20">
+                <span class="fs23 code-literal"> {</span>
+                <span class="fs23 str">'when_im'</span>
+                <span class="fs23 code-literal">: </span>
+                <span class="fs23 int">64</span>
+                <span class="fs23 code-literal">}</span>
+            </div>
+
+
         </div>
         <div id="animation_6" class="disp-none">
 
             <div class="monospace pl40 mt20">dict when_im .64
-                <span class="op7 ml150">
+                <span class="op7 ml136">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
             </div>
-            {% dict_block 'when_im' '64' %}
+
+            <div class="monospace-bg fs0 pl40 mt20">
+                <span class="fs23 code-literal"> {</span>
+                <span class="fs23 str">'when_im'</span>
+                <span class="fs23 code-literal">: </span>
+                <span class="fs23 str">'64'</span>
+                <span class="fs23 code-literal">}</span>
+            </div>
+
+
         </div>
     </div>
 

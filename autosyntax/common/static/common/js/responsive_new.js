@@ -31,8 +31,13 @@ function big_desktop_resize() {
     set_style_to_collection('width60', 'width', 60);
     set_style_to_collection('width30', 'width', 30);
 
+    set_style_to_collection('pl30', 'paddingLeft', 30);
+
     set_style_to_collection('mr400', 'marginRight', 400);
     set_style_to_collection('mr300', 'marginRight', 300);
+
+    //PRESS TO TOGGLE .NUTELLA COMPENSATION
+    set_style_to_collection('ml136', 'marginLeft', 136);
 }
 
 function desktop_resize() {
@@ -55,8 +60,14 @@ function desktop_resize() {
     set_style_to_collection('width60', 'width', 45);
     set_style_to_collection('width30', 'width', 25);
 
+    set_style_to_collection('pl30', 'paddingLeft', 25);
+    set_style_to_collection('pl40', 'paddingLeft', 35);
+
     set_style_to_collection('mr400', 'marginRight', 200);
     set_style_to_collection('mr300', 'marginRight', 150);
+
+    //PRESS TO TOGGLE .NUTELLA COMPENSATION
+    set_style_to_collection('ml136', 'marginLeft', 139);
 }
 
 function tablet_landscape_resize() {
