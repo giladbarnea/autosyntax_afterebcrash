@@ -56,6 +56,7 @@ function big_desktop_resize() {
     // ML MARGIN LEFT
     set_style_to_collection('ml100', 'marginLeft', 100);
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
+    set_style_to_collection('ml150', 'marginLeft', 150);
     set_style_to_collection('ml136', 'marginLeft', 136);
 }
 
@@ -108,7 +109,7 @@ function desktop_resize() {
     if (filename === 'how') {
         set_style_to_collection('mr400', 'marginRight', 175);
         set_style_to_collection('mr300', 'marginRight', 125);
-        set_style_to_collection('mr200', 'marginRight', 75);
+        set_style_to_collection('mr200', 'marginRight', 100);
     }
     else {
         set_style_to_collection('mr400', 'marginRight', 200);
@@ -127,6 +128,7 @@ function desktop_resize() {
     set_style_to_collection('ml100', 'marginLeft', 100);
 
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
+    set_style_to_collection('ml150', 'marginLeft', 150);
     set_style_to_collection('ml136', 'marginLeft', 139);
 }
 
@@ -135,6 +137,10 @@ function tablet_landscape_resize() {
     document.body.style['marginLeft'] = "40px";
     document.body.style['marginRight'] = "40px";
 
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
 
     // FONT SIZE
     set_style_to_collection('fs60', 'fontSize', 40);
@@ -144,14 +150,16 @@ function tablet_landscape_resize() {
     set_style_to_collection('fs32', 'fontSize', 28);
     set_style_to_collection('fs30', 'fontSize', 22);
     set_style_to_collection('fs25', 'fontSize', 20);
-    set_style_to_collection('fs23', 'fontSize', 18);
+    if (filename === 'how') {
+        set_style_to_collection('fs23', 'fontSize', 18);
+    }
+    else {
+        set_style_to_collection('fs23', 'fontSize', 18);
+    }
     set_style_to_collection('fs20', 'fontSize', 14);
     set_style_to_collection('fs15', 'fontSize', 15);
     //
-    let filename = window.location.pathname
-        .split("/")
-        .filter(c => c.length)
-        .pop();
+
 
     // PAD-BODY
     if (filename === 'cv') {
@@ -185,6 +193,11 @@ function tablet_landscape_resize() {
         set_style_to_collection('pl65', 'paddingLeft', 50);
         set_style_to_collection('pl40', 'paddingLeft', 15);
     }
+    else if (filename === 'how') {
+        set_style_to_collection('pl65', 'paddingLeft', 50);
+        // pl 40 is the monospace code tabbing
+        set_style_to_collection('pl40', 'paddingLeft', 20);
+    }
     else {
         set_style_to_collection('pl40', 'paddingLeft', 30);
         set_style_to_collection('pl65', 'paddingLeft', 65);
@@ -198,19 +211,21 @@ function tablet_landscape_resize() {
 
     // MR MARGIN RIGHT
     if (filename === 'how') {
-
-        // set_style_to_collection('mr400', 'marginRight', 175);
-        // set_style_to_collection('mr300', 'marginRight', 125);
-        // set_style_to_collection('mr200', 'marginRight', 75);
+        set_style_to_collection('mr400', 'marginRight', 80);
+        set_style_to_collection('mr300', 'marginRight', 0);
+        //because pl40 is 20
+        set_style_to_collection('mr200', 'marginRight', 30);
     }
     else if (filename === 'cv') {
-        // BECAUSE CLASS IS JIW
+        // BECAUSE CLASS IS JIW, and pad-body is 150
         set_style_to_collection('mr400', 'marginRight', 80);
         set_style_to_collection('mr300', 'marginRight', 0);
         set_style_to_collection('mr200', 'marginRight', 60);
     }
+    // homepage
     else {
-        set_style_to_collection('mr400', 'marginRight', 60);
+        // because pad-body is 180
+        set_style_to_collection('mr400', 'marginRight', 100);
         set_style_to_collection('mr300', 'marginRight', 100);
         set_style_to_collection('mr200', 'marginRight', 60);
     }
@@ -229,7 +244,8 @@ function tablet_landscape_resize() {
     set_style_to_collection('ml100', 'marginLeft', 70);
 
     // //PRESS TO TOGGLE .NUTELLA COMPENSATION
-    // set_style_to_collection('ml136', 'marginLeft', 139);
+    set_style_to_collection('ml150', 'marginLeft', 120);
+    set_style_to_collection('ml136', 'marginLeft', 110);
 
 }
 

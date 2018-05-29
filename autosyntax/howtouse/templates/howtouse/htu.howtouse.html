@@ -12,7 +12,7 @@
             overview
         </div>
         <br>
-        <div class="basic-text mt25 white fs25">
+        <div class="basic-text mt25 white fs25 mr400">
             "Operators" tell autosyntax which type of code to generate.
         </div>
         {% br 1 %}
@@ -57,7 +57,7 @@
             <div class="animation fs23">
                 <div id="animation_1">
                     <div class="monospace pl40 mt20">list milk nutella
-                        <span class="op7 ml150">
+                        <span class="op7 ml150 fs20">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                     </div>
@@ -74,7 +74,7 @@
                 </div>
                 <div id="animation_2" class="disp-none">
                     <div class="monospace pl40 mt20">list milk .nutella
-                        <span class="op7 ml136">
+                        <span class="op7 ml136 fs20">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                     </div>
@@ -117,7 +117,7 @@
         <div class="animation mr400">
             <div id="animation_3">
                 <div class="monospace pl40 mt20">for .characters
-                    <span class="op7 ml136">
+                    <span class="op7 ml136 fs20">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                 </div>
@@ -133,7 +133,7 @@
             </div>
             <div id="animation_4" class="disp-none">
                 <div class="monospace pl40 mt20">for characters
-                    <span class="op7 ml150">
+                    <span class="op7 ml150 fs20">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
                 </div>
@@ -167,7 +167,7 @@
     <div class="animation mr400 fs23">
         <div id="animation_5">
             <div class="monospace pl40 mt20">dict when_im 64
-                <span class="op7 ml150">
+                <span class="op7 ml150 fs20">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
             </div>
@@ -185,7 +185,7 @@
         <div id="animation_6" class="disp-none">
 
             <div class="monospace pl40 mt20">dict when_im .64
-                <span class="op7 ml136">
+                <span class="op7 ml136 fs20">
 						PRESS TO TOGGLE EXAMPLE
 					</span>
             </div>
@@ -271,18 +271,18 @@
         operators
     </div>
     {#    >D E F#}
-    <div class="basic-text mt25 fs25 white mr200">
+    <div class="basic-text mt25 fs25 white mr400">
 		<span class="pl40 it">
 		<span class="monospace-bg">def</span>
 		</span>
     </div>
     <br>
-    <div class="mr200">
+    <div class="mr400">
         <div class="basic-text mt20 fs23">
             <ul class="my-ul" id="complex_ops_ul1">
                 <li>1st argument is the method's name</li>
                 <li>2nd+ arguments are the method's parameters</li>
-                <li>Dotting an argument makes it the default value of the previous one</li>
+                <li class="jiw">Dotting an argument makes it the default value of the previous one</li>
                 <li>A built in method sets the type of the previous argument</li>
             </ul>
         </div>
@@ -293,13 +293,14 @@
         <div class="basic-text mt25 fs23">
             <ul class="my-ul" id="complex_ops_ul2">
                 <li>'args' and 'kwargs' are translated to *args and **kwargs</li>
-                <li>If indentation is found, a 'self' is added as first parameter</li>
+                <li class="jiw">If indentation is found, a 'self' is added as first parameter</li>
                 <li>Magic methods are wrapped in __dunder__</li>
             </ul>
         </div>
     </div>
     {% br 2 %}
-    <div class="mr400">
+    {#    KEEP 200 BECAUSE LONG#}
+    <div class="mr200">
         <div class="monospace pl40 mt20 fs23">def get_age int dob int 1900 earthyears .True args kwargs</div>
 
         <div class="monospace-bg fs0 pl40 mt20">
@@ -343,7 +344,7 @@
 		</span>
     </div>
 
-    <div class="basic-text mt25 fs23 mr200">
+    <div class="basic-text mt25 fs23 mr400">
         <ul class="my-ul" id="complex_ops_ul3">
             <li>1st argument is the class's name</li>
             <li>2nd+ arguments are its super classes</li>
@@ -355,7 +356,7 @@
     <div class="basic-text mt25 white fs23 pl40">
         fun stuff:
     </div>
-    <div class="basic-text mt25 fs23 mr200">
+    <div class="basic-text mt25 fs23 mr400">
         <ul class="my-ul" id="complex_ops_ul4">
             <li>'init' arguments are automatically set as data members</li>
             <li>If any super class was typed, its __super__ is called</li>
@@ -364,6 +365,7 @@
     </div>
 
     {% br 2 %}
+    {#    KEEP 200 BECAUSE LONG#}
     <div class="mr200">
         <div class="monospace pl40 mt20 fs23">class Earth Planet Starstuff init coords tuple habitable .True args</div>
 
