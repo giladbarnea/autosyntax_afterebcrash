@@ -150,12 +150,8 @@ function tablet_landscape_resize() {
     set_style_to_collection('fs32', 'fontSize', 28);
     set_style_to_collection('fs30', 'fontSize', 22);
     set_style_to_collection('fs25', 'fontSize', 20);
-    if (filename === 'how') {
-        set_style_to_collection('fs23', 'fontSize', 18);
-    }
-    else {
-        set_style_to_collection('fs23', 'fontSize', 18);
-    }
+    set_style_to_collection('fs23', 'fontSize', 18);
+
     set_style_to_collection('fs20', 'fontSize', 14);
     set_style_to_collection('fs15', 'fontSize', 15);
     //
@@ -169,15 +165,15 @@ function tablet_landscape_resize() {
         set_style_to_collection('pad-body', 'paddingLeft', 180);
     }
     //
-    // set_style_to_collection('top88', 'top', "86%");
-    // set_style_to_collection('top84', 'top', "81%");
+    set_style_to_collection('top88', 'top', "86%");
+    set_style_to_collection('top84', 'top', "81%");
     //
 
     // HEIGHT WIDTH
-    // set_style_to_collection('height60', 'height', 45);
+    set_style_to_collection('height60', 'height', 40);
     set_style_to_collection('height30', 'height', 25);
     //
-    // set_style_to_collection('width60', 'width', 45);
+    set_style_to_collection('width60', 'width', 40);
     set_style_to_collection('width30', 'width', 25);
     //
 
