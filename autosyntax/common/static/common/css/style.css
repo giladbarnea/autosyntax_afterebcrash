@@ -232,6 +232,15 @@ body {
     /*transition: font-size 500ms, color 500ms;*/
 }
 
+.btiny {
+    list-style: outside url('/static/common/img/NOTSURE/tiny.png');
+}
+
+.jiw {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .sidebar-item:hover,
 .light-grey {
     color: #dfdfdf;

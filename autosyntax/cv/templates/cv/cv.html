@@ -1,270 +1,256 @@
 {% extends 'common/common.layout.html' %}
 {% load staticfiles %}{% load tags %}{% load filters %}
 {% block content %}
-    <div id="cv_content">
-        <div class="space fs60 pt20">Gilad Barnea - CV</div>
+<div id="cv_content">
+    <div class="space fs60 pt20">Gilad Barnea - CV</div>
+    {% br 2 %}
+    {# {% page_title 'Gilad Barnea - CV' %}#}
+    <div class="fs30 work pl30" id="overview_cv">
+        <span class="turquoise">Overview</span>
+    </div>
+
+    {# O V E R V I E W#}
+    <div class="basic-text mt25 fs23 mr400">
+        <ul class="pl40 btiny" id="overview_cv_list">
+            <li class="pl30">I graduated a 1200hr-long Full-Stack Dev. studies at College of Sela.</li>
+            <li class="pl30 pt25">I am passionate, curious and self-disciplined. It works well together.</li>
+            <li class="pl30 pt25">I’m looking for a job at which I will both be challenged, and be able to
+                                  contribute
+                                  significantly.
+            </li>
+        </ul>
+    </div>
+
+
+    {% br 4 %}
+
+
+    {# E X P E R I E N C E#}
+    <div class="fs30 work" id="experience_cv">
+        <span class="turquoise">Experience</span>
+    </div>
+    <div class="white basic-text mt25 fs25 pl65">my story with {{ 'autosyntax'|it }}</div>
+    <br>
+    <div class="basic-text mt25 fs23 jiw mr400">
+        I don't count the projects I did in college as real-world experience;
+        {{ "autosyntax"|it }} is an actual product that is used by actual users.
+        <span class="fs35"><br><br></span>
+        It's evolving through their continuous feedback, and new releases come
+        out on a regular basis.
+        <span class="fs35"><br><br></span>
+        It took about 4 months to get it stable for release, in which
+        time I encountered challenges not found in school exercises;
+        <span class="fs15"><br><br></span>
+        Taking many libraries, which weren't built to work together, and make them work together;
+        {# Making many different libraries, some lacking documentation (or worse - documentated in C)#}
+        {# fs25 together organically;#}
+        <span class="fs15"><br><br></span>
+        Letting go of features I thought were good, in favor of features users actually needed;
+        <span class="fs15"><br><br></span>
+        And wrapping the whole thing in an intuitive, attractive way.
+        <span class="fs15"><br><br></span>
+        I enjoyed every minute of it, and still am.
+
+    </div>
+    {% br 4 %}
+
+
+    {# S K I L L S#}
+    <div class="fs30 work" id="skills_cv">
+        <span class="turquoise">Skills</span>
+    </div>
+    {# > L A N G U A G E S#}
+    <div class="basic-text mt25 white fs25 pl40">Languages</div>
+    <div class="basic-text jiw mt25 fs23 mr400">
+        <ul class="pl40 btiny" id="skills_languages_cv">
+            <li class="pl30">Python, C#, SQL, Javascript (ES5 & 6), Typescript, HTML5, CSS3, Autohotkey.</li>
+        </ul>
+    </div>
+
+
+    {% br 1 %}
+    {# > T E C H N O L O G I E S#}
+    <div class="basic-text mt25 white fs25 pl40">
+        Technologies
         {% br 2 %}
-        {#        {% page_title 'Gilad Barnea - CV' %}#}
-        <div class="fs30 work pl30" id="overview_cv">
-            <span class="turquoise">Overview</span>
+        &emsp;&emsp;python
+    </div>
+
+    <div class="mr500">
+        <div class="basic-text mt25 fs23">
+            <ul class="my-ul" id="skills_tech_py_cv">
+                <li>Pandas, Numpy, Django, PyQt (4 & 5), AsyncIO, Google APIs, SQLite.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="basic-text mt25 fs25 pl40 white">&emsp;&emsp;.NET</div>
+        <div class="basic-text mt25 fs23">
+            <ul class="my-ul" id="skills_tech_net_cv">
+                <li>Entity Framework, Linq, Universal Windows Platform (UWP), Microsoft SQL Server Management
+                    Studio.
+                </li>
+            </ul>
         </div>
 
-        {#        O V E R V I E W#}
-        <div class="basic-text mt25 fs23 mr400">
-            <ul class="pl40" id="overview_cv_list"
-                style="list-style: outside url(static/common/img/NOTSURE/tiny.png);">
-                <li class="pl30">I graduated a 1200hr-long Full-Stack Dev. studies at College of Sela.</li>
+        <br>
+        <div class="basic-text mt25 fs25 pl40 white">&emsp;&emsp;Web & Cloud</div>
 
-                <li class="pl30 pt25">I am passionate, curious and self-disciplined. It works well together.</li>
-                <li class="pl30 pt25">I’m looking for a job at which I will both be challenged, and be able to
-                                      contribute
-                                      significantly.
+        <div class="basic-text mt25 fs23">
+            <ul class="my-ul" id="skills_tech_webcloud_cv">
+                <li>Angular 2, Django, Amazon Web Services, ASP MVC.
+                </li>
+            </ul>
+        </div>
+
+        <br>
+        <div class="basic-text mt25 fs25 pl40 white">&emsp;&emsp;Editing</div>
+
+
+        <div class="basic-text mt25 fs23">
+            <ul class="my-ul" id="skills_tech_editing_cv">
+                <li>Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).
                 </li>
             </ul>
         </div>
 
 
-        {#        <div class="basic-text mt25 fs23 mr200">#}
-        {#            <ul class="my-ul" id="overview_cv_list">#}
-        {#                <li>I graduated a 1200hr long Full-Stack Developer studies at College of Sela.</li>#}
-        {#                <li>I am passionate, self-disciplined and a quick learner. I get things done.</li>#}
-        {#                <li>I am passionate, curious and self-disciplined. It works well together.</li>#}
-        {#                <li>I’m looking for a job at which I will both be challenged, and be able to contribute significantly.#}
-        {#                </li>#}
-        {#            </ul>#}
-        {#        </div>#}
-
         {% br 4 %}
+        {# E D U C A T I O N#}
 
-
-        {#        E X P E R I E N C E#}
-        <div class="fs30 work pl40" id="experience_cv">
-            <span class="turquoise">Experience</span>
+        <div class="fs30 work" id="education_cv">
+            <span class="turquoise">Academic Education</span>
         </div>
-        {#        {% work_indented 'Experience'|turq id='experience_cv' %}#}
-        <div class="white basic-text mt25 fs25 pl65">my story with {{ 'autosyntax'|it }}</div>
-        <br>
-        <div class="basic-text mt25 fs23 mr400 pl40">
-            I don't count the projects I did in college as real-world experience;
-            {{ "autosyntax"|it }} is an actual product that is used by actual users.
-            {% br_25 %}
-            It's evolving through their continuous feedback, and new releases come
-            out on a regular basis.
-            {% br_25 %}
-            It took about 4 months to get it stable for release, in which
-            time I encountered challenges not found in school exercises;
-            {% br_15 %}
-            Taking many libraries, which weren't built to work together, and make them work together;
-            {#            Making many different libraries, some lacking documentation (or worse - documentated in C)#}
-            {#            fs25 together organically;#}
-            {% br_15 %}
-            Letting go of features I thought were good, in favor of features users actually needed;
-            {% br_15 %}
-            And wrapping the whole thing in an intuitive, attractive way.
-            {% br 3 %}
-            I enjoyed every minute of it, and still am.
+    </div>
 
-        </div>
-        {#        {% basic_text_ind_mright200 "I don't count the projects I did in college as real-world experience;" "autosyntax"|it " is an actual product that is used by actual users.<br><br>It's evolving through their continuous feedback, and new releases come out on a regular basis.<br><br>It took about 4 months to get it stable for release, in which time I encountered challenges not found in school exercises; <br>Making many different libraries, some lacking documentation (or worse - documentated in C) fs25 together organically; <br>Letting go of features I liked in favor of features users actually needed;<br>And wrapping the whole thing in a way that makes the users want to use it.<br><br>I enjoyed every minute of it, and still am." %}#}
-        {% br 4 %}
+    {# > F U L L S T A C K#}
+    <div class="basic-text mt25 fs25 pl40">
+        <span class="white">Full-Stack Developer Certificate, Sela</span>
+        <span class="it fs23">(Dec 2016 - Jan 2018)</span>
+    </div>
+    {# {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}#}
+
+    <div class="basic-text mt25 fs23 mr400">
+        <ul class="my-ul" id="education_sela_cv">
+            <li>"Yahalom" honor of excellency</li>
+            <li>Numerous projects comprising database, business logic, web, cloud deployment and GUI.</li>
+            <li>Average grade: 96.2</li>
+        </ul>
+    </div>
 
 
-        {#        S K I L L S#}
-        <div class="fs30 work pl40" id="skills_cv">
-            <span class="turquoise">Skills</span>
-        </div>
-        {#        > L A N G U A G E S#}
-        <div class="basic-text mt25 white fs25 pl40">Languages</div>
-        <div class="basic-text mt25 fs23 mr400">
-            <ul class="my-ul" id="skills_languages_cv">
-                <li>Python, C#, SQL, Javascript (ES5 & 6), Typescript, HTML5, CSS3, Autohotkey.</li>
-            </ul>
-        </div>
+    {% br 3 %}
 
 
-        {% br 1 %}
-        {#        > T E C H N O L O G I E S#}
-        <div class="basic-text mt25 white fs25 pl40">
-            Technologies
-            {% br 2 %}
-            &emsp;&emsp;python
-        </div>
+    {# > B E N G U R I O N#}
+    <div class="basic-text mt25 fs25">
+        <span class="white">Relevant courses, Ben-Gurion Uni.</span>
+        <span class="it fs23">(2015-2016)</span>
+    </div>
 
-        <div class="mr500">
-            <div class="basic-text mt25 fs23">
-                <ul class="my-ul" id="skills_tech_py_cv">
-                    <li>Pandas, Numpy, Django, PyQt (4 & 5), AsyncIO, Google APIs, SQLite.</li>
-                </ul>
-            </div>
-            <br>
-            <div class="basic-text mt25 fs25 pl40 white">&emsp;&emsp;.NET</div>
-            <div class="basic-text mt25 fs23">
-                <ul class="my-ul" id="skills_tech_net_cv">
-                    <li>Entity Framework, Linq, Universal Windows Platform (UWP), Microsoft SQL Server Management
-                        Studio.
-                    </li>
-                </ul>
-            </div>
-
-            <br>
-            <div class="basic-text mt25 fs25 pl40 white">&emsp;&emsp;Web & Cloud</div>
-
-            <div class="basic-text mt25 fs23">
-                <ul class="my-ul" id="skills_tech_webcloud_cv">
-                    <li>Angular 2, Django, Amazon Web Services, ASP MVC.
-                    </li>
-                </ul>
-            </div>
-
-            <br>
-            <div class="basic-text mt25 fs25 pl40 white">&emsp;&emsp;Editing</div>
+    <div class="basic-text mt25 fs23 mr400">
+        <ul class="my-ul" id="education_bgu_cv">
+            <li>Differential and Integral Calculus I.</li>
+            <li>Linear Algebra I</li>
+            <li>Logic I.</li>
+        </ul>
+    </div>
 
 
-            <div class="basic-text mt25 fs23">
-                <ul class="my-ul" id="skills_tech_editing_cv">
-                    <li>Photoshop, Adobe Premiere (video), Steinberg Cubase (music production).
-                    </li>
-                </ul>
-            </div>
+    {% br 3 %}
 
-
-            {% br 4 %}
-            {#        E D U C A T I O N#}
-
-            <div class="fs30 work pl40" id="education_cv">
-                <span class="turquoise">Academic Education</span>
-            </div>
-        </div>
-
-        {#        > F U L L  S T A C K#}
-        <div class="basic-text mt25 fs25 pl40">
-            <span class="white">Full-Stack Developer Certificate, Sela</span>
-            <span class="it fs23">(Dec 2016 - Jan 2018)</span>
-        </div>
-        {#        {% basic_text_ind 'Full-Stack Developer Certificate, Sela'|white '(Dec 2016 - Jan 2018)'|it %}#}
-
-        <div class="basic-text mt25 fs23 mr400">
-            <ul class="my-ul" id="education_sela_cv">
-                <li>"Yahalom" honor of excellency</li>
-                <li>Numerous projects comprising database, business logic, web, cloud deployment and GUI.</li>
-                <li>Average grade: 96.2</li>
-            </ul>
-        </div>
-
-
-        {% br 3 %}
-
-
-        {#        > B E N  G U R I O N#}
-        <div class="basic-text mt25 fs25 pl40">
-            <span class="white">Relevant courses, Ben-Gurion Uni.</span>
-            <span class="it fs23">(2015-2016)</span>
-        </div>
-
-        <div class="basic-text mt25 fs23 mr400">
-            <ul class="my-ul" id="education_bgu_cv">
-                <li>Differential and Integral Calculus I.</li>
-                <li>Linear Algebra I</li>
-                <li>Logic I.</li>
-            </ul>
-        </div>
-
-
-        {% br 3 %}
-
-        {#        > J E R U S A L E M#}
-        <div class="basic-text mt25 fs25 pl40 mr200">
+    {# > J E R U S A L E M#}
+    <div class="basic-text mt25 fs25 mr200">
 			<span class="white">
 				Classical Composition and Orchestration, Jerusalem Academy of Music
 			</span>
-            <span class="it fs23">(2014-2015)</span>
-        </div>
-
-        {% br 4 %}
-
-
-        {#        M I L I T A R Y#}
-
-        <div class="fs30 work pl40" id="military_cv">
-            <span class="download-link turquoise">Military service - Military Band</span>
-        </div>
-        {#        {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text mt25 it' id='military_cv' %}#}
-        <br>
-
-
-        <div class="basic-text mt25 fs23 mr500">
-            <ul class="my-ul" id="military_list_cv">
-                <li>Pianist, arranger and producer in IDF Military Band.</li>
-                <li>Poros Piano Academy 1st prize winner, piano duo competition with Guy Pardo (2012, Greece).</li>
-                <li>Music Fest Perugia 2nd prize, piano concerto competition (2010, Italy).</li>
-            </ul>
-        </div>
-
-
-        {% br 4 %}
-
-        {#        L A N G U A G E S#}
-
-        <div class="fs30 work pl40" id="languages_cv">
-            <span class="turquoise">Languages</span>
-        </div>
-
-        {#        {% work_indented 'Languages'|turq id='languages_cv' %} <br>#}
-
-
-        <div class="basic-text mt25 fs23 mr300">
-            <ul class="my-ul" id="languages_list_cv">
-                <li>Hebrew - native.</li>
-                <li>English – Bilingual fluency (speaking, writing, reading).</li>
-                <li>German – Beginner.</li>
-            </ul>
-        </div>
-
-
-        {% br 3 %}
-
-
-        {#        C O N T A C T#}
-        <span class="basic-text mt25 fs23 center" id="email_msg" style="opacity:0">
-					</span>
-        {% br 2 %}
-
-        <div class="fs30 work pl40" id="contact_cv">
-            <span class="download-link turquoise">Contact</span>
-        </div>
-        {% br 1 %}
-
-        <div class="basic-text mt25 fs23 white mr200 pl65">
-            You're welcome to email me at
-            <a id="email"
-               class="download-link basic-text mt25 white no-decor"
-               href="mailto:giladbrn@gmail.com">giladbrn@gmail.com</a>.
-            {% br 2 %}
-            Here is my
-            <a id="linkedin"
-               class="download-link basic-text mt25 white underline">
-                Linkedin profile</a>.
-
-            {% br 2 %}
-            Phone number:
-            <span id="phone"
-                  class="download-link basic-text mt25 white underline">(+972)508675854</span>
-
-            {% br 2 %}
-            And for mainly pictures of my nephews:
-            <a id="fb"
-               class="download-link basic-text mt25 white underline">
-                facebook</a>.
-        </div>
-        {% br 2 %}
-        <div class="basic-text mt25 fs25 white pl40">
-            Thank you.
-        </div>
-
-        <div class="fs35 op0">
-            {% lorem %}
-        </div>
-
+        <span class="it fs23">(2014-2015)</span>
     </div>
-    <script type="module" src="{% static 'cv/cv.js' %}"></script>
+
+    {% br 4 %}
+
+
+    {# M I L I T A R Y#}
+
+    <div class="fs30 work" id="military_cv">
+        <span class="turquoise">Military service - Military Band</span>
+    </div>
+    {# {% work_indented 'Military service - Military Band'|turq '(2010 - 2013)'|span:'basic-text mt25 it' id='military_cv' %}#}
+    <br>
+
+
+    <div class="basic-text mt25 fs23 mr500">
+        <ul class="my-ul" id="military_list_cv">
+            <li>Pianist, arranger and producer in IDF Military Band.</li>
+            <li>Poros Piano Academy 1st prize winner, piano duo competition with Guy Pardo (2012, Greece).</li>
+            <li>Music Fest Perugia 2nd prize, piano concerto competition (2010, Italy).</li>
+        </ul>
+    </div>
+
+
+    {% br 4 %}
+
+    {# L A N G U A G E S#}
+
+    <div class="fs30 work" id="languages_cv">
+        <span class="turquoise">Languages</span>
+    </div>
+
+    {# {% work_indented 'Languages'|turq id='languages_cv' %} <br>#}
+
+
+    <div class="basic-text mt25 fs23 mr300">
+        <ul class="my-ul" id="languages_list_cv">
+            <li>Hebrew - native.</li>
+            <li>English – Bilingual fluency (speaking, writing, reading).</li>
+            <li>German – Beginner.</li>
+        </ul>
+    </div>
+
+
+    {% br 3 %}
+
+
+    {# C O N T A C T#}
+    <span class="basic-text mt25 fs23 center" id="email_msg" style="opacity:0">
+					</span>
+    {% br 2 %}
+
+    <div class="fs30 work" id="contact_cv">
+        <span class="turquoise">Contact</span>
+    </div>
+    {% br 1 %}
+
+    <div class="basic-text mt25 fs23 white mr200 pl65">
+        You're welcome to email me at
+        <a id="email"
+           class="download-link basic-text mt25 white no-decor"
+           href="mailto:giladbrn@gmail.com">giladbrn@gmail.com</a>.
+        {% br 2 %}
+        Here is my
+        <a id="linkedin"
+           class="download-link basic-text mt25 white underline">
+            Linkedin profile</a>.
+
+        {% br 2 %}
+        Phone number:
+        <span id="phone"
+              class="download-link basic-text mt25 white underline">(+972)508675854</span>
+
+        {% br 2 %}
+        And for mainly pictures of my nephews:
+        <a id="fb"
+           class="download-link basic-text mt25 white underline">
+            facebook</a>.
+    </div>
+    {% br 2 %}
+    <div class="basic-text mt25 fs25 white pl40">
+        Thank you.
+    </div>
+
+    <div class="fs35 op0">
+        {% lorem %}
+    </div>
+
+</div>
+<script type="module" src="{% static 'cv/cv.js' %}"></script>
 {% endblock %}
