@@ -12,8 +12,12 @@
 <script src="{% static 'common/js/continue_arrow.js' %}"></script>
 <div id="all" class="no-select op0">
     <div class="grid-container">
+        {#    H A M B U R G E R #}
+        <div id="hamburger" class="disp-none">
+            {% include 'common/hamburger.html' %}
+            <br>
+        </div>
         <div id="grid_0" class="grid-item grid-0">
-
             {# C O N S O L E  M E N U#}
             <img src="{% static '/common/img/console_menu.svg' %}"
                  id="console_menu"
@@ -53,15 +57,15 @@
         </svg>
 
 
-        <div class="grid-item grid-1">
-            <div class="pad-body" id="pad_body">
-                {# B L O C K  C O N T E N T#}
-                {% block content %}
-                {% endblock %}
-                {# E N D  B L O C K  C O N T E N T#}
-            </div>
-            {#    end pad-body#}
+        {#        <div class="grid-item grid-1">#}
+        <div class="pad-body grid-item grid-1" id="pad_body">
+            {# B L O C K  C O N T E N T#}
+            {% block content %}
+            {% endblock %}
+            {# E N D  B L O C K  C O N T E N T#}
         </div>
+        {#    end pad-body#}
+        {#        </div>#}
         {# end grid_1#}
 
 

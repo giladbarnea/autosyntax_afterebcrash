@@ -5,6 +5,9 @@ function tablet_portrait() {
     set_style('continue_arrow', 'display', 'none');
     set_style('back', 'display', 'none');
     set_style('go_up', 'display', 'none');
+    set_style('hamburger', 'display', 'unset');
+    // set_style('hamburger', 'position', 'fixed');
+    // set_style('hamburger_img', 'position', 'fixed');
 
 
     // arrow.set(tablet_landscape_up);
@@ -38,6 +41,8 @@ function tablet_portrait() {
 
     // PAD-BODY
     set_style_to_collection('pad-body', 'paddingLeft', 0);
+    by_id('pad_body').className += ' row-1';
+
     //
     set_style_to_collection('top88', 'top', "90%");
     set_style_to_collection('top84', 'top', "81%");
@@ -48,9 +53,13 @@ function tablet_portrait() {
 
     // HEIGHT WIDTH
     set_style_to_collection('height60', 'height', 40);
+    // hamburger is 50
+    set_style_to_collection('height50', 'height', 45);
     set_style_to_collection('height30', 'height', 25);
     //
     set_style_to_collection('width60', 'width', 40);
+    // hamburger is 50
+    set_style_to_collection('width50', 'width', 45);
     set_style_to_collection('width30', 'width', 25);
     //
 
@@ -103,6 +112,7 @@ function tablet_portrait() {
             set_style(works[i], 'paddingLeft', 0);
         }
     }
+    // set_style('hamburger', 'position', 'fixed');
     // if (filename === undefined || filename === 'cv') {
     //     set_style('go_up', 'fontSize', 23);
     //     set_style('go_up', 'top', "91%");
