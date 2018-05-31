@@ -176,8 +176,8 @@ body {
 }
 
 .go-up, .back {
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
     transition: width 400ms, height 400ms, left 400ms;
 }
 

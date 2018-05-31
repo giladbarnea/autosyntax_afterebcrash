@@ -25,7 +25,7 @@ class ContinueArrow {
         }
         else {
             this.center = "48.5%";
-            this.left = '14%';
+            this.left = '17%';
             this.top = '85%';
         }
     }
@@ -129,6 +129,9 @@ function big_desktop_resize() {
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 150);
     set_style_to_collection('ml136', 'marginLeft', 136);
+
+    set_style('back', 'left', '5%');
+    set_style('back', 'width', '80px');
 }
 
 function desktop_resize() {
@@ -207,6 +210,10 @@ function desktop_resize() {
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 150);
     set_style_to_collection('ml136', 'marginLeft', 139);
+
+
+    set_style('back', 'left', '5%');
+    set_style('back', 'width', '80px');
 }
 
 function tablet_landscape_resize() {
@@ -321,6 +328,12 @@ function tablet_landscape_resize() {
     // //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 120);
     set_style_to_collection('ml136', 'marginLeft', 110);
+
+
+    set_style('back', 'left', '6%');
+    set_style('back', 'width', '70px');
+
+
     //
     // if (filename === 'how') {
     //     continue_arrow_left = "18%";
