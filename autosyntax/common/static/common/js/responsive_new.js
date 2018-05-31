@@ -6,6 +6,11 @@ let tablet_landscape_up = 900;
 let desktop_up = 1200;
 let big_desktop_up = 1800;
 
+let continue_arrow_left = '14%';
+let continue_arrow_lbl_left = '12%';
+
+let continue_arrow_center = '47.5%';
+let continue_arrow_lbl_center = '45.5%';
 
 on_event_do(window, "resize", on_resize);
 
@@ -121,8 +126,12 @@ function desktop_resize() {
     set_style_to_collection('mt20', 'marginTop', 20);
     set_style_to_collection('mt25', 'marginTop', 25);
 
-
-    set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
+    if (filename === 'cv') {
+        set_style_to_collection('my-ul', 'paddingLeft', "1em");
+    }
+    else {
+        set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
+    }
 
     // ML MARGIN LEFT
     set_style_to_collection('ml100', 'marginLeft', 100);
@@ -187,7 +196,7 @@ function tablet_landscape_resize() {
 
     if (filename === 'cv') {
         set_style_to_collection('pl65', 'paddingLeft', 50);
-        set_style_to_collection('pl40', 'paddingLeft', 15);
+        set_style_to_collection('pl40', 'paddingLeft', 17);
     }
     else if (filename === 'how') {
         set_style_to_collection('pl65', 'paddingLeft', 50);
@@ -242,6 +251,15 @@ function tablet_landscape_resize() {
     // //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 120);
     set_style_to_collection('ml136', 'marginLeft', 110);
+
+    if (filename === 'how') {
+        continue_arrow_left = "18%";
+        continue_arrow_lbl_left = "16%";
+    }
+    else {
+        continue_arrow_left = '14%';
+        continue_arrow_lbl_left = '12.8%';
+    }
 
 }
 

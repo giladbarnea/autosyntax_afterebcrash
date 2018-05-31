@@ -54,7 +54,7 @@ function copy(value = 'giladbrn@gmail.com') {
     increase_opacity(by_id('email_msg'), 0.7, factor = 0.3);
     setTimeout(() => {
         decrease_opacity(by_id('email_msg'), 0, factor = 0.3);
-    }, 1000);
+    }, 3000);
 
 
 }

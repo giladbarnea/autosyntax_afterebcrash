@@ -229,7 +229,16 @@ body {
 .sidebar-item {
     background-color: #111111;
     border: #111111;
-    transition: font-size 500ms, color 500ms;
+    /*transition: font-size 500ms, color 500ms;*/
+}
+
+.btiny {
+    list-style: outside url('/static/common/img/NOTSURE/tiny.png');
+}
+
+.jiw {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .sidebar-item:hover,

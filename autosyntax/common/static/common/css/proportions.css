@@ -204,17 +204,20 @@ body {
     width: 60px;
 }
 
-.width100 {
-    width: 100px;
+.width110 {
+    width: 110px;
 }
 
 .width200 {
     width: 200px;
 }
 
-.continue-arrow-lbl {
-    left: 48.6%;
-}
+/*.continue-arrow {*/
+/*left: 47.5%;*/
+/*}*/
+/*.continue-arrow-lbl {*/
+/*left: 45%;*/
+/*}*/
 
 .center {
 
@@ -222,10 +225,6 @@ body {
 
 .my-ul {
     padding-left: 2.5em
-}
-
-.continue-arrow {
-    left: 50%;
 }
 
 /*#continue_arrow:hover {*/

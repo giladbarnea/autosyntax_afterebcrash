@@ -68,14 +68,6 @@ on_event_do("sidebar_item_3", "click",
 on_event_do("sidebar_item_4", "click",
     () => scroll_to("complex_htu"));
 
-on_event_do("1900_click", "click",
-    () => {
-        if (by_id('1900_res').style['display'] === 'none')
-            set_style('1900_res', 'display', 'unset');
-
-        else
-            set_style('1900_res', 'display', 'none');
-    });
 
 function toggle_pair(a, b) {
     a = element_or_by_fn(a, by_id);

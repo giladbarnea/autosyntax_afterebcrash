@@ -1,5 +1,4 @@
 console.log('htu.js\n');
-
 toggle_pair("animation_1", "animation_2");
 toggle_pair("animation_3", "animation_4");
 toggle_pair("animation_5", "animation_6");
@@ -40,17 +39,17 @@ function set_ops_list(list, id) {
     }
 }
 
-let sidebar_items = by_id("sidebar").children;
-let items = ["Operators", "Dotted arguments",
-    "Inline methods", "Complex operators"];
-
-let counter = 0;
-for (let i = 0; i < sidebar_items.length; i++) {
-    if (sidebar_items[i].tagName === "DIV") {
-        sidebar_items[i].innerHTML = items[counter];
-        counter += 1;
-    }
-}
+// let sidebar_items = by_id("sidebar").children;
+// let items = ["Operators", "Dotted arguments",
+//     "Inline methods", "Complex operators"];
+//
+// let counter = 0;
+// for (let i = 0; i < sidebar_items.length; i++) {
+//     if (sidebar_items[i].tagName === "DIV") {
+//         sidebar_items[i].innerHTML = items[counter];
+//         counter += 1;
+//     }
+// }
 
 // Operators
 on_event_do("sidebar_item_1", "click",
