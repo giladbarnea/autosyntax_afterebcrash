@@ -269,8 +269,22 @@ body {
 }
 
 .row-1 {
+    margin-top: 30px;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+
+#hamburger_img {
+    /*width: 30px;*/
+    /*height: 30px;*/
+    margin-top: -15px;
+    margin-left: -30px;
+    position: fixed;
+    background: #111111;
+    padding-right: 617px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-left: 30px;
 }
 
 /*all fonts*/
