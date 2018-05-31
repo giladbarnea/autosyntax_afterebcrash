@@ -83,58 +83,67 @@ function big_desktop_resize() {
         .split("/")
         .filter(c => c.length)
         .pop();
+
     arrow.set(big_desktop_up, filename);
-    document.body.style['marginLeft'] = "60px";
-    document.body.style['marginRight'] = "60px";
+    to_none_mobile();
+    body_margins(50, 60, 60, 60);
+    fonts_sizes(_60 = 60,
+        _35 = 40,
+        _32 = 32,
+        _30 = 30,
+        _25 = 25,
+        _23 = 23,
+        _20 = 20,
+        _15 = 15);
 
-    set_style_to_collection('fs60', 'fontSize', 60);
+    pad_body(350);
+    tops();
+    left();
+    heights();
+    widths();
+    padding_tops();
+    padding_lefts();
+    margin_rights();
+    margin_tops();
+    my_ul();
+    margin_lefts();
+    back();
+    // set_style_to_collection('top88', 'top', "88%");
+    // set_style_to_collection('top84', 'top', "84%");
 
-    //BR 2.5 - DEFAULT 40
-    set_style_to_collection('fs35', 'fontSize', 40);
-    set_style_to_collection('fs32', 'fontSize', 32);
-    set_style_to_collection('fs30', 'fontSize', 30);
-    set_style_to_collection('fs25', 'fontSize', 25);
-    set_style_to_collection('fs23', 'fontSize', 23);
-    set_style_to_collection('fs20', 'fontSize', 20);
-    set_style_to_collection('fs15', 'fontSize', 15);
+    // set_style_to_collection('l90', 'left', "90%");
 
-    set_style_to_collection('pad-body', 'paddingLeft', 350);
+    // set_style_to_collection('height60', 'height', 60);
+    // set_style_to_collection('height30', 'height', 30);
 
-    set_style_to_collection('top88', 'top', "88%");
-    set_style_to_collection('top84', 'top', "84%");
+    // set_style_to_collection('width60', 'width', 60);
+    // set_style_to_collection('width30', 'width', 30);
 
-    set_style_to_collection('l90', 'left', "90%");
+    // set_style_to_collection('pt20', 'paddingTop', 20);
 
-    set_style_to_collection('height60', 'height', 60);
-    set_style_to_collection('height30', 'height', 30);
+// set_style_to_collection('pl20', 'paddingLeft', normalize(_20));
+//     set_style_to_collection('pl30', 'paddingLeft', normalize(_30));
+//     set_style_to_collection('pl45', 'paddingLeft', normalize(_45));
+//     set_style_to_collection('pl65', 'paddingLeft', normalize(_65));
 
-    set_style_to_collection('width60', 'width', 60);
-    set_style_to_collection('width30', 'width', 30);
+    // set_style_to_collection('mr400', 'marginRight', 400);
+    // set_style_to_collection('mr300', 'marginRight', 300);
 
-    set_style_to_collection('pt20', 'paddingTop', 20);
+    // set_style_to_collection('mt20', 'marginTop', 20);
+    // set_style_to_collection('mt25', 'marginTop', 25);
 
-    set_style_to_collection('pl20', 'paddingLeft', 20);
-    set_style_to_collection('pl30', 'paddingLeft', 30);
-    set_style_to_collection('pl45', 'paddingLeft', 45);
-    set_style_to_collection('pl65', 'paddingLeft', 65);
-
-    set_style_to_collection('mr400', 'marginRight', 400);
-    set_style_to_collection('mr300', 'marginRight', 300);
-
-    set_style_to_collection('mt20', 'marginTop', 20);
-    set_style_to_collection('mt25', 'marginTop', 25);
-
-    set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
+    // set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
 
     // ML MARGIN LEFT
-    set_style_to_collection('ml100', 'marginLeft', 100);
-    //PRESS TO TOGGLE .NUTELLA COMPENSATION
-    set_style_to_collection('ml150', 'marginLeft', 150);
-    set_style_to_collection('ml136', 'marginLeft', 136);
+    // set_style_to_collection('ml100', 'marginLeft', 100);
+    // //PRESS TO TOGGLE .NUTELLA COMPENSATION
+    // set_style_to_collection('ml150', 'marginLeft', 150);
+    // set_style_to_collection('ml136', 'marginLeft', 136);
 
-    set_style('back', 'left', '5%');
-    set_style('back', 'width', '80px');
+    // set_style('back', 'left', '5%');
+    // set_style('back', 'width', '80px');
 }
+
 
 function desktop_resize() {
     let filename = window.location.pathname
@@ -142,9 +151,9 @@ function desktop_resize() {
         .filter(c => c.length)
         .pop();
     arrow.set(desktop_up);
+    to_none_mobile();
 
-    document.body.style['marginLeft'] = "60px";
-    document.body.style['marginRight'] = "60px";
+    body_margins();
 
     //FONTS 80% for fs60
     set_style_to_collection('fs60', 'fontSize', 48);
@@ -220,12 +229,14 @@ function desktop_resize() {
     set_style('back', 'width', '80px');
 }
 
+
 function tablet_landscape_resize() {
     arrow.set(tablet_landscape_up);
-    // BODY
-    document.body.style['marginLeft'] = "40px";
-    document.body.style['marginRight'] = "40px";
 
+    to_none_mobile();
+
+    // BODY
+    body_margins(top = 50, right = 40, bottom = 60, left = 40);
 
     let filename = window.location.pathname
         .split("/")
@@ -248,13 +259,13 @@ function tablet_landscape_resize() {
 
 
     // PAD-BODY
-    if (filename === 'cv') {
+    if (filename === 'cv')
         set_style_to_collection('pad-body', 'paddingLeft', 140);
-    }
-    else {
+
+    else
         set_style_to_collection('pad-body', 'paddingLeft', 180);
-    }
-    //
+
+    remove_class('pad_body', 'row-1');
     set_style_to_collection('top88', 'top', "86%");
     set_style_to_collection('top84', 'top', "81%");
 
@@ -358,7 +369,7 @@ function on_resize() {
         tablet_landscape_resize();
     }
     else if (w >= tablet_portrait_up) {
-        console.warn('tablet_portrait_up. w: ', w);
+        console.log('tablet_portrait_up. w: ', w);
         tablet_portrait();
     }
     else if (w <= phone_max) {

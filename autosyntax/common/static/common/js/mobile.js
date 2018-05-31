@@ -4,13 +4,17 @@ function open_hamb_menu() {
     console.warn('menu');
 }
 
-function tablet_portrait() {
+function to_mobile() {
     set_style('grid_0', 'display', 'none');
     set_style('continue_arrow', 'display', 'none');
     set_style('back', 'display', 'none');
     set_style('go_up', 'display', 'none');
     set_style('hamburger', 'display', 'unset');
     on_event_do('hamburger_img', 'click', open_hamb_menu);
+}
+
+function tablet_portrait() {
+    to_mobile();
     // set_style('hamburger', 'position', 'fixed');
     // set_style('hamburger_img', 'position', 'fixed');
 
@@ -46,7 +50,9 @@ function tablet_portrait() {
 
     // PAD-BODY
     set_style_to_collection('pad-body', 'paddingLeft', 0);
-    by_id('pad_body').className += ' row-1';
+
+    add_class('pad_body', 'row-1');
+
 
     //
     set_style_to_collection('top88', 'top', "90%");
