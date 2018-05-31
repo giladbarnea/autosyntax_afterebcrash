@@ -38,7 +38,7 @@ function tops(_88 = "88%", _84 = "84%") {
     set_style_to_collection('top84', 'top', _84);
 }
 
-function left(_90 = "90%") {
+function _left(_90 = "90%") {
     set_style_to_collection('l90', 'left', _90);
 }
 
