@@ -66,6 +66,7 @@ set_style("continue_arrow", "top", arrow.top);
 //
 // }
 
+
 const phone_max = 599;
 const tablet_portrait_up = 600;
 const tablet_landscape_up = 900;
@@ -74,7 +75,21 @@ const big_desktop_up = 1800;
 
 
 on_event_do(window, "resize", on_resize);
+try {
+    create_bullet_list('overview_cv_list');
+    create_bullet_list('skills_languages_cv');
+    create_bullet_list('skills_tech_py_cv');
+    create_bullet_list('skills_tech_net_cv');
+    create_bullet_list('skills_tech_webcloud_cv');
+    create_bullet_list('skills_tech_editing_cv');
+    create_bullet_list('education_sela_cv');
+    create_bullet_list('education_bgu_cv');
+    create_bullet_list('military_list_cv');
+    create_bullet_list('languages_list_cv');
+}
+catch (e) {
 
+}
 on_resize();
 
 
@@ -136,13 +151,13 @@ function desktop_resize() {
     _left(_90 = '90%');
 
     if (filename === 'how') {
-        margin_rights(_200 = 100, _300 = 125, _400 = 175, _500 = 200);
+        margin_rights(_100 = '100px', _200 = 100, _300 = 125, _400 = 175, _500 = 200);
         // set_style_to_collection('mr400', 'marginRight', 175);
         // set_style_to_collection('mr300', 'marginRight', 125);
         // set_style_to_collection('mr200', 'marginRight', 100);
     }
     else {
-        margin_rights(_200 = 100, _300 = 150, _400 = 200, _500 = 200);
+        margin_rights(_100 = '100px', _200 = 100, _300 = 150, _400 = 200, _500 = 200);
         // set_style_to_collection('mr400', 'marginRight', 200);
         // set_style_to_collection('mr300', 'marginRight', 150);
         // set_style_to_collection('mr200', 'marginRight', 100);
@@ -210,7 +225,7 @@ function tablet_landscape_resize() {
     _left(_90 = '90%');
     heights(_60 = 40, _30 = 25);
     widths(_60 = 40, _30 = 25);
-    padding_tops(_20 = 15);
+    padding_tops(_20 = 15, _25 = 25);
     margin_tops(_20 = 15, _25 = 20);
     my_ul('1em');
     margin_lefts(_100 = 70, _136 = 110, _150 = 120);
@@ -285,14 +300,14 @@ function tablet_landscape_resize() {
 
     // MR MARGIN RIGHT
     if (filename === 'how') {
-        margin_rights(_200 = 30, _300 = 0, _400 = 80, _500 = 60);
+        margin_rights(_100 = '100px', _200 = 30, _300 = 0, _400 = 80, _500 = 60);
         // set_style_to_collection('mr400', 'marginRight', 80);
         // set_style_to_collection('mr300', 'marginRight', 0);
         //because pl40 is 20
         // set_style_to_collection('mr200', 'marginRight', 30);
     }
     else if (filename === 'cv') {
-        margin_rights(_200 = 60, _300 = 0, _400 = 80, _500 = 60);
+        margin_rights(_100 = '100px', _200 = 60, _300 = 0, _400 = 80, _500 = 60);
         // BECAUSE CLASS IS JIW, and pad-body is 150
         // set_style_to_collection('mr400', 'marginRight', 80);
         // set_style_to_collection('mr300', 'marginRight', 0);
@@ -300,7 +315,7 @@ function tablet_landscape_resize() {
     }
     // homepage
     else {
-        margin_rights(_200 = 60, _300 = 100, _400 = 100, _500 = 60);
+        margin_rights(_100 = '100px', _200 = 60, _300 = 100, _400 = 100, _500 = 60);
         // because pad-body is 180
         // set_style_to_collection('mr400', 'marginRight', 100);
         // set_style_to_collection('mr300', 'marginRight', 100);
@@ -352,7 +367,7 @@ function on_resize() {
     }
     else if (w <= phone_max) {
         console.log('phone_max. w: ', w);
-        phone_resize();
+        phone_landscape();
     }
     else {
         console.warn('Got to final else in responsive. w: ', w);

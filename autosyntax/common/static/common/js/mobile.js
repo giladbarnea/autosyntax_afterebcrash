@@ -22,7 +22,7 @@ function tablet_portrait() {
     body_margins(body_margin_top, right = 10, bottom = 60, body_margin_left);
     let ham_pad_bott = body_margin_top + (5 + (600 - width) / (60 / 7));
     let ham_pad_top = body_margin_top + (15 + (600 - width) / 30);
-    hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top);
+    hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
 
 
     let filename = window.location.pathname
@@ -36,11 +36,11 @@ function tablet_portrait() {
     _left('85%');
     heights(_60 = 40, _30 = 25);
     widths(_60 = 40, _30 = 25);
-    padding_tops(_20 = 15);
+    padding_tops(_20 = 15, _25 = 25);
 
     let padding_left_40 = "25px";
     padding_lefts(_20 = 15, _30 = 23, _40 = padding_left_40, _45 = 35, _65 = 65);
-    margin_rights(_200 = 60, _300 = 30, _400 = 30, _500 = 60);
+    margin_rights(_100 = '100px', _200 = 60, _300 = 30, _400 = 30, _500 = 60);
     margin_tops(_20 = 15, _25 = 20);
     my_ul('1em');
     margin_lefts(_100 = 70, _136 = 110, _150 = 120);
@@ -116,5 +116,64 @@ function tablet_portrait() {
     // set_style_to_collection('ml150', 'marginLeft', 120);
     // set_style_to_collection('ml136', 'marginLeft', 110);
 
+
+}
+
+function phone_landscape() {
+    to_mobile();
+
+    let width = window.screen.availWidth;
+    let body_margin_left = 73 + ((width - 600) / 5);
+    let body_margin_top = 50 + ((width - 600) / 7.5);
+    body_margins(body_margin_top, right = 10, bottom = 60, body_margin_left);
+    let ham_pad_bott = body_margin_top + (5 + (360 - width) / (60 / 7));
+    let ham_pad_top = body_margin_top + (15 + (360 - width) / 30);
+    hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
+
+
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+    fonts_sizes(_60 = 25, _35 = 35, _32 = 15, _30 = 16, _25 = 12, _23 = 11, _20 = 10, _15 = 9);
+    pad_body(0);
+    add_class('pad_body', 'row-1');
+    tops(_88 = '90%', _84 = '81%');
+    _left('85%');
+    heights(_60 = 40, _30 = 25);
+    widths(_60 = 40, _30 = 25);
+    padding_tops(_20 = 10, _25 = 15);
+
+    let padding_left_40 = "0px";
+
+    if (filename === 'cv')
+        padding_lefts(_20 = 15, _30 = 7, _40 = 17, _45 = 35, _65 = 30);
+
+    else
+        padding_lefts(_20 = 15, _30 = 10, _40 = padding_left_40, _45 = 35, _65 = 65);
+
+    if (filename === 'cv')
+        margin_rights(_100 = 20, _200 = 20, _300 = 30, _400 = 20, _500 = 20);
+    else
+        margin_rights(_100 = 20, _200 = 60, _300 = 30, _400 = 20, _500 = 60);
+
+
+    if (filename === 'how')
+        margin_tops(_20 = 10, _25 = 10);
+    else if (filename === 'cv')
+        margin_tops(_20 = 10, _25 = 15);
+    else
+        margin_tops(_20 = 15, _25 = 20);
+    my_ul('1em');
+    margin_lefts(_100 = 30, _136 = 44, _150 = 50);
+    if (filename === undefined)
+        set_style('download_file_size', 'marginLeft', 0);
+    let works = by_class('work');
+    for (let i = 0; i < works.length; i++) {
+        if (works[i].tagName === "DIV" &&
+            works[i].style['paddingLeft'] === padding_left_40) {
+            set_style(works[i], 'paddingLeft', 0);
+        }
+    }
 
 }

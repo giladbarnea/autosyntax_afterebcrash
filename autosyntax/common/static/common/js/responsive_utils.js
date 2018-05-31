@@ -57,17 +57,21 @@ function padding_tops(_20 = "20px", _25 = "25px",
                       _70 = "70px", _80 = '80px',
                       _100 = '100px') {
     set_style_to_collection('pt20', 'paddingTop', _20);
+    set_style_to_collection('pt25', 'paddingTop', _25);
 
 }
 
 function padding_lefts(_20 = "20px", _30 = '30px', _40 = '40px', _45 = '45px', _65 = '65px') {
     set_style_to_collection('pl20', 'paddingLeft', normalize(_20));
+    console.log(_30);
     set_style_to_collection('pl30', 'paddingLeft', normalize(_30));
+    set_style_to_collection('pl40', 'paddingLeft', normalize(_40));
     set_style_to_collection('pl45', 'paddingLeft', normalize(_45));
     set_style_to_collection('pl65', 'paddingLeft', normalize(_65));
 }
 
-function margin_rights(_200 = '200px', _300 = '300px', _400 = '400px', _500 = '500px') {
+function margin_rights(_100 = '100px', _200 = '200px', _300 = '300px', _400 = '400px', _500 = '500px') {
+    set_style_to_collection('mr100', 'marginRight', normalize(_100));
     set_style_to_collection('mr200', 'marginRight', normalize(_200));
     set_style_to_collection('mr300', 'marginRight', normalize(_300));
     set_style_to_collection('mr400', 'marginRight', normalize(_400));
@@ -96,8 +100,9 @@ function back(left = '5%', width = '80px') {
     set_style('back', 'width', normalize(width));
 }
 
-function hamburger(mt, pb, pt) {
+function hamburger(mt, pb, pt, pr) {
     set_style('hamburger_img', 'marginTop', mt);
     set_style('hamburger_img', 'paddingBottom', pb);
     set_style('hamburger_img', 'paddingTop', pt);
+    set_style('hamburger_img', 'paddingRight', pr);
 }
