@@ -60,7 +60,7 @@ function padding_tops(_20 = "20px", _25 = "25px",
 
 }
 
-function padding_lefts(_20 = "20px", _30 = '30px', _45 = '45px', _65 = '65px') {
+function padding_lefts(_20 = "20px", _30 = '30px', _40 = '40px', _45 = '45px', _65 = '65px') {
     set_style_to_collection('pl20', 'paddingLeft', normalize(_20));
     set_style_to_collection('pl30', 'paddingLeft', normalize(_30));
     set_style_to_collection('pl45', 'paddingLeft', normalize(_45));
@@ -75,8 +75,8 @@ function margin_rights(_200 = '200px', _300 = '300px', _400 = '400px', _500 = '5
 }
 
 function margin_tops(_20 = '20px', _25 = '25px') {
-    set_style_to_collection('mt20', 'marginTop', normalize(_20);
-    set_style_to_collection('mt25', 'marginTop', normalize(_25);
+    set_style_to_collection('mt20', 'marginTop', normalize(_20));
+    set_style_to_collection('mt25', 'marginTop', normalize(_25));
 
 }
 

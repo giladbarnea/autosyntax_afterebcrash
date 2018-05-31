@@ -87,14 +87,10 @@ function big_desktop_resize() {
     arrow.set(big_desktop_up, filename);
     to_none_mobile();
     body_margins(50, 60, 60, 60);
-    fonts_sizes(_60 = 60,
-        _35 = 40,
-        _32 = 32,
-        _30 = 30,
-        _25 = 25,
-        _23 = 23,
-        _20 = 20,
-        _15 = 15);
+    fonts_sizes(_60 = 60, _35 = 40,
+        _32 = 32, _30 = 30,
+        _25 = 25, _23 = 23,
+        _20 = 20, _15 = 15);
 
     pad_body(350);
     tops();
@@ -108,40 +104,6 @@ function big_desktop_resize() {
     my_ul();
     margin_lefts();
     back();
-    // set_style_to_collection('top88', 'top', "88%");
-    // set_style_to_collection('top84', 'top', "84%");
-
-    // set_style_to_collection('l90', 'left', "90%");
-
-    // set_style_to_collection('height60', 'height', 60);
-    // set_style_to_collection('height30', 'height', 30);
-
-    // set_style_to_collection('width60', 'width', 60);
-    // set_style_to_collection('width30', 'width', 30);
-
-    // set_style_to_collection('pt20', 'paddingTop', 20);
-
-// set_style_to_collection('pl20', 'paddingLeft', normalize(_20));
-//     set_style_to_collection('pl30', 'paddingLeft', normalize(_30));
-//     set_style_to_collection('pl45', 'paddingLeft', normalize(_45));
-//     set_style_to_collection('pl65', 'paddingLeft', normalize(_65));
-
-    // set_style_to_collection('mr400', 'marginRight', 400);
-    // set_style_to_collection('mr300', 'marginRight', 300);
-
-    // set_style_to_collection('mt20', 'marginTop', 20);
-    // set_style_to_collection('mt25', 'marginTop', 25);
-
-    // set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
-
-    // ML MARGIN LEFT
-    // set_style_to_collection('ml100', 'marginLeft', 100);
-    // //PRESS TO TOGGLE .NUTELLA COMPENSATION
-    // set_style_to_collection('ml150', 'marginLeft', 150);
-    // set_style_to_collection('ml136', 'marginLeft', 136);
-
-    // set_style('back', 'left', '5%');
-    // set_style('back', 'width', '80px');
 }
 
 
@@ -152,81 +114,78 @@ function desktop_resize() {
         .pop();
     arrow.set(desktop_up);
     to_none_mobile();
-
     body_margins();
 
-    //FONTS 80% for fs60
-    set_style_to_collection('fs60', 'fontSize', 48);
+    fonts_sizes(_60 = 48, _35 = 40,
+        _32 = 28, _30 = 24,
+        _25 = 23, _23 = 20,
+        _20 = 18, _15 = 15);
 
-    //BR 2.5 - DEFAULT 40
-    set_style_to_collection('fs35', 'fontSize', 40);
-    set_style_to_collection('fs32', 'fontSize', 28);
-    set_style_to_collection('fs30', 'fontSize', 24);
-    set_style_to_collection('fs25', 'fontSize', 23);
-    set_style_to_collection('fs23', 'fontSize', 20);
-    set_style_to_collection('fs20', 'fontSize', 18);
-    set_style_to_collection('fs15', 'fontSize', 15);
+    if (filename === 'cv')
+        pad_body(230);
+    else
+        pad_body(250);
 
+    tops(_88 = '86%', _84 = '84%');
+    // set_style_to_collection('top88', 'top', "86%");
+    // set_style_to_collection('top84', 'top', "81%");
+    left();
+    // set_style_to_collection('l90', 'left', "90%");
+    heights(_60 = 45, _30 = 25);
+    // set_style_to_collection('height60', 'height', 45);
+    // set_style_to_collection('height30', 'height', 25);
+    widths(_60 = 45, _30 = 25);
+    // set_style_to_collection('width60', 'width', 45);
+    // set_style_to_collection('width30', 'width', 25);
 
-    if (filename === 'cv') {
-        set_style_to_collection('pad-body', 'paddingLeft', 230);
-    }
-    else {
-        set_style_to_collection('pad-body', 'paddingLeft', 250);
-    }
+    padding_tops();
+    // set_style_to_collection('pt20', 'paddingTop', 20);
 
-    set_style_to_collection('top88', 'top', "86%");
-    set_style_to_collection('top84', 'top', "81%");
-
-    set_style_to_collection('l90', 'left', "90%");
-
-    set_style_to_collection('height60', 'height', 45);
-    set_style_to_collection('height30', 'height', 25);
-
-    set_style_to_collection('width60', 'width', 45);
-    set_style_to_collection('width30', 'width', 25);
-
-    set_style_to_collection('pt20', 'paddingTop', 20);
-
-    set_style_to_collection('pl20', 'paddingLeft', 20);
-    set_style_to_collection('pl30', 'paddingLeft', 25);
-    set_style_to_collection('pl40', 'paddingLeft', 35);
-    //NO USE TO PL45
-    set_style_to_collection('pl45', 'paddingLeft', 35);
-    set_style_to_collection('pl65', 'paddingLeft', 65);
+    padding_lefts(_20 = 20, _30 = 25, _40 = 35, _45 = 35, _65 = 65);
+    // set_style_to_collection('pl20', 'paddingLeft', 20);
+    // set_style_to_collection('pl30', 'paddingLeft', 25);
+    // set_style_to_collection('pl40', 'paddingLeft', 35);
+    // //NO USE TO PL45
+    // set_style_to_collection('pl45', 'paddingLeft', 35);
+    // set_style_to_collection('pl65', 'paddingLeft', 65);
 
     if (filename === 'how') {
-        set_style_to_collection('mr400', 'marginRight', 175);
-        set_style_to_collection('mr300', 'marginRight', 125);
-        set_style_to_collection('mr200', 'marginRight', 100);
+        margin_rights(_200 = 100, _300 = 125, _400 = 175, _500 = 200);
+        // set_style_to_collection('mr400', 'marginRight', 175);
+        // set_style_to_collection('mr300', 'marginRight', 125);
+        // set_style_to_collection('mr200', 'marginRight', 100);
     }
     else {
-        set_style_to_collection('mr400', 'marginRight', 200);
-        set_style_to_collection('mr300', 'marginRight', 150);
-        set_style_to_collection('mr200', 'marginRight', 100);
+        margin_rights(_200 = 100, _300 = 150, _400 = 200, _500 = 200);
+        // set_style_to_collection('mr400', 'marginRight', 200);
+        // set_style_to_collection('mr300', 'marginRight', 150);
+        // set_style_to_collection('mr200', 'marginRight', 100);
     }
-    set_style_to_collection('mr500', 'marginRight', 200);
-
-    set_style_to_collection('mt20', 'marginTop', 20);
-    set_style_to_collection('mt25', 'marginTop', 25);
+    // set_style_to_collection('mr500', 'marginRight', 200);
+    margin_tops();
+    // set_style_to_collection('mt20', 'marginTop', 20);
+    // set_style_to_collection('mt25', 'marginTop', 25);
 
     if (filename === 'cv') {
-        set_style_to_collection('my-ul', 'paddingLeft', "1em");
+        my_ul('1em');
+        // set_style_to_collection('my-ul', 'paddingLeft', "1em");
     }
     else {
-        set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
+        my_ul('2.5em');
+        // set_style_to_collection('my-ul', 'paddingLeft', "2.5em");
     }
 
+    margin_lefts(_100 = 100, _136 = 139, _150 = 150);
     // ML MARGIN LEFT
-    set_style_to_collection('ml100', 'marginLeft', 100);
+    // set_style_to_collection('ml100', 'marginLeft', 100);
 
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
-    set_style_to_collection('ml150', 'marginLeft', 150);
-    set_style_to_collection('ml136', 'marginLeft', 139);
+    // set_style_to_collection('ml150', 'marginLeft', 150);
+    // set_style_to_collection('ml136', 'marginLeft', 139);
+    back();
 
-
-    set_style('back', 'left', '5%');
-    set_style('back', 'width', '80px');
+    // set_style('back', 'left', '5%');
+    // set_style('back', 'width', '80px');
 }
 
 
