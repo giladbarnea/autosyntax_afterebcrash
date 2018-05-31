@@ -25,6 +25,24 @@ function scroll_to(target) {
 
 }
 
+function scroll_to_linear(target, factor) {
+    let target_top = get_rect(target).top;
+    let is_target_below = window.scrollY < target_top;
+    let direction = is_target_below ? +1 : -1;
+    let timer = setInterval(() => {
+        if (window.scrollY <= target_top - 80
+            && window.scrollY >= target_top - 80 - factor) {
+            clearInterval(timer);
+        }
+        else {
+            console.log('scrollY: ', window.scrollY);
+            window.scrollTo(0, window.scrollY + direction * factor);
+
+        }
+    }, 1);
+
+}
+
 // function scroll_to_top(target) {
 //     let factor = 18;
 //     let freq = 1;
@@ -186,14 +204,14 @@ function span(inner, cls, tail = '', id = undefined) {
     return `<span ${_cls} ${_id}>${inner}</span>${tail}`;
 }
 
-function add_class(element, add) {
-    element = element_or_by_fn(element, by_id);
-    let cls = element.className;
-    let add_idx = cls.indexOf(add);
-    if (add_idx === -1) {
-        element.className += ` ${add}`;
-    }
-}
+// function add_class(element, add) {
+//     element = element_or_by_fn(element, by_id);
+//     let cls = element.className;
+//     let add_idx = cls.indexOf(add);
+//     if (add_idx === -1) {
+//         element.className += ` ${add}`;
+//     }
+// }
 
 function remove_class(element, remove) {
     element = element_or_by_fn(element, by_id);

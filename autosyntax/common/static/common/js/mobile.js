@@ -1,17 +1,5 @@
 console.log('mobile.js');
 
-function open_hamb_menu() {
-    console.warn('menu');
-}
-
-function to_mobile() {
-    set_style('grid_0', 'display', 'none');
-    set_style('continue_arrow', 'display', 'none');
-    set_style('back', 'display', 'none');
-    set_style('go_up', 'display', 'none');
-    set_style('hamburger', 'display', 'unset');
-    on_event_do('hamburger_img', 'click', open_hamb_menu);
-}
 
 function tablet_portrait() {
     to_mobile();
@@ -19,7 +7,7 @@ function tablet_portrait() {
     let width = window.screen.availWidth;
     let body_margin_left = 90 + ((width - 900) / 5);
     let body_margin_top = 50 + ((width - 900) / 7.5);
-    body_margins(body_margin_top, right = 10, bottom = 60, body_margin_left);
+    body_margins(body_margin_top, right = body_margin_left / 2, bottom = 60, body_margin_left);
     let ham_pad_bott = body_margin_top + (5 + (600 - width) / (60 / 7));
     let ham_pad_top = body_margin_top + (15 + (600 - width) / 30);
     hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
@@ -31,7 +19,7 @@ function tablet_portrait() {
         .pop();
     fonts_sizes(_60 = 45, _35 = 35, _32 = 28, _30 = 22, _25 = 20, _23 = 18, _20 = 14, _15 = 15);
     pad_body(0);
-    add_class('pad_body', 'row-1');
+    add_classes('pad_body', 'row-1');
     tops(_88 = '90%', _84 = '81%');
     _left('85%');
     heights(_60 = 40, _30 = 25);
@@ -137,7 +125,7 @@ function phone_landscape() {
         .pop();
     fonts_sizes(_60 = 25, _35 = 35, _32 = 15, _30 = 16, _25 = 12, _23 = 11, _20 = 10, _15 = 9);
     pad_body(0);
-    add_class('pad_body', 'row-1');
+    add_classes('pad_body', 'row-1');
     tops(_88 = '90%', _84 = '81%');
     _left('85%');
     heights(_60 = 40, _30 = 25);
@@ -164,6 +152,7 @@ function phone_landscape() {
         margin_tops(_20 = 10, _25 = 15);
     else
         margin_tops(_20 = 15, _25 = 20);
+
     my_ul('1em');
     margin_lefts(_100 = 30, _136 = 44, _150 = 50);
     if (filename === undefined)

@@ -2,6 +2,34 @@
 
 let normalize = (n) => typeof n === "number" ? n.toString() + "px" : n;
 
+function open_hamb_menu() {
+    set_style('hamburger_menu', 'position', 'fixed');
+    set_style('all', 'filter', 'grayscale(80%) brightness(50%) blur(7px)');
+    set_style('hamburger_menu', 'display', 'unset');
+    increase_opacity('hamburger_menu', 1, factor = 0.5)
+
+}
+
+function close_hamb_menu() {
+    set_style('hamburger_menu', 'position', 'fixed');
+    set_style('all', 'filter', 'grayscale(0%) brightness(100%) blur(0px)');
+    decrease_opacity('hamburger_menu', 0, factor = 0.5);
+    setTimeout(() => {
+        set_style('hamburger_menu', 'display', 'none');
+    }, 1000);
+
+
+}
+
+function to_mobile() {
+    set_style('grid_0', 'display', 'none');
+    set_style('continue_arrow', 'display', 'none');
+    set_style('back', 'display', 'none');
+    set_style('go_up', 'display', 'none');
+    set_style('hamburger', 'display', 'unset');
+    on_event_do('hamburger_img', 'click', open_hamb_menu);
+}
+
 function to_none_mobile() {
     set_style('grid_0', 'display', 'unset');
     set_style('continue_arrow', 'display', 'unset');
@@ -63,7 +91,6 @@ function padding_tops(_20 = "20px", _25 = "25px",
 
 function padding_lefts(_20 = "20px", _30 = '30px', _40 = '40px', _45 = '45px', _65 = '65px') {
     set_style_to_collection('pl20', 'paddingLeft', normalize(_20));
-    console.log(_30);
     set_style_to_collection('pl30', 'paddingLeft', normalize(_30));
     set_style_to_collection('pl40', 'paddingLeft', normalize(_40));
     set_style_to_collection('pl45', 'paddingLeft', normalize(_45));

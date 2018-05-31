@@ -143,7 +143,6 @@ function desktop_resize() {
         pad_body(250);
 
     tops(_88 = '86%', _84 = '84%');
-    left();
     heights(_60 = 45, _30 = 25);
     widths(_60 = 45, _30 = 25);
     padding_tops();

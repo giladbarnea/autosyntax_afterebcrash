@@ -1,6 +1,17 @@
 {% load static %}
-<img
+{% load tags %}{% load filters %}
+
+<img class="ztop"
         {#		style="margin-top: -10px;"#}
-        id="hamburger_img"
-        src="{% static '/common/img/NOTSURE/hamb_thin5.png' %}"/>
-<br>
+     id="hamburger_img"
+     src="{% static '/common/img/NOTSURE/hamb_thin5.png' %}"/>
+{% br 4 %}
+<div id="hamburger_menu" class="space fs60 pl45 pt20 disp-none op0 ztop">
+    <span id="hamburger_item_1">What is it?</span>
+    {% br 2 %}
+    <span id="hamburger_item_2">Download</span>
+    {% br 2 %}
+    <span id="hamburger_item_3">How to use</span>
+    {% br 2 %}
+    <span id="hamburger_item_4">Who am I? (CV)</span>
+</div>

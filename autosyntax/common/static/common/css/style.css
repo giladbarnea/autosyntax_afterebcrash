@@ -302,6 +302,22 @@ body {
     z-index: 1000;
 }
 
+#all {
+    /*-webkit-transition: -webkit-filter 5000ms linear;*/
+    transition: 1s filter ease-out;
+
+}
+
+.blurry {
+    /*-webkit-filter: grayscale(100%);*/
+    filter: grayscale(100%) blur(5px);
+}
+
+/*#all {*/
+/*-webkit-filter: grayscale(100%); !* Safari 6.0 - 9.0 *!*/
+/*filter: grayscale(100%) blur(5px);*/
+/*}*/
+
 /*#overview_ul {*/
 /*list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-marker.png);*/
 
