@@ -167,14 +167,11 @@ body {
 
 .back {
     bottom: 5%;
+    left: 5%
 }
 
 .go-up {
     left: 90%;
-}
-
-.back {
-    left: 7%
 }
 
 /*.sidebar-item:hover {*/

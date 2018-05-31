@@ -10,7 +10,7 @@ def index(request):
 
 def how_to_use(request):
 	context = {
-		'sidebar_items': ['Operators', 'Dotted', 'Inline methods', ''],
+		'sidebar_items': ['Operators', 'Dotted arguments', 'Inline methods', 'Complex operators'],
 		'operators':     ['list', 'tuple', 'set', 'dict', 'for', 'def', 'class', 'listcomp', 'str', 'print'],
 		'dotstr_ops':    ['list', 'tuple', 'set', 'dict', 'str', 'print'],
 		'dotvar_ops':    ['for', 'listcomp']

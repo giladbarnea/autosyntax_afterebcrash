@@ -1,16 +1,77 @@
 console.log('responsive_new.js\n');
 
-let phone_max = 599;
-let tablet_portrait_up = 600;
-let tablet_landscape_up = 900;
-let desktop_up = 1200;
-let big_desktop_up = 1800;
+// defaults to big desktop up
+class ContinueArrow {
+    constructor() {
+        this.center = "48.5%";
+        this.left = '14%';
+        this.top = '85%';
+    }
 
-let continue_arrow_left = '14%';
-let continue_arrow_lbl_left = '10%';
+    set(media, filename) {
+        if (media === big_desktop_up) {
+            this.center = "48.5%";
+            this.left = '14%';
+            if (filename === 'how') {
+                this.top = '65%';
+            }
+            else
+                this.top = '85%';
+        }
+        else if (media === desktop_up) {
+            this.center = "48.5%";
+            this.left = '14%';
+            this.top = '85%';
+        }
+        else {
+            this.center = "48.5%";
+            this.left = '14%';
+            this.top = '85%';
+        }
+    }
+}
 
-let continue_arrow_center = '47.5%';
-let continue_arrow_lbl_center = '45.5%';
+let arrow = new ContinueArrow();
+set_style("continue_arrow", "left", arrow.center);
+set_style("continue_arrow", "top", arrow.top);
+// function set_continue_arrow(media) {
+//     if (media === big_desktop_up) {
+//         arrow_attrs = {
+//             'arrow_c': "48.5%",
+//             'lbl_c': "47.5%",
+//             'arrow_l': '14%',
+//             'lbl_l': '12.7%'
+//         }
+//     }
+//     else if (media === desktop_up) {
+//         arrow_attrs = {
+//             'arrow_c': "48.5%",
+//             'lbl_c': "46%",
+//             'arrow_l': '14%',
+//             'lbl_l': '12%'
+//         }
+//     }
+//     else if (media === tablet_landscape_up) {
+//         arrow_attrs = {
+//             'arrow_c': "48.5%",
+//             'lbl_c': "44.5%",
+//             'arrow_l': '14%',
+//             'lbl_l': '10%'
+//         }
+//     }
+//     else {
+//         console.error('implement get_continue_arrow fn in respopnsive')
+//     }
+//
+//
+// }
+
+const phone_max = 599;
+const tablet_portrait_up = 600;
+const tablet_landscape_up = 900;
+const desktop_up = 1200;
+const big_desktop_up = 1800;
+
 
 on_event_do(window, "resize", on_resize);
 
@@ -18,6 +79,11 @@ on_resize();
 
 
 function big_desktop_resize() {
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+    arrow.set(big_desktop_up, filename);
     document.body.style['marginLeft'] = "60px";
     document.body.style['marginRight'] = "60px";
 
@@ -66,6 +132,12 @@ function big_desktop_resize() {
 }
 
 function desktop_resize() {
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+    arrow.set(desktop_up);
+
     document.body.style['marginLeft'] = "60px";
     document.body.style['marginRight'] = "60px";
 
@@ -81,10 +153,6 @@ function desktop_resize() {
     set_style_to_collection('fs20', 'fontSize', 18);
     set_style_to_collection('fs15', 'fontSize', 15);
 
-    let filename = window.location.pathname
-        .split("/")
-        .filter(c => c.length)
-        .pop();
 
     if (filename === 'cv') {
         set_style_to_collection('pad-body', 'paddingLeft', 230);
@@ -142,9 +210,11 @@ function desktop_resize() {
 }
 
 function tablet_landscape_resize() {
+    arrow.set(tablet_landscape_up);
     // BODY
     document.body.style['marginLeft'] = "40px";
     document.body.style['marginRight'] = "40px";
+
 
     let filename = window.location.pathname
         .split("/")
@@ -251,15 +321,15 @@ function tablet_landscape_resize() {
     // //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 120);
     set_style_to_collection('ml136', 'marginLeft', 110);
-
-    if (filename === 'how') {
-        continue_arrow_left = "18%";
-        continue_arrow_lbl_left = "16%";
-    }
-    else {
-        continue_arrow_left = '14%';
-        continue_arrow_lbl_left = '12.8%';
-    }
+    //
+    // if (filename === 'how') {
+    //     continue_arrow_left = "18%";
+    //     continue_arrow_lbl_left = "16%";
+    // }
+    // else {
+    //     continue_arrow_left = '14%';
+    //     continue_arrow_lbl_left = '12.8%';
+    // }
 
 }
 

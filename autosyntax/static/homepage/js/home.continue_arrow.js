@@ -16,22 +16,26 @@ on_event_do(window, "scroll", continue_arrow_hndl);
 
 function continue_arrow_hndl() {
     if (user_below(howtouse.init_top)) {
+        console.warn('user below how to use');
         on_event_do("continue_arrow", "click",
             () => scroll_to(whoami.sect_id));
         by_id("continue_arrow_lbl").innerHTML = whoami.lbl
     }
     else if (user_below(download.init_top)) {
+        console.warn('user below download');
         on_event_do("continue_arrow", "click",
             () => scroll_to(howtouse.sect_id));
         by_id("continue_arrow_lbl").innerHTML = howtouse.lbl
     }
     else if (user_below(whatisit.init_top)) {
+        console.warn('user below whatisit');
         on_event_do("continue_arrow", "click",
             () => scroll_to(download.sect_id));
 
         by_id("continue_arrow_lbl").innerHTML = download.lbl
     }
     else {
+        console.warn('user below else');
         on_event_do("continue_arrow", "click",
             () => scroll_to(whatisit.sect_id));
 

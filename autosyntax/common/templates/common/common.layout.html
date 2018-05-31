@@ -30,7 +30,7 @@
             </div>
             {#        B A C K#}
             <a href="/">
-                <svg id="back" class="back op7 fs25 work top88 disp-none">
+                <svg id="back" class="back op7 fs25 work top88 ztop disp-none">
                     <text x="0" y="20" fill="white">HOME</text>
                 </svg>
             </a>
@@ -39,16 +39,16 @@
 
         {#    C O N T I N U E  A R R O W#}
         <div id="continue_arrow_lbl"
-             class="continue-arrow-lbl work fs20 op0 width110 top84"></div>
+             class="continue-arrow-lbl work fs20 op0 width110 top84 disp-none"></div>
 
 
         <img src="{% static '/common/img/continue.svg' %}"
              id="continue_arrow"
-             class="continue-arrow top88 height60 width60"
+             class="continue-arrow top88 height60 width60 op0"
         />
 
         {#G O  U P#}
-        <svg id="go_up" class="go-up fs25 width110 top88">
+        <svg id="go_up" class="go-up fs25 width110 top88 ztop">
             <text x="0" y="20" fill="white">TOP</text>
         </svg>
 
@@ -65,6 +65,9 @@
         {# end grid_1#}
 
 
+    </div>
+    <div class="fs35 op0">
+        {% lorem %}
     </div>
     {#    end grid container#}
 

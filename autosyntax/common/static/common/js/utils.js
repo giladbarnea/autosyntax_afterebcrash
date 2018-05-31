@@ -130,12 +130,31 @@ function fade_opacity(element, limit, factor, up, then = "") {
 }
 
 function increase_opacity(element, limit, factor) {
+    element = element_or_by_fn(element, by_id);
     fade_opacity(element, limit, factor, true);
 
 }
 
 function decrease_opacity(element, limit, factor) {
+    element = element_or_by_fn(element, by_id);
     fade_opacity(element, limit, factor, false);
+
+}
+
+function set_opacity(element, limit, factor) {
+    element = element_or_by_fn(element, by_id);
+
+    let current_opacity = element.style["opacity"];
+
+    if (current_opacity === "")
+        current_opacity = 0;
+
+    if (current_opacity < limit)
+        increase_opacity(element, limit, factor);
+
+    else if (current_opacity > limit)
+        decrease_opacity(element, limit, factor);
+
 
 }
 

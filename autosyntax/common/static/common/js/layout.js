@@ -23,8 +23,7 @@ on_event_do("console_menu", "click", hide_console_menu);
 on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
 on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
-set_style("continue_arrow", "left", continue_arrow_center);
-set_style("continue_arrow_lbl", "left", continue_arrow_lbl_center);
+
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));
 
@@ -40,17 +39,14 @@ function first_scroll_fade_ins() {
         is_go_up_visible = true;
         increase_opacity(by_id("go_up"), 0.7, factor = 1);
         // from responsiveness file
-        set_style("continue_arrow", "left", continue_arrow_left);
-        set_style("continue_arrow_lbl", "left", continue_arrow_lbl_left);
-        decrease_opacity(by_id("continue_arrow"), 0.7, factor = 0.05);
+        set_style("continue_arrow", "left", arrow.left);
+        set_opacity('continue_arrow', 0.7, factor = 0.1);
     }
     else if (window.scrollY <= 100 && is_go_up_visible) {
-        // console.log('\nscrolled up, lbl 48.6%\n');
         is_go_up_visible = false;
         decrease_opacity(by_id("go_up"), 0, factor = 1);
         // from reponsiveness file
-        set_style("continue_arrow", "left", continue_arrow_center);
-        set_style("continue_arrow_lbl", "left", continue_arrow_lbl_center);
+        set_style("continue_arrow", "left", arrow.center);
         increase_opacity(by_id("continue_arrow"), 1, factor = 0.05);
     }
 }
