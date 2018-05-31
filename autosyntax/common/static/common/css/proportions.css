@@ -170,7 +170,7 @@ body {
     left: 5%;
 }
 
-.go-up {
+.l90 {
     left: 90%;
 }
 
@@ -217,7 +217,8 @@ body {
 /*}*/
 
 .center {
-
+    left: 37%;
+    position: absolute;
 }
 
 .my-ul {

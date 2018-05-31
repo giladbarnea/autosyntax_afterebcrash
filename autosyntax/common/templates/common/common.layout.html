@@ -12,7 +12,7 @@
 <script src="{% static 'common/js/continue_arrow.js' %}"></script>
 <div id="all" class="no-select op0">
     <div class="grid-container">
-        <div class="grid-item grid_0">
+        <div id="grid_0" class="grid-item grid-0">
 
             {# C O N S O L E  M E N U#}
             <img src="{% static '/common/img/console_menu.svg' %}"
@@ -48,12 +48,12 @@
         />
 
         {#G O  U P#}
-        <svg id="go_up" class="go-up fs23 width110 top88 ztop">
+        <svg id="go_up" class="go-up fs23 width110 top88 ztop l90">
             <text x="0" y="20" fill="white">TOP</text>
         </svg>
 
 
-        <div class="grid-item grid_1">
+        <div class="grid-item grid-1">
             <div class="pad-body" id="pad_body">
                 {# B L O C K  C O N T E N T#}
                 {% block content %}
@@ -75,5 +75,6 @@
 {#end all#}
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script src="{% static 'common/js/mobile.js' %}"></script>
 <script src="{% static 'common/js/responsive_new.js' %}"></script>
 <script src="{% static 'common/js/layout.js' %}"></script>

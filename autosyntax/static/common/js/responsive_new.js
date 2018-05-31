@@ -334,25 +334,8 @@ function tablet_landscape_resize() {
     set_style('back', 'width', '70px');
 
 
-    //
-    // if (filename === 'how') {
-    //     continue_arrow_left = "18%";
-    //     continue_arrow_lbl_left = "16%";
-    // }
-    // else {
-    //     continue_arrow_left = '14%';
-    //     continue_arrow_lbl_left = '12.8%';
-    // }
-
 }
 
-function tablet_portrait_resize() {
-
-}
-
-function phone_resize() {
-
-}
 
 function on_resize() {
     let w = window.screen.availWidth;
@@ -365,12 +348,12 @@ function on_resize() {
         desktop_resize();
     }
     else if (w >= tablet_landscape_up) {
-        console.warn('tablet_landscape_up. w: ', w);
+        console.log('tablet_landscape_up. w: ', w);
         tablet_landscape_resize();
     }
     else if (w >= tablet_portrait_up) {
-        console.log('tablet_portrait_up. w: ', w);
-        tablet_portrait_resize();
+        console.warn('tablet_portrait_up. w: ', w);
+        tablet_portrait();
     }
     else if (w <= phone_max) {
         console.log('phone_max. w: ', w);

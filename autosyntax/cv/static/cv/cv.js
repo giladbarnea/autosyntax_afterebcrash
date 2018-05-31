@@ -23,7 +23,7 @@ on_event_do('fb', 'click', () => {
     open_in_new_tab('https://www.facebook.com/gilad.barnea.3');
 });
 
-set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
+// set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
 
 create_bullet_list('overview_cv_list');
 create_bullet_list('skills_languages_cv');

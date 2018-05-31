@@ -251,12 +251,12 @@ body {
     display: inline-grid;
 }
 
-.grid_0 {
+.grid-0 {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.grid_1 {
+.grid-1 {
     grid-column-start: 2;
     grid-column-end: 3;
 }

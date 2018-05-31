@@ -103,6 +103,8 @@ function big_desktop_resize() {
     set_style_to_collection('top88', 'top', "88%");
     set_style_to_collection('top84', 'top', "84%");
 
+    set_style_to_collection('l90', 'left', "90%");
+
     set_style_to_collection('height60', 'height', 60);
     set_style_to_collection('height30', 'height', 30);
 
@@ -166,6 +168,8 @@ function desktop_resize() {
 
     set_style_to_collection('top88', 'top', "86%");
     set_style_to_collection('top84', 'top', "81%");
+
+    set_style_to_collection('l90', 'left', "90%");
 
     set_style_to_collection('height60', 'height', 45);
     set_style_to_collection('height30', 'height', 25);
@@ -253,6 +257,8 @@ function tablet_landscape_resize() {
     //
     set_style_to_collection('top88', 'top', "86%");
     set_style_to_collection('top84', 'top', "81%");
+
+    set_style_to_collection('l90', 'left', "90%");
     //
 
     // HEIGHT WIDTH
@@ -336,13 +342,6 @@ function tablet_landscape_resize() {
 
 }
 
-function tablet_portrait_resize() {
-
-}
-
-function phone_resize() {
-
-}
 
 function on_resize() {
     let w = window.screen.availWidth;
@@ -355,12 +354,12 @@ function on_resize() {
         desktop_resize();
     }
     else if (w >= tablet_landscape_up) {
-        console.warn('tablet_landscape_up. w: ', w);
+        console.log('tablet_landscape_up. w: ', w);
         tablet_landscape_resize();
     }
     else if (w >= tablet_portrait_up) {
-        console.log('tablet_portrait_up. w: ', w);
-        tablet_portrait_resize();
+        console.warn('tablet_portrait_up. w: ', w);
+        tablet_portrait();
     }
     else if (w <= phone_max) {
         console.log('phone_max. w: ', w);
