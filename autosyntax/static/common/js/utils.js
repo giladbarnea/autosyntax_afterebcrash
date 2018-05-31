@@ -186,8 +186,22 @@ function span(inner, cls, tail = '', id = undefined) {
     return `<span ${_cls} ${_id}>${inner}</span>${tail}`;
 }
 
-function add_inner_html(element, add) {
-    element_or_by_fn(element, by_id)
-        .innerHTML += add;
+function add_class(element, add) {
+    element = element_or_by_fn(element, by_id);
+    let cls = element.className;
+    let add_idx = cls.indexOf(add);
+    if (add_idx === -1) {
+        element.className += ` ${add}`;
+    }
+}
 
+function remove_class(element, remove) {
+    element = element_or_by_fn(element, by_id);
+    let cls = element.className;
+    let remove_idx = cls.indexOf(remove);
+    if (remove_idx !== -1) {
+        let before = cls.substring(0, remove_idx);
+        let after = cls.substring(remove_idx + remove.length + 1, cls.length);
+        element.className = before + after;
+    }
 }
