@@ -7,7 +7,7 @@ let desktop_up = 1200;
 let big_desktop_up = 1800;
 
 let continue_arrow_left = '14%';
-let continue_arrow_lbl_left = '12%';
+let continue_arrow_lbl_left = '10%';
 
 let continue_arrow_center = '47.5%';
 let continue_arrow_lbl_center = '45.5%';
