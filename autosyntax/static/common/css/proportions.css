@@ -167,14 +167,11 @@ body {
 
 .back {
     bottom: 5%;
+    left: 5%;
 }
 
 .go-up {
     left: 90%;
-}
-
-.back {
-    left: 7%
 }
 
 /*.sidebar-item:hover {*/
@@ -205,16 +202,19 @@ body {
 }
 
 .width110 {
-    width: 100px;
+    width: 110px;
 }
 
 .width200 {
     width: 200px;
 }
 
-.continue-arrow-lbl {
-    left: 48.6%;
-}
+/*.continue-arrow {*/
+/*left: 47.5%;*/
+/*}*/
+/*.continue-arrow-lbl {*/
+/*left: 45%;*/
+/*}*/
 
 .center {
 
@@ -222,10 +222,6 @@ body {
 
 .my-ul {
     padding-left: 2.5em
-}
-
-.continue-arrow {
-    left: 50%;
 }
 
 /*#continue_arrow:hover {*/

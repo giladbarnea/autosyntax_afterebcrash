@@ -1,44 +1,70 @@
 console.log('responsive_new.js\n');
 
-function get_continue_arrow(media) {
-    if (media === big_desktop_up) {
-        return {
-            'arrow_c': "48.5%",
-            'lbl_c': "47.5%",
-            'arrow_l': '14%',
-            'lbl_l': '12.7%'
-        }
-    }
-    else if (media === desktop_up) {
-        return {
-            'arrow_c': "48.5%",
-            'lbl_c': "46%",
-            'arrow_l': '14%',
-            'lbl_l': '12%'
-        }
-    }
-    else if (media === tablet_landscape_up) {
-        return {
-            'arrow_c': "48.5%",
-            'lbl_c': "44.5%",
-            'arrow_l': '14%',
-            'lbl_l': '10%'
-        }
-    }
-    else if (media === tablet_portrait_up) {
-        return {
-            'arrow_c': "48.5%",
-            'lbl_c': "43%",
-            'arrow_l': '14%',
-            'lbl_l': '8%'
-        }
-    }
-    else {
-        console.error('implement get_continue_arrow fn in respopnsive')
+// defaults to big desktop up
+class ContinueArrow {
+    constructor() {
+        this.center = "48.5%";
+        this.left = '14%';
+        this.top = '85%';
     }
 
-
+    set(media, filename) {
+        if (media === big_desktop_up) {
+            this.center = "48.5%";
+            this.left = '14%';
+            if (filename === 'how') {
+                this.top = '65%';
+            }
+            else
+                this.top = '85%';
+        }
+        else if (media === desktop_up) {
+            this.center = "48.5%";
+            this.left = '14%';
+            this.top = '85%';
+        }
+        else {
+            this.center = "48.5%";
+            this.left = '17%';
+            this.top = '85%';
+        }
+    }
 }
+
+let arrow = new ContinueArrow();
+set_style("continue_arrow", "left", arrow.center);
+set_style("continue_arrow", "top", arrow.top);
+// function set_continue_arrow(media) {
+//     if (media === big_desktop_up) {
+//         arrow_attrs = {
+//             'arrow_c': "48.5%",
+//             'lbl_c': "47.5%",
+//             'arrow_l': '14%',
+//             'lbl_l': '12.7%'
+//         }
+//     }
+//     else if (media === desktop_up) {
+//         arrow_attrs = {
+//             'arrow_c': "48.5%",
+//             'lbl_c': "46%",
+//             'arrow_l': '14%',
+//             'lbl_l': '12%'
+//         }
+//     }
+//     else if (media === tablet_landscape_up) {
+//         arrow_attrs = {
+//             'arrow_c': "48.5%",
+//             'lbl_c': "44.5%",
+//             'arrow_l': '14%',
+//             'lbl_l': '10%'
+//         }
+//     }
+//     else {
+//         console.error('implement get_continue_arrow fn in respopnsive')
+//     }
+//
+//
+// }
 
 const phone_max = 599;
 const tablet_portrait_up = 600;
@@ -53,6 +79,11 @@ on_resize();
 
 
 function big_desktop_resize() {
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+    arrow.set(big_desktop_up, filename);
     document.body.style['marginLeft'] = "60px";
     document.body.style['marginRight'] = "60px";
 
@@ -98,9 +129,18 @@ function big_desktop_resize() {
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 150);
     set_style_to_collection('ml136', 'marginLeft', 136);
+
+    set_style('back', 'left', '5%');
+    set_style('back', 'width', '80px');
 }
 
 function desktop_resize() {
+    let filename = window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+    arrow.set(desktop_up);
+
     document.body.style['marginLeft'] = "60px";
     document.body.style['marginRight'] = "60px";
 
@@ -116,10 +156,6 @@ function desktop_resize() {
     set_style_to_collection('fs20', 'fontSize', 18);
     set_style_to_collection('fs15', 'fontSize', 15);
 
-    let filename = window.location.pathname
-        .split("/")
-        .filter(c => c.length)
-        .pop();
 
     if (filename === 'cv') {
         set_style_to_collection('pad-body', 'paddingLeft', 230);
@@ -174,12 +210,18 @@ function desktop_resize() {
     //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 150);
     set_style_to_collection('ml136', 'marginLeft', 139);
+
+
+    set_style('back', 'left', '5%');
+    set_style('back', 'width', '80px');
 }
 
 function tablet_landscape_resize() {
+    arrow.set(tablet_landscape_up);
     // BODY
     document.body.style['marginLeft'] = "40px";
     document.body.style['marginRight'] = "40px";
+
 
     let filename = window.location.pathname
         .split("/")
@@ -203,7 +245,7 @@ function tablet_landscape_resize() {
 
     // PAD-BODY
     if (filename === 'cv') {
-        set_style_to_collection('pad-body', 'paddingLeft', 150);
+        set_style_to_collection('pad-body', 'paddingLeft', 140);
     }
     else {
         set_style_to_collection('pad-body', 'paddingLeft', 180);
@@ -286,6 +328,12 @@ function tablet_landscape_resize() {
     // //PRESS TO TOGGLE .NUTELLA COMPENSATION
     set_style_to_collection('ml150', 'marginLeft', 120);
     set_style_to_collection('ml136', 'marginLeft', 110);
+
+
+    set_style('back', 'left', '6%');
+    set_style('back', 'width', '70px');
+
+
     //
     // if (filename === 'how') {
     //     continue_arrow_left = "18%";

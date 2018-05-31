@@ -245,7 +245,7 @@ function tablet_landscape_resize() {
 
     // PAD-BODY
     if (filename === 'cv') {
-        set_style_to_collection('pad-body', 'paddingLeft', 150);
+        set_style_to_collection('pad-body', 'paddingLeft', 140);
     }
     else {
         set_style_to_collection('pad-body', 'paddingLeft', 180);
@@ -333,16 +333,6 @@ function tablet_landscape_resize() {
     set_style('back', 'left', '6%');
     set_style('back', 'width', '70px');
 
-
-    //
-    // if (filename === 'how') {
-    //     continue_arrow_left = "18%";
-    //     continue_arrow_lbl_left = "16%";
-    // }
-    // else {
-    //     continue_arrow_left = '14%';
-    //     continue_arrow_lbl_left = '12.8%';
-    // }
 
 }
 
