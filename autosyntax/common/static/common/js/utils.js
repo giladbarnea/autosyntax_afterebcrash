@@ -25,21 +25,26 @@ function scroll_to(target) {
 
 }
 
-function scroll_to_linear(target, factor) {
-    let target_top = get_rect(target).top;
-    let is_target_below = window.scrollY < target_top;
+function scroll_to_linear(target_y, factor) {
+    target_y = target_y - 80;
+    // let target_top = get_rect(target).top - 80;
+    let is_target_below = window.scrollY < target_y;
     let direction = is_target_below ? +1 : -1;
+    console.log('target_y: ', target_y);
+    console.log('window.scrollY: ', window.scrollY);
+
     let timer = setInterval(() => {
-        if (window.scrollY <= target_top - 80
-            && window.scrollY >= target_top - 80 - factor) {
+        console.log('target_y: ', target_y);
+        console.log('window.scrollY: ', window.scrollY);
+        if (window.scrollY <= target_y
+            && window.scrollY >= target_y - factor) {
             clearInterval(timer);
         }
         else {
-            console.log('scrollY: ', window.scrollY);
             window.scrollTo(0, window.scrollY + direction * factor);
 
         }
-    }, 1);
+    }, 10);
 
 }
 

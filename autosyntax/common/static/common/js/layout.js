@@ -22,15 +22,13 @@ let is_console_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
 on_event_do("console_menu", "click", hide_console_menu);
 
-on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
-on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
+// on_event_do("continue_arrow", "mouseover", display_continue_arrow_lbl);
+// on_event_do("continue_arrow", "mouseleave", hide_continue_arrow_lbl);
 
 
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));
 
-// on_event_do("continue_arrow", "click",
-//     () => decrease_opacity(by_id("continue_arrow_lbl"), 0, factor = 1));
 
 increase_opacity(by_id("all"), 1, factor = 0.5);
 

@@ -1,4 +1,4 @@
-console.log('continue_arrow_howtouse.js\n');
+console.log('htu.continue_arrow.js\n');
 set_init_lbl_html("Operators");
 
 
