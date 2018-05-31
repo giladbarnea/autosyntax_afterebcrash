@@ -95,3 +95,9 @@ function back(left = '5%', width = '80px') {
     set_style('back', 'left', left);
     set_style('back', 'width', normalize(width));
 }
+
+function hamburger(mt, pb, pt) {
+    set_style('hamburger_img', 'marginTop', mt);
+    set_style('hamburger_img', 'paddingBottom', pb);
+    set_style('hamburger_img', 'paddingTop', pt);
+}

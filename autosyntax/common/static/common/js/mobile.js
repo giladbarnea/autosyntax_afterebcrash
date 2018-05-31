@@ -16,10 +16,15 @@ function to_mobile() {
 function tablet_portrait() {
     to_mobile();
 
-    let body_margin_left = 60 + ((window.screen.availWidth - 900) / 10);
-    let body_margin_top = 50 + ((window.screen.availWidth - 900) / 7.5);
-
+    let width = window.screen.availWidth;
+    let body_margin_left = 90 + ((width - 900) / 5);
+    let body_margin_top = 50 + ((width - 900) / 7.5);
     body_margins(body_margin_top, right = 10, bottom = 60, body_margin_left);
+    let ham_pad_bott = body_margin_top + (5 + (600 - width) / (60 / 7));
+    let ham_pad_top = body_margin_top + (15 + (600 - width) / 30);
+    hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top);
+
+
     let filename = window.location.pathname
         .split("/")
         .filter(c => c.length)
@@ -32,13 +37,14 @@ function tablet_portrait() {
     heights(_60 = 40, _30 = 25);
     widths(_60 = 40, _30 = 25);
     padding_tops(_20 = 15);
-    set_style_to_collection('pt20', 'paddingTop', 15);
+
     let padding_left_40 = "25px";
     padding_lefts(_20 = 15, _30 = 23, _40 = padding_left_40, _45 = 35, _65 = 65);
     margin_rights(_200 = 60, _300 = 30, _400 = 30, _500 = 60);
     margin_tops(_20 = 15, _25 = 20);
     my_ul('1em');
     margin_lefts(_100 = 70, _136 = 110, _150 = 120);
+
     let works = by_class('work');
     for (let i = 0; i < works.length; i++) {
         if (works[i].tagName === "DIV" &&
@@ -46,6 +52,7 @@ function tablet_portrait() {
             set_style(works[i], 'paddingLeft', 0);
         }
     }
+    // set_style_to_collection('pt20', 'paddingTop', 15);
     // set_style('hamburger', 'position', 'fixed');
     // set_style('hamburger_img', 'position', 'fixed');
     // arrow.set(tablet_landscape_up);
