@@ -43,4 +43,4 @@ def get(distance, every, lasts):
 	my_print(amped, 'amped')
 
 
-get(distance=4192, every=10, lasts=2000)
+get(distance=4192, every=9, lasts=2000)

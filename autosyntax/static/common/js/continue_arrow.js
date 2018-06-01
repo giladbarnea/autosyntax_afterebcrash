@@ -5,8 +5,13 @@ function set_init_lbl_html(value) {
     by_id("continue_arrow_lbl").innerHTML = value;
 }
 
+
 function get_init_top(id) {
-    return get_rect(id).top + window.scrollY;
+    console.warn('id: ', id);
+    let top = get_rect(id).top + window.scrollY;
+    console.warn('top: ', top);
+    return top;
+
 }
 
 function display_continue_arrow_lbl() {
@@ -25,6 +30,8 @@ class Section {
         this.init_top = get_init_top(sect_id);
         this.lbl = lbl;
     }
+
+
 }
 
 

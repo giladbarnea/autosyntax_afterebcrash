@@ -28,6 +28,7 @@ function scroll_to_linear(target_y) {
     console.log('distance: ', distance);
     console.log('target_y: ', target_y);
     console.log(`window.scrollY: ${window.scrollY}\n`);
+    console.log('bezzed.length: ', bezzed.length);
     let counter = 0;
     let timer = setInterval(() => {
         if (window.scrollY <= target_y

@@ -1,13 +1,15 @@
 console.log('home.continue_arrow.js\n');
 set_init_lbl_html("What is it?");
 
-
-let [whoami, howtouse, download, whatisit] = [
+//IMPORTANT TO KEEP IT HERE - FILE IS MODULE = LOADS LAST = scrollY's ACCURATE
+export let [whoami, howtouse, download, whatisit] = [
     new Section("whoami_content", "Who am I"),
     new Section("howtouse_content", "How to use"),
     new Section("download_content", "Download"),
     new Section("whatisit_content", "What is it?")
 ];
+
+
 on_event_do("continue_arrow", "click", () =>
     scroll_to("whatisit_content"));
 // DOES NOT persist in other pages

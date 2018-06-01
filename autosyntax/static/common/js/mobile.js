@@ -1,23 +1,5 @@
 console.log('mobile.js');
 
-function open_hamb_menu() {
-    // add_classes('all', 'blurry')
-    // set_style('all', 'filter', 'grayscale(100%) brightness(20%)');
-    set_style('all', 'filter', 'grayscale(100%) brightness(20%) blur(5px)');
-    // setTimeout(() => {
-    //     set_style('all', 'filter', 'grayscale(100%) brightness(20%) blur(5px)');
-    // }, 1000)
-
-}
-
-function to_mobile() {
-    set_style('grid_0', 'display', 'none');
-    set_style('continue_arrow', 'display', 'none');
-    set_style('back', 'display', 'none');
-    set_style('go_up', 'display', 'none');
-    set_style('hamburger', 'display', 'unset');
-    on_event_do('hamburger_img', 'click', open_hamb_menu);
-}
 
 function tablet_portrait() {
     to_mobile();
