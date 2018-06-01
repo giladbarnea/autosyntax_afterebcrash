@@ -15,38 +15,39 @@ function scroll_to(target) {
         block: "start", inline: "nearest"
     });
 
-    // scroll_to_top(target);
-    // let timer = setInterval(() => {
-    //     if (window.scrollY < 10000) {
-    //         console.log('y: ', window.scrollY);
-    //         clearInterval(timer);
-    //     }
-    // }, 1);
-
 }
 
-function scroll_to_linear(target_y, factor) {
-    target_y = target_y - 80;
-    // let target_top = get_rect(target).top - 80;
+function scroll_to_linear(target_y) {
+    // target_y = target_y - 80;
+    let y = window.scrollY;
     let is_target_below = window.scrollY < target_y;
     let direction = is_target_below ? +1 : -1;
+    let distance = Math.abs(window.scrollY - target_y);
+    let bezzed = get_bezzed(distance, 10, 2000);
+    console.log('\nfactor: ', factor);
+    console.log('distance: ', distance);
     console.log('target_y: ', target_y);
-    console.log('window.scrollY: ', window.scrollY);
-
+    console.log(`window.scrollY: ${window.scrollY}\n`);
+    let counter = 0;
     let timer = setInterval(() => {
-        console.log('target_y: ', target_y);
-        console.log('window.scrollY: ', window.scrollY);
         if (window.scrollY <= target_y
-            && window.scrollY >= target_y - factor) {
+            && window.scrollY >= target_y - 90) {
+            console.log(`counter: ${counter}\n`);
+            console.log('distance/factor: ', distance / factor);
             clearInterval(timer);
         }
         else {
-            window.scrollTo(0, window.scrollY + direction * factor);
+            // console.log('counter: ', counter);
+            window.scrollTo(0, window.scrollY + direction * bezzed[counter]);
+            counter = counter + 1;
+            // window.scrollTo(0, window.scrollY + direction * bezzed[counter]);
+            // counter = counter + 8 < bezzed.length && bezzed[counter] >= 1 ? counter + 8 : counter;
 
         }
     }, 10);
 
 }
+
 
 // function scroll_to_top(target) {
 //     let factor = 18;
