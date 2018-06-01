@@ -229,3 +229,10 @@ function remove_class(element, remove) {
         element.className = before + after;
     }
 }
+
+function create(tag, att, att_value, inner) {
+    let element = document.createElement(tag);
+    element.setAttribute(att, att_value);
+    element.innerHTML = inner;
+    return element;
+}
