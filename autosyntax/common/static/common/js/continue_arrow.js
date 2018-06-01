@@ -1,5 +1,5 @@
 // TOP SCRIPT, DONT CALL ANY FNS HERE
-console.log('continue_arrow.js\n');
+console.log('common/continue_arrow.js\t\tFROM common.layout.html\n');
 
 function set_init_lbl_html(value) {
     by_id("continue_arrow_lbl").innerHTML = value;
@@ -7,8 +7,7 @@ function set_init_lbl_html(value) {
 
 
 function get_init_top(id) {
-    let top = get_rect(id).top + window.scrollY;
-    return top;
+    return get_rect(id).top + window.scrollY;
 
 }
 

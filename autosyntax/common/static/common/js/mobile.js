@@ -1,5 +1,5 @@
-console.log('mobile.js');
-
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/mobile.js\t\t\t\tFROM common.layout.html\n');
 
 function tablet_portrait() {
     to_mobile();
@@ -142,6 +142,8 @@ function phone_landscape() {
 
     if (filename === 'cv')
         margin_rights(_100 = 20, _200 = 20, _300 = 30, _400 = 20, _500 = 20);
+    else if (filename === 'how')
+        margin_rights(_100 = 20, _200 = 20, _300 = 30, _400 = 20, _500 = 60);
     else
         margin_rights(_100 = 20, _200 = 60, _300 = 30, _400 = 20, _500 = 60);
 

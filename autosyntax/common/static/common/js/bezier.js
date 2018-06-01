@@ -1,3 +1,6 @@
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/bezier.js\t\t\t\tFROM common.layout.html\n');
+
 function bezier(distance) {
     let _bez = t => 3 * (1 - t) * Math.pow(t, 2);
 

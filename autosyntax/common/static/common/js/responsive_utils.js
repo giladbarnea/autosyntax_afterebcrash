@@ -1,8 +1,8 @@
-console.log('common.responsive_utils.js');
-let hamb_menu_open = false;
-// TOP SCRIPTS DONT CALL FNS
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/responsive_utils.js\t\tFROM common.layout.html\n');
 
 let normalize = (n) => typeof n === "number" ? n.toString() + "px" : n;
+let hamb_menu_open = false;
 
 function handle_hamb_menu() {
     if (hamb_menu_open)
@@ -12,7 +12,6 @@ function handle_hamb_menu() {
 }
 
 function open_hamb_menu() {
-    console.warn('open_hamb_menu');
     hamb_menu_open = true;
     set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(80%) brightness(50%) blur(7px)');
@@ -22,7 +21,6 @@ function open_hamb_menu() {
 }
 
 function close_hamb_menu() {
-    console.warn('close_hamb_menu');
     hamb_menu_open = false;
     set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(0%) brightness(100%) blur(0px)');
@@ -30,7 +28,6 @@ function close_hamb_menu() {
     setTimeout(() => {
         set_style('hamburger_menu', 'display', 'none');
     }, 1000);
-
 
 }
 

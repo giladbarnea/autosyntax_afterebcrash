@@ -1,5 +1,5 @@
--// TOP SCRIPT, DONT CALL ANY FNS HERE
-    console.log('utils_general.js\n');
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/utils.js\t\t\t\t\tFROM common.layout.html\n');
 
 function by_id(id) {
     return document.getElementById(id);

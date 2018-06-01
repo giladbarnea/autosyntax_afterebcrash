@@ -1,4 +1,5 @@
-console.log('responsive_new.js\n');
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/responsive_new.js\t\tFROM common.layout.html\n');
 
 // defaults to big desktop up
 class ContinueArrow {

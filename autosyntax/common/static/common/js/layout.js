@@ -1,4 +1,5 @@
-console.log('layout.js\n');
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/layout.js\t\t\t\tFROM common.layout.html\n');
 let filename = window.location.pathname
     .split("/")
     .filter(c => c.length)
