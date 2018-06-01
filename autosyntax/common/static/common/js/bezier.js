@@ -45,14 +45,14 @@ function prettify(list) {
 }
 
 function print(list, name) {
-    console.log(`\n${name}: ${prettify(list)}`);
+    // console.log(`\n${name}: ${prettify(list)}`);
     console.log(`${name} sum: ${sum(list)}`);
     console.log(`max/min ${name}: ${max(list) / min(list)}`);
     console.log(`length ${name}: ${list.length}`);
 }
 
 function get_bezzed(distance, freq_ms, dur_ms) {
-    console.log(`distance: ${distance}`);
+    console.log(`\ndistance: ${distance}`);
     console.log(`freq_ms ${freq_ms} ms`);
     console.log(`animation takes ${dur_ms / 1000} seconds`);
     let iterations = distance / (dur_ms / freq_ms);

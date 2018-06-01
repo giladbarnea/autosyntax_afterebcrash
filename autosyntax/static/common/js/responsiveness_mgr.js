@@ -172,7 +172,6 @@ function on_resize() {
             set_style("pad_body", "paddingLeft", 250);
         }
         else if (dyn_pad_body) {
-            console.warn('pad body else');
             dyn_pad_body = false;
             set_style("pad_body", "paddingLeft", 350);
         }

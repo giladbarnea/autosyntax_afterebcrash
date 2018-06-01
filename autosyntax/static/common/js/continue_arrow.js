@@ -7,9 +7,7 @@ function set_init_lbl_html(value) {
 
 
 function get_init_top(id) {
-    console.warn('id: ', id);
     let top = get_rect(id).top + window.scrollY;
-    console.warn('top: ', top);
     return top;
 
 }

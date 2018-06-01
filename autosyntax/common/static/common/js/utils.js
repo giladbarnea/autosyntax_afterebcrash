@@ -17,13 +17,20 @@ function scroll_to(target) {
 
 }
 
-function scroll_to_linear(target_y) {
+function scroll_to_linear(target_y, freq_ms = 10) {
     // target_y = target_y - 80;
     let y = window.scrollY;
     let is_target_below = window.scrollY < target_y;
+    console.log('is_target_below: ', is_target_below);
     let direction = is_target_below ? +1 : -1;
+    let stop_cond = false;
+    if (is_target_below)
+        stop_cond = () => window.scrollY >= target_y - 80;
+    else
+        stop_cond = () => window.scrollY <= target_y - 80;
+
     let distance = Math.abs(window.scrollY - target_y);
-    let bezzed = get_bezzed(distance, 10, 2000);
+    let bezzed = get_bezzed(distance, freq_ms, 2000);
     console.log('\nfactor: ', factor);
     console.log('distance: ', distance);
     console.log('target_y: ', target_y);
@@ -31,21 +38,22 @@ function scroll_to_linear(target_y) {
     console.log('bezzed.length: ', bezzed.length);
     let counter = 0;
     let timer = setInterval(() => {
-        if (window.scrollY <= target_y
-            && window.scrollY >= target_y - 90) {
-            console.log(`counter: ${counter}\n`);
-            console.log('distance/factor: ', distance / factor);
+        if (stop_cond()) {
+            console.log(`\ncounter: ${counter}\n`);
+            console.log(`window.scrollY: ${window.scrollY}\n`);
+            console.log('target_y: ', target_y);
+            console.log('target_y + 200: ', target_y + 200);
             clearInterval(timer);
         }
         else {
-            // console.log('counter: ', counter);
+            if (counter === bezzed.length - 1) {
+                console.log('counter reached end of bezzed: ', counter);
+            }
             window.scrollTo(0, window.scrollY + direction * bezzed[counter]);
             counter = counter + 1;
-            // window.scrollTo(0, window.scrollY + direction * bezzed[counter]);
-            // counter = counter + 8 < bezzed.length && bezzed[counter] >= 1 ? counter + 8 : counter;
 
         }
-    }, 10);
+    }, freq_ms);
 
 }
 
