@@ -1,5 +1,5 @@
--// TOP SCRIPT, DONT CALL ANY FNS HERE
-    console.log('utils_general.js\n');
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/utils.js\t\t\t\t\tFROM common.layout.html\n');
 
 function by_id(id) {
     return document.getElementById(id);
@@ -23,14 +23,24 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
     let is_target_below = window.scrollY < target_y;
     let direction = is_target_below ? +1 : -1;
     let stop_cond = false;
-    if (is_target_below)
-        stop_cond = () => window.scrollY >= target_y - 80;
-    else
-        stop_cond = () => window.scrollY <= target_y - 80;
+    console.log('\nis_target_below: ', is_target_below);
+    if (is_target_below) {
+        if (target_y - 80 >= 0)
+            stop_cond = () => window.scrollY >= target_y - 80;
+        else
+            stop_cond = () => window.scrollY >= target_y;
+    }
+
+    else {
+        if (target_y - 80 >= 0)
+            stop_cond = () => window.scrollY <= target_y - 80;
+        else
+            stop_cond = () => window.scrollY <= target_y;
+    }
 
     let distance = Math.abs(window.scrollY - target_y);
-    let bezzed = get_bezzed(distance, freq_ms, 2000);
-    // console.log('\nfactor: ', factor);
+    let bezzed = get_bezzed(distance, freq_ms);
+    // console.log('sum(bezzed): ', sum(bezzed));
     // console.log('distance: ', distance);
     // console.log('target_y: ', target_y);
     // console.log(`window.scrollY: ${window.scrollY}\n`);
@@ -38,16 +48,23 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
     let counter = 0;
     let timer = setInterval(() => {
         if (stop_cond()) {
-            // console.log(`\ncounter: ${counter}\n`);
+            // console.warn(`\nreached stop condition`);
+            // console.log(`counter: ${counter}\n`);
+            // console.log('bezzed[counter]: ', bezzed[counter]);
             // console.log(`window.scrollY: ${window.scrollY}\n`);
             // console.log('target_y: ', target_y);
-            // console.log('target_y + 200: ', target_y + 200);
+            // console.log('target_y - 80: ', target_y - 80);
             clearInterval(timer);
         }
         else {
             if (counter === bezzed.length - 1) {
                 console.warn('counter reached end of bezzed: ', counter);
                 console.warn('common.utils.scroll_to_bezier');
+                console.log('bezzed[counter]: ', bezzed[counter]);
+                console.log(`window.scrollY: ${window.scrollY}\n`);
+                console.log('target_y: ', target_y);
+                console.log('target_y - 80: ', target_y - 80);
+                // counter = counter - 1;
             }
             window.scrollTo(0, window.scrollY + direction * bezzed[counter]);
             counter = counter + 1;
@@ -57,32 +74,6 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
 
 }
 
-
-// function scroll_to_top(target) {
-//     let factor = 18;
-//     let freq = 1;
-//     let timer = setInterval(
-//         () => {
-//             function _expo(factor) {
-//                 // console.log('factor: ', factor);
-//                 // console.log('Math.pow(window.scrollY / 100, 0.98): ', Math.pow(window.scrollY / 100, 0.98));
-//                 // console.log('1 - (5 / window.scrollY: ', (1 - (5 / window.scrollY)));
-//                 // console.log('Math.pow(window.scrollY, 0.25) : ', Math.pow(window.scrollY, 0.25));
-//                 window.scrollTo(0, window.scrollY - factor);
-//                 // return factor > 1 ? factor * (1 - (Math.pow(window.scrollY / 100, 0.98))) : factor
-//                 // return factor > 1 ? factor * (1 - (Math.pow(window.scrollY / 100, 0.98))) : factor
-//                 // return factor > 1 ? Math.pow(window.scrollY, 0.25) : factor
-//                 return factor > 1 ? Math.pow(factor, 0.999) : factor
-//             }
-//
-//             if (window.scrollY > get_rect(target).top) {
-//                 factor = _expo(factor);
-//             }
-//             else {
-//                 clearInterval(timer);
-//             }
-//         }, freq);
-// }
 
 function element_or_by_fn(element, fn) {
     return typeof element === "string" ? fn(element) : element;
@@ -237,4 +228,11 @@ function remove_class(element, remove) {
         let after = cls.substring(remove_idx + remove.length + 1, cls.length);
         element.className = before + after;
     }
+}
+
+function create(tag, att, att_value, inner) {
+    let element = document.createElement(tag);
+    element.setAttribute(att, att_value);
+    element.innerHTML = inner;
+    return element;
 }

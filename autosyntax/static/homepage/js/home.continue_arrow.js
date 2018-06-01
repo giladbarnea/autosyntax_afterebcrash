@@ -1,4 +1,4 @@
-console.log('home.continue_arrow.js\n');
+console.log('homepage/home.continue_arrow.js\tFROM home.landing.html\tMODULE\n');
 set_init_lbl_html("What is it?");
 
 //IMPORTANT TO KEEP IT HERE - FILE IS MODULE = LOADS LAST = scrollY's ACCURATE

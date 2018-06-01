@@ -1,4 +1,4 @@
-console.log('htu.js\n');
+console.log('howtouse/htu.js\t\t\t\t\tFROM htu.howtouse.html\n');
 toggle_pair("animation_1", "animation_2");
 toggle_pair("animation_3", "animation_4");
 toggle_pair("animation_5", "animation_6");

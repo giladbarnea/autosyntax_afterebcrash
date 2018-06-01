@@ -1,3 +1,6 @@
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/bezier.js\t\t\t\tFROM common.layout.html\n');
+
 function bezier(distance) {
     let _bez = t => 3 * (1 - t) * Math.pow(t, 2);
 
@@ -52,20 +55,27 @@ function print(list, name) {
     console.log(`length ${name}: ${list.length}`);
 }
 
-function get_bezzed(distance, freq_ms, dur_ms) {
+function get_bezzed(distance, freq_ms) {
+    let dur_ms;
+    if (distance < 500)
+        dur_ms = distance;
+    else if (distance < 1000)
+        dur_ms = 500;
+    else
+        dur_ms = distance ** 0.9;
     // console.log(`\ndistance: ${distance}`);
     // console.log(`freq_ms ${freq_ms} ms`);
     // console.log(`animation takes ${dur_ms / 1000} seconds`);
-    let iterations = distance / (dur_ms / freq_ms);
+    let one_step = distance / (dur_ms / freq_ms);
 
     let curved = bezier(distance);
 
     let curved_sum = sum(curved);
     // console.log('curved sum: ', curved_sum);
-    let diluted = dilute(curved, parseInt(iterations));
+    let diluted = dilute(curved, parseInt(one_step));
 
     let compressed = diluted.map(curr => Math.pow(curr, (1 - distance / Math.pow(dur_ms, 1.5))));
-    let amp_factor = (curved_sum - sum(compressed)) / (distance / iterations);
+    let amp_factor = (curved_sum - sum(compressed)) / (distance / one_step);
     // console.log('\namp_factor: ', amp_factor);
 
     // print(amped, 'amped');

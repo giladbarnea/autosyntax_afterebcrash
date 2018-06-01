@@ -221,6 +221,18 @@ body {
     padding-left: 2.5em
 }
 
+#hamburger_menu {
+    padding-top: 105%;
+    margin-top: -100%;
+    padding-left: 105%;
+    margin-left: -100%;
+    padding-right: 100%;
+    margin-right: -100%;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+
+}
+
 /*#continue_arrow:hover {*/
 /*height: 63px;*/
 /*left: 49.8%;*/

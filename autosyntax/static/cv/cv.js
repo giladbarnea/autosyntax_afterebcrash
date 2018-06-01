@@ -1,4 +1,4 @@
-console.log('cv.js');
+console.log('cv/cv.js\tFROM cv.html\tMODULE\n');
 
 by_id("continue_arrow").style["display"] = "none";
 set_style("back", "display", "unset");

@@ -1,8 +1,8 @@
-console.log('htu.continue_arrow.js\n');
+console.log('howtouse/htu.continue_arrow.js\tFROM htu.howtouse.html\tMODULE\n');
 set_init_lbl_html("Operators");
 
 //IMPORTANT TO KEEP IT HERE - FILE IS MODULE = LOADS LAST = scrollY's ACCURATE
-let [operators, dotted, inline, complex] = [
+export let [operators, dotted, inline, complex] = [
     new Section("operators_htu", "Operators"),
     new Section("dotted_htu", "Dotted args"),
     new Section("inline_htu", "Inline methods"),

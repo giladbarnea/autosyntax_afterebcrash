@@ -1,8 +1,18 @@
-// TOP SCRIPTS DONT CALL FNS
+// TOP SCRIPT, DONT CALL ANY FNS HERE
+console.log('common/responsive_utils.js\t\tFROM common.layout.html\n');
 
 let normalize = (n) => typeof n === "number" ? n.toString() + "px" : n;
+let hamb_menu_open = false;
+
+function handle_hamb_menu() {
+    if (hamb_menu_open)
+        close_hamb_menu();
+    else
+        open_hamb_menu();
+}
 
 function open_hamb_menu() {
+    hamb_menu_open = true;
     set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(80%) brightness(50%) blur(7px)');
     set_style('hamburger_menu', 'display', 'unset');
@@ -11,6 +21,7 @@ function open_hamb_menu() {
 }
 
 function close_hamb_menu() {
+    hamb_menu_open = false;
     set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(0%) brightness(100%) blur(0px)');
     decrease_opacity('hamburger_menu', 0, factor = 0.5);
@@ -18,23 +29,24 @@ function close_hamb_menu() {
         set_style('hamburger_menu', 'display', 'none');
     }, 1000);
 
-
 }
 
 function to_mobile() {
     set_style('grid_0', 'display', 'none');
     set_style('continue_arrow', 'display', 'none');
     set_style('back', 'display', 'none');
-    set_style('go_up', 'display', 'none');
+    // set_style('go_up', 'display', 'none');
     set_style('hamburger', 'display', 'unset');
-    on_event_do('hamburger_img', 'click', open_hamb_menu);
+    // on_event_do('hamburger_img', 'click', open_hamb_menu);
+    on_event_do('hamburger_img', 'click', handle_hamb_menu);
+    on_event_do('hamburger_menu', 'click', handle_hamb_menu);
 }
 
 function to_none_mobile() {
     set_style('grid_0', 'display', 'unset');
     set_style('continue_arrow', 'display', 'unset');
     set_style('back', 'display', 'unset');
-    set_style('go_up', 'display', 'unset');
+    // set_style('go_up', 'display', 'unset');
     set_style('hamburger', 'display', 'none');
 }
 
