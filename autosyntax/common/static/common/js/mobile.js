@@ -8,8 +8,8 @@ function tablet_portrait() {
     let body_margin_left = 90 + ((width - 900) / 5);
     let body_margin_top = 50 + ((width - 900) / 7.5);
     body_margins(body_margin_top, right = body_margin_left / 2, bottom = 60, body_margin_left);
-    let ham_pad_bott = body_margin_top + (5 + (600 - width) / (60 / 7));
-    let ham_pad_top = body_margin_top + (15 + (600 - width) / 30);
+    let ham_pad_bott = body_margin_top + (10 + (600 - width) / 10);
+    let ham_pad_top = body_margin_top + (15 + (600 - width) / 15);
     hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
 
 

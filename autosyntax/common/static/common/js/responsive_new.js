@@ -70,7 +70,7 @@ set_style("continue_arrow", "top", arrow.top);
 
 const phone_max = 599;
 const tablet_portrait_up = 600;
-const tablet_landscape_up = 900;
+const tablet_landscape_up = 901;
 const desktop_up = 1200;
 const big_desktop_up = 1800;
 
