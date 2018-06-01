@@ -16,7 +16,7 @@ on_event_do(window, "scroll",
     });
 
 on_event_do("go_up", "click",
-    () => scroll_to(document.body));
+    () => scroll_to_bezier(0));
 
 let is_console_menu_vis = false;
 on_event_do("console_menu", "mouseover", show_console_menu);
