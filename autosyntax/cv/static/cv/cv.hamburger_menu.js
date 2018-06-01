@@ -1,13 +1,5 @@
 console.log('cv/cv.hamburger_menu.js\tFROM cv.html\tMODULE\n');
-let [overview, experience, skills, education, military, languages, contact] = [
-    new Section("overview_cv", "Who am I"),
-    new Section("experience_cv", "How to use"),
-    new Section("skills_cv", "Download"),
-    new Section("education_cv", "What is it?"),
-    new Section("military_cv", "What is it?"),
-    new Section("languages_cv", "What is it?"),
-    new Section("contact_cv", "What is it?")
-];
+
 
 let hamburger_menu = by_id('hamburger_menu');
 for (let i = 5; i <= 7; i++) {
@@ -31,7 +23,15 @@ by_id('hamburger_item_3').innerHTML = 'Skills';
 by_id('hamburger_item_4').innerHTML = 'Education';
 set_style('hamburger_menu', 'marginTop', '-105%');
 set_style('hamburger_menu', 'fontSize', '35px');
-
+let [overview, experience, skills, education, military, languages, contact] = [
+    new Section("overview_cv", "Who am I"),
+    new Section("experience_cv", "How to use"),
+    new Section("skills_cv", "Download"),
+    new Section("education_cv", "What is it?"),
+    new Section("military_cv", "What is it?"),
+    new Section("languages_cv", "What is it?"),
+    new Section("contact_cv", "What is it?")
+];
 
 // What is it?
 on_event_do("hamburger_item_1", "click",

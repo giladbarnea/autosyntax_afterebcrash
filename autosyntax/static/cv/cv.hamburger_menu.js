@@ -1,4 +1,28 @@
 console.log('cv/cv.hamburger_menu.js\tFROM cv.html\tMODULE\n');
+
+
+let hamburger_menu = by_id('hamburger_menu');
+for (let i = 5; i <= 7; i++) {
+    add_child(hamburger_menu, {'tag': 'br'});
+    add_child(hamburger_menu, {'tag': 'br'});
+    add_child(hamburger_menu,
+        {
+            'tag': 'SPAN',
+            'att': 'id',
+            'att_value': `hamburger_item_${i}`,
+            'inner': i === 5 ?
+                'Military' :
+                i === 6 ?
+                    'Languages' :
+                    'Contact'
+        });
+}
+by_id('hamburger_item_1').innerHTML = 'Overview';
+by_id('hamburger_item_2').innerHTML = 'Experience';
+by_id('hamburger_item_3').innerHTML = 'Skills';
+by_id('hamburger_item_4').innerHTML = 'Education';
+set_style('hamburger_menu', 'marginTop', '-105%');
+set_style('hamburger_menu', 'fontSize', '35px');
 let [overview, experience, skills, education, military, languages, contact] = [
     new Section("overview_cv", "Who am I"),
     new Section("experience_cv", "How to use"),
@@ -8,22 +32,6 @@ let [overview, experience, skills, education, military, languages, contact] = [
     new Section("languages_cv", "What is it?"),
     new Section("contact_cv", "What is it?")
 ];
-
-
-by_id('hamburger_item_1').innerHTML = 'Overview';
-by_id('hamburger_item_2').innerHTML = 'Experience';
-by_id('hamburger_item_3').innerHTML = 'Skills';
-by_id('hamburger_item_4').innerHTML = 'Education';
-
-let hamburger_menu = by_id('hamburger_menu');
-hamburger_menu.appendChild(document.createElement('br'));
-hamburger_menu.appendChild(document.createElement('br'));
-// let span = document.createElement('SPAN');
-// span.setAttribute('id', 'hamburger_item_5');
-let span = create('SPAN', 'id', 'hamburger_item_5', inner = 'Military');
-// span.innerHTML = 'lololo';
-hamburger_menu.appendChild(span);
-
 
 // What is it?
 on_event_do("hamburger_item_1", "click",
@@ -48,4 +56,22 @@ on_event_do("hamburger_item_3", "click",
 on_event_do("hamburger_item_4", "click",
     () => {
         scroll_to_bezier(education.init_top);
+    });
+
+
+on_event_do("hamburger_item_5", "click",
+    () => {
+        scroll_to_bezier(military.init_top);
+    });
+
+
+on_event_do("hamburger_item_6", "click",
+    () => {
+        scroll_to_bezier(languages.init_top);
+    });
+
+
+on_event_do("hamburger_item_7", "click",
+    () => {
+        scroll_to_bezier(contact.init_top);
     });
