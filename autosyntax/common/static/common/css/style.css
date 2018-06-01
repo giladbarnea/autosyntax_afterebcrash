@@ -304,7 +304,7 @@ body {
 
 #all {
     /*-webkit-transition: -webkit-filter 5000ms linear;*/
-    transition: 1s filter ease-out;
+    transition: 700ms filter ease-out;
 
 }
 

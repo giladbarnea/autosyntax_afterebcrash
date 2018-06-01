@@ -40,20 +40,20 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
 
     let distance = Math.abs(window.scrollY - target_y);
     let bezzed = get_bezzed(distance, freq_ms);
-    console.log('sum(bezzed): ', sum(bezzed));
-    console.log('distance: ', distance);
-    console.log('target_y: ', target_y);
-    console.log(`window.scrollY: ${window.scrollY}\n`);
-    console.log('bezzed.length: ', bezzed.length);
+    // console.log('sum(bezzed): ', sum(bezzed));
+    // console.log('distance: ', distance);
+    // console.log('target_y: ', target_y);
+    // console.log(`window.scrollY: ${window.scrollY}\n`);
+    // console.log('bezzed.length: ', bezzed.length);
     let counter = 0;
     let timer = setInterval(() => {
         if (stop_cond()) {
-            console.warn(`\nreached stop condition`);
-            console.log(`counter: ${counter}\n`);
-            console.log('bezzed[counter]: ', bezzed[counter]);
-            console.log(`window.scrollY: ${window.scrollY}\n`);
-            console.log('target_y: ', target_y);
-            console.log('target_y - 80: ', target_y - 80);
+            // console.warn(`\nreached stop condition`);
+            // console.log(`counter: ${counter}\n`);
+            // console.log('bezzed[counter]: ', bezzed[counter]);
+            // console.log(`window.scrollY: ${window.scrollY}\n`);
+            // console.log('target_y: ', target_y);
+            // console.log('target_y - 80: ', target_y - 80);
             clearInterval(timer);
         }
         else {
