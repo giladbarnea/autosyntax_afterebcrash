@@ -22,15 +22,15 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
     let is_target_below = window.scrollY < target_y;
     let direction = is_target_below ? +1 : -1;
     let stop_cond = false;
-    console.warn('\nis_target_below: ', is_target_below);
+    // console.warn('\nis_target_below: ', is_target_below);
     let distance;
     if (is_target_below) {
         if (target_y - 100 >= 0) {
-            console.log('stop condition: window.scrollY >= target_y - 100');
+            // console.log('stop condition: window.scrollY >= target_y - 100');
             stop_cond = () => window.scrollY >= target_y - 100;
         }
         else {
-            console.log('stop condition: window.scrollY >= target_y');
+            // console.log('stop condition: window.scrollY >= target_y');
             stop_cond = () => window.scrollY >= target_y;
         }
         distance = Math.abs(window.scrollY - target_y);
@@ -38,35 +38,35 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
     // going up
     else {
         if (target_y - 100 >= 0) {
-            console.log('stop condition: window.scrollY <= target_y - 100');
+            // console.log('stop condition: window.scrollY <= target_y - 100');
             stop_cond = () => window.scrollY <= target_y - 100;
         }
         else {
-            console.log('stop condition: window.scrollY <= target_y');
+            // console.log('stop condition: window.scrollY <= target_y');
             stop_cond = () => window.scrollY <= target_y;
         }
         distance = Math.abs(window.scrollY - (target_y - 100));
     }
 
 
-    console.log('window.scrollY: ', window.scrollY);
-    console.log('target_y: ', target_y);
-    console.log('target_y - 100: ', target_y - 100);
-    console.log('distance: ', distance);
+    // console.log('window.scrollY: ', window.scrollY);
+    // console.log('target_y: ', target_y);
+    // console.log('target_y - 100: ', target_y - 100);
+    // console.log('distance: ', distance);
     let bezzed = get_bezzed(distance, freq_ms);
-    console.log('\nutils.js');
-    console.log('bezzed[0]: ', bezzed[0]);
-    console.log('sum(bezzed): ', sum(bezzed));
-    console.log('bezzed.length: ', bezzed.length);
+    // console.log('\nutils.js');
+    // console.log('bezzed[0]: ', bezzed[0]);
+    // console.log('sum(bezzed): ', sum(bezzed));
+    // console.log('bezzed.length: ', bezzed.length);
     let counter = 0;
     let timer = setInterval(() => {
         if (stop_cond()) {
-            console.log(`\nreached stop condition`);
-            console.log('counter: ', counter);
-            console.log('bezzed[counter]: ', bezzed[counter]);
-            console.log('window.scrollY: ', window.scrollY);
-            console.log('target_y: ', target_y);
-            console.log('target_y - 100: ', target_y - 100);
+            // console.log(`\nreached stop condition`);
+            // console.log('counter: ', counter);
+            // console.log('bezzed[counter]: ', bezzed[counter]);
+            // console.log('window.scrollY: ', window.scrollY);
+            // console.log('target_y: ', target_y);
+            // console.log('target_y - 100: ', target_y - 100);
             clearInterval(timer);
         }
         else {
