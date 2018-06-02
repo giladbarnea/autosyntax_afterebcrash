@@ -236,12 +236,6 @@ function remove_class(element, remove) {
     }
 }
 
-function create(tag, att = undefined, att_value = undefined, inner = undefined) {
-    let element = document.createElement(tag);
-    element.setAttribute(att, att_value);
-    element.innerHTML = inner;
-    return element;
-}
 
 function add_child(element, child_attrs) {
     element = element_or_by_fn(element, by_id);
@@ -252,3 +246,22 @@ function add_child(element, child_attrs) {
         child_attrs['inner'],
     ))
 }
+
+function create(tag, att = undefined, att_value = undefined, inner = undefined) {
+    let element = document.createElement(tag);
+    element.setAttribute(att, att_value);
+    element.innerHTML = inner;
+    return element;
+}
+
+
+
+
+
+
+
+
+
+
+
+

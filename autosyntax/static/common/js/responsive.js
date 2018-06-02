@@ -1,5 +1,5 @@
 // TOP SCRIPT, DONT CALL ANY FNS HERE
-console.log('common/responsive_new.js\t\tFROM common.layout.html\n');
+console.log('common/responsive.js\t\tFROM common.layout.html\n');
 
 // defaults to big desktop up
 class ContinueArrow {
@@ -13,9 +13,9 @@ class ContinueArrow {
         if (media === big_desktop_up) {
             this.center = "48.5%";
             this.left = '14%';
-            if (filename === 'how') {
+            if (filename === 'how')
                 this.top = '65%';
-            }
+			
             else
                 this.top = '85%';
         }
@@ -35,37 +35,6 @@ class ContinueArrow {
 let arrow = new ContinueArrow();
 set_style("continue_arrow", "left", arrow.center);
 set_style("continue_arrow", "top", arrow.top);
-// function set_continue_arrow(media) {
-//     if (media === big_desktop_up) {
-//         arrow_attrs = {
-//             'arrow_c': "48.5%",
-//             'lbl_c': "47.5%",
-//             'arrow_l': '14%',
-//             'lbl_l': '12.7%'
-//         }
-//     }
-//     else if (media === desktop_up) {
-//         arrow_attrs = {
-//             'arrow_c': "48.5%",
-//             'lbl_c': "46%",
-//             'arrow_l': '14%',
-//             'lbl_l': '12%'
-//         }
-//     }
-//     else if (media === tablet_landscape_up) {
-//         arrow_attrs = {
-//             'arrow_c': "48.5%",
-//             'lbl_c': "44.5%",
-//             'arrow_l': '14%',
-//             'lbl_l': '10%'
-//         }
-//     }
-//     else {
-//         console.error('implement get_continue_arrow fn in respopnsive')
-//     }
-//
-//
-// }
 
 
 const phone_max = 599;
@@ -76,21 +45,16 @@ const big_desktop_up = 1800;
 
 
 on_event_do(window, "resize", on_resize);
-try {
-    create_bullet_list('overview_cv_list');
-    create_bullet_list('skills_languages_cv');
-    create_bullet_list('skills_tech_py_cv');
-    create_bullet_list('skills_tech_net_cv');
-    create_bullet_list('skills_tech_webcloud_cv');
-    create_bullet_list('skills_tech_editing_cv');
-    create_bullet_list('education_sela_cv');
-    create_bullet_list('education_bgu_cv');
-    create_bullet_list('military_list_cv');
-    create_bullet_list('languages_list_cv');
-}
-catch (e) {
-
-}
+create_bullet_list('overview_cv_list');
+create_bullet_list('skills_languages_cv');
+create_bullet_list('skills_tech_py_cv');
+create_bullet_list('skills_tech_net_cv');
+create_bullet_list('skills_tech_webcloud_cv');
+create_bullet_list('skills_tech_editing_cv');
+create_bullet_list('education_sela_cv');
+create_bullet_list('education_bgu_cv');
+create_bullet_list('military_list_cv');
+create_bullet_list('languages_list_cv');
 on_resize();
 
 
