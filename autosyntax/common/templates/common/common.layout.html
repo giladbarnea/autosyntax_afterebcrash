@@ -1,5 +1,10 @@
 {% load staticfiles %}
-<meta property="og:image" content="{% static '/common/preview_1200_630.png' %}">
+<meta property="og:image" content="http://www.autosyntax.io/static/common/preview_1200_630.gif">
+<meta property="og:title" content="autosyntax makes you code faster."/>
+<meta property="og:url" content="http://www.autosyntax.io"/>
+<meta property="og:type" content="website"/>
+<meta property="og:description" content="autosyntax is a desktop app that converts
+simple english words to fully functional python code, with one global hotkey."/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="height=device-height, initial-scale=1">
 <title>autosyntax</title>
@@ -12,13 +17,13 @@
 <script src="{% static 'common/js/bezier.js' %}"></script>
 <script src="{% static 'common/js/utils.js' %}"></script>
 <script src="{% static 'common/js/continue_arrow.js' %}"></script>
+{#    H A M B U R G E R #}
 <div id="hamburger" class="disp-none">
     {% include 'common/hamburger.html' %}
     <br>
 </div>
 <div id="all" class="no-select op0">
     <div class="grid-container">
-        {#    H A M B U R G E R #}
         <div id="grid_0" class="grid-item grid-0">
             {# C O N S O L E  M E N U#}
             <img src="{% static '/common/img/console_menu.svg' %}"
