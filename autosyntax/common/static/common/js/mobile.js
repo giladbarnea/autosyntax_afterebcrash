@@ -15,23 +15,17 @@ function tablet_portrait() {
     let ham_img_pad_top = body_margin_top + (15 + (600 - width) / 15);
 
     hamburger_img(mt = -body_margin_top - 5, pb = ham_img_pad_bott, pt = ham_img_pad_top, pr = width);
-
+    set_style('hamburger_footer', 'marginLeft', '37%');
     let fshamburger;
     let ham_menu_mt;
     let ham_menu_ml;
     if (filename === 'cv') {
-        console.log('height: ', height);
-        console.log('height/20: ', height / 20);
-        console.log('width: ', width);
-        console.log('width/14: ', width / 14);
+
         fshamburger = height / 20 < width / 14 ? height / 20 : width / 14;
         ham_menu_mt = '-110%';
         ham_menu_ml = '-95%';
     } else {
-        console.log('height: ', height);
-        console.log('height/17: ', height / 17);
-        console.log('width: ', width);
-        console.log('width/14: ', width / 14);
+
         fshamburger = height / 17 < width / 14 ? height / 17 : width / 14;
         ham_menu_mt = '-100%';
         ham_menu_ml = '-100%';
@@ -54,7 +48,7 @@ function tablet_portrait() {
     margin_tops(_20 = 15, _25 = 20);
     my_ul('1em');
     margin_lefts(_100 = 70, _136 = 110, _150 = 120);
-
+    // back(left = '6%', _width = 70);
     let works = by_class('work');
     for (let i = 0; i < works.length; i++) {
         if (works[i].tagName === "DIV" &&
@@ -79,23 +73,17 @@ function phone_landscape() {
     let ham_img_pad_bott = body_margin_top + (5 + (360 - width) / (60 / 7));
     let ham_img_pad_top = body_margin_top + (15 + (360 - width) / 30);
     hamburger_img(mt = -body_margin_top - 5, pb = ham_img_pad_bott, pt = ham_img_pad_top, pr = width);
-
+    set_style('hamburger_footer', 'marginLeft', '32%');
     let fshamburger;
     let ham_menu_mt;
     let ham_menu_ml;
     if (filename === 'cv') {
-        console.log('height: ', height);
-        console.log('height/20: ', height / 20);
-        console.log('width: ', width);
-        console.log('width/14: ', width / 14);
+
         fshamburger = height / 20 < width / 14 ? height / 20 : width / 14;
         ham_menu_mt = '-110%';
         ham_menu_ml = '-95%';
     } else {
-        console.log('height: ', height);
-        console.log('height/17: ', height / 17);
-        console.log('width: ', width);
-        console.log('width/14: ', width / 14);
+
         fshamburger = height / 17 < width / 14 ? height / 17 : width / 14;
         ham_menu_mt = '-100%';
         ham_menu_ml = '-100%';
@@ -137,6 +125,7 @@ function phone_landscape() {
 
     my_ul('1em');
     margin_lefts(_100 = 30, _136 = 44, _150 = 50);
+    // back(left = '6%', _width = 70);
     if (filename === undefined)
         set_style('download_file_size', 'marginLeft', 0);
     let works = by_class('work');

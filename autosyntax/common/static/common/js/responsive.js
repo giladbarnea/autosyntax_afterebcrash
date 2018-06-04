@@ -162,7 +162,7 @@ function tablet_landscape_resize() {
     margin_tops(_20 = 15, _25 = 20);
     my_ul('1em');
     margin_lefts(_100 = 70, _136 = 110, _150 = 120);
-    back(left = '6%', width = 70);
+    back(left = '6%', _width = 70);
 
 
     if (filename === 'cv')

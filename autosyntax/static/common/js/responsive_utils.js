@@ -34,7 +34,7 @@ function close_hamb_menu() {
 function to_mobile() {
     set_style('grid_0', 'display', 'none');
     set_style('continue_arrow', 'display', 'none');
-    set_style('back', 'display', 'none');
+    // set_style('back', 'display', 'none');
     // set_style('go_up', 'display', 'none');
     set_style('hamburger', 'display', 'unset');
     // on_event_do('hamburger_img', 'click', open_hamb_menu);
@@ -45,7 +45,7 @@ function to_mobile() {
 function to_none_mobile() {
     set_style('grid_0', 'display', 'unset');
     set_style('continue_arrow', 'display', 'unset');
-    set_style('back', 'display', 'unset');
+    // set_style('back', 'display', 'unset');
     // set_style('go_up', 'display', 'unset');
     set_style('hamburger', 'display', 'none');
 }
