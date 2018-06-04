@@ -8,5 +8,6 @@ urlpatterns = [
 	# url(r'howtouse', views.how_to_use, name='howtouse'),
 	url(r'how', views.how_to_use, name='howtouse'),
 	url(r'cv', views.cv, name='cv'),
-	# url(r'whoami', views.index, name='whoami'),
+	url(r'whoami', views.whoami, name='whoami'),
+	url(r'download', views.download, name='download'),
 	]

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+<meta property="og:image" content="{% static '/common/preview_1200_630.png' %}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="height=device-height, initial-scale=1">
 <title>autosyntax</title>
@@ -26,6 +27,7 @@
 
             {# S I D E B A R#}
             <div class="space-font sidebar pl20 pt70" id="sidebar">
+
                 {% for item in sidebar_items %}
                     <div class="sidebar-item fs20 mb10"
                          id="sidebar_item_{{ forloop.counter }}">
@@ -44,7 +46,7 @@
 
         {#       OUT OF GRID#}
         {#    C O N T I N U E  A R R O W#}
-{#        <div id="continue_arrow_lbl"#}
+        {#        <div id="continue_arrow_lbl"#}
         {#             class="continue-arrow-lbl work fs20 op0 width110 top84 disp-none"></div>#}
 
 
@@ -57,7 +59,6 @@
         <svg id="go_up" class="go-up fs23 width110 top88 ztop l90">
             <text x="0" y="20" fill="white">TOP</text>
         </svg>
-
 
 
         {#        END OUT OF GRID#}
@@ -87,4 +88,9 @@
 <script src="{% static 'common/js/responsive_utils.js' %}"></script>
 <script src="{% static 'common/js/mobile.js' %}"></script>
 <script src="{% static 'common/js/responsive.js' %}"></script>
+{#{% for script in scroll_to %}#}
+{#    <script src="{{ script }}"></script>#}
+{#{% endfor %}#}
+{{ scroll_to |safe }}
 <script src="{% static 'common/js/layout.js' %}"></script>
+

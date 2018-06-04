@@ -8,6 +8,22 @@ def index(request):
 	return render(request, 'homepage/home.whoami.html', context)
 
 
+def whoami(request):
+	context = {
+		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I? (CV)'],
+		'scroll_to':     '<script src="/static/homepage/js/scroll_to_whoami.js"></script>'
+		}
+	return render(request, 'homepage/home.whoami.html', context)
+
+
+def download(request):
+	context = {
+		'sidebar_items': ['What is it?', 'Download', 'How to use', 'Who am I? (CV)'],
+		'scroll_to':     '<script src="/static/homepage/js/scroll_to_download.js"></script>'
+		}
+	return render(request, 'homepage/home.whoami.html', context)
+
+
 def how_to_use(request):
 	context = {
 		'sidebar_items': ['Operators', 'Dotted arguments', 'Inline methods', 'Complex operators'],
