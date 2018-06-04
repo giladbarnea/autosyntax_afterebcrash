@@ -15,7 +15,7 @@ class ContinueArrow {
             this.left = '14%';
             if (filename === 'how')
                 this.top = '65%';
-			
+
             else
                 this.top = '85%';
         }
@@ -45,25 +45,26 @@ const big_desktop_up = 1800;
 
 
 on_event_do(window, "resize", on_resize);
-create_bullet_list('overview_cv_list');
-create_bullet_list('skills_languages_cv');
-create_bullet_list('skills_tech_py_cv');
-create_bullet_list('skills_tech_net_cv');
-create_bullet_list('skills_tech_webcloud_cv');
-create_bullet_list('skills_tech_editing_cv');
-create_bullet_list('education_sela_cv');
-create_bullet_list('education_bgu_cv');
-create_bullet_list('military_list_cv');
-create_bullet_list('languages_list_cv');
+// create_bullet_list('overview_cv_list');
+// create_bullet_list('skills_languages_cv');
+// create_bullet_list('skills_tech_py_cv');
+// create_bullet_list('skills_tech_net_cv');
+// create_bullet_list('skills_tech_webcloud_cv');
+// create_bullet_list('skills_tech_editing_cv');
+// create_bullet_list('education_sela_cv');
+// create_bullet_list('education_bgu_cv');
+// create_bullet_list('military_list_cv');
+// create_bullet_list('languages_list_cv');
 on_resize();
 
 
 function big_desktop_resize() {
-    let filename = window.location.pathname
-        .split("/")
-        .filter(c => c.length)
-        .pop();
+    // let filename = window.location.pathname
+    //     .split("/")
+    //     .filter(c => c.length)
+    //     .pop();
 
+    let filename = get_filename();
     arrow.set(big_desktop_up, filename);
     to_none_mobile();
     body_margins(50, 60, 60, 60);
@@ -89,10 +90,11 @@ function big_desktop_resize() {
 
 
 function desktop_resize() {
-    let filename = window.location.pathname
-        .split("/")
-        .filter(c => c.length)
-        .pop();
+    // let filename = window.location.pathname
+    //     .split("/")
+    //     .filter(c => c.length)
+    //     .pop();
+    let filename = get_filename();
     arrow.set(desktop_up);
     to_none_mobile();
     body_margins();

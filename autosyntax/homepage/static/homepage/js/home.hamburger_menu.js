@@ -23,6 +23,7 @@ on_event_do("hamburger_item_3", "click",
 // Who am I?
 on_event_do("hamburger_item_4", "click",
     () => {
+        console.log('whoami.init_top: ', whoami.init_top);
         scroll_to_bezier(whoami.init_top);
     });
 

@@ -18,37 +18,41 @@ function scroll_to(target) {
 }
 
 function scroll_to_bezier(target_y, freq_ms = 10) {
+    console.warn('\n!scroll_to_bezier');
     let y = window.scrollY;
     let is_target_below = window.scrollY < target_y;
     let direction = is_target_below ? +1 : -1;
     let stop_cond = false;
     // console.warn('\nis_target_below: ', is_target_below);
     let distance;
+
     if (is_target_below) {
         if (target_y - 100 >= 0) {
-            // console.log('stop condition: window.scrollY >= target_y - 100');
+            console.log('stop condition: window.scrollY >= target_y - 100');
             stop_cond = () => window.scrollY >= target_y - 100;
         }
         else {
-            // console.log('stop condition: window.scrollY >= target_y');
+            console.log('stop condition: window.scrollY >= target_y');
             stop_cond = () => window.scrollY >= target_y;
         }
+        console.log('distance = Math.abs(window.scrollY - (target_y - 100))');
         distance = Math.abs(window.scrollY - target_y);
     }
     // going up
     else {
         if (target_y - 100 >= 0) {
-            // console.log('stop condition: window.scrollY <= target_y - 100');
+            console.log('stop condition: window.scrollY <= target_y - 100');
             stop_cond = () => window.scrollY <= target_y - 100;
         }
         else {
-            // console.log('stop condition: window.scrollY <= target_y');
+            console.log('stop condition: window.scrollY <= target_y');
             stop_cond = () => window.scrollY <= target_y;
         }
+        console.log('distance = Math.abs(window.scrollY - (target_y - 100))');
         distance = Math.abs(window.scrollY - (target_y - 100));
     }
 
-
+    console.log('distance: ', distance);
     // console.log('window.scrollY: ', window.scrollY);
     // console.log('target_y: ', target_y);
     // console.log('target_y - 100: ', target_y - 100);
@@ -61,12 +65,12 @@ function scroll_to_bezier(target_y, freq_ms = 10) {
     let counter = 0;
     let timer = setInterval(() => {
         if (stop_cond()) {
-            // console.log(`\nreached stop condition`);
-            // console.log('counter: ', counter);
-            // console.log('bezzed[counter]: ', bezzed[counter]);
-            // console.log('window.scrollY: ', window.scrollY);
-            // console.log('target_y: ', target_y);
-            // console.log('target_y - 100: ', target_y - 100);
+            console.log(`\nreached stop condition`);
+            console.log('counter: ', counter);
+            console.log('bezzed[counter]: ', bezzed[counter]);
+            console.log('window.scrollY: ', window.scrollY);
+            console.log('target_y: ', target_y);
+            console.log('target_y - 100: ', target_y - 100);
             clearInterval(timer);
         }
         else {
@@ -197,6 +201,7 @@ function set_opacity(element, limit, factor) {
 }
 
 function create_bullet_list(ul_id) {
+
     let list = by_id(ul_id);
     let list_ch = list.children;
 
@@ -239,7 +244,7 @@ function remove_class(element, remove) {
 
 function add_child(element, child_attrs) {
     element = element_or_by_fn(element, by_id);
-    element.appendChild(create(
+    element.appendChild(create_element(
         child_attrs['tag'],
         child_attrs['att'],
         child_attrs['att_value'],
@@ -247,15 +252,19 @@ function add_child(element, child_attrs) {
     ))
 }
 
-function create(tag, att = undefined, att_value = undefined, inner = undefined) {
+function create_element(tag, att = undefined, att_value = undefined, inner = undefined) {
     let element = document.createElement(tag);
     element.setAttribute(att, att_value);
     element.innerHTML = inner;
     return element;
 }
 
-
-
+function get_filename() {
+    return window.location.pathname
+        .split("/")
+        .filter(c => c.length)
+        .pop();
+}
 
 
 

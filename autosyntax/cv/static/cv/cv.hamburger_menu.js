@@ -21,8 +21,8 @@ by_id('hamburger_item_1').innerHTML = 'Overview';
 by_id('hamburger_item_2').innerHTML = 'Experience';
 by_id('hamburger_item_3').innerHTML = 'Skills';
 by_id('hamburger_item_4').innerHTML = 'Education';
-console.log('fixing hamburger menu marginTop and fontSize');
-set_style('hamburger_menu', 'marginTop', '-105%');
+// console.log('fixing hamburger menu marginTop and fontSize');
+// set_style('hamburger_menu', 'marginTop', '-105%');
 let width = window.screen.availWidth;
 if (width < 550)
     set_style('hamburger_menu', 'fontSize', width / 13.5);
@@ -55,6 +55,7 @@ on_event_do("hamburger_item_2", "click",
 // How to use
 on_event_do("hamburger_item_3", "click",
     () => {
+        console.log('skills.init_top: ', skills.init_top);
         scroll_to_bezier(skills.init_top);
 
     });
@@ -68,6 +69,7 @@ on_event_do("hamburger_item_4", "click",
 
 on_event_do("hamburger_item_5", "click",
     () => {
+        console.log('military.init_top: ', military.init_top);
         scroll_to_bezier(military.init_top);
     });
 
