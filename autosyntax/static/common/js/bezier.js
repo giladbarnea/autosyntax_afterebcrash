@@ -16,6 +16,12 @@ function bezier(distance) {
 
 }
 
+function dilute(list, factor) {
+    return list.filter((n, i) => i % factor === 0)
+        .reverse()
+        .map(n => n * factor);
+
+}
 
 function sum(list) {
     let sum = 0;
@@ -49,36 +55,25 @@ function print(list, name) {
     console.log(`length ${name}: ${list.length}`);
 }
 
-function dilute(list, factor) {
-    return list.filter((n, i) => i % factor === 0)
-        .reverse()
-        .map(n => n * factor);
-
-}
-
 function get_bezzed(distance, freq_ms) {
-    let dur_ms; // distance = 2276, dur_ms = 1050.642
+    let dur_ms;
     if (distance < 500)
         dur_ms = distance;
     else if (distance < 1000)
         dur_ms = 500;
     else
         dur_ms = distance ** 0.9;
-    // console.log(`\nbezier.js`);
-    // console.log('distance: ', distance);
-    // console.log(`every ${freq_ms} ms`);
-    // console.log(`dur_ms: ${dur_ms}`);
+    // console.log(`\ndistance: ${distance}`);
+    // console.log(`freq_ms ${freq_ms} ms`);
     // console.log(`animation takes ${dur_ms / 1000} seconds`);
     let one_step = distance / (dur_ms / freq_ms);
-    // console.log(`one step is ${one_step} pixels`);
-    // console.log(`${dur_ms / freq_ms} steps overall`);
+
     let curved = bezier(distance);
 
     let curved_sum = sum(curved);
-    // console.log('curved_sum: ', curved_sum);
-    // console.log('parseInt(one_step): ', parseInt(one_step));
+    // console.log('curved sum: ', curved_sum);
     let diluted = dilute(curved, parseInt(one_step));
-    // console.log('sum(diluted): ', sum(diluted));
+
     let compressed = diluted.map(curr => Math.pow(curr, (1 - distance / Math.pow(dur_ms, 1.5))));
     let amp_factor = (curved_sum - sum(compressed)) / (distance / one_step);
     // console.log('\namp_factor: ', amp_factor);

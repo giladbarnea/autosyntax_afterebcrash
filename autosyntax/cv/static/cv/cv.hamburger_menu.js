@@ -1,5 +1,13 @@
 console.log('cv/cv.hamburger_menu.js\tFROM cv.html\tMODULE\n');
-
+let [overview, experience, skills, education, military, languages, contact] = [
+    new Section("overview_cv", "Who am I"),
+    new Section("experience_cv", "How to use"),
+    new Section("skills_cv", "Download"),
+    new Section("education_cv", "What is it?"),
+    new Section("military_cv", "What is it?"),
+    new Section("languages_cv", "What is it?"),
+    new Section("contact_cv", "What is it?")
+];
 
 let hamburger_menu = by_id('hamburger_menu');
 for (let i = 5; i <= 7; i++) {
@@ -21,24 +29,23 @@ by_id('hamburger_item_1').innerHTML = 'Overview';
 by_id('hamburger_item_2').innerHTML = 'Experience';
 by_id('hamburger_item_3').innerHTML = 'Skills';
 by_id('hamburger_item_4').innerHTML = 'Education';
-// console.log('fixing hamburger menu marginTop and fontSize');
-// set_style('hamburger_menu', 'marginTop', '-105%');
+
+
+console.log('setting `hamburger_menu` mt => -105%, fontsize...');
+set_style('hamburger_menu', 'marginTop', '-105%');
 let width = window.screen.availWidth;
-if (width < 550)
+if (width < 550) {
     set_style('hamburger_menu', 'fontSize', width / 13.5);
+}
 
-else
+else {
     set_style('hamburger_menu', 'fontSize', 35);
+}
 
-let [overview, experience, skills, education, military, languages, contact] = [
-    new Section("overview_cv", "Who am I"),
-    new Section("experience_cv", "How to use"),
-    new Section("skills_cv", "Download"),
-    new Section("education_cv", "What is it?"),
-    new Section("military_cv", "What is it?"),
-    new Section("languages_cv", "What is it?"),
-    new Section("contact_cv", "What is it?")
-];
+
+// set_style('hamburger_menu', 'marginTop', '-105%');
+// set_style('hamburger_menu', 'fontSize', '35px');
+
 
 // What is it?
 on_event_do("hamburger_item_1", "click",

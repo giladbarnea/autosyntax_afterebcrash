@@ -35,7 +35,9 @@ function to_mobile() {
     set_style('grid_0', 'display', 'none');
     set_style('continue_arrow', 'display', 'none');
     set_style('back', 'display', 'none');
+    // set_style('go_up', 'display', 'none');
     set_style('hamburger', 'display', 'unset');
+    // on_event_do('hamburger_img', 'click', open_hamb_menu);
     on_event_do('hamburger_img', 'click', handle_hamb_menu);
     on_event_do('hamburger_menu', 'click', handle_hamb_menu);
 }
@@ -44,6 +46,7 @@ function to_none_mobile() {
     set_style('grid_0', 'display', 'unset');
     set_style('continue_arrow', 'display', 'unset');
     set_style('back', 'display', 'unset');
+    // set_style('go_up', 'display', 'unset');
     set_style('hamburger', 'display', 'none');
 }
 
@@ -90,10 +93,9 @@ function widths(_60 = "60px", _30 = "30px") {
 }
 
 function padding_tops(_20 = "20px", _25 = "25px",
-                      // _40 = "40px", _60 = "60px",
-                      // _70 = "70px", _80 = '80px',
-                      // _100 = '100px'
-) {
+                      _40 = "40px", _60 = "60px",
+                      _70 = "70px", _80 = '80px',
+                      _100 = '100px') {
     set_style_to_collection('pt20', 'paddingTop', _20);
     set_style_to_collection('pt25', 'paddingTop', _25);
 
@@ -143,21 +145,22 @@ function hamburger(mt, pb, pt, pr) {
     set_style('hamburger_img', 'paddingTop', pt);
     set_style('hamburger_img', 'paddingRight', pr);
 
-    if (get_filename() === 'cv') {
-        console.log('setting `hamburger_menu` mr => -105%, fontsize...');
-        set_style('hamburger_menu', 'marginTop', '-105%');
-        let width = window.screen.availWidth;
-        if (width < 550) {
-            set_style('hamburger_menu', 'fontSize', width / 13.5);
-        }
-
-        else {
-            set_style('hamburger_menu', 'fontSize', 35);
-        }
-    }
-    else {
-        set_style('hamburger_menu', 'marginTop', '-100%');
-    }
+    // FILE LOADS TOO EARLY, MOVED TO cv.hamburger_menu.js
+    // if (get_filename() === 'cv') {
+    //     console.log('setting `hamburger_menu` mr => -105%, fontsize...');
+    //     set_style('hamburger_menu', 'marginTop', '-105%');
+    //     let width = window.screen.availWidth;
+    //     if (width < 550) {
+    //         set_style('hamburger_menu', 'fontSize', width / 13.5);
+    //     }
+    //
+    //     else {
+    //         set_style('hamburger_menu', 'fontSize', 35);
+    //     }
+    // }
+    // else {
+    //     set_style('hamburger_menu', 'marginTop', '-100%');
+    // }
 
 
 }

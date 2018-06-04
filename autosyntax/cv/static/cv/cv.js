@@ -26,16 +26,16 @@ on_event_do('fb', 'click', () => {
 // set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
 
 // WAS IN RESPONSIVE.JS, NOT SURE WHY
-create_bullet_list('overview_cv_list');
-create_bullet_list('skills_languages_cv');
-create_bullet_list('skills_tech_py_cv');
-create_bullet_list('skills_tech_net_cv');
-create_bullet_list('skills_tech_webcloud_cv');
-create_bullet_list('skills_tech_editing_cv');
-create_bullet_list('education_sela_cv');
-create_bullet_list('education_bgu_cv');
-create_bullet_list('military_list_cv');
-create_bullet_list('languages_list_cv');
+// create_bullet_list('overview_cv_list');
+// create_bullet_list('skills_languages_cv');
+// create_bullet_list('skills_tech_py_cv');
+// create_bullet_list('skills_tech_net_cv');
+// create_bullet_list('skills_tech_webcloud_cv');
+// create_bullet_list('skills_tech_editing_cv');
+// create_bullet_list('education_sela_cv');
+// create_bullet_list('education_bgu_cv');
+// create_bullet_list('military_list_cv');
+// create_bullet_list('languages_list_cv');
 
 function open_in_new_tab(url) {
     let a = document.createElement("a");

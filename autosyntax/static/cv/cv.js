@@ -25,6 +25,7 @@ on_event_do('fb', 'click', () => {
 
 // set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
 
+// WAS IN RESPONSIVE.JS, NOT SURE WHY
 // create_bullet_list('overview_cv_list');
 // create_bullet_list('skills_languages_cv');
 // create_bullet_list('skills_tech_py_cv');
