@@ -1,9 +1,9 @@
 // TOP SCRIPT, DONT CALL ANY FNS HERE
 console.log('common/continue_arrow.js\t\tFROM common.layout.html\n');
 
-function set_init_lbl_html(value) {
-    by_id("continue_arrow_lbl").innerHTML = value;
-}
+// function set_init_lbl_html(value) {
+//     by_id("continue_arrow_lbl").innerHTML = value;
+// }
 
 
 function get_init_top(id) {
@@ -23,10 +23,9 @@ function get_init_top(id) {
 // }
 
 class Section {
-    constructor(sect_id, lbl) {
+    constructor(sect_id) {
         this.sect_id = sect_id;
         this.init_top = get_init_top(sect_id);
-        this.lbl = lbl;
     }
 
 

@@ -13,20 +13,22 @@ function handle_hamb_menu() {
 
 function open_hamb_menu() {
     hamb_menu_open = true;
-    set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(80%) brightness(50%) blur(7px)');
     set_style('hamburger_menu', 'display', 'unset');
-    increase_opacity('hamburger_menu', 1, factor = 0.5)
+    set_style('hamburger_home', 'display', 'unset');
+    increase_opacity('hamburger_menu', 1, factor = 0.5);
+    increase_opacity('hamburger_home', 0.7, factor = 0.3)
 
 }
 
 function close_hamb_menu() {
     hamb_menu_open = false;
-    set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(0%) brightness(100%) blur(0px)');
     decrease_opacity('hamburger_menu', 0, factor = 0.5);
+    decrease_opacity('hamburger_home', 0, factor = 0.5);
     setTimeout(() => {
         set_style('hamburger_menu', 'display', 'none');
+        set_style('hamburger_home', 'display', 'none');
     }, 1000);
 
 }
@@ -37,6 +39,7 @@ function to_mobile() {
     // set_style('back', 'display', 'none');
     // set_style('go_up', 'display', 'none');
     set_style('hamburger', 'display', 'unset');
+    set_style('hamburger_home', 'display', 'unset');
     // on_event_do('hamburger_img', 'click', open_hamb_menu);
     on_event_do('hamburger_img', 'click', handle_hamb_menu);
     on_event_do('hamburger_menu', 'click', handle_hamb_menu);
@@ -135,9 +138,9 @@ function margin_lefts(_100 = '100px', _136 = '136px', _150 = '150px') {
     set_style_to_collection('ml150', 'marginLeft', normalize(_150));
 }
 
-function back(left = '5%', width = '80px') {
+function back(left = '5%', _width = '80px') {
     set_style('back', 'left', left);
-    set_style('back', 'width', normalize(width));
+    set_style('back', 'width', normalize(_width));
 }
 
 function hamburger_img(mt, pb, pt, pr) {

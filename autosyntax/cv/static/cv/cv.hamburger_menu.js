@@ -2,13 +2,13 @@ let width = window.screen.availWidth;
 
 console.log('cv/cv.hamburger_menu.js\t\t\tFROM cv.html\tMODULE\n');
 let [overview, experience, skills, education, military, languages, contact] = [
-    new Section("overview_cv", "Who am I"),
-    new Section("experience_cv", "How to use"),
-    new Section("skills_cv", "Download"),
-    new Section("education_cv", "What is it?"),
-    new Section("military_cv", "What is it?"),
-    new Section("languages_cv", "What is it?"),
-    new Section("contact_cv", "What is it?")
+    new Section("overview_cv"),
+    new Section("experience_cv"),
+    new Section("skills_cv"),
+    new Section("education_cv"),
+    new Section("military_cv"),
+    new Section("languages_cv"),
+    new Section("contact_cv")
 ];
 
 let hamburger_menu = by_id('hamburger_menu');

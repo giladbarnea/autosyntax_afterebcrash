@@ -252,6 +252,10 @@ function add_child(element, child_attrs) {
     ))
 }
 
+function smaller(a, b) {
+    return a < b ? a : b;
+}
+
 function get_filename() {
     return window.location.pathname
         .split("/")

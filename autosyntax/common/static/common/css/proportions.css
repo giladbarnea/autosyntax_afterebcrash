@@ -237,7 +237,7 @@ body {
     position: fixed;
 
     padding-top: 105%;
-    margin-top: -100%;
+    margin-top: -105%;
 
     padding-left: 105%;
     margin-left: -100%;
@@ -250,7 +250,7 @@ body {
 
 }
 
-#hamburger_footer {
+#hamburger_home {
     position: fixed;
 
     padding-top: 0;

@@ -13,24 +13,22 @@ function handle_hamb_menu() {
 
 function open_hamb_menu() {
     hamb_menu_open = true;
-    // set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(80%) brightness(50%) blur(7px)');
     set_style('hamburger_menu', 'display', 'unset');
-    set_style('hamburger_footer', 'display', 'unset');
+    set_style('hamburger_home', 'display', 'unset');
     increase_opacity('hamburger_menu', 1, factor = 0.5);
-    increase_opacity('hamburger_footer', 0.7, factor = 0.3)
+    increase_opacity('hamburger_home', 0.7, factor = 0.3)
 
 }
 
 function close_hamb_menu() {
     hamb_menu_open = false;
-    // set_style('hamburger_menu', 'position', 'fixed');
     set_style('all', 'filter', 'grayscale(0%) brightness(100%) blur(0px)');
     decrease_opacity('hamburger_menu', 0, factor = 0.5);
-    decrease_opacity('hamburger_footer', 0, factor = 0.5);
+    decrease_opacity('hamburger_home', 0, factor = 0.5);
     setTimeout(() => {
         set_style('hamburger_menu', 'display', 'none');
-        set_style('hamburger_footer', 'display', 'none');
+        set_style('hamburger_home', 'display', 'none');
     }, 1000);
 
 }
@@ -41,7 +39,7 @@ function to_mobile() {
     // set_style('back', 'display', 'none');
     // set_style('go_up', 'display', 'none');
     set_style('hamburger', 'display', 'unset');
-    set_style('hamburger_footer', 'display', 'unset');
+    set_style('hamburger_home', 'display', 'unset');
     // on_event_do('hamburger_img', 'click', open_hamb_menu);
     on_event_do('hamburger_img', 'click', handle_hamb_menu);
     on_event_do('hamburger_menu', 'click', handle_hamb_menu);
@@ -156,4 +154,9 @@ function hamburger_img(mt, pb, pt, pr) {
 function hamburger_menu(mt, ml) {
     set_style('hamburger_menu', 'marginTop', mt);
     set_style('hamburger_menu', 'marginLeft', ml);
+}
+
+function hamburger_home(ml = '37%', mt) {
+    set_style('hamburger_home', 'marginLeft', ml);
+    set_style('hamburger_home', 'marginTop', mt);
 }
