@@ -47,6 +47,7 @@ const big_desktop_up = 1800;
 on_event_do(window, "resize", on_resize);
 try {
     create_bullet_list('overview_cv_list');
+    debugger;
     create_bullet_list('skills_languages_cv');
     create_bullet_list('skills_tech_py_cv');
     create_bullet_list('skills_tech_net_cv');

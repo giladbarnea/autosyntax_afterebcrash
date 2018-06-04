@@ -145,22 +145,5 @@ function hamburger(mt, pb, pt, pr) {
     set_style('hamburger_img', 'paddingTop', pt);
     set_style('hamburger_img', 'paddingRight', pr);
 
-    // FILE LOADS TOO EARLY, MOVED TO cv.hamburger_menu.js
-    // if (get_filename() === 'cv') {
-    //     console.log('setting `hamburger_menu` mr => -105%, fontsize...');
-    //     set_style('hamburger_menu', 'marginTop', '-105%');
-    //     let width = window.screen.availWidth;
-    //     if (width < 550) {
-    //         set_style('hamburger_menu', 'fontSize', width / 13.5);
-    //     }
-    //
-    //     else {
-    //         set_style('hamburger_menu', 'fontSize', 35);
-    //     }
-    // }
-    // else {
-    //     set_style('hamburger_menu', 'marginTop', '-100%');
-    // }
-
 
 }
