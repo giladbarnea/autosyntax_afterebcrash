@@ -1,4 +1,4 @@
-console.log('cv/cv.js\tFROM cv.html\tMODULE\n');
+console.log('cv/cv.js\t\t\t\t\t\tFROM cv.html\tMODULE\n');
 
 by_id("continue_arrow").style["display"] = "none";
 set_style("back", "display", "unset");
@@ -25,7 +25,7 @@ on_event_do('fb', 'click', () => {
 
 // set_style('email_msg', 'paddingLeft', window.screen.availWidth / 4);
 
-// WAS IN RESPONSIVE.JS, NOT SURE WHY
+// DONT put here, because hambuger-menu section coords rely on having the ml / mt classes set BEFORE. keep in responsive.js
 // create_bullet_list('overview_cv_list');
 // create_bullet_list('skills_languages_cv');
 // create_bullet_list('skills_tech_py_cv');

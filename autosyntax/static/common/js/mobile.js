@@ -10,7 +10,7 @@ function tablet_portrait() {
     body_margins(body_margin_top, right = body_margin_left / 2, bottom = 60, body_margin_left);
     let ham_pad_bott = body_margin_top + (10 + (600 - width) / 10);
     let ham_pad_top = body_margin_top + (15 + (600 - width) / 15);
-    hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
+    hamburger_img(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
 
 
     let filename = window.location.pathname
@@ -53,7 +53,7 @@ function phone_landscape() {
     body_margins(body_margin_top, right = 10, bottom = 60, body_margin_left);
     let ham_pad_bott = body_margin_top + (5 + (360 - width) / (60 / 7));
     let ham_pad_top = body_margin_top + (15 + (360 - width) / 30);
-    hamburger(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
+    hamburger_img(mt = -body_margin_top - 5, pb = ham_pad_bott, pt = ham_pad_top, pr = width);
 
 
     let filename = window.location.pathname

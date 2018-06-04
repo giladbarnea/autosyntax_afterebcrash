@@ -57,7 +57,7 @@ function body_margins(top = "50px", right = "60px", bottom = "60px", left = "60p
     document.body.style['marginLeft'] = normalize(left);
 }
 
-function fonts_sizes(_60, _35, _32, _30, _25, _23, _20, _15) {
+function fonts_sizes(_60, _35, _32, _30, _25, _23, _20, _15, _hamburger_menu) {
     set_style_to_collection('fs60', 'fontSize', normalize(_60));
     //BR 2.5 - DEFAULT 40
     set_style_to_collection('fs35', 'fontSize', normalize(_35));
@@ -67,6 +67,7 @@ function fonts_sizes(_60, _35, _32, _30, _25, _23, _20, _15) {
     set_style_to_collection('fs23', 'fontSize', normalize(_23));
     set_style_to_collection('fs20', 'fontSize', normalize(_20));
     set_style_to_collection('fs15', 'fontSize', normalize(_15));
+    set_style_to_collection('fshamburger', 'fontSize', normalize(_hamburger_menu));
 }
 
 function pad_body(padding_left = "350px") {
@@ -139,11 +140,15 @@ function back(left = '5%', width = '80px') {
     set_style('back', 'width', normalize(width));
 }
 
-function hamburger(mt, pb, pt, pr) {
+function hamburger_img(mt, pb, pt, pr) {
     set_style('hamburger_img', 'marginTop', mt);
     set_style('hamburger_img', 'paddingBottom', pb);
     set_style('hamburger_img', 'paddingTop', pt);
     set_style('hamburger_img', 'paddingRight', pr);
 
+}
 
+function hamburger_menu(mt, ml) {
+    set_style('hamburger_menu', 'marginTop', mt);
+    set_style('hamburger_menu', 'marginLeft', ml);
 }
