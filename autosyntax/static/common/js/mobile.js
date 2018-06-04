@@ -78,7 +78,6 @@ function phone_landscape() {
     body_margins(body_margin_top, right = 10, bottom = 60, body_margin_left);
     let ham_img_pad_bott = body_margin_top + (5 + (360 - width) / (60 / 7));
     let ham_img_pad_top = body_margin_top + (15 + (360 - width) / 30);
-    debugger;
     hamburger_img(mt = -body_margin_top - 5, pb = ham_img_pad_bott, pt = ham_img_pad_top, pr = width);
 
     let fshamburger;
