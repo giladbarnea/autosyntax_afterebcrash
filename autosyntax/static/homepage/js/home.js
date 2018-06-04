@@ -23,7 +23,12 @@ on_event_do("sidebar_item_4", "click",
     () => scroll_to("whoami_content"));
 
 
-
+// Who am I? => white
+set_style('sidebar_item_4', 'color', '#eeeeee');
+for (let i = 4; i <= 4; i++) {
+    remove_class(`sidebar_item_${i}`, 'fs20');
+    add_classes(`sidebar_item_${i}`, 'fs23')
+}
 
 
 

@@ -104,8 +104,11 @@ function desktop_resize() {
 
     if (filename === 'cv')
         pad_body(230);
-    else
-        pad_body(250);
+    else {
+        let w = window.screen.availWidth;
+        let pad_body_left = 350 - ((1799 - w) / 6);
+        pad_body(pad_body_left);
+    }
 
     tops(_88 = '86%', _84 = '84%');
     heights(_60 = 45, _30 = 25);

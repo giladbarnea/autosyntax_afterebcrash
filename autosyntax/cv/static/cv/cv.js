@@ -1,8 +1,8 @@
 console.log('cv/cv.js\t\t\t\t\t\tFROM cv.html\tMODULE\n');
 
-// set_style('continue_arrow', 'display', 'none');
+set_style('continue_arrow', 'display', 'none');
 // by_id("continue_arrow").style["display"] = "none";
-// set_style("back", "display", "unset");
+set_style("back", "display", "unset");
 let sidebar_items = by_id("sidebar").children;
 let items = ['Overview', 'Experience', 'Skills',
     'Education', 'M.Service', 'Languages', 'Contact'];
