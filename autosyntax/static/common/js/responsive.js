@@ -1,5 +1,5 @@
 // TOP SCRIPT, DONT CALL ANY FNS HERE
-console.log('common/responsive.js\t\tFROM common.layout.html\n');
+console.log('common/responsive.js\t\t\tFROM common.layout.html\n');
 
 // defaults to big desktop up
 class ContinueArrow {
@@ -60,6 +60,7 @@ try {
 catch (e) {
 
 }
+
 on_resize();
 
 
@@ -151,28 +152,7 @@ function desktop_resize() {
 
     back();
     remove_class('pad_body', 'row-1');
-    // set_style_to_collection('top88', 'top', "86%");
-    // set_style_to_collection('top84', 'top', "81%");
-    // set_style_to_collection('l90', 'left', "90%");
-    // set_style_to_collection('height60', 'height', 45);
-    // set_style_to_collection('height30', 'height', 25);
-    // set_style_to_collection('width60', 'width', 45);
-    // set_style_to_collection('width30', 'width', 25);
-    // set_style_to_collection('pt20', 'paddingTop', 20);
-    // set_style_to_collection('pl20', 'paddingLeft', 20);
-    // set_style_to_collection('pl30', 'paddingLeft', 25);
-    // set_style_to_collection('pl40', 'paddingLeft', 35);
-    // //NO USE TO PL45
-    // set_style_to_collection('pl45', 'paddingLeft', 35);
-    // set_style_to_collection('pl65', 'paddingLeft', 65);
-    // set_style_to_collection('mt20', 'marginTop', 20);
-    // set_style_to_collection('mt25', 'marginTop', 25);
-    // set_style_to_collection('ml100', 'marginLeft', 100);
-    //PRESS TO TOGGLE .NUTELLA COMPENSATION
-    // set_style_to_collection('ml150', 'marginLeft', 150);
-    // set_style_to_collection('ml136', 'marginLeft', 139);
-    // set_style('back', 'left', '5%');
-    // set_style('back', 'width', '80px');
+
 }
 
 

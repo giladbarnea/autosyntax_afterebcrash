@@ -1,4 +1,6 @@
-console.log('cv/cv.hamburger_menu.js\tFROM cv.html\tMODULE\n');
+let width = window.screen.availWidth;
+
+console.log('cv/cv.hamburger_menu.js\t\t\tFROM cv.html\tMODULE\n');
 let [overview, experience, skills, education, military, languages, contact] = [
     new Section("overview_cv", "Who am I"),
     new Section("experience_cv", "How to use"),
@@ -29,22 +31,6 @@ by_id('hamburger_item_1').innerHTML = 'Overview';
 by_id('hamburger_item_2').innerHTML = 'Experience';
 by_id('hamburger_item_3').innerHTML = 'Skills';
 by_id('hamburger_item_4').innerHTML = 'Education';
-
-
-console.log('setting `hamburger_menu` mt => -105%, fontsize...');
-set_style('hamburger_menu', 'marginTop', '-105%');
-let width = window.screen.availWidth;
-if (width < 550) {
-    set_style('hamburger_menu', 'fontSize', width / 13.5);
-}
-
-else {
-    set_style('hamburger_menu', 'fontSize', 35);
-}
-
-
-// set_style('hamburger_menu', 'marginTop', '-105%');
-// set_style('hamburger_menu', 'fontSize', '35px');
 
 
 // What is it?
