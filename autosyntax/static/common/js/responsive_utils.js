@@ -155,3 +155,8 @@ function hamburger_menu(mt, ml) {
     set_style('hamburger_menu', 'marginTop', mt);
     set_style('hamburger_menu', 'marginLeft', ml);
 }
+
+function hamburger_home(ml = '37%', mt) {
+    set_style('hamburger_home', 'marginLeft', ml);
+    set_style('hamburger_home', 'marginTop', mt);
+}
