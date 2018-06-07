@@ -29,6 +29,9 @@ on_event_do("go_up", "click",
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));
 
+on_event_do_to_collection("whoami-link", "click",
+    () => scroll_to("whoami_content"));
+
 
 increase_opacity(by_id("all"), 1, factor = 0.5);
 

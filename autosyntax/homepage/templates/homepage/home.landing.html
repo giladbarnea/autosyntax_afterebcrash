@@ -2,32 +2,33 @@
 {% load static %}
 {# B L O C K  C O N T E N T#}
 {% block content %}
-{% load tags %}{% load filters %}
-<div class="space fs60 pt20">
-    Hi! My name is Gilad.
-    <br>I love to code FAST.
-    <br><br>
-    This is why I created
-    <br>
-    <span class="download-link it turquoise">autosyntax.</span>
+    {% load tags %}{% load filters %}
+    <div class="space fs60 pt20">
+        Hi! My name is
+        <span class="whoami-link">Gilad.</span>
+        <br>I love to code FAST.
+        <br><br>
+        This is why I created
+        <br>
+        <span class="download-link it turquoise">autosyntax.</span>
 
-</div>
-{% br 2 %}
-<div class="mr100 fs30 work pl40">
-    It's completely free and I know you'll like it.
-</div>
+    </div>
+    {% br 2 %}
+    <div class="mr100 fs30 work pl40">
+        It's completely free and I know you'll like it.
+    </div>
 
-{#W H A T  I S  I T  B L O C K#}
-<div id="whatisit_block">
-    {% block what_is_it %}
-    {% endblock %}
+    {#W H A T  I S  I T  B L O C K#}
+    <div id="whatisit_block">
+        {% block what_is_it %}
+        {% endblock %}
 
-</div>
+    </div>
 
 
-<script type="module" src="{% static 'homepage/js/home.continue_arrow.js' %}"></script>
-<script type="module" src="{% static 'homepage/js/home.hamburger_menu.js' %}"></script>
-<script src="{% static 'homepage/js/home.js' %}"></script>
+    <script type="module" src="{% static 'homepage/js/home.continue_arrow.js' %}"></script>
+    <script type="module" src="{% static 'homepage/js/home.hamburger_menu.js' %}"></script>
+    <script src="{% static 'homepage/js/home.js' %}"></script>
 {% endblock %}
 {# E N D  B L O C K  C O N T E N T#}
 
