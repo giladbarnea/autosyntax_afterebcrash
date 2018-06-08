@@ -71,14 +71,10 @@ function get_bezzed(distance, freq_ms) {
     //
     else {
         dur_ms = distance ** 0.9;
-        console.warn('distance: ', distance);
-        console.warn('dur_ms: ', dur_ms);
 
         // Too long - shorten
         if (dur_ms > 1500) {
             dur_ms **= 0.95;
-            console.warn('new dur_ms:');
-            console.warn('dur_ms: ', dur_ms);
         }
     }
     // console.log(`\ndistance: ${distance}`);

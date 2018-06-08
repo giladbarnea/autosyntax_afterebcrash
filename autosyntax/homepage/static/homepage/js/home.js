@@ -26,17 +26,18 @@ on_event_do("sidebar_item_4", "click",
     () => scroll_to("whoami_content"));
 
 function emphasize_whoami() {
-    let fs23_fontsize = by_class('fs23')[0].style['fontSize'];
-    set_style('sidebar_item_4', 'fontSize', fs23_fontsize);
-    set_style('sidebar_item_4', 'color', 'white');
-    has_whoami_been_emphasized = true;
+    if (!has_whoami_been_emphasized) {
+        let fs23_fontsize = getComputedStyle(by_class('fs23')[0]).fontSize;
+        set_style('sidebar_item_4', 'fontSize', fs23_fontsize);
+        set_style('sidebar_item_4', 'color', 'white');
+        has_whoami_been_emphasized = true;
+    }
 }
 
-// Who am I? => white
-// set_style('sidebar_item_4', 'color', 'white');
-// set_style('sidebar_item_4', 'opacity', '0.7');
-// remove_class(`sidebar_item_4`, 'fs20');
-// add_classes(`sidebar_item_4`, 'fs23');
+on_event_do('github_link', 'click', () => {
+    open_in_new_tab("https://github.com/GbeTech/autosyntax");
+});
 
 
+on_event_do_to_collection('whoami-link', 'mouseover', emphasize_whoami);
 

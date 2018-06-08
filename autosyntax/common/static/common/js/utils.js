@@ -215,14 +215,6 @@ function span(inner, cls, tail = '', id = undefined) {
     return `<span ${_cls} ${_id}>${inner}</span>${tail}`;
 }
 
-// function add_class(element, add) {
-//     element = element_or_by_fn(element, by_id);
-//     let cls = element.className;
-//     let add_idx = cls.indexOf(add);
-//     if (add_idx === -1) {
-//         element.className += ` ${add}`;
-//     }
-// }
 
 function remove_class(element, remove) {
     element = element_or_by_fn(element, by_id);
@@ -261,4 +253,11 @@ function get_filename() {
         .split("/")
         .filter(c => c.length)
         .pop();
+}
+
+function open_in_new_tab(url) {
+    let a = document.createElement("a");
+    a.target = "_blank";
+    a.href = url;
+    a.click();
 }

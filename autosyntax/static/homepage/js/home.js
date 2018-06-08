@@ -4,6 +4,9 @@ set_style("whatisit_block", "paddingTop", window.screen.availHeight / 3);
 set_style("download_block", "paddingTop", window.screen.availHeight / 5);
 set_style("whoami_block", "paddingTop", window.screen.availHeight / 4);
 
+
+let has_whoami_been_emphasized = false;
+
 create_bullet_list('principles_htu');
 
 // What is it?
@@ -22,13 +25,19 @@ on_event_do("sidebar_item_3", "click",
 on_event_do("sidebar_item_4", "click",
     () => scroll_to("whoami_content"));
 
-
-// Who am I? => white
-set_style('sidebar_item_4', 'color', '#eeeeee');
-for (let i = 4; i <= 4; i++) {
-    remove_class(`sidebar_item_${i}`, 'fs20');
-    add_classes(`sidebar_item_${i}`, 'fs23')
+function emphasize_whoami() {
+    if (!has_whoami_been_emphasized) {
+        let fs23_fontsize = getComputedStyle(by_class('fs23')[0]).fontSize;
+        set_style('sidebar_item_4', 'fontSize', fs23_fontsize);
+        set_style('sidebar_item_4', 'color', 'white');
+        has_whoami_been_emphasized = true;
+    }
 }
 
+on_event_do('github_link', 'click', () => {
+    open_in_new_tab("https://github.com/GbeTech/autosyntax");
+});
 
+
+on_event_do_to_collection('whoami-link', 'mouseover', emphasize_whoami);
 

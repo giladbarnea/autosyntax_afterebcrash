@@ -7,6 +7,7 @@ let is_go_up_visible = false;
 if (window.scrollY >= 100) {
     show_go_up();
     leftwards_continue_arrow();
+    emphasize_whoami();
 }
 set_style_to_collection("my-ul", 'listStyle', "outside url('static/common/img/NOTSURE/tiny7.png')");
 // set_style_to_collection("my-ul", 'listStyle', "outside url('static/common/img/NOTSURE/arrow_serious/untitled.svg')");
@@ -61,10 +62,11 @@ function first_scroll_fade_ins() {
     if (window.scrollY >= 100 && !is_go_up_visible) {
         show_go_up();
         leftwards_continue_arrow();
-        if (!has_whoami_been_emphasized) {
+        if (filename === undefined) {
             emphasize_whoami();
-
         }
+
+
     }
     else if (window.scrollY <= 100 && is_go_up_visible) {
         hide_go_up();

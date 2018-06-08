@@ -38,12 +38,7 @@ on_event_do('fb', 'click', () => {
 // create_bullet_list('military_list_cv');
 // create_bullet_list('languages_list_cv');
 
-function open_in_new_tab(url) {
-    let a = document.createElement("a");
-    a.target = "_blank";
-    a.href = url;
-    a.click();
-}
+
 
 function copy(value = 'giladbrn@gmail.com') {
     let temp = document.createElement('INPUT');

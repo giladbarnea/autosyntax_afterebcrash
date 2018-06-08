@@ -57,12 +57,26 @@ function print(list, name) {
 
 function get_bezzed(distance, freq_ms) {
     let dur_ms;
-    if (distance < 500)
+
+    // A 300px distance takes 300ms
+    if (distance < 500) {
         dur_ms = distance;
-    else if (distance < 1000)
+    }
+
+    // Relatively short (<1000>) takes 500ms
+    else if (distance < 1000) {
         dur_ms = 500;
-    else
+    }
+
+    //
+    else {
         dur_ms = distance ** 0.9;
+
+        // Too long - shorten
+        if (dur_ms > 1500) {
+            dur_ms **= 0.95;
+        }
+    }
     // console.log(`\ndistance: ${distance}`);
     // console.log(`freq_ms ${freq_ms} ms`);
     // console.log(`animation takes ${dur_ms / 1000} seconds`);

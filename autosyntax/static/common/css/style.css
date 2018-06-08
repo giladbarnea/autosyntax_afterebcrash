@@ -111,9 +111,7 @@ body {
     text-align: center;
 }
 
-/*opacity 0*/
 .go-up,
-    /*.sidebar-item,*/
 .op0 {
     opacity: 0;
 }
@@ -130,6 +128,10 @@ body {
     opacity: 0.7;
 }
 
+.op8 {
+    opacity: 0.8;
+}
+
 .op1 {
     opacity: 1;
 }
@@ -138,11 +140,13 @@ body {
     display: none;
 }
 
-.download-link:hover {
+.download-link:hover,
+.whoami-link:hover {
     text-decoration: underline;
 }
 
 .download-link:hover,
+.whoami-link:hover,
 .go-up,
 .continue-arrow,
 .console-menu,
@@ -150,6 +154,16 @@ body {
 .animation,
 .back {
     cursor: pointer;
+
+}
+
+.white-hover {
+    transition: color 300ms;
+    transition-timing-function: linear;
+}
+
+.white-hover:hover {
+    color: white;
 
 }
 
@@ -185,62 +199,17 @@ body {
     text-decoration: underline;
 }
 
-.code-literal {
-    /*color: #a9b7c6;*/
-    color: #C4D5E6;
-}
-
-.str {
-    color: #708F5D
-}
-
-.int {
-    color: #79B2DE
-}
-
-.kept {
-    color: #EE8B36
-}
-
-.magic {
-    color: #B903B9
-}
-
-.self {
-    color: #9E5E97
-}
-
-.super {
-    color: #8B8BCC;
-}
-
-.doc {
-    color: #699F5B
-}
-
-.sidebar-item,
-.grey {
-    color: #bbbbbb;
-}
-
-.dark-grey {
-    color: #999999;
-}
-
 .sidebar-item {
     background-color: #111111;
     border: #111111;
-    /*transition: font-size 500ms, color 500ms;*/
+    transition: font-size 700ms, color 700ms;
+    transition-timing-function: ease-out;
+
 }
 
 .jiw {
     text-align: justify;
     text-justify: inter-word;
-}
-
-.sidebar-item:hover,
-.light-grey {
-    color: #dfdfdf;
 }
 
 .grid-container {
@@ -304,9 +273,51 @@ body {
 
 }
 
+/*UNUSED??*/
 .blurry {
-    /*-webkit-filter: grayscale(100%);*/
     filter: grayscale(100%) blur(5px);
+}
+
+.code-literal {
+    /*color: #a9b7c6;*/
+    color: #C4D5E6;
+}
+
+.str {
+    color: #708F5D
+}
+
+.int {
+    color: #79B2DE
+}
+
+.kept {
+    color: #EE8B36
+}
+
+.magic {
+    color: #B903B9
+}
+
+.self {
+    color: #9E5E97
+}
+
+.super {
+    color: #8B8BCC;
+}
+
+.doc {
+    color: #699F5B
+}
+
+.sidebar-item,
+.grey {
+    color: #bbbbbb;
+}
+
+.dark-grey {
+    color: #999999;
 }
 
 /*#all {*/

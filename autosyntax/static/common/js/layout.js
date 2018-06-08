@@ -3,9 +3,11 @@ console.log('common/layout.js\t\t\t\tFROM common.layout.html\n');
 let filename = get_filename();
 console.log('filename: ', filename);
 let is_go_up_visible = false;
+
 if (window.scrollY >= 100) {
     show_go_up();
-    left_continue_arrow();
+    leftwards_continue_arrow();
+    emphasize_whoami();
 }
 set_style_to_collection("my-ul", 'listStyle', "outside url('static/common/img/NOTSURE/tiny7.png')");
 // set_style_to_collection("my-ul", 'listStyle', "outside url('static/common/img/NOTSURE/arrow_serious/untitled.svg')");
@@ -28,6 +30,9 @@ on_event_do("go_up", "click",
 on_event_do_to_collection("download-link", "click",
     () => scroll_to("download_content"));
 
+on_event_do_to_collection("whoami-link", "click",
+    () => scroll_to("whoami_content"));
+
 
 increase_opacity(by_id("all"), 1, factor = 0.5);
 
@@ -46,16 +51,22 @@ function center_continue_arrow() {
     increase_opacity(by_id("continue_arrow"), 1, factor = 0.05);
 }
 
-function left_continue_arrow() {
+function leftwards_continue_arrow() {
     set_style("continue_arrow", "left", arrow.left);
     set_opacity('continue_arrow', 0.7, factor = 0.1);
 }
+
 
 function first_scroll_fade_ins() {
     // PERSISTS
     if (window.scrollY >= 100 && !is_go_up_visible) {
         show_go_up();
-        left_continue_arrow();
+        leftwards_continue_arrow();
+        if (filename === undefined) {
+            emphasize_whoami();
+        }
+
+
     }
     else if (window.scrollY <= 100 && is_go_up_visible) {
         hide_go_up();

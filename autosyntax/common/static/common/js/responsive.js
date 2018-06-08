@@ -70,6 +70,7 @@ function big_desktop_resize() {
     arrow.set(big_desktop_up, filename);
     to_none_mobile();
     body_margins(50, 60, 60, 60);
+
     fonts_sizes(_60 = 60, _35 = 40,
         _32 = 32, _30 = 30,
         _25 = 25, _23 = 23,
